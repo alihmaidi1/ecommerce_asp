@@ -12,12 +12,15 @@ namespace ecommerce.Domain.Entities
         public Category()
         {
             Child = new HashSet<Category>();
+            Products= new HashSet<Product>();
 
         }
         public string Name { get; set; }
 
         public Category Parent { get;set; }
         public ICollection<Category> Child { get; set; }
+
+        public ICollection<Product> Products { get; set; }
         public string Description { get; set; }
         public bool Status { get; set; }
         public int Rank { get; set; }

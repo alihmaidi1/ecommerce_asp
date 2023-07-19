@@ -7,19 +7,19 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Property: BaseEntity
+    public  class Brand :BaseEntity
     {
 
-        public Property()
+        public Brand()
         {
 
-            Products=new HashSet<ProductProperty>();   
+            Products=new HashSet<Product>();    
 
         }
-
         public string Name { get; set; }
 
-        public ICollection<ProductProperty> Products{ get; set; }
+        public ICollection<Product> Products { get; set; }
+
 
     }
 }
