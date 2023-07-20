@@ -10,7 +10,7 @@ namespace ecommerce.Domain.Entities
     public class Wishlist:BaseEntityWithoutId
     {
 
-
+        public Guid ProductId { get; set; }
         public Product Product { get; set; }    
         
 

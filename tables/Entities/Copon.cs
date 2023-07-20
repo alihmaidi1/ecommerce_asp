@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace ecommerce.Domain.Entities
-{
+namespace ecommerce.Domain.Entities;
+
     public class Copon :BaseEntity
     {
 
@@ -28,4 +28,4 @@ namespace ecommerce.Domain.Entities
         public ICollection<Product> Products{ get; set; }
 
     }
-}
+

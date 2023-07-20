@@ -7,7 +7,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    internal class Country: BaseEntity
+    public class Country: BaseEntity
     {
 
         public Country()
@@ -20,5 +20,6 @@ namespace ecommerce.Domain.Entities
         public string Name { get; set; }
     
         public ICollection<City> Cities { get; set;}
+
     }
 }

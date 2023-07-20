@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.Domain.Entities
-{
+namespace ecommerce.Domain.Entities;
+
     public class ProductProperty: BaseEntityWithoutId
     {
 
@@ -20,4 +20,4 @@ namespace ecommerce.Domain.Entities
 
 
     }
-}
+

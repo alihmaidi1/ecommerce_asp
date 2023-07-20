@@ -9,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Base.Entity
 {
-    public class BaseEntityWithoutId
+    public class BaseEntityWithoutId:IBaseEntity
     {
         public DateTime DateCreated { get; set; }
         public DateTime? DateDeleted { get; set; }
@@ -17,7 +17,5 @@ namespace ecommerce.Domain.Base.Entity
         public Guid? CreatedBy { get; set; }
         public Guid? UpdatedBy { get; set; }
         public Guid? DeletedBy { get; set; }
-
-
     }
 }

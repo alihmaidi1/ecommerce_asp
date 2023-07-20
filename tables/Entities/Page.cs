@@ -15,5 +15,6 @@ namespace ecommerce.Domain.Entities
 
         public string Content { get; set; } 
 
+
     }
 }

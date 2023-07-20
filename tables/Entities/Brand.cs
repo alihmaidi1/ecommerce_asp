@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ecommerce.Domain.Base.Entity;
+using ecommerce.Domain.Base.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public  class Brand :BaseEntity
+    public  class Brand : Imagable
     {
 
         public Brand()
@@ -17,6 +19,7 @@ namespace ecommerce.Domain.Entities
 
         }
         public string Name { get; set; }
+        public Image Url { get; set; }
 
         public ICollection<Product> Products { get; set; }
 

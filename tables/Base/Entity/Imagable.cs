@@ -5,13 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace tables.Entities
-{
-    internal class Temp :BaseEntity
+namespace ecommerce.Domain.Base.Entity;
+    public abstract class Imagable:BaseEntity
     {
-
-        public string Url { get; set; }
-
-
     }
-}
+

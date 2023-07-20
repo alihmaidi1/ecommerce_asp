@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace tables.Entities
-{
+namespace tables.Entities;
+
     public class Currency : BaseEntity
     {
         public string Code { get; set; }    
@@ -15,4 +15,4 @@ namespace tables.Entities
         public string Status { get; set; }
 
     }
-}
+

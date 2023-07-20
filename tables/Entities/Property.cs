@@ -13,13 +13,13 @@ namespace ecommerce.Domain.Entities
         public Property()
         {
 
-            Products=new HashSet<ProductProperty>();   
+            Products=new HashSet<Product>();   
 
         }
 
         public string Name { get; set; }
 
-        public ICollection<ProductProperty> Products{ get; set; }
+        public ICollection<Product> Products{ get; set; }
 
     }
 }

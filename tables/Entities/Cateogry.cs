@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ecommerce.Domain.Base.Entity;
+using ecommerce.Domain.Base.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Category :BaseEntity
+    public class Category :Imagable
     {
         public Category()
         {
@@ -17,7 +19,8 @@ namespace ecommerce.Domain.Entities
         }
         public string Name { get; set; }
 
-        public Category Parent { get;set; }
+//        public Image Url { get; set; }
+        public Category? Parent { get;set; }
         public ICollection<Category> Child { get; set; }
 
         public ICollection<Product> Products { get; set; }
@@ -26,7 +29,7 @@ namespace ecommerce.Domain.Entities
         public int Rank { get; set; }
         public string ? Meta_Description { get; set; }
         public string ? Meta_Title { get; set; }
-        public string ? Meta_Logo { get; set; }
+//        public Image ? Meta_Logo { get; set; }
 
 
     }
