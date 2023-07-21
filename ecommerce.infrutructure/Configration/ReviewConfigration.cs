@@ -14,7 +14,7 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Review> builder)
         {
 
-            builder.HasKey(r => new { r.ProductId });
+            builder.HasKey(r => new { r.ProductId,r.UserId });
 
         }
     }

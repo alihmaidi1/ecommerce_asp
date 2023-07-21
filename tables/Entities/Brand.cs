@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Base.Entity;
+﻿using ecommerce.Domain.Base.Abstract;
 using ecommerce.Domain.Base.Interfaces;
 using System;
 using System.Collections.Generic;

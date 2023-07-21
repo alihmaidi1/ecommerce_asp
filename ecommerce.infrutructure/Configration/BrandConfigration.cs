@@ -15,7 +15,13 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Brand> builder)
         {
             builder.HasIndex(b=>b.Name).IsUnique();
-            builder.HasMany(b => b.Products).WithOne(p => p.Brand);
-        }
+            builder.HasMany(b => b.Products)
+            .WithOne(p => p.Brand)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(b => b.Url)
+            .WithOne(i=>(Brand)i.Imagable)
+            .HasForeignKey<Image>(i=>i.Imagable_id)
+            .OnDelete(DeleteBehavior.Cascade);
+        }   
     }
 }

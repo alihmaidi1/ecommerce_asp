@@ -15,7 +15,9 @@ namespace ecommerce.infrutructure.Configration
         {
 
             builder.HasIndex(c=>c.Name).IsUnique();
-            builder.HasMany(c => c.Cities).WithOne(c => c.Country);
+            builder.HasMany(c => c.Cities)
+            .WithOne(c => c.Country)
+            .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

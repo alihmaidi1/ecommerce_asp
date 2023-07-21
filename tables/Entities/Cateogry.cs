@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Base.Entity;
+﻿using ecommerce.Domain.Base.Abstract;
 using ecommerce.Domain.Base.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Category :Imagable
+    public class Category :Imagable,Tagable
     {
         public Category()
         {
@@ -19,7 +19,7 @@ namespace ecommerce.Domain.Entities
         }
         public string Name { get; set; }
 
-//        public Image Url { get; set; }
+        public Image Url { get; set; }
         public Category? Parent { get;set; }
         public ICollection<Category> Child { get; set; }
 
@@ -29,6 +29,9 @@ namespace ecommerce.Domain.Entities
         public int Rank { get; set; }
         public string ? Meta_Description { get; set; }
         public string ? Meta_Title { get; set; }
+
+        public ICollection<Tag> Tags { get; set; }
+
 //        public Image ? Meta_Logo { get; set; }
 
 

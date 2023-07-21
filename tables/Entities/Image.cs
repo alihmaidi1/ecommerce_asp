@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Base.Entity;
+﻿using ecommerce.Domain.Base.Abstract;
 using ecommerce.Domain.Base.Interfaces;
 using ecommerce.Domain.Enum;
 using System;
@@ -10,7 +10,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;
 
-    public class Image:BaseEntity
+public class Image:BaseEntity
     {
 
         public string Url { get; set; }
@@ -20,8 +20,11 @@ namespace ecommerce.Domain.Entities;
 
         public EntitiesHasImages Type { get; set; }
 
-        public Imagable ImagableID { get; set; }
+        public Imagable Imagable { get; set; }
+        
+        public Guid Imagable_id { get; set; }
 
 
-    }
+
+}
 

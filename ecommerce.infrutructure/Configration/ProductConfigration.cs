@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Base.Abstract;
+using ecommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,11 +14,27 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.Property(p => p.SellingNumber).HasDefaultValue(0);
             
+            
+            builder.Property(p => p.SellingNumber).HasDefaultValue(0);
+           
+
             builder.HasMany(p => p.Properties).WithMany(p=>p.Products).UsingEntity<ProductProperty>();
-            builder.HasMany(p=>p.Tags).WithMany(t=>t.Products).UsingEntity<ProductTag>();
-            builder.HasMany(p => p.Reviews).WithOne(r=>r.Product);
-        }
+
+
+
+//            builder.HasMany(c => c.Tags)
+  //          .WithMany(t => t.Tagable as ICollection<Product>)
+    //        .UsingEntity<TageablePivot>();
+
+
+
+            builder.HasMany(p => p.Reviews)
+            .WithOne(r=>r.Product)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            
+
+        }   
     }
 }

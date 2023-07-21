@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ecommerce.Domain.Base.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,13 +14,13 @@ namespace ecommerce.Domain.Entities
         public Tag()
         {
 
-            Products=new HashSet<Product>();
+            Tagable = new HashSet<Tagable>();
 
         }
 
         public string Name { get; set; }
-        [ForeignKey("ProductId")]
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Tagable> Tagable { get; set; }
+
 
 
     }

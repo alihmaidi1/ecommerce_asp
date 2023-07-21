@@ -14,7 +14,9 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Copon> builder)
         {
             builder.HasIndex(c=>c.Name).IsUnique();
-            builder.HasMany(c=>c.Products).WithOne(p=>p.Copon);
+            builder.HasMany(c=>c.Products)
+            .WithOne(p=>p.Copon)
+            .OnDelete(DeleteBehavior.SetNull);
 
         }
     }

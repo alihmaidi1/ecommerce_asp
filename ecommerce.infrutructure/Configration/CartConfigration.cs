@@ -13,7 +13,7 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Cart> builder)
         {
-            builder.HasKey(c => new { c.ProductId });
+            builder.HasKey(c => new { c.ProductId,c.UserId });
         }
     }
 }

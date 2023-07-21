@@ -13,7 +13,7 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Wishlist> builder)
         {
-            builder.HasKey(w => new { w.ProductId });
+            builder.HasKey(w => new { w.ProductId,w.UserId });
         }
     }
 }

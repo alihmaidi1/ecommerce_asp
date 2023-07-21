@@ -6,16 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tables.Entities;
 
 namespace ecommerce.infrutructure.Configration
 {
-    internal class TagProductConfigration : IEntityTypeConfiguration<ProductTag>
+    public class TagableConfigration : IEntityTypeConfiguration<TageablePivot>
     {
-        public void Configure(EntityTypeBuilder<ProductTag> builder)
+        public void Configure(EntityTypeBuilder<TageablePivot> builder)
         {
+            builder.HasKey(t => new { t.TagId,t.TagableId });
 
-            builder.HasKey(t => new {t.TagId,t.ProductId});
-            
         }
     }
 }

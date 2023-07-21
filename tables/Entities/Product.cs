@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Base.Entity;
+﻿using ecommerce.Domain.Base.Abstract;
 using ecommerce.Domain.Base.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;
 
-    public class Product: Imagable
+public class Product: Imagable,Tagable
     {
         
         public Product()
@@ -54,8 +54,11 @@ namespace ecommerce.Domain.Entities;
 
         public ICollection<Property>Properties { get; set; }
 
-        public ICollection<Tag>Tags { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public ICollection<Tag> Tags { get; set; }
+
+    public ICollection<Review> Reviews { get; set; }
+
+        
 
 
 

@@ -90,18 +90,6 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductTag",
-                columns: table => new
-                {
-                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductTag", x => new { x.ProductId, x.ProductsId });
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Properties",
                 columns: table => new
                 {
@@ -120,11 +108,41 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tags",
+                name: "RoleClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RoleClaims", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Roles",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sliders",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Rank = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -134,7 +152,36 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tags", x => x.Id);
+                    table.PrimaryKey("PK_Sliders", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    age = table.Column<int>(type: "int", nullable: true),
+                    Point = table.Column<int>(type: "int", nullable: true),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -164,12 +211,53 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Banners",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Link = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    Rank = table.Column<int>(type: "int", nullable: false),
+                    showIn = table.Column<int>(type: "int", nullable: false),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Banners", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Brands",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Brands", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Carts",
                 columns: table => new
                 {
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    ProductId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -179,45 +267,28 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Carts", x => x.ProductId);
+                    table.PrimaryKey("PK_Carts", x => new { x.ProductId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_Carts_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Imagable",
+                name: "Categories",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Category_Name = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ParentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: true),
-                    Rank = table.Column<int>(type: "int", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    Rank = table.Column<int>(type: "int", nullable: false),
                     Meta_Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Meta_Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Product_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Product_Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MetaTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MetaDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MetaLogoId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Price = table.Column<float>(type: "real", nullable: true),
-                    Quantity = table.Column<int>(type: "int", nullable: true),
-                    MinQuantity = table.Column<int>(type: "int", nullable: true),
-                    SellingNumber = table.Column<int>(type: "int", nullable: true, defaultValue: 0),
-                    BrandId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    CoponId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Banner_UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Link = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Banner_Status = table.Column<bool>(type: "bit", nullable: true),
-                    Banner_Rank = table.Column<int>(type: "int", nullable: true),
-                    showIn = table.Column<int>(type: "int", nullable: true),
-                    Slider_UrlId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Slider_Rank = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Slider_Status = table.Column<bool>(type: "bit", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -227,27 +298,11 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Imagable", x => x.Id);
+                    table.PrimaryKey("PK_Categories", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Imagable_Copons_CoponId",
-                        column: x => x.CoponId,
-                        principalTable: "Copons",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Imagable_Imagable_BrandId",
-                        column: x => x.BrandId,
-                        principalTable: "Imagable",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Imagable_Imagable_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Imagable",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Imagable_Imagable_ParentId",
+                        name: "FK_Categories_Categories_ParentId",
                         column: x => x.ParentId,
-                        principalTable: "Imagable",
+                        principalTable: "Categories",
                         principalColumn: "Id");
                 });
 
@@ -260,7 +315,7 @@ namespace ecommerce.infrutructure.Migrations
                     Hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ResizedUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<int>(type: "int", nullable: false),
-                    ImagableIDId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Imagable_id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -273,16 +328,65 @@ namespace ecommerce.infrutructure.Migrations
                 {
                     table.PrimaryKey("PK_Images", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Images_Imagable_ImagableIDId",
-                        column: x => x.ImagableIDId,
-                        principalTable: "Imagable",
+                        name: "FK_Images_Sliders_Imagable_id",
+                        column: x => x.Imagable_id,
+                        principalTable: "Sliders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MetaTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MetaDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MetaLogoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    MinQuantity = table.Column<int>(type: "int", nullable: false),
+                    SellingNumber = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
+                    BrandId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    CoponId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Brands_BrandId",
+                        column: x => x.BrandId,
+                        principalTable: "Brands",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Images_Imagable_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Imagable",
-                        principalColumn: "Id");
+                        name: "FK_Products_Copons_CoponId",
+                        column: x => x.CoponId,
+                        principalTable: "Copons",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_Products_Images_MetaLogoId",
+                        column: x => x.MetaLogoId,
+                        principalTable: "Images",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -302,9 +406,9 @@ namespace ecommerce.infrutructure.Migrations
                 {
                     table.PrimaryKey("PK_ProductProperties", x => new { x.PropertyId, x.ProductId });
                     table.ForeignKey(
-                        name: "FK_ProductProperties_Imagable_ProductId",
+                        name: "FK_ProductProperties_Products_ProductId",
                         column: x => x.ProductId,
-                        principalTable: "Imagable",
+                        principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -316,43 +420,11 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductTags",
-                columns: table => new
-                {
-                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TagId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductTags", x => new { x.TagId, x.ProductId });
-                    table.ForeignKey(
-                        name: "FK_ProductTags_Imagable_ProductId1",
-                        column: x => x.ProductId1,
-                        principalTable: "Imagable",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ProductTags_Tags_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Tags",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Reviews",
                 columns: table => new
                 {
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     stars = table.Column<int>(type: "int", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -364,21 +436,28 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reviews", x => x.ProductId);
+                    table.PrimaryKey("PK_Reviews", x => new { x.ProductId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_Reviews_Imagable_ProductId1",
-                        column: x => x.ProductId1,
-                        principalTable: "Imagable",
+                        name: "FK_Reviews_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Reviews_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Wishlists",
+                name: "Tags",
                 columns: table => new
                 {
-                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProductId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -388,19 +467,123 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Wishlists", x => x.ProductId);
+                    table.PrimaryKey("PK_Tags", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Wishlists_Imagable_ProductId1",
-                        column: x => x.ProductId1,
-                        principalTable: "Imagable",
+                        name: "FK_Tags_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Wishlists",
+                columns: table => new
+                {
+                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Wishlists", x => new { x.ProductId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_Wishlists_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Wishlists_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TageablePivots",
+                columns: table => new
+                {
+                    TagId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TagableId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TageablePivots", x => new { x.TagId, x.TagableId });
+                    table.ForeignKey(
+                        name: "FK_TageablePivots_Categories_TagableId",
+                        column: x => x.TagableId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TageablePivots_Tags_TagId",
+                        column: x => x.TagId,
+                        principalTable: "Tags",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Carts_ProductId1",
+                name: "IX_Banners_Rank",
+                table: "Banners",
+                column: "Rank",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Banners_UrlId",
+                table: "Banners",
+                column: "UrlId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Brands_Name",
+                table: "Brands",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Brands_UrlId",
+                table: "Brands",
+                column: "UrlId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Carts_UserId",
                 table: "Carts",
-                column: "ProductId1");
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Categories_Name",
+                table: "Categories",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Categories_ParentId",
+                table: "Categories",
+                column: "ParentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Categories_Rank",
+                table: "Categories",
+                column: "Rank",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Categories_UrlId",
+                table: "Categories",
+                column: "UrlId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cities_CountryId",
@@ -432,84 +615,10 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Banner_Rank",
-                table: "Imagable",
-                column: "Banner_Rank",
-                unique: true,
-                filter: "[Rank] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Banner_UrlId",
-                table: "Imagable",
-                column: "Banner_UrlId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_BrandId",
-                table: "Imagable",
-                column: "BrandId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Category_Name",
-                table: "Imagable",
-                column: "Category_Name",
-                unique: true,
-                filter: "[Name] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_CategoryId",
-                table: "Imagable",
-                column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_CoponId",
-                table: "Imagable",
-                column: "CoponId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_MetaLogoId",
-                table: "Imagable",
-                column: "MetaLogoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Name",
-                table: "Imagable",
-                column: "Name",
-                unique: true,
-                filter: "[Name] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_ParentId",
-                table: "Imagable",
-                column: "ParentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Rank",
-                table: "Imagable",
-                column: "Rank",
-                unique: true,
-                filter: "[Rank] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Slider_Rank",
-                table: "Imagable",
-                column: "Slider_Rank",
-                unique: true,
-                filter: "[Rank] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_Slider_UrlId",
-                table: "Imagable",
-                column: "Slider_UrlId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Imagable_UrlId",
-                table: "Imagable",
-                column: "UrlId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Images_ImagableIDId",
+                name: "IX_Images_Imagable_id",
                 table: "Images",
-                column: "ImagableIDId");
+                column: "Imagable_id",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Images_ProductId",
@@ -522,14 +631,24 @@ namespace ecommerce.infrutructure.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductTags_ProductId",
-                table: "ProductTags",
-                column: "ProductId");
+                name: "IX_Products_BrandId",
+                table: "Products",
+                column: "BrandId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductTags_ProductId1",
-                table: "ProductTags",
-                column: "ProductId1");
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CoponId",
+                table: "Products",
+                column: "CoponId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_MetaLogoId",
+                table: "Products",
+                column: "MetaLogoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Properties_Name",
@@ -538,9 +657,20 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_ProductId1",
+                name: "IX_Reviews_UserId",
                 table: "Reviews",
-                column: "ProductId1");
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sliders_Rank",
+                table: "Sliders",
+                column: "Rank",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TageablePivots_TagableId",
+                table: "TageablePivots",
+                column: "TagableId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tags_Name",
@@ -549,61 +679,72 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Wishlists_ProductId1",
+                name: "IX_Tags_ProductId",
+                table: "Tags",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Wishlists_UserId",
                 table: "Wishlists",
-                column: "ProductId1");
+                column: "UserId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Carts_Imagable_ProductId1",
-                table: "Carts",
-                column: "ProductId1",
-                principalTable: "Imagable",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Imagable_Images_Banner_UrlId",
-                table: "Imagable",
-                column: "Banner_UrlId",
-                principalTable: "Images",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Imagable_Images_MetaLogoId",
-                table: "Imagable",
-                column: "MetaLogoId",
-                principalTable: "Images",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Imagable_Images_Slider_UrlId",
-                table: "Imagable",
-                column: "Slider_UrlId",
-                principalTable: "Images",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Imagable_Images_UrlId",
-                table: "Imagable",
+                name: "FK_Banners_Images_UrlId",
+                table: "Banners",
                 column: "UrlId",
                 principalTable: "Images",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Brands_Images_UrlId",
+                table: "Brands",
+                column: "UrlId",
+                principalTable: "Images",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Carts_Products_ProductId",
+                table: "Carts",
+                column: "ProductId",
+                principalTable: "Products",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Categories_Images_UrlId",
+                table: "Categories",
+                column: "UrlId",
+                principalTable: "Images",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Images_Products_ProductId",
+                table: "Images",
+                column: "ProductId",
+                principalTable: "Products",
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Images_Imagable_ImagableIDId",
-                table: "Images");
+                name: "FK_Brands_Images_UrlId",
+                table: "Brands");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Images_Imagable_ProductId",
-                table: "Images");
+                name: "FK_Categories_Images_UrlId",
+                table: "Categories");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Products_Images_MetaLogoId",
+                table: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Banners");
 
             migrationBuilder.DropTable(
                 name: "Carts");
@@ -621,13 +762,16 @@ namespace ecommerce.infrutructure.Migrations
                 name: "ProductProperties");
 
             migrationBuilder.DropTable(
-                name: "ProductTag");
-
-            migrationBuilder.DropTable(
-                name: "ProductTags");
-
-            migrationBuilder.DropTable(
                 name: "Reviews");
+
+            migrationBuilder.DropTable(
+                name: "RoleClaims");
+
+            migrationBuilder.DropTable(
+                name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "TageablePivots");
 
             migrationBuilder.DropTable(
                 name: "Wishlists");
@@ -642,13 +786,25 @@ namespace ecommerce.infrutructure.Migrations
                 name: "Tags");
 
             migrationBuilder.DropTable(
-                name: "Imagable");
-
-            migrationBuilder.DropTable(
-                name: "Copons");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Images");
+
+            migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Sliders");
+
+            migrationBuilder.DropTable(
+                name: "Brands");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Copons");
         }
     }
 }
