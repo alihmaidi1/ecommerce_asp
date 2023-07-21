@@ -19,8 +19,9 @@ namespace ecommerce.infrutructure.Configration
 
 
 
-            builder.HasMany(c => c.Child)
-            .WithOne(c => c.Parent);
+//            builder.HasMany(c => c.Child)
+  //          .WithOne(c => c.Parent)
+    //        .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(c => c.Tags)
             .WithMany(t=>(ICollection<Category>)t.Tagable)            
