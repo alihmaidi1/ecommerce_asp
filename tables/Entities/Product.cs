@@ -1,6 +1,4 @@
-﻿using ecommerce.Domain.Base.Abstract;
-using ecommerce.Domain.Base.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,23 +7,25 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;
 
-public class Product: Imagable,Tagable
+public class Product: BaseEntity
     {
         
         public Product()
         {
             
             Properties=new HashSet<Property>();
-            Tags= new HashSet<Tag>();
+//            Images= new HashSet<string>();
             Reviews=new HashSet<Review>();
 
 
         }
 
+//    public ICollection<Tag> Tags { get; set; }
+
         public string Name { get; set; }
         public string Title { get; set; }
 
-        public ICollection<Image> images { get; set; }
+//        public ICollection<string> Images { get; set; }
 
         
         public string Description { get; set; }
@@ -34,7 +34,7 @@ public class Product: Imagable,Tagable
 
         public string MetaDescription { get; set; }
 
-        public Image MetaLogo { get; set; }
+        public string MetaLogo { get; set; }
 
         public Category Category { get; set; }  
 
@@ -54,9 +54,8 @@ public class Product: Imagable,Tagable
 
         public ICollection<Property>Properties { get; set; }
 
-        public ICollection<Tag> Tags { get; set; }
 
-    public ICollection<Review> Reviews { get; set; }
+        public ICollection<Review> Reviews { get; set; }
 
         
 

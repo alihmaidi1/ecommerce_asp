@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Identity;
 using System.Reflection.Emit;
 using ecommerce.Domain.Base.Entity;
 using ecommerce.Domain.Abstract;
-using ecommerce.Domain.Base.Abstract;
 
 namespace ecommerce.infrutructure
 {
@@ -51,7 +50,7 @@ namespace ecommerce.infrutructure
         public DbSet<Copon> Copons { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Currency> Currencies { get; set; }
-        public DbSet<Image> Images { get; set; }
+//        public DbSet<Image> Images { get; set; }
         public DbSet<Page> Pages { get; set; }
 
         public DbSet<Product> Products { get; set; }
@@ -65,8 +64,7 @@ namespace ecommerce.infrutructure
         public DbSet<Review> Reviews { get; set; }
 
         public DbSet<Slider> Sliders { get; set; }
-        public DbSet<Tag> Tags { get; set; }
-        public DbSet<TageablePivot> TageablePivots { get; set; }
+//        public DbSet<TageablePivot> TageablePivots { get; set; }
 
 
         public DbSet<Wishlist> Wishlists { get; set; }

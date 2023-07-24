@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Base.Abstract;
+﻿
 using ecommerce.Domain.Base.Interfaces;
 using ecommerce.Domain.Entities;
 using ecommerce.Domain.Enum;
@@ -11,9 +11,9 @@ using tables.Base.Entity;
 
 namespace tables.Entities
 {
-    public class Banner : Imagable
+    public class Banner :BaseEntity,IImage
     {
-        public Image Url   { get; set; }
+        public string Url   { get; set; }
         public string Link { get; set; }   
         public bool Status  { get; set; }
         public int Rank { get; set; }   

@@ -1,5 +1,4 @@
-﻿using ecommerce.Domain.Base.Abstract;
-using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -20,14 +19,7 @@ namespace ecommerce.infrutructure.Configration
            
 
             builder.HasMany(p => p.Properties).WithMany(p=>p.Products).UsingEntity<ProductProperty>();
-
-
-
-//            builder.HasMany(c => c.Tags)
-  //          .WithMany(t => t.Tagable as ICollection<Product>)
-    //        .UsingEntity<TageablePivot>();
-
-
+          
 
             builder.HasMany(p => p.Reviews)
             .WithOne(r=>r.Product)

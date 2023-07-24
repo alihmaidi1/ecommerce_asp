@@ -1,5 +1,4 @@
-﻿using ecommerce.Domain.Base.Abstract;
-using ecommerce.Domain.Base.Interfaces;
+﻿using ecommerce.Domain.Base.Interfaces;
 using ecommerce.Domain.Enum;
 using System;
 using System.Collections.Generic;
@@ -19,9 +18,7 @@ public class Image:BaseEntity
         public string ResizedUrl { get; set; }
 
         public EntitiesHasImages Type { get; set; }
-
-        public Imagable Imagable { get; set; }
-        
+        public IImage Imageable { get; set; }
         public Guid Imagable_id { get; set; }
 
 

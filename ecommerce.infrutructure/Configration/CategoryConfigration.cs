@@ -17,30 +17,18 @@ namespace ecommerce.infrutructure.Configration
             builder.HasIndex(c=>c.Name).IsUnique();
             builder.HasIndex(c => c.Rank).IsUnique();
 
-
-
-//            builder.HasMany(c => c.Child)
-  //          .WithOne(c => c.Parent)
-    //        .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(c => c.Tags)
-            .WithMany(t=>(ICollection<Category>)t.Tagable)            
-            .UsingEntity<TageablePivot>();
-
-            builder.HasMany(c=>c.Products)
-            .WithOne(p=>p.Category)
+            builder.HasMany(c => c.Products)
+            .WithOne(p => p.Category)
             .OnDelete(DeleteBehavior.Cascade);
 
+            builder.HasMany(c => c.Child)
+            .WithOne(c => c.Parent)
+            .OnDelete(DeleteBehavior.Restrict);
 
-//            builder.HasOne(c => c.Url)
-  //          .WithOne(i => (Category)i.Imagable)
-    //        .HasForeignKey<Image>(i=>i.Imagable_id);
 
-//            builder.HasOne(c => c.Meta_Logo)
-  //          .WithOne(i => (Category)i.Imagable)
-    //        .HasForeignKey<Image>(i => i.Imagable_id);
 
-            
+
+
 
 
         }

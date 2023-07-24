@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.infrutructure.Configration
 {
+
     internal class CartConfigration : IEntityTypeConfiguration<Cart>
     {
         public void Configure(EntityTypeBuilder<Cart> builder)

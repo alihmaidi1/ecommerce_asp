@@ -1,9 +1,14 @@
+using ecommerce.admin;
+using ecommerce.Dto;
 using ecommerce.infrutructure;
+using ecommerce.service;
 using Microsoft.AspNetCore.RateLimiting;
+using Repositories;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 // Add services to the container.
 
@@ -28,6 +33,10 @@ builder.Services.AddRateLimiter(Limitrateoption =>
 
 
 builder.Services.AddInfrustucture(builder.Configuration);
+builder.Services.AddRepository();
+builder.Services.AddServices();
+builder.Services.AddAdmindependency();
+builder.Services.AddMapper();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Policy", policyBuilder =>
@@ -53,7 +62,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSerilogRequestLogging();
 app.UseCors("Policy");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

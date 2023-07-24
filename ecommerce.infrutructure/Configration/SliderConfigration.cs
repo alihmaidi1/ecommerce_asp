@@ -15,11 +15,7 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Slider> builder)
         {
             builder.HasIndex(s => s.Rank).IsUnique();
-            builder.HasOne(s=>s.Url)
-            .WithOne(i=>(Slider)i.Imagable)
-            .HasForeignKey<Image>(i=>i.Imagable_id)
-            .OnDelete(DeleteBehavior.Cascade);
-            
+
         }
     }
 }

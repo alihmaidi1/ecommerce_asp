@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Admin:Account<Guid>
+    public class Admin : Account<Guid>
     {
+        //public bool IsBlocked { get; set; }
 
     }
+
+
 }

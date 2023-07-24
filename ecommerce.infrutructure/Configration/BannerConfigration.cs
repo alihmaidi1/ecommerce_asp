@@ -15,11 +15,11 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Banner> builder)
         {
             builder.HasIndex(b => b.Rank).IsUnique();
-            builder.HasOne(b => b.Url)
-            .WithOne(i=>(Banner)i.Imagable)
-            .HasForeignKey<Image>(i=>i.Imagable_id)
-            .OnDelete(DeleteBehavior.Cascade);
-         
+
+//            builder.HasOne(b => b.Url)
+  //          .WithOne(i => (Banner)i.Imageable)
+    //        .HasForeignKey<Image>(i => new {i.Imagable_id});
+
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using ecommerce.Domain.Base.Abstract;
-using ecommerce.Domain.Base.Interfaces;
-using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +8,9 @@ using tables.Base.Entity;
 
 namespace tables.Entities
 {
-    public class Slider :Imagable
+    public class Slider :BaseEntity
     {
-        public Image Url { get; set; }
+        public string Url { get; set; }
         public string Rank { get; set; }
         public bool  Status { get; set; }=true;
 

@@ -18,7 +18,6 @@ namespace ecommerce.infrutructure.seed
             var transaction=context.Database.BeginTransaction();
             try
             {
-                await TagSeed.seedData(context);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);

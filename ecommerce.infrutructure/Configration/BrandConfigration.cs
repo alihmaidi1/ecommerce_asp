@@ -18,10 +18,7 @@ namespace ecommerce.infrutructure.Configration
             builder.HasMany(b => b.Products)
             .WithOne(p => p.Brand)
             .OnDelete(DeleteBehavior.Restrict);
-            builder.HasOne(b => b.Url)
-            .WithOne(i=>(Brand)i.Imagable)
-            .HasForeignKey<Image>(i=>i.Imagable_id)
-            .OnDelete(DeleteBehavior.Cascade);
-        }   
+
+        }
     }
 }
