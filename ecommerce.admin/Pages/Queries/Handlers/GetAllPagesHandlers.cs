@@ -4,6 +4,8 @@ using ecommerce.admin.Pages.Queries.Result;
 using ecommerce.Domain.Entities;
 using ecommerce.service.Abstract;
 using ecommerce.service.Implement;
+using ecommerce_shared.OperationResult;
+using ecommerce_shared.OperationResult.Base;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.admin.Pages.Queries.Handlers
 {
-    public class GetAllPagesHandlers : IRequestHandler<GetAllPagesQuery, List<GetAllPagesResult>>
+    public class GetAllPagesHandlers : IRequestHandler<GetAllPagesQuery, OperationResultBase<List<GetAllPagesResult>>>
     {
 
         #region Field
@@ -32,12 +34,12 @@ namespace ecommerce.admin.Pages.Queries.Handlers
         }
 
         #endregion
-        public async Task<List<GetAllPagesResult>> Handle(GetAllPagesQuery request, CancellationToken cancellationToken)
+        public async Task<OperationResultBase<List<GetAllPagesResult>>> Handle(GetAllPagesQuery request, CancellationToken cancellationToken)
         {
 
            var PagesList= await this.pageService.GetPagesListAsync();
            var PagesListResponse = this.Mapper.Map<List<GetAllPagesResult>>(PagesList);
-            return PagesListResponse;
+            return OperationResult<List<GetAllPagesResult>>.Success(PagesListResponse);
         }
     }
 }
