@@ -2,6 +2,9 @@ using ecommerce.admin;
 using ecommerce.Dto;
 using ecommerce.infrutructure;
 using ecommerce.service;
+using ecommerce_shared.Middleware;
+using ecommerce_shared.Swagger;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 using Serilog;
@@ -15,7 +18,8 @@ builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Confi
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi();
+builder.Services.AddTransient<ErrorHandling>();
 
 builder.Services.AddRateLimiter(Limitrateoption =>
 {
@@ -36,7 +40,6 @@ builder.Services.AddInfrustucture(builder.Configuration);
 builder.Services.AddRepository();
 builder.Services.AddServices();
 builder.Services.AddAdmindependency();
-builder.Services.AddMapper();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Policy", policyBuilder =>
@@ -58,8 +61,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.ConfigureOpenAPI();
 }
 
 app.UseSerilogRequestLogging();
@@ -67,8 +69,10 @@ app.UseCors("Policy");
 
 app.UseHttpsRedirection();
 
+
 app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseMiddleware<ErrorHandling>();
 app.Run();

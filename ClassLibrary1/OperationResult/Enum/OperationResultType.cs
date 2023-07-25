@@ -10,7 +10,7 @@ namespace ecommerce_shared.OperationResult.Enum
     {
         Success,
         Exist,
-        NotExist,
+        NotExist=429,
         Failed,
         Forbidden,
         Exception,

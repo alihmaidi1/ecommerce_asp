@@ -5,17 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Pages.Queries.Result
+namespace ecommerce.Dto.Results.Admin.Pages.Command
 {
-    public class GetAllPagesResult
+    public class AddPageDto
     {
-
-
         public PageName Name { get; set; }
 
         public string Content { get; set; }
 
-        public Guid Id { get; set; }
 
 
     }

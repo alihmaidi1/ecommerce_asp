@@ -12,5 +12,11 @@ namespace ecommerce.service.Abstract
 
         public Task<List<Page>> GetPagesListAsync();
 
+        public IQueryable<Page> GetPagesQueryable();
+        public Task<Page> GetPagesByIdAsync(Guid id);
+
+        public Task<bool> AddPageAsync(Page page);
+
+
     }
 }

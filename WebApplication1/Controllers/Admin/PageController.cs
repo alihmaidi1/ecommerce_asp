@@ -1,29 +1,45 @@
-﻿using ecommerce.admin.Pages.Queries.Models;
+﻿using ecommerce.admin.Features.Pages.Commands.Models;
+using ecommerce.admin.Features.Pages.Queries.Models;
+using ecommerce.Base;
+using ecommerce.Domain.AppMetaData;
+using ecommerce.Domain.AppMetaData.Admin;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.Admin
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class PageController : ControllerBase
+    public class PageController : ApiController
     {
-        private readonly IMediator Mediator;
-        public PageController(IMediator Mediator)
-        {
-            this.Mediator = Mediator;
-
-        }
-
-        [HttpGet("List")]
-        public async Task<IActionResult> GetPageList()
+        
+        [HttpGet(PageRouter.List)]
+        public async Task<IActionResult> GetPageList([FromQuery] GetAllPagesQuery query)
         {
 
-            var response =await this.Mediator.Send(new GetAllPagesQuery());
+            var response =await this.Mediator.Send(query);
+            
             return Ok(response);
         }
 
 
+
+        [HttpGet(PageRouter.GetById)]
+        public async Task<IActionResult> getPageById()
+        {
+
+            var response = await this.Mediator.Send(new GetPageById());
+            return Ok(response);
+        }
+
+
+
+        [HttpPost(PageRouter.AddPage)]
+        public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
+        {
+
+            var response = await this.Mediator.Send(command);
+            return Ok(response);
+        }
     }
 }

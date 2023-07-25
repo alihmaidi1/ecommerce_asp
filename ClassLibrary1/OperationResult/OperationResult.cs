@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace ecommerce_shared.OperationResult
 {
-    public sealed class OperationResult<T>: OperationResultBase<T>
+    public sealed class OperationResult<T>: Base.OperationResultBase<T>
     {
 
-        public static OperationResultBase<T> Deleted()
+        public static Base.OperationResultBase<T> Deleted()
             {
 
                 var StatusCode = (int?)System.Net.HttpStatusCode.OK;
                 string Message = "Deleted Succcessfully";
-                return new OperationResultBase<T>() { 
+                return new Base.OperationResultBase<T>() { 
                 
                     StatusCode = StatusCode,
                     Message = Message
@@ -24,12 +24,23 @@ namespace ecommerce_shared.OperationResult
 
             }
 
-        public static OperationResultBase<T> Success(T Data)
+        public static Base.OperationResultBase<T> NotFound(string message="")
+        {
+
+            return new Base.OperationResultBase<T>()
+            {
+                StatusCode=(int)OperationResultTypes.NotExist,
+                Message= message,
+
+            };
+        }
+
+        public static Base.OperationResultBase<T> Success(T Data)
         {
             T Result = Data;
             var StatusCode = (int?)System.Net.HttpStatusCode.OK;
             string Message = "Added Successfully";
-            return new OperationResultBase<T>()
+            return new Base.OperationResultBase<T>()
             {
 
                 StatusCode = StatusCode,
@@ -38,7 +49,32 @@ namespace ecommerce_shared.OperationResult
             };
 
         }
+        public Base.OperationResultBase<T> Created(string message="")
+        {
 
+            var StatusCode = (int?)System.Net.HttpStatusCode.Created;
+            string Message = message;
+            return new Base.OperationResultBase<T>()
+            {
+
+                StatusCode = StatusCode,
+                Message = Message
+            };
+
+
+        }
+        public static Base.OperationResultBase<T> Exists(string message="")
+        {
+            var StatusCode = (int?)System.Net.HttpStatusCode.UnprocessableEntity;
+            string Message = message;
+            return new Base.OperationResultBase<T>()
+            {
+
+                StatusCode = StatusCode,
+                Message = Message
+            };
+
+        }
 
     }
 }
