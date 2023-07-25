@@ -30,7 +30,7 @@ namespace ecommerce.admin.Features.Pages.Commands.Validations
         public void ContentRule()
         {
 
-            RuleFor(x => x.Content).NotEmpty().NotNull().Length(1);
+            RuleFor(x => x.Content).NotEmpty().NotNull();
 
         }
 

@@ -17,6 +17,8 @@ namespace ecommerce.service.Abstract
 
         public Task<bool> AddPageAsync(Page page);
 
+        public Task<bool> DeletePageAsync(Guid Id);
+
 
     }
 }

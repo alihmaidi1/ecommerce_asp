@@ -14,6 +14,8 @@ namespace ecommerce.Domain.AppMetaData.Admin
         public const string List = prefix + "/List";
         public const string GetById = prefix + "/{id}/GetById";
         public const string AddPage = prefix + "/store";
+        public const string Delete = prefix + "/{id}/Delete";
+
 
     }
 }

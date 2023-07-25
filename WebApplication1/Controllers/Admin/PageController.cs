@@ -41,5 +41,16 @@ namespace ecommerce.Controllers.Admin
             var response = await this.Mediator.Send(command);
             return Ok(response);
         }
+
+
+
+        [HttpDelete(PageRouter.Delete)]
+
+        public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
+        {
+
+            var response = await this.Mediator.Send(command);
+            return Ok(response);
+        }
     }
 }

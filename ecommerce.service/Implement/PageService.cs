@@ -2,6 +2,7 @@
 using ecommerce.Repository.PageRepository;
 using ecommerce.service.Abstract;
 using ecommerce_shared.Exceptions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +25,21 @@ namespace ecommerce.service.Implement
             var PageResult = PageRepository.GetTableAsNoTracking()
                 .Where(pagetable=>pagetable.Name.Equals(page.Name))
                 .FirstOrDefault();
-            if (PageResult != null) { return false; }
+            if (PageResult != null) {
+                throw new ExistsException(nameof(Page));
+            }
             await PageRepository.AddAsync(page);
+            return true;
+
+        }
+
+        public async Task<bool> DeletePageAsync(Guid Id)
+        {
+            int deletedRaw=PageRepository.GetTableAsTracking().Where(x=>x.Id==Id).ExecuteDelete();
+            if (deletedRaw == 0)
+            {
+                throw new NotFoundException(nameof(Page));
+            }
             return true;
 
         }

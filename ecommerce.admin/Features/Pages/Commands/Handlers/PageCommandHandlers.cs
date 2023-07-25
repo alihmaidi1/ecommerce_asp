@@ -13,7 +13,11 @@ using System.Threading.Tasks;
 
 namespace ecommerce.admin.Features.Pages.Commands.Handlers
 {
-    public class PageCommandHandlers : IRequestHandler<AddPageCommand, OperationResultBase<string>>
+    public class PageCommandHandlers : 
+        IRequestHandler<AddPageCommand, OperationResultBase<string>>,
+        IRequestHandler<DeletePageCommand, OperationResultBase<bool>>
+
+
     {
 
         public IPageService pageService;
@@ -30,10 +34,15 @@ namespace ecommerce.admin.Features.Pages.Commands.Handlers
         {
             var mapperResult = mapper.Map<Page>(request);
             var result = await pageService.AddPageAsync(mapperResult);
-
-            if (result == false) { return OperationResult<string>.Exists(); }
-
+            
             return OperationResult<string>.Success("the page was created successfully");
+        }
+
+        async Task<OperationResultBase<bool>> IRequestHandler<DeletePageCommand, OperationResultBase<bool>>.Handle(DeletePageCommand request, CancellationToken cancellationToken)
+        {
+            var Result =await pageService.DeletePageAsync(request.Id);
+
+            return OperationResult<bool>.Deleted();
         }
     }
 }

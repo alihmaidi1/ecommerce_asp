@@ -39,6 +39,15 @@ namespace ecommerce_shared.Middleware
                         Response.StatusCode = 405;
                         await Response.WriteAsJsonAsync(e.Message);
 
+                     break;
+
+
+                    case ExistsException:
+
+
+                        Response.StatusCode = 405;
+                        await Response.WriteAsJsonAsync(e.Message);
+
                         break;
                     default:
 
