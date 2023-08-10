@@ -1,22 +1,32 @@
-﻿using ecommerce_shared.OperationResult.Base;
+﻿using ecommerce.Domain.SharedResources;
+using ecommerce_shared.OperationResult.Base;
 using ecommerce_shared.OperationResult.Enum;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ecommerce_shared.OperationResult
 {
-    public sealed class OperationResult<T>: Base.OperationResultBase<T>
+    public class OperationResult
     {
 
-        public static Base.OperationResultBase<T> Deleted()
-            {
+        public IStringLocalizer<SharedResource> _StringLocalizer;
 
+        public OperationResult(IStringLocalizer<SharedResource> stringLocalizer) {
+        
+            _StringLocalizer = stringLocalizer;
+        }    
+        public Base.OperationResultBase<T> Deleted<T>()
+            {
+                
                 var StatusCode = (int?)System.Net.HttpStatusCode.OK;
-                string Message = "Deleted Succcessfully";
-                return new Base.OperationResultBase<T>() { 
+                string Message = _StringLocalizer[SharedResourceKeys.Deleted];
+                
+            return new Base.OperationResultBase<T>() { 
                 
                     StatusCode = StatusCode,
                     Message = Message
@@ -24,9 +34,9 @@ namespace ecommerce_shared.OperationResult
 
             }
 
-        public static Base.OperationResultBase<T> NotFound(string message="")
+        public  Base.OperationResultBase<T> NotFound<T>(string message="")
         {
-
+             
             return new Base.OperationResultBase<T>()
             {
                 StatusCode=(int)OperationResultTypes.NotExist,
@@ -35,11 +45,11 @@ namespace ecommerce_shared.OperationResult
             };
         }
 
-        public static Base.OperationResultBase<T> Success(T Data)
+        public Base.OperationResultBase<T> Success<T>(T Data)
         {
             T Result = Data;
             var StatusCode = (int?)System.Net.HttpStatusCode.OK;
-            string Message = "Added Successfully";
+            string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
             return new Base.OperationResultBase<T>()
             {
 
@@ -49,7 +59,7 @@ namespace ecommerce_shared.OperationResult
             };
 
         }
-        public Base.OperationResultBase<T> Created(string message="")
+        public Base.OperationResultBase<T> Created<T>(string message = "")
         {
 
             var StatusCode = (int?)System.Net.HttpStatusCode.Created;
@@ -63,8 +73,8 @@ namespace ecommerce_shared.OperationResult
 
 
         }
-        public static Base.OperationResultBase<T> Exists(string message="")
-        {
+            public  Base.OperationResultBase<T> Exists<T>(string message="")
+          {
             var StatusCode = (int?)System.Net.HttpStatusCode.UnprocessableEntity;
             string Message = message;
             return new Base.OperationResultBase<T>()

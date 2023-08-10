@@ -11,6 +11,17 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[] { "en", "ar" };
+    options.SetDefaultCulture(supportedCultures[1])
+        .AddSupportedCultures(supportedCultures)
+        .AddSupportedUICultures(supportedCultures);
+
+});
+
+
+
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 // Add services to the container.
@@ -20,6 +31,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 builder.Services.AddTransient<ErrorHandling>();
+
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "");
+
+
+
+
+
 
 builder.Services.AddRateLimiter(Limitrateoption =>
 {
@@ -54,7 +73,6 @@ builder.Services.AddCors(options =>
 
 
 
-
 var app = builder.Build();
 
 
@@ -63,6 +81,11 @@ if (app.Environment.IsDevelopment())
 {
     app.ConfigureOpenAPI();
 }
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    ApplyCurrentCultureToResponseHeaders = true
+});
+
 
 app.UseSerilogRequestLogging();
 app.UseCors("Policy");
