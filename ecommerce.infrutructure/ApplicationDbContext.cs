@@ -15,7 +15,7 @@ using ecommerce.Domain.Abstract;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext: IdentityDbContext<Account<Guid>, IdentityRole<Guid>,Guid> 
+    public class ApplicationDbContext: IdentityDbContext<Account>
     {
 
         public ApplicationDbContext(DbContextOptions option):base(option)
@@ -27,11 +27,16 @@ namespace ecommerce.infrutructure
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            builder.Ignore<IdentityUserLogin<Guid>>();
-            builder.Ignore<IdentityUserRole<Guid>>();
-            builder.Ignore<IdentityUserClaim<Guid>>();
-            builder.Ignore<IdentityUserToken<Guid>>();
-            builder.Ignore<IdentityUser<Guid>>();
+            builder.Ignore<IdentityUserLogin<string>>();
+            builder.Ignore<IdentityUserRole<string>>();
+            builder.Ignore<IdentityUserClaim<string>>();
+            builder.Ignore<IdentityUserToken<string>>();
+            builder.Ignore<IdentityUser<string>>();
+            builder.Entity<Account>(entity =>
+            {
+                entity.ToTable(nameof(Account));
+
+            });
 
 
 
@@ -39,7 +44,7 @@ namespace ecommerce.infrutructure
 
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Cart> Carts { get; set; }

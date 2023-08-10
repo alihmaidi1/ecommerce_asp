@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ecommerce.Domain.Abstract
 {
-    public abstract class Account<T> : IdentityUser<Guid>
+    public abstract class Account : IdentityUser
     {
 
     }
