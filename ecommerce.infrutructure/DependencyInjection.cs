@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ecommerce.Domain.Abstract;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,13 +16,17 @@ namespace ecommerce.infrutructure
 
         public static IServiceCollection AddInfrustucture(this IServiceCollection services, IConfiguration configuration)
         {
-            
+
+            services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>()
+            .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddDbContext<ApplicationDbContext>(option =>
             {
                 option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 
             });
 
+            
             return services;
 
         }

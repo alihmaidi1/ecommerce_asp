@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
-namespace ecommerce.Domain.Abstract
+namespace ecommerce.Domain.Enum
 {
-    public abstract class Account : IdentityUser<Guid>
+    public enum Role
     {
 
+        SuperAdmin=0,
+        DeliveryMan=1
     }
 }

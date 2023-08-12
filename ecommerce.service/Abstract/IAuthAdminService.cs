@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
-namespace ecommerce.Domain.Abstract
+namespace ecommerce.service.Abstract
 {
-    public abstract class Account : IdentityUser<Guid>
+    public interface IAuthService
     {
-
     }
 }

@@ -1,10 +1,13 @@
 using ecommerce.admin;
 using ecommerce.Dto;
 using ecommerce.infrutructure;
+using ecommerce.infrutructure.seed;
 using ecommerce.service;
+using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 using Serilog;
@@ -34,7 +37,7 @@ builder.Services.AddTransient<ErrorHandling>();
 
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
-
+builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
 
 
 
@@ -57,6 +60,7 @@ builder.Services.AddRateLimiter(Limitrateoption =>
 
 builder.Services.AddInfrustucture(builder.Configuration);
 builder.Services.AddRepository();
+
 builder.Services.AddServices();
 builder.Services.AddAdmindependency();
 builder.Services.AddCors(options =>
@@ -69,6 +73,7 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader();
     });
 });
+
 
 
 
@@ -92,7 +97,11 @@ app.UseCors("Policy");
 
 app.UseHttpsRedirection();
 
+using(var scope= app.Services.CreateScope())
 
+    
+{await DatabaseSeed.InitializeAsync(scope.ServiceProvider);
+}
 app.UseAuthorization();
 
 app.MapControllers();

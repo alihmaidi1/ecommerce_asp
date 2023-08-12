@@ -15,7 +15,7 @@ using ecommerce.Domain.Abstract;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext: IdentityDbContext<Account>
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
     {
 
         public ApplicationDbContext(DbContextOptions option):base(option)
@@ -27,24 +27,15 @@ namespace ecommerce.infrutructure
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            builder.Ignore<IdentityUserLogin<string>>();
-            builder.Ignore<IdentityUserRole<string>>();
-            builder.Ignore<IdentityUserClaim<string>>();
-            builder.Ignore<IdentityUserToken<string>>();
-            builder.Ignore<IdentityUser<string>>();
-            builder.Entity<Account>(entity =>
-            {
-                entity.ToTable(nameof(Account));
 
-            });
-
-
+            
+            base.OnModelCreating(builder);
 
         }
 
         public DbSet<Banner> Banners { get; set; }
-        public DbSet<Admin> Admins { get; set; }
-        public DbSet<User> Users { get; set; }
+        //public DbSet<Admin> Admins { get; set; }
+        //public DbSet<User> Users { get; set; }
 
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Cart> Carts { get; set; }

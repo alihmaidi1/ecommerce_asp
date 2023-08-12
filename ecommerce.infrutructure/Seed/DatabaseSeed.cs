@@ -1,4 +1,5 @@
 ﻿using ecommerce.infrutructure.Seed;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace ecommerce.infrutructure.seed
         public static async Task InitializeAsync(IServiceProvider services)
         {
 
-            var context = services.GetService<ApplicationDbContext>();
-            var transaction=context.Database.BeginTransaction();
+            var context = services.GetRequiredService<ApplicationDbContext>();
+            var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+            var transaction =context.Database.BeginTransaction();
             try
             {
+                await RoleSeed.seedData(RoleManager);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);

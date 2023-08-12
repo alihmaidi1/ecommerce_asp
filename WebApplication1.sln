@@ -23,11 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.service", "ecomme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.Domain", "tables\ecommerce.Domain.csproj", "{726B3A7E-BD0C-4502-8342-24E4D7E8CC94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{CC9C7019-E190-4718-9340-39F133E5AFB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{CC9C7019-E190-4718-9340-39F133E5AFB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.admin", "ecommerce.admin\ecommerce.admin.csproj", "{9CAA9BDE-60F9-440D-AF44-6599F3D7FD01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.admin", "ecommerce.admin\ecommerce.admin.csproj", "{9CAA9BDE-60F9-440D-AF44-6599F3D7FD01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.Dto", "ecommerce.Dto\ecommerce.Dto.csproj", "{46E5E4E5-206A-4E9A-88F3-9014FF78610E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.Dto", "ecommerce.Dto\ecommerce.Dto.csproj", "{46E5E4E5-206A-4E9A-88F3-9014FF78610E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

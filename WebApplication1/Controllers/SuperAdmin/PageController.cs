@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ecommerce.Controllers.Admin
+namespace ecommerce.Controllers.SuperAdmin
 {
     [ApiController]
     public class PageController : ApiController
