@@ -20,10 +20,10 @@ namespace ecommerce.infrutructure
             services.AddIdentity<Account, IdentityRole<Guid>>(options =>
             {
                 options.User.RequireUniqueEmail = true;
-                options.Password.RequireNonAlphanumeric = false; 
-                options.Password.RequireDigit = false;
-                options.Password.RequireLowercase = false;  
-                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = true; 
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;  
+                options.Password.RequireUppercase = true;
 
             })
             .AddEntityFrameworkStores<ApplicationDbContext>();

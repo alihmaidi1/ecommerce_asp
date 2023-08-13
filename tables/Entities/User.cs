@@ -6,11 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
     [Table("Users")]
-    public class User:Account
+    public class User:BaseEntity
     {
 
         public string Name { get; set; }
@@ -20,5 +21,6 @@ namespace ecommerce.Domain.Entities
         public City City { get; set; }
         public Guid AccountId { get; set; }
 
+        public Account Account { get; set; }
     }
 }

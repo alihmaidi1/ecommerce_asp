@@ -2,6 +2,8 @@ using ecommerce.admin;
 using ecommerce.Dto;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
+using ecommerce.infrutructure.Services.Classes;
+using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce.service;
 using ecommerce.user;
 using ecommerce_shared.Jwt;
@@ -43,9 +45,9 @@ builder.Services.AddSingleton<IJwtRepository,JwtRepository>();
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
 
+builder.Services.AddHttpClient("Region",c=>c.BaseAddress= new Uri("https://countriesnow.space"));
 
-
-
+builder.Services.AddSingleton<IExternalRegionApi, ExternalRegionApi>();
 
 builder.Services.AddRateLimiter(Limitrateoption =>
 {
@@ -102,10 +104,11 @@ app.UseCors("Policy");
 
 app.UseHttpsRedirection();
 
-using(var scope= app.Services.CreateScope())
-
+using(var scope= app.Services.CreateScope()){
     
-{await DatabaseSeed.InitializeAsync(scope.ServiceProvider);
+    await DatabaseSeed.InitializeAsync(scope.ServiceProvider);
+
+
 }
 
 app.UseAuthentication();

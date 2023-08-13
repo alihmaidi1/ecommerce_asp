@@ -15,7 +15,8 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            
+
+            builder.Property(u => u.Point).HasDefaultValue(0);
 
         }
     }

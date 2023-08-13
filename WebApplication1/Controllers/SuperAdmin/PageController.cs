@@ -49,7 +49,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpDelete(PageRouter.Delete)]
-        [Authorize(AuthenticationSchemes ="Bearer")]
+        [Authorize]
 
         public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
         {

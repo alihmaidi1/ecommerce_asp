@@ -1,4 +1,5 @@
 ﻿using ecommerce.infrutructure.Seed;
+using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -16,6 +17,7 @@ namespace ecommerce.infrutructure.seed
         {
 
             var context = services.GetRequiredService<ApplicationDbContext>();
+            var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
             var transaction =context.Database.BeginTransaction();
             try
@@ -28,7 +30,7 @@ namespace ecommerce.infrutructure.seed
                 await BrandSeed.seedData(context);
                 await CartSeed.seedData(context);
                 await CategorySeed.seedData(context);
-                await CountrySeed.seedData(context);
+                await CountrySeed.seedData(context, RegionApi);
                 await Cityseed.seedData(context);
                 await CoponSeed.seedData(context);
                 await ProductSeed.seedData(context);
