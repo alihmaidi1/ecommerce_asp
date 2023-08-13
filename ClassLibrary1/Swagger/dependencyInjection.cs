@@ -43,10 +43,23 @@ namespace ecommerce_shared.Swagger
 
 
 
+                }
+                
+                
+                
+                );
+
+                option.AddSecurityDefinition("Auth", new OpenApiSecurityScheme
+                {
+
+                    Description="dfsfsdfs",
+                    Name="Alihmaidi",
+                    In=ParameterLocation.Header,
+                    Type=SecuritySchemeType.ApiKey,
+
 
 
                 });
-
 
             });
 
@@ -67,6 +80,9 @@ namespace ecommerce_shared.Swagger
                 });
 
                 //c.DocExpansion(DocExpansion.None);
+
+
+
             });
             return app;
         }

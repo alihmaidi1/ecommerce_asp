@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.service.Abstract
 {
-    public interface IAuthService
+    public interface IAuthAdminService
     {
     }
 }

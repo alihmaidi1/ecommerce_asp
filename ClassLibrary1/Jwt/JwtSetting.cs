@@ -12,7 +12,7 @@ namespace ecommerce_shared.Jwt
         public string key {get; set;}
         public string Issuer { get; set; }
         public string Audience { get; set; }
-        public string DurationInMinute { get; set; }
+        public double DurationInMinute { get; set; }
 
     }
 }

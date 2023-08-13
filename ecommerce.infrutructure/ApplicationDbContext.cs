@@ -15,7 +15,7 @@ using ecommerce.Domain.Abstract;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
+    public class ApplicationDbContext : IdentityDbContext<Account, IdentityRole<Guid>, Guid>
     {
 
         public ApplicationDbContext(DbContextOptions option):base(option)
@@ -34,8 +34,8 @@ namespace ecommerce.infrutructure
         }
 
         public DbSet<Banner> Banners { get; set; }
-        //public DbSet<Admin> Admins { get; set; }
-        //public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Cart> Carts { get; set; }

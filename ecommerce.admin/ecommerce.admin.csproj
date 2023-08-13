@@ -21,4 +21,8 @@
     <ProjectReference Include="..\tables\ecommerce.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Commands\Validations\" />
+  </ItemGroup>
+
 </Project>

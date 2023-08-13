@@ -14,10 +14,11 @@ namespace ecommerce.Domain.Entities
     {
 
         public string Name { get; set; }
-        [Range(0,1000)]
-        public int age { get; set; }
+         
         [Range(0,Double.MaxValue)]
         public int Point { get; set; }
+        public City City { get; set; }
+        public Guid AccountId { get; set; }
 
     }
 }

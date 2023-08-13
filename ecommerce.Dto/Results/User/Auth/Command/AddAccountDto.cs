@@ -1,19 +1,17 @@
-﻿using ecommerce_shared.OperationResult.Base;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Auth.Commands.Models
+namespace ecommerce.Dto.Results.User.Auth.Command
 {
-    public class LoginAdminCommand: IRequest<OperationResultBase<string>>
+    public class AddAccountDto
     {
 
         public string Username { get; set; }
-
         public string Password { get; set; }
+        public string Email { get; set; }
 
     }
 }

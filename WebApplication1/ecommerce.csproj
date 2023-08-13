@@ -34,6 +34,7 @@
     <ProjectReference Include="..\ecommerce.admin\ecommerce.admin.csproj" />
     <ProjectReference Include="..\ecommerce.infrutructure\ecommerce.infrutructure.csproj" />
     <ProjectReference Include="..\ecommerce.service\ecommerce.service.csproj" />
+    <ProjectReference Include="..\ecommerce.user\ecommerce.user.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
   </ItemGroup>
 

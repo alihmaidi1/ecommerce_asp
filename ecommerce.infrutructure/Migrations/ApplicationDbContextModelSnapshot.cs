@@ -885,9 +885,22 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Admin", b =>
+                {
+                    b.HasBaseType("ecommerce.Domain.Abstract.Account");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.User", b =>
                 {
                     b.HasBaseType("ecommerce.Domain.Abstract.Account");
+
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CityId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -896,8 +909,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<int>("Point")
                         .HasColumnType("int");
 
-                    b.Property<int>("age")
-                        .HasColumnType("int");
+                    b.HasIndex("CityId");
 
                     b.ToTable("Users");
                 });
@@ -1075,13 +1087,30 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Admin", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Abstract.Account", null)
+                        .WithOne()
+                        .HasForeignKey("ecommerce.Domain.Entities.Admin", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.User", b =>
                 {
+                    b.HasOne("ecommerce.Domain.Entities.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ecommerce.Domain.Abstract.Account", null)
                         .WithOne()
                         .HasForeignKey("ecommerce.Domain.Entities.User", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Brand", b =>

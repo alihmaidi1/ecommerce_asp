@@ -13,5 +13,7 @@ namespace ecommerce.Domain.AppMetaData
         public const string Version = "v1";
         public const string Rule=root+"/"+Version+"/";
 
+        public const string User = "User";
+
     }
 }

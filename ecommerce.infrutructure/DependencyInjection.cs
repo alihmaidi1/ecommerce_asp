@@ -17,7 +17,15 @@ namespace ecommerce.infrutructure
         public static IServiceCollection AddInfrustucture(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>()
+            services.AddIdentity<Account, IdentityRole<Guid>>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireNonAlphanumeric = false; 
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;  
+                options.Password.RequireUppercase = false;
+
+            })
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddDbContext<ApplicationDbContext>(option =>

@@ -3,8 +3,11 @@ using ecommerce.Dto;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
 using ecommerce.service;
+using ecommerce.user;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
+using ecommerce_shared.Repository.Concrete;
+using ecommerce_shared.Repository.interfaces;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
@@ -33,8 +36,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
-builder.Services.AddTransient<ErrorHandling>();
 
+builder.Services.AddTransient<ErrorHandling>();
+builder.Services.AddSingleton<IJwtRepository,JwtRepository>();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
@@ -63,6 +67,7 @@ builder.Services.AddRepository();
 
 builder.Services.AddServices();
 builder.Services.AddAdmindependency();
+builder.Services.AddUserdependency();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Policy", policyBuilder =>
@@ -102,6 +107,9 @@ using(var scope= app.Services.CreateScope())
     
 {await DatabaseSeed.InitializeAsync(scope.ServiceProvider);
 }
+
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();

@@ -4,12 +4,14 @@ using ecommerce.Base;
 using ecommerce.Domain.AppMetaData;
 using ecommerce.Domain.AppMetaData.Admin;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin
 {
     [ApiController]
+
     public class PageController : ApiController
     {
         
@@ -25,6 +27,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(PageRouter.GetById)]
+
         public async Task<IActionResult> getPageById()
         {
 
@@ -33,6 +36,7 @@ namespace ecommerce.Controllers.SuperAdmin
         }
 
 
+        [Authorize]
 
         [HttpPost(PageRouter.AddPage)]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
@@ -45,6 +49,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpDelete(PageRouter.Delete)]
+        [Authorize(AuthenticationSchemes ="Bearer")]
 
         public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
         {
