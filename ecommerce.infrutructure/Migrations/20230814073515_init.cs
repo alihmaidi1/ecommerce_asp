@@ -148,12 +148,10 @@ namespace ecommerce.infrutructure.Migrations
                 name: "Countries",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    lat = table.Column<int>(type: "int", nullable: false),
-                    lon = table.Column<int>(type: "int", nullable: false),
+                    lat = table.Column<double>(type: "float", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -420,9 +418,9 @@ namespace ecommerce.infrutructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CountryId = table.Column<int>(type: "int", nullable: false),
-                    status = table.Column<bool>(type: "bit", nullable: false),
-                    Delivery_Price = table.Column<float>(type: "real", nullable: false),
+                    CountryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    status = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
+                    Delivery_Price = table.Column<float>(type: "real", nullable: false, defaultValue: 0f),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),

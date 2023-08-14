@@ -20,8 +20,7 @@ namespace ecommerce.infrutructure.seed
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
             var transaction =context.Database.BeginTransaction();
-            try
-            {
+
                 await RoleSeed.seedData(RoleManager);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);
@@ -38,14 +37,6 @@ namespace ecommerce.infrutructure.seed
                 await ReviewSeed.seedData(context);
                 await transaction.CommitAsync();
                 
-
-            }catch(Exception ex)
-            {
-
-                transaction.Rollback();
-                throw ex;
-
-            }
 
         }
 

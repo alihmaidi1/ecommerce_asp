@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230813133334_init")]
+    [Migration("20230814073515_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -373,8 +373,8 @@ namespace ecommerce.infrutructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("CountryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("CreatedBy")
                         .HasColumnType("uniqueidentifier");
@@ -392,7 +392,9 @@ namespace ecommerce.infrutructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("Delivery_Price")
-                        .HasColumnType("real");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("real")
+                        .HasDefaultValue(0f);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -402,7 +404,9 @@ namespace ecommerce.infrutructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("status")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.HasKey("Id");
 
@@ -458,11 +462,9 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Country", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Code")
                         .IsRequired()
@@ -490,11 +492,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("lat")
-                        .HasColumnType("int");
-
-                    b.Property<int>("lon")
-                        .HasColumnType("int");
+                    b.Property<double>("lat")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

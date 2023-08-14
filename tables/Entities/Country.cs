@@ -8,7 +8,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Country: BaseEntityWithoutId
+    public class Country: BaseEntity
     {
 
         public Country()
@@ -18,13 +18,11 @@ namespace ecommerce.Domain.Entities
 
         }
 
-        public int Id { get; set; }
-
+        
         public string Name { get; set; }
         public string Code { get; set; }
 
-        public int lat { get; set; } 
-        public int lon { get; set; }
+        public double lat { get; set; }
     
         public ICollection<City> Cities { get; set;}
 

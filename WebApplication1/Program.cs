@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 using Serilog;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,7 +35,12 @@ builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Confi
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.NumberHandling=JsonNumberHandling.AllowReadingFromString| JsonNumberHandling.WriteAsString;
+
+
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
@@ -45,9 +51,14 @@ builder.Services.AddSingleton<IJwtRepository,JwtRepository>();
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
 
-builder.Services.AddHttpClient("Region",c=>c.BaseAddress= new Uri("https://countriesnow.space"));
+builder.Services.AddHttpClient("Region",c=> {
 
-builder.Services.AddSingleton<IExternalRegionApi, ExternalRegionApi>();
+
+    c.BaseAddress = new Uri("https://countriesnow.space");
+   
+    });
+
+builder.Services.AddTransient<ExternalRegionApi>();
 
 builder.Services.AddRateLimiter(Limitrateoption =>
 {
