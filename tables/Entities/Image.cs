@@ -18,8 +18,8 @@ public class Image:BaseEntity
         public string ResizedUrl { get; set; }
 
         public EntitiesHasImages Type { get; set; }
-        public IImage Imageable { get; set; }
-        public Guid Imagable_id { get; set; }
+        //public virtual IImage Imageable { get; set; }
+        //public Guid Imagable_id { get; set; }
 
 
 

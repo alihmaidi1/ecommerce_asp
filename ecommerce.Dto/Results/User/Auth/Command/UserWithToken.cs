@@ -29,7 +29,7 @@ namespace ecommerce.Dto.Results.User.Auth.Command
         public bool IsBlocked { get; set; }
 
 
-        public TokenDto Token_Info { get; set; }
+        public TokenDto TokenInfo { get; set; }
 
 
 

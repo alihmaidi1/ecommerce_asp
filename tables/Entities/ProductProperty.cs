@@ -14,9 +14,9 @@ namespace ecommerce.Domain.Entities;
         public Guid PropertyId { get; set; }
 
 
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
-        public Property Property { get; set; }
+        public virtual Property Property { get; set; }
 
 
     }

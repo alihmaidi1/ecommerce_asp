@@ -25,7 +25,7 @@ namespace ecommerce.Domain.Entities
 
         public double lat { get; set; }
     
-        public ICollection<City> Cities { get; set;}
+        public virtual ICollection<City> Cities { get; set;}
 
 
         public static Expression<Func<Country, Country>> SelectIDAndName = c => new Country

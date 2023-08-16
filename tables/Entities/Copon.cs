@@ -25,7 +25,7 @@ namespace ecommerce.Domain.Entities;
 
         public DateTime EndAt { get; set; }
 
-        public ICollection<Product> Products{ get; set; }
+        public virtual ICollection<Product> Products{ get; set; }
 
     }
 

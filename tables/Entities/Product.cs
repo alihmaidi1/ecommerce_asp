@@ -36,7 +36,7 @@ public class Product: BaseEntity
 
         public string MetaLogo { get; set; }
 
-        public Category Category { get; set; }  
+        public virtual Category Category { get; set; }  
 
         public float Price { get; set; }    
     
@@ -47,15 +47,15 @@ public class Product: BaseEntity
 
         public int SellingNumber { get; set; }
 
-        public Brand? Brand { get; set; }
+        public virtual Brand? Brand { get; set; }
 
-        public Copon? Copon { get; set; }   
-
-
-        public ICollection<Property>Properties { get; set; }
+        public virtual Copon? Copon { get; set; }   
 
 
-        public ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Property>Properties { get; set; }
+
+
+        public virtual ICollection<Review> Reviews { get; set; }
 
         
 

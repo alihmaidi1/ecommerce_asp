@@ -32,7 +32,8 @@ namespace ecommerce.infrutructure
 
             services.AddDbContext<ApplicationDbContext>(option =>
             {
-                option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                option.UseLazyLoadingProxies()                
+                .UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
                 option.LogTo(Console.WriteLine,LogLevel.Information);
                 option.EnableSensitiveDataLogging();                                
 

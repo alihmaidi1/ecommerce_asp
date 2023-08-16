@@ -37,7 +37,7 @@ builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Confi
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    options.JsonSerializerOptions.NumberHandling=JsonNumberHandling.AllowReadingFromString| JsonNumberHandling.WriteAsString;
+    //options.JsonSerializerOptions.NumberHandling=JsonNumberHandling.AllowReadingFromString| JsonNumberHandling.WriteAsString;
 
 
 });
@@ -46,7 +46,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 builder.Services.AddTransient<ErrorHandling>();
-builder.Services.AddSingleton<IJwtRepository,JwtRepository>();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
@@ -92,6 +91,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+
+
+builder.Services.AddTransient<IJwtRepository, JwtRepository>();
 
 
 

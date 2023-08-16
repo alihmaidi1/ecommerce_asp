@@ -15,7 +15,8 @@ namespace ecommerce.infrutructure.Configration
         {
             builder.Property(c => c.Delivery_Price).HasDefaultValue(0);
             builder.Property(c=>c.status).HasDefaultValue(false);
-            
+            builder.HasMany(c => c.Users)
+                   .WithOne(u => u.City);
 
         }
     }

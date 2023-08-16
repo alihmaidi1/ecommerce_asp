@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230816063634_init")]
+    [Migration("20230816103908_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -21,6 +21,9 @@ namespace ecommerce.infrutructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -1180,7 +1183,7 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
 
                     b.HasOne("ecommerce.Domain.Entities.City", "City")
-                        .WithMany()
+                        .WithMany("Users")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1227,6 +1230,11 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("Child");
 
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ecommerce.Domain.Entities.City", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Copon", b =>

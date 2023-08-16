@@ -21,12 +21,12 @@ namespace ecommerce_shared.Repository.Concrete
     {
 
         public readonly JwtSetting JWTOption;
-        //public ApplicationDbContext Context;
-        public JwtRepository(IOptions<JwtSetting> JWTOption) {
-
+        public readonly ApplicationDbContext Context;
+        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext)
+        {
 
             this.JWTOption = JWTOption.Value;
-            //this.Context = dbContext;
+            this.Context = DbContext;
         }
         public TokenDto GetTokens(Account Account,bool WithRefresh=true)
         {
@@ -39,15 +39,15 @@ namespace ecommerce_shared.Repository.Concrete
             {
 
                 RefreshToken RefreshToken = GenerateRefreshToken();
-               // Account.RefreshTokens.Add(RefreshToken);
-               // Context.SaveChanges();
+                Account.RefreshTokens.Add(RefreshToken);
+                Context.SaveChanges();
 
                 return new TokenDto
                 {
 
                     Token = Token,
                     RefreshToken=RefreshToken.Token,
-                    Expired_at=(int)JWTOption.DurationInMinute*60
+                    Expired_at=(int)(JWTOption.DurationInMinute*60)
 
 
                 };
@@ -59,7 +59,7 @@ namespace ecommerce_shared.Repository.Concrete
             {
 
                 Token = Token,
-                Expired_at = (int)JWTOption.DurationInMinute * 60
+                Expired_at = (int)(JWTOption.DurationInMinute * 60)
 
 
             };
