@@ -28,5 +28,13 @@ namespace ecommerce.infrutructure.Services.Classes
             return await HttpClient.GetFromJsonAsync<ExternalRegionDto<List<CountriesDto>>>("api/v0.1/countries/positions");
 
         }
+
+        public async Task<ExternalRegionDto<List<GetAllCountriesWithCities>>> GetAllCountriesWithCities()
+        {
+
+            return await HttpClient.GetFromJsonAsync<ExternalRegionDto<List<GetAllCountriesWithCities>>>("api/v0.1/countries");
+
+        }
+
     }
 }

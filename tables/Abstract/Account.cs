@@ -8,8 +8,16 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ecommerce.Domain.Abstract
 {
-    public  class Account : IdentityUser<Guid>
+    public class Account : IdentityUser<Guid>
     {
+
+        public Account() { 
+        
+            RefreshTokens=new HashSet<RefreshToken>();    
+        }
+        public User User { get; set; }
+
+        public ICollection<RefreshToken>? RefreshTokens{ get; set; }    
 
     }
 }

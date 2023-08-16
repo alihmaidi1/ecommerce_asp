@@ -59,7 +59,7 @@ namespace ecommerce_shared.OperationResult
             };
 
         }
-        public Base.OperationResultBase<T> Created<T>(string message = "")
+        public Base.OperationResultBase<T> Created<T>(T data,string message = "")
         {
 
             var StatusCode = (int?)System.Net.HttpStatusCode.Created;
@@ -68,7 +68,8 @@ namespace ecommerce_shared.OperationResult
             {
 
                 StatusCode = StatusCode,
-                Message = Message
+                Message = Message,
+                Result= data
             };
 
 

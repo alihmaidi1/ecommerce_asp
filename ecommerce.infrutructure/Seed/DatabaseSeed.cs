@@ -30,7 +30,7 @@ namespace ecommerce.infrutructure.seed
                 await CartSeed.seedData(context);
                 await CategorySeed.seedData(context);
                 await CountrySeed.seedData(context, RegionApi);
-                await Cityseed.seedData(context);
+                await Cityseed.seedData(context, RegionApi);
                 await CoponSeed.seedData(context);
                 await ProductSeed.seedData(context);
                 await PorpertySeed.seedData(context);

@@ -5,14 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    [Table("Admins")]
-    public class Admin : Account
+    public class Admin : BaseEntity
     {
-        //public bool IsBlocked { get; set; }
-
+     
     }
 
 

@@ -13,5 +13,7 @@ namespace ecommerce.infrutructure.Services.Interfaces
     {
         public Task<ExternalRegionDto<List<CountriesDto>>> GetAllCountry();
 
+        public Task<ExternalRegionDto<List<GetAllCountriesWithCities>>> GetAllCountriesWithCities();
+
     }
 }

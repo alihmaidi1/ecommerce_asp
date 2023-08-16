@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,20 +22,22 @@ namespace ecommerce.infrutructure
             services.AddIdentity<Account, IdentityRole<Guid>>(options =>
             {
                 options.User.RequireUniqueEmail = true;
-                options.Password.RequireNonAlphanumeric = true; 
-                options.Password.RequireDigit = true;
-                options.Password.RequireLowercase = true;  
-                options.Password.RequireUppercase = true;
+                options.Password.RequireNonAlphanumeric = false; 
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;  
+                options.Password.RequireUppercase = false;
 
             })
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddDbContext<ApplicationDbContext>(option =>
             {
-                option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-                      .EnableSensitiveDataLogging();
+                option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                option.LogTo(Console.WriteLine,LogLevel.Information);
+                option.EnableSensitiveDataLogging();                                
 
             });
+            
 
             
 

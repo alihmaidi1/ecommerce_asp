@@ -16,6 +16,7 @@ namespace ecommerce.infrutructure.Dto
 
         public T data { get; set; } 
 
+
     }
 
 

@@ -20,13 +20,12 @@ namespace ecommerce.infrutructure.Seed
         public static async Task seedData(ApplicationDbContext context,IExternalRegionApi ExternalRegionApi)
         {
 
-            int CountryCount=context.Countries.Count();
-            if (CountryCount == 0)
+            if (context.Countries.Count()==0)
             {
 
                 ExternalRegionDto<List<CountriesDto>> response = await ExternalRegionApi.GetAllCountry();
-                List<Country> countries = response.data.Select(c=>c.ToCountryDto()).ToList();
-                context.AddRange(countries);
+                var countries = response.data.Select(CountriesDto.ToCountryDto).ToList();
+                context.Countries.BulkInsert(countries);
                 context.SaveChanges();
                                 
                 
@@ -37,12 +36,4 @@ namespace ecommerce.infrutructure.Seed
 
     }
 
-    public class Country1
-    {
-
-        public string name { get; set; }
-            public string iso2 { get; set; }    
-
-            public string lat { get; set; }
-    }
 }

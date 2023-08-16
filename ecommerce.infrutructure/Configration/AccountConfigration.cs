@@ -18,6 +18,8 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Account> builder)
         {
 
+            builder.HasOne(a => a.User)
+                   .WithOne(u=>u.Account);
 
         }
     }

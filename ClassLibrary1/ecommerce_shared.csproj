@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ecommerce.Dto\ecommerce.Dto.csproj" />
     <ProjectReference Include="..\ecommerce.infrutructure\ecommerce.infrutructure.csproj" />
   </ItemGroup>
 

@@ -17,20 +17,20 @@ namespace ecommerce_shared.Middleware
         {
 			try
 			{
-				
+
 				await next(context);
-			}
-			catch (Exception e)
-			{
-				var Response = context.Response;
+            }
+            catch (Exception e)
+            {
+                var Response = context.Response;
 
-				switch (e)
-				{
+                switch (e)
+                {
 
-					case ValidationException:
+                    case ValidationException:
 
-						Response.StatusCode = 429;
-					break;
+                        Response.StatusCode = 429;
+                        break;
 
 
                     case NotFoundException:
@@ -39,7 +39,7 @@ namespace ecommerce_shared.Middleware
                         Response.StatusCode = 405;
                         await Response.WriteAsJsonAsync(e.Message);
 
-                     break;
+                        break;
 
 
                     case ExistsException:
@@ -51,13 +51,13 @@ namespace ecommerce_shared.Middleware
                         break;
                     default:
 
-						Response.StatusCode = 500;
-						await Response.WriteAsJsonAsync(e.Message);
-					break;
+                        Response.StatusCode = 500;
+                        await Response.WriteAsJsonAsync(e.Message);
+                        break;
 
                 }
 
-			}
+            }
         }
     }
 }
