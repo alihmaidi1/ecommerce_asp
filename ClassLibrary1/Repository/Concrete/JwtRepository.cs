@@ -28,41 +28,19 @@ namespace ecommerce_shared.Repository.Concrete
             this.JWTOption = JWTOption.Value;
             this.Context = DbContext;
         }
-        public TokenDto GetTokens(Account Account,bool WithRefresh=true)
+        public TokenDto GetTokens(Account Account)
         {
 
             var claims = CreateClaim(Account);
             var signingCredentials = GetSigningCredentials(JWTOption);            
             var JwtToken = GetJwtToken(JWTOption,claims, signingCredentials);
             var Token =  new JwtSecurityTokenHandler().WriteToken(JwtToken);
-            if (WithRefresh)
-            {
-
-                RefreshToken RefreshToken = GenerateRefreshToken();
-                Account.RefreshTokens.Add(RefreshToken);
-                Context.SaveChanges();
-
-                return new TokenDto
-                {
-
-                    Token = Token,
-                    RefreshToken=RefreshToken.Token,
-                    Expired_at=(int)(JWTOption.DurationInMinute*60)
-
-
-                };
-
-
-
-            }
-            return new TokenDto
-            {
-
-                Token = Token,
-                Expired_at = (int)(JWTOption.DurationInMinute * 60)
-
-
-            };
+            RefreshToken RefreshToken = GenerateRefreshToken();
+            Account.RefreshTokens.Add(RefreshToken);
+            Context.SaveChanges();
+            return TokenDto.ToTokenDto(Token,(int)(JWTOption.DurationInMinute * 60),RefreshToken);
+                
+                                  
         }
     
     
@@ -125,8 +103,6 @@ namespace ecommerce_shared.Repository.Concrete
 
         }
 
-
-
-
+        
     }
 }

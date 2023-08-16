@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.admin", "ecommerc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.Dto", "ecommerce.Dto\ecommerce.Dto.csproj", "{46E5E4E5-206A-4E9A-88F3-9014FF78610E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.user", "ecommerce.user\ecommerce.user.csproj", "{B8C17FAA-DD83-4689-88F5-BA9BB15A64F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.user", "ecommerce.user\ecommerce.user.csproj", "{B8C17FAA-DD83-4689-88F5-BA9BB15A64F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

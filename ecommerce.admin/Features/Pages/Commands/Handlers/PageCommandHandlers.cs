@@ -2,7 +2,7 @@
 using ecommerce.admin.Features.Pages.Commands.Models;
 using ecommerce.Domain.Entities;
 using ecommerce.Domain.SharedResources;
-using ecommerce.service.Abstract;
+using ecommerce.service.PageService;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.OperationResult.Base;
 using MediatR;

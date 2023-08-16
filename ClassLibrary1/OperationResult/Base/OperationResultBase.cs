@@ -18,12 +18,10 @@ namespace ecommerce_shared.OperationResult.Base
         public T Result { get; set; }
 
         public string Message { get; set; }
+        
+        public int StatusCode { get; set; }
 
-
-        public Exception Exception { get; set; }
-
-        public int? StatusCode { get; set; }
-
+        
 
 
     }

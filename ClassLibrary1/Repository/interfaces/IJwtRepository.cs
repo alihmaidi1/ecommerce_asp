@@ -16,7 +16,7 @@ namespace ecommerce_shared.Repository.interfaces
     public interface IJwtRepository
     {
 
-        public TokenDto GetTokens(Account Account,bool WithRefresh=true);
+        public TokenDto GetTokens(Account Account);
 
 
         public List<Claim> CreateClaim(Account Account);

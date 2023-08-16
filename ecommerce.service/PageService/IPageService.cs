@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.service.Abstract
+namespace ecommerce.service.PageService
 {
     public interface IPageService
     {

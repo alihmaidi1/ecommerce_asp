@@ -1,6 +1,8 @@
 ﻿using ecommerce.Domain.SharedResources;
 using ecommerce_shared.OperationResult.Base;
 using ecommerce_shared.OperationResult.Enum;
+using ecommerce_shared.OperationResult.MethodExtension;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
@@ -15,75 +17,49 @@ namespace ecommerce_shared.OperationResult
     {
 
         public IStringLocalizer<SharedResource> _StringLocalizer;
-
         public OperationResult(IStringLocalizer<SharedResource> stringLocalizer) {
         
             _StringLocalizer = stringLocalizer;
         }    
-        public Base.OperationResultBase<T> Deleted<T>()
-            {
-                
-                var StatusCode = (int?)System.Net.HttpStatusCode.OK;
-                string Message = _StringLocalizer[SharedResourceKeys.Deleted];
-                
-            return new Base.OperationResultBase<T>() { 
-                
-                    StatusCode = StatusCode,
-                    Message = Message
-                };
 
-            }
 
-        public  Base.OperationResultBase<T> NotFound<T>(string message="")
+
+        public JsonResult Deleted<T>() where T : class
         {
-             
-            return new Base.OperationResultBase<T>()
-            {
-                StatusCode=(int)OperationResultTypes.NotExist,
-                Message= message,
-
-            };
+                
+            int StatusCode = (int)System.Net.HttpStatusCode.OK;
+            string Message = _StringLocalizer[SharedResourceKeys.Deleted];
+            return this.ToJsonResult<T>(StatusCode:StatusCode,Message:Message);
         }
 
-        public Base.OperationResultBase<T> Success<T>(T Data)
+        public  JsonResult NotFound<T>(string Message="") where T : class
         {
-            T Result = Data;
-            var StatusCode = (int?)System.Net.HttpStatusCode.OK;
+
+            int StatusCode = (int)OperationResultTypes.NotExist;
+
+            return this.ToJsonResult<T>(StatusCode: StatusCode, Message: Message);
+        }
+
+        public JsonResult Success<T>(T Data) where T : class
+        {
+            int StatusCode = (int)System.Net.HttpStatusCode.OK;
             string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
-            return new Base.OperationResultBase<T>()
-            {
 
-                StatusCode = StatusCode,
-                Message = Message,
-                Result = Result 
-            };
+            return this.ToJsonResult<T>(StatusCode, Data, Message);
 
         }
-        public Base.OperationResultBase<T> Created<T>(T data,string message = "")
+        public JsonResult Created<T>(T Data, string Message = "") where T : class
         {
 
-            var StatusCode = (int?)System.Net.HttpStatusCode.Created;
-            string Message = message;
-            return new Base.OperationResultBase<T>()
-            {
-
-                StatusCode = StatusCode,
-                Message = Message,
-                Result= data
-            };
+            int StatusCode = (int)System.Net.HttpStatusCode.Created;
+            return this.ToJsonResult<T>(StatusCode,Data,Message);            
 
 
         }
-            public  Base.OperationResultBase<T> Exists<T>(string message="")
+            public  JsonResult Exists<T>(string Message="") where T : class
           {
-            var StatusCode = (int?)System.Net.HttpStatusCode.UnprocessableEntity;
-            string Message = message;
-            return new Base.OperationResultBase<T>()
-            {
-
-                StatusCode = StatusCode,
-                Message = Message
-            };
+            int StatusCode = (int)System.Net.HttpStatusCode.UnprocessableEntity;
+            return this.ToJsonResult<T>(StatusCode,Message:Message);
 
         }
 

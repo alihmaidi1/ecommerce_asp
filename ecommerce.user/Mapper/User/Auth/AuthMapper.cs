@@ -23,5 +23,7 @@ namespace ecommerce.user.Mapper.User.Auth
             CreateMap<AddUserCommand, ecommerce.Domain.Entities.User>();
 
         }
+
+        
     }
 }

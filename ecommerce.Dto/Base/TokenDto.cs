@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ecommerce.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,19 @@ namespace ecommerce.Dto.Base
 
         public string ?RefreshToken { get; set; }
 
-        public int Expired_at { get; set; }
+        public int ExpiredAt { get; set; }
+
+        public static TokenDto ToTokenDto(string Token,int ExpiredAt,RefreshToken RefreshToken=null)
+        {
+
+            return new TokenDto
+            {
+                Token=Token,
+                ExpiredAt=ExpiredAt,
+                RefreshToken=RefreshToken.Token
+
+            };
+
+        }
     }
 }
