@@ -2,6 +2,7 @@
 using ecommerce.Dto.Results.User.Auth.Command;
 using ecommerce_shared.OperationResult.Base;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.user.Features.Auth.Commands.Models
 {
-    public class AddUserCommand:IRequest<OperationResultBase<UserWithToken>>
+    public class AddUserCommand:IRequest<JsonResult>
     {
 
         public string Username { get; set; }

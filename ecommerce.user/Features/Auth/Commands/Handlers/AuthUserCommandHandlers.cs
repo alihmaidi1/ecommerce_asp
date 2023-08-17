@@ -14,6 +14,8 @@ using ecommerce_shared.Repository.interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Http.Headers;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
@@ -24,8 +26,8 @@ using System.Threading.Tasks;
 namespace ecommerce.user.Features.Auth.Commands.Handlers
 {
     internal class AuthUserCommandHandlers : OperationResult,
-        IRequestHandler<AddUserCommand, OperationResultBase<UserWithToken>>,
-        IRequestHandler<LoginUserCommand, OperationResultBase<string>>
+        IRequestHandler<AddUserCommand, JsonResult>,
+        IRequestHandler<LoginUserCommand, JsonResult>
 
     {
 
@@ -52,7 +54,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             this.jwtRepository= jwtRepository;
         }
 
-        public async Task<OperationResultBase<UserWithToken>> Handle(AddUserCommand request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
             var Account =mapper.Map<Account>(request);
             var Accountresult=await this.userManager.CreateAsync(Account, request.Password);
@@ -61,17 +63,19 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             {
                    throw new CanotCreateAccountException(Accountresult.Errors);
             }
-            var User = mapper.Map<User>(request,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
-            this.DbContext.Users.Add(User);
-            this.DbContext.SaveChanges();
-            TokenDto TokenInfo=jwtRepository.GetTokens(Account);
+            var User= mapper.Map<User>(request,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
+            this.DbContext.Users.Add(User);                       
+            DbContext.SaveChanges();
+                        
+            TokenDto TokenInfo =jwtRepository.GetTokens(Account);
+            
             UserWithToken result = new UserWithToken()
             {
 
                 Id=User.Id,
                 Name=User.Name,
                 UserName=User.Account.UserName,
-                City=User.City,
+                City=DbContext.Users.Include(x=>x.City).Single(x=>x.Id==User.Id).City.Name,
                 Email=User.Account.Email,
                 IsBlocked=User.IsBlocked,
                 Point=User.Point,   
@@ -85,7 +89,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
 
         }
 
-        public Task<OperationResultBase<string>> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+        public Task<JsonResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

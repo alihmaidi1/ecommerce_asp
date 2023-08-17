@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,10 +32,16 @@ namespace ecommerce_shared.OperationResult.MethodExtension
             var OperationResultBase=CreateOperationResultBase<T>(Result,Message,StatusCode);
             return new JsonResult(OperationResultBase)
             {
-                StatusCode= StatusCode,
-                
+
+                StatusCode=StatusCode
             };
+        
         }
 
+        public static async Task<JsonResult> ToJsonResultAsync<T>(this Task<OperationResult> OperationResult, int StatusCode, T? Result = null, string Message = "") where T : class
+        {
+
+            return (await OperationResult).ToJsonResult(StatusCode,Result,Message);
+        }
     }
 }

@@ -4,6 +4,7 @@ using ecommerce_shared.OperationResult;
 using ecommerce_shared.OperationResult.Base;
 using ecommerce_shared.Pagination;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.admin.Features.Pages.Queries.Models
 {
-    public class GetAllPagesQuery : IRequest<OperationResultBase<PageList<GetAllPagesResult>>>
+    public class GetAllPagesQuery : IRequest<JsonResult>
     {
 
         public int ? pageNumber { get; set; }

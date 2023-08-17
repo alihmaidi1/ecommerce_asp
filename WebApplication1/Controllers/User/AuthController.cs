@@ -15,7 +15,7 @@ namespace ecommerce.Controllers.User
         {
 
             var response = await this.Mediator.Send(command);
-            return Ok(response);
+            return response;
         }
 
     }

@@ -8,10 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.admin.Features.Pages.Queries.Models
 {
-    public class GetPageById : IRequest<OperationResultBase<GetPageByIdResult>>
+    public class GetPageById : IRequest<JsonResult>
     {
         public Guid Id;
     }

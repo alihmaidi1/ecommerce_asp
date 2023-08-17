@@ -6,6 +6,7 @@ using ecommerce.service.PageService;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.OperationResult.Base;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ using System.Threading.Tasks;
 namespace ecommerce.admin.Features.Pages.Commands.Handlers
 {
     public class PageCommandHandlers : OperationResult,
-        IRequestHandler<AddPageCommand, OperationResultBase<string>>,
-        IRequestHandler<DeletePageCommand, OperationResultBase<bool>>
+        IRequestHandler<AddPageCommand, JsonResult>
+       // IRequestHandler<DeletePageCommand, JsonResult>
 
 
     {
@@ -36,7 +37,7 @@ namespace ecommerce.admin.Features.Pages.Commands.Handlers
             _StringLocalizer = stringLocalizer;
         }
 
-        public async Task<OperationResultBase<string>> Handle(AddPageCommand request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle(AddPageCommand request, CancellationToken cancellationToken)
         {
             var mapperResult = mapper.Map<Page>(request);
             var result = await pageService.AddPageAsync(mapperResult);
@@ -44,11 +45,12 @@ namespace ecommerce.admin.Features.Pages.Commands.Handlers
             return Created<string>(_StringLocalizer[SharedResourceKeys.Page_Created_Successfully]);
         }
 
-        async Task<OperationResultBase<bool>> IRequestHandler<DeletePageCommand, OperationResultBase<bool>>.Handle(DeletePageCommand request, CancellationToken cancellationToken)
-        {
-            var Result =await pageService.DeletePageAsync(request.Id);
+        //async Task<JsonResult> Handle(DeletePageCommand request, CancellationToken cancellationToken)
+        //{
+        //    var Result =await pageService.DeletePageAsync(request.Id);
 
-            return Deleted<bool>();
-        }
+        //    return Deleted<bool>();
+        //}
+
     }
 }

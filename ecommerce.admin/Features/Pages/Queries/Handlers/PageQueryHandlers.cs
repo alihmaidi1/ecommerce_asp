@@ -21,8 +21,8 @@ using System.Threading.Tasks;
 namespace ecommerce.admin.Features.Pages.Queries.Handlers
 {
     public class PageQueryHandlers :OperationResult,
-        IRequestHandler<GetAllPagesQuery, OperationResultBase<PageList<GetAllPagesResult>>>,
-        IRequestHandler<GetPageById, OperationResultBase<GetPageByIdResult>>
+        IRequestHandler<GetAllPagesQuery, JsonResult>,
+        IRequestHandler<GetPageById, JsonResult>
     {
 
         #region Field
@@ -42,7 +42,7 @@ namespace ecommerce.admin.Features.Pages.Queries.Handlers
         }
 
         #endregion
-        public async Task<OperationResultBase<PageList<GetAllPagesResult>>> Handle( GetAllPagesQuery request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle( GetAllPagesQuery request, CancellationToken cancellationToken)
         {
 
             var PagesList = await pageService.GetPagesQueryable().Select(GetAllPagesResult.GetAllPage).ToPagedList(request.pageNumber,request.pageSize);
@@ -51,7 +51,7 @@ namespace ecommerce.admin.Features.Pages.Queries.Handlers
              return  Success(PagesList);
         }
 
-        public async Task<OperationResultBase<GetPageByIdResult>> Handle(GetPageById request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle(GetPageById request, CancellationToken cancellationToken)
         {
 
             var Page = await pageService.GetPagesByIdAsync(request.Id);

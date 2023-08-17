@@ -23,7 +23,7 @@ namespace ecommerce.Dto.Results.User.Auth.Command
 
         public int Point { get; set; }
 
-        public City City { get; set; }
+        public string City { get; set; }
 
 
         public bool IsBlocked { get; set; }
