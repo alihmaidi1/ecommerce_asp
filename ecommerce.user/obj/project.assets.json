@@ -2221,6 +2221,19 @@
         "runtime": {
           "bin/placeholder/ecommerce_shared.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ecommerce_shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
       }
     }
   },
@@ -6354,6 +6367,11 @@
       "type": "project",
       "path": "../ClassLibrary1/ecommerce_shared.csproj",
       "msbuildProject": "../ClassLibrary1/ecommerce_shared.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6363,6 +6381,7 @@
       "FluentValidation >= 11.7.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.7.0",
       "MediatR >= 12.1.1",
+      "Repositories >= 1.0.0",
       "ecommerce.Dto >= 1.0.0",
       "ecommerce_shared >= 1.0.0"
     ]
@@ -6406,6 +6425,9 @@
             },
             "C:\\Users\\Ali Hmaidi\\source\\repos\\WebApplication1\\src\\ecommerce.Dto\\ecommerce.Dto.csproj": {
               "projectPath": "C:\\Users\\Ali Hmaidi\\source\\repos\\WebApplication1\\src\\ecommerce.Dto\\ecommerce.Dto.csproj"
+            },
+            "C:\\Users\\Ali Hmaidi\\source\\repos\\WebApplication1\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\source\\repos\\WebApplication1\\src\\Repositories\\Repositories.csproj"
             }
           }
         }

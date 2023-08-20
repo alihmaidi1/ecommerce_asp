@@ -13,6 +13,7 @@
           "FluentValidation": "11.7.0",
           "FluentValidation.DependencyInjectionExtensions": "11.7.0",
           "MediatR": "12.1.1",
+          "Repositories": "1.0.0",
           "ecommerce.Dto": "1.0.0",
           "ecommerce_shared": "1.0.0"
         },
@@ -1184,6 +1185,14 @@
         "runtime": {
           "ecommerce_shared.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "dependencies": {
+          "ecommerce_shared": "1.0.0"
+        },
+        "runtime": {
+          "Repositories.dll": {}
+        }
       }
     }
   },
@@ -2091,6 +2100,11 @@
       "sha512": ""
     },
     "ecommerce_shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Repositories/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

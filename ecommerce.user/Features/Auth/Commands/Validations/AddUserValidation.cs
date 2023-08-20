@@ -1,5 +1,9 @@
-﻿using ecommerce.user.Features.Auth.Commands.Models;
+﻿using ecommerce.Domain.Abstract;
+using ecommerce.infrutructure;
+using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce_shared.Rule;
 using FluentValidation;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +15,11 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
     public class AddUserValidation:AbstractValidator<AddUserCommand>
     {
 
-        public AddUserValidation() {
+        public UserManager<Account> UserManager;
+        public AddUserValidation(UserManager<Account> userManager) {
+
+
+            this.UserManager= userManager;
 
             ApplyUserNameValidation();
             ApplyPasswordValidation();
@@ -24,13 +32,19 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
         
         public void ApplyUserNameValidation()
         {
-
+            RuleFor(x => x.Username)
+                .NotEmpty()
+                .NotNull();
+                
 
         }
 
         public void ApplyPasswordValidation()
         {
 
+            RuleFor(x => x.Password)
+                .NotEmpty()
+                .NotNull();
 
         }
 
@@ -39,12 +53,22 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
         public void ApplyEmailValidation()
         {
 
+            RuleFor(x => x.Email)
+                .NotEmpty()
+                .NotNull()
+                .EmailAddress();
+                
 
         }
+
+        
 
         public void ApplyNameValidation()
         {
 
+            RuleFor(x => x.Name)
+                .NotEmpty()
+                .NotNull();
 
         }
 
@@ -52,11 +76,14 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
         {
 
 
+
         }
 
         public void ApplyCityValidation()
         {
-
+            RuleFor(x => x.CityId)
+                .NotEmpty()
+                .NotNull();
 
         }
         

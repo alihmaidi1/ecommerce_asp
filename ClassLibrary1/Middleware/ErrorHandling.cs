@@ -29,7 +29,9 @@ namespace ecommerce_shared.Middleware
 
                     case ValidationException:
 
-                        Response.StatusCode = 429;
+
+                        await Response.WriteAsJsonAsync(e.Message);
+                        Response.StatusCode = 444;
                         break;
 
 

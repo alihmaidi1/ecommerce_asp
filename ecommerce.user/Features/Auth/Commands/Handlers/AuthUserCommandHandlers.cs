@@ -14,9 +14,11 @@ using ecommerce_shared.Repository.interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Http.Headers;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using Repositories.User.Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,26 +65,12 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             {
                    throw new CanotCreateAccountException(Accountresult.Errors);
             }
-            var User= mapper.Map<User>(request,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
+            var User = DbContext.Users.CreateProxy();
+            mapper.Map(request,User,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
             this.DbContext.Users.Add(User);                       
-            DbContext.SaveChanges();
-                        
+            DbContext.SaveChanges();                        
             TokenDto TokenInfo =jwtRepository.GetTokens(Account);
-            
-            UserWithToken result = new UserWithToken()
-            {
-
-                Id=User.Id,
-                Name=User.Name,
-                UserName=User.Account.UserName,
-                City=DbContext.Users.Include(x=>x.City).Single(x=>x.Id==User.Id).City.Name,
-                Email=User.Account.Email,
-                IsBlocked=User.IsBlocked,
-                Point=User.Point,   
-                TokenInfo=TokenInfo
-                
-
-            };
+            UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Created<UserWithToken>(result,"The User Was Created SuccessFully");
               
 

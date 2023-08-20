@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ecommerce_shared.csproj" />
     <ProjectReference Include="..\ecommerce.Dto\ecommerce.Dto.csproj" />
+    <ProjectReference Include="..\Repositories\Repositories.csproj" />
   </ItemGroup>
 
 </Project>

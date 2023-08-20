@@ -21,3 +21,5 @@ C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\bin\Debug\ne
 C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\bin\Debug\net7.0\ar\ecommerce.Domain.resources.dll
 C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\bin\Debug\net7.0\en\ecommerce.Domain.resources.dll
 C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\obj\Debug\net7.0\ecommerce.user.csproj.CopyComplete
+C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\bin\Debug\net7.0\Repositories.dll
+C:\Users\Ali Hmaidi\source\repos\WebApplication1\src\ecommerce.user\bin\Debug\net7.0\Repositories.pdb
