@@ -2,6 +2,7 @@
 using ecommerce_shared.Repository.interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -18,7 +19,8 @@ namespace ecommerce_shared.Jwt
 
         public static IServiceCollection AddJwtConfigration(this IServiceCollection services, IConfiguration Configuration)
         {
-            var JwtOption = Configuration.Get<JwtSetting>();
+            var JwtOption = Configuration.GetSection("AccessToken");
+
             services.AddAuthentication(options =>
             {
 
@@ -34,9 +36,9 @@ namespace ecommerce_shared.Jwt
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime = true,
-                    ValidIssuer = JwtOption.Issuer,
-                    ValidAudience = JwtOption.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("siodu9834h3troit3985ywyfhuwoer3284"))
+                    ValidIssuer = JwtOption["Issuer"] ,
+                    ValidAudience = JwtOption["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtOption["Key"]))
 
 
                 };
@@ -50,6 +52,16 @@ namespace ecommerce_shared.Jwt
                         throw new UnAuthenticationException();
 
                         
+                    },
+
+                    OnForbidden=async context =>
+                    {
+
+                        
+                        
+                        throw new UnAuthorizationException();
+
+
                     }
 
 

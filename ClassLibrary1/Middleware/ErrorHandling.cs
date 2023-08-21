@@ -47,6 +47,13 @@ namespace ecommerce_shared.Middleware
                         response.StatusCode = (int)HttpStatusCode.Unauthorized;
                         break;
 
+
+                    case UnAuthorizationException exception:
+                        Result.Message = exception.Message;
+                        Result.StatusCode = (int)HttpStatusCode.Forbidden;
+                        response.StatusCode = (int)HttpStatusCode.Forbidden;
+                        break;
+
                     case Exception exception:
                         Result.Message = exception.Message;
                         Result.StatusCode= (int)HttpStatusCode.InternalServerError;
