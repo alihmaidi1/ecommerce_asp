@@ -1,5 +1,7 @@
-﻿using ecommerce_shared.Repository.interfaces;
+﻿using ecommerce_shared.Exceptions;
+using ecommerce_shared.Repository.interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -38,6 +40,22 @@ namespace ecommerce_shared.Jwt
 
 
                 };
+                options.Events = new JwtBearerEvents
+                {
+
+                    OnChallenge = async context =>
+                    {
+                        context.HandleResponse();
+
+                        throw new UnAuthenticationException();
+
+                        
+                    }
+
+
+
+                };
+                
 
 
             });

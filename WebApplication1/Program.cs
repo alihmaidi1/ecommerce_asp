@@ -56,7 +56,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 
-builder.Services.AddTransient<ErrorHandling>();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
@@ -111,6 +110,7 @@ builder.Services.AddTransient<IJwtRepository, JwtRepository>();
 
 
 
+builder.Services.AddTransient<ErrorHandling>();
 
 var app = builder.Build();
 
@@ -129,6 +129,8 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 app.UseSerilogRequestLogging();
 app.UseCors("Policy");
 
+
+app.UseMiddleware<ErrorHandling>();
 app.UseHttpsRedirection();
 
 using(var scope= app.Services.CreateScope()){
@@ -138,11 +140,11 @@ using(var scope= app.Services.CreateScope()){
 
 }
 
+
 app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseMiddleware<ErrorHandling>();
 app.Run();

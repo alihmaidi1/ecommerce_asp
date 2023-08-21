@@ -40,6 +40,13 @@ namespace ecommerce_shared.Middleware
                         response.StatusCode = (int)HttpStatusCode.UnprocessableEntity;
                         Result.Errors = exception.Errors.Select(f => f.PropertyName + ":" + f.ErrorMessage).ToList(); ;
                         break;
+
+                    case UnAuthenticationException exception:
+                        Result.Message = exception.Message;
+                        Result.StatusCode = (int)HttpStatusCode.Unauthorized;
+                        response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                        break;
+
                     case Exception exception:
                         Result.Message = exception.Message;
                         Result.StatusCode= (int)HttpStatusCode.InternalServerError;

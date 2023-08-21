@@ -22,19 +22,18 @@ namespace ecommerce.infrutructure
             services.AddIdentity<Account, IdentityRole<Guid>>(options =>
             {
                 options.User.RequireUniqueEmail = true;
-                options.Password.RequireNonAlphanumeric = false; 
+                options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireDigit = false;
-                options.Password.RequireLowercase = false;  
+                options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
 
             })
-            .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddDefaultTokenProviders();
-
+            .AddEntityFrameworkStores<ApplicationDbContext>();
+            
             services.AddDbContext<ApplicationDbContext>(option =>
             {
                 option.UseLazyLoadingProxies()                
-                .UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                .UseSqlServer(configuration.GetConnectionString("DefaultConnection"));                
                 option.LogTo(Console.WriteLine,LogLevel.Information);
                 option.EnableSensitiveDataLogging();                                
 
