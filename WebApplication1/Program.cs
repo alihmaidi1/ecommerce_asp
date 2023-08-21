@@ -1,3 +1,4 @@
+using Common;
 using ecommerce.admin;
 using ecommerce.Dto;
 using ecommerce.infrutructure;
@@ -88,6 +89,7 @@ builder.Services.AddInfrustucture(builder.Configuration);
 builder.Services.AddRepository();
 
 builder.Services.AddServices();
+builder.Services.AddCommondependency();
 builder.Services.AddAdmindependency();
 builder.Services.AddUserdependency();
 builder.Services.AddCors(options =>

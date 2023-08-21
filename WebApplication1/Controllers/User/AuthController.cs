@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.User
 {
+
     public class AuthController: ApiController
     {
 
