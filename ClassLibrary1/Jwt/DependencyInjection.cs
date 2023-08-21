@@ -29,12 +29,12 @@ namespace ecommerce_shared.Jwt
                 {
 
                     ValidateIssuerSigningKey = true,
-                    ValidateIssuer= true,
-                    ValidateAudience= true,
-                    ValidateLifetime= true,
-                    ValidIssuer=JwtOption.Issuer,
-                    ValidAudience=JwtOption.Audience,
-                    IssuerSigningKey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtOption.key))
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidIssuer = JwtOption.Issuer,
+                    ValidAudience = JwtOption.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("siodu9834h3troit3985ywyfhuwoer3284"))
 
 
                 };

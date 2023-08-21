@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6iYOBqJNGd038wE9/t1aidK+L9msRi3IoXLmWJCh5ctN0mawL+DYmhagpcdrj2rFufkfrbSySR5cdzOOfQ1vGw==",
+  "dgSpecHash": "XwYdT441W56QCUhYiYhcZcSfv1zev7stlAxWNU94P5EXrBUNTmMIp1bAbxZHkhUlP/kWgMKmR0QrAmRJTabwDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\source\\repos\\WebApplication1\\src\\ecommerce.user\\ecommerce.user.csproj",
   "expectedPackageFiles": [
@@ -9,8 +9,8 @@
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
-    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation\\11.7.0\\fluentvalidation.11.7.0.nupkg.sha512",
-    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.0\\fluentvalidation.dependencyinjectionextensions.11.7.0.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

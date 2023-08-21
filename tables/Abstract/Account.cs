@@ -16,6 +16,8 @@ namespace ecommerce.Domain.Abstract
             RefreshTokens=new HashSet<RefreshToken>();    
         }
         public virtual User User { get; set; }
+        public virtual Admin Admin{ get; set; }
+
 
         public virtual ICollection<RefreshToken>? RefreshTokens{ get; set; }    
 

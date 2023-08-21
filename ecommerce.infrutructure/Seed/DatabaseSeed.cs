@@ -1,4 +1,5 @@
-﻿using ecommerce.infrutructure.Seed;
+﻿using ecommerce.Domain.Abstract;
+using ecommerce.infrutructure.Seed;
 using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,9 +20,11 @@ namespace ecommerce.infrutructure.seed
             var context = services.GetRequiredService<ApplicationDbContext>();
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+            var UserManager = services.GetRequiredService<UserManager<Account>>();
             var transaction =context.Database.BeginTransaction();
 
                 await RoleSeed.seedData(RoleManager);
+                await AdminSeed.seedData(context,UserManager);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);

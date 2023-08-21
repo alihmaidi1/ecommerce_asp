@@ -64,7 +64,7 @@ namespace ecommerce_shared.Repository.Concrete
         public SigningCredentials GetSigningCredentials(JwtSetting JWTOption)
         {
 
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTOption.key));
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTOption.Key));
             return  new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
 

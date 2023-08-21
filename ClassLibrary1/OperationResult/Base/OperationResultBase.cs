@@ -21,6 +21,7 @@ namespace ecommerce_shared.OperationResult.Base
         
         public int StatusCode { get; set; }
 
+        public List<string> Errors { get; set; }
         
 
 

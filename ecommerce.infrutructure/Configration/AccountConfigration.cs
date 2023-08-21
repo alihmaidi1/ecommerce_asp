@@ -21,6 +21,9 @@ namespace ecommerce.infrutructure.Configration
             builder.HasOne(a => a.User)
                    .WithOne(u=>u.Account);
 
+            builder.HasOne(a => a.Admin)
+                   .WithOne(a => a.Account);
+
         }
     }
 }

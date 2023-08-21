@@ -11,7 +11,14 @@ namespace ecommerce.Domain.Entities
 {
     public class Admin : BaseEntity
     {
-     
+
+        public Guid Id { get; set; }
+        public Guid AccountId { get; set; }
+
+        public virtual Account Account { get; set; }
+
+        public bool IsBlocked { get; set; }
+
     }
 
 

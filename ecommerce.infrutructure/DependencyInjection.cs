@@ -28,7 +28,8 @@ namespace ecommerce.infrutructure
                 options.Password.RequireUppercase = false;
 
             })
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
 
             services.AddDbContext<ApplicationDbContext>(option =>
             {

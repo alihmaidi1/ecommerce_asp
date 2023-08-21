@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230816103908_init")]
+    [Migration("20230821103252_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -231,6 +231,9 @@ namespace ecommerce.infrutructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid?>("CreatedBy")
                         .HasColumnType("uniqueidentifier");
 
@@ -246,10 +249,18 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<Guid?>("DeletedBy")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("IsBlocked")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId")
+                        .IsUnique();
 
                     b.ToTable("Admins");
                 });
@@ -1060,6 +1071,17 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Admin", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Abstract.Account", "Account")
+                        .WithOne("Admin")
+                        .HasForeignKey("ecommerce.Domain.Entities.Admin", "AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Cart", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Product", "Product")
@@ -1214,6 +1236,9 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Abstract.Account", b =>
                 {
+                    b.Navigation("Admin")
+                        .IsRequired();
+
                     b.Navigation("RefreshTokens");
 
                     b.Navigation("User")

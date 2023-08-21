@@ -37,7 +37,6 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [Authorize]
-
         [HttpPost(PageRouter.AddPage)]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {
@@ -49,8 +48,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpDelete(PageRouter.Delete)]
-        [Authorize]
-
+        
         public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
         {
 

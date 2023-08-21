@@ -1,12 +1,14 @@
-﻿using Azure;
-using ecommerce_shared.Exceptions;
+﻿using ecommerce_shared.Exceptions;
+using ecommerce_shared.OperationResult.Base;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ecommerce_shared.Middleware
@@ -20,44 +22,34 @@ namespace ecommerce_shared.Middleware
 
 				await next(context);
             }
-            catch (Exception e)
+            catch (Exception error)
             {
-                var Response = context.Response;
+            
+                var response=context.Response;
+                response.ContentType= "application/json";
+                var Result = new OperationResultBase<string>() { };
 
-                switch (e)
+
+                switch (error)
                 {
 
-                    case ValidationException:
 
-
-                        await Response.WriteAsJsonAsync(e.Message);
-                        Response.StatusCode = 444;
+                    case ValidationException exception:
+                        Result.Message = exception.Message;
+                        Result.StatusCode = (int)HttpStatusCode.UnprocessableEntity;
+                        response.StatusCode = (int)HttpStatusCode.UnprocessableEntity;
+                        Result.Errors = exception.Errors.Select(f => f.PropertyName + ":" + f.ErrorMessage).ToList(); ;
                         break;
-
-
-                    case NotFoundException:
-
-
-                        Response.StatusCode = 405;
-                        await Response.WriteAsJsonAsync(e.Message);
-
-                        break;
-
-
-                    case ExistsException:
-
-
-                        Response.StatusCode = 405;
-                        await Response.WriteAsJsonAsync(e.Message);
-
-                        break;
-                    default:
-
-                        Response.StatusCode = 500;
-                        await Response.WriteAsJsonAsync(e.Message);
+                    case Exception exception:
+                        Result.Message = exception.Message;
+                        Result.StatusCode= (int)HttpStatusCode.InternalServerError;
+                        response.StatusCode= (int)HttpStatusCode.InternalServerError;
                         break;
 
                 }
+
+                var errors= JsonSerializer.Serialize(Result);
+                await response.WriteAsync(errors);
 
             }
         }
