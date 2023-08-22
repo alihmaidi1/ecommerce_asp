@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230821103252_init")]
+    [Migration("20230822074633_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -751,7 +751,7 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("RefreshToken");
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Review", b =>

@@ -36,6 +36,8 @@ namespace ecommerce_shared.Repository.Concrete
             var JwtToken = GetJwtToken(JWTOption,claims, signingCredentials);
             var Token =  new JwtSecurityTokenHandler().WriteToken(JwtToken);
             RefreshToken RefreshToken = GenerateRefreshToken();
+
+            
             Account.RefreshTokens.Add(RefreshToken);
             Context.SaveChanges();
             return TokenDto.ToTokenDto(Token,(int)(JWTOption.DurationInMinute * 60),RefreshToken);

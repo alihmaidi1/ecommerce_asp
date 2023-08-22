@@ -1,5 +1,7 @@
-﻿using ecommerce_shared.OperationResult.Base;
+﻿using ecommerce.Dto.Base;
+using ecommerce_shared.OperationResult.Base;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Common.Features.Token.Commands.Models
 {
-    public class RefreshTheTokenCommand: IRequest<OperationResultBase<string>>
+    public class RefreshTheTokenCommand: IRequest<JsonResult>
     {
 
 

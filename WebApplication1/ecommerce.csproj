@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\ecommerce.admin\ecommerce.admin.csproj" />
     <ProjectReference Include="..\ecommerce.infrutructure\ecommerce.infrutructure.csproj" />
     <ProjectReference Include="..\ecommerce.service\ecommerce.service.csproj" />

@@ -23,7 +23,8 @@ namespace ecommerce.infrutructure.Configration
 
             builder.HasOne(a => a.Admin)
                    .WithOne(a => a.Account);
-
+            builder.HasMany(a => a.RefreshTokens)
+                   .WithOne(r => r.Account);
         }
     }
 }

@@ -373,7 +373,7 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RefreshToken",
+                name: "RefreshTokens",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -383,9 +383,9 @@ namespace ecommerce.infrutructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RefreshToken", x => x.Id);
+                    table.PrimaryKey("PK_RefreshTokens", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RefreshToken_AspNetUsers_AccountId",
+                        name: "FK_RefreshTokens_AspNetUsers_AccountId",
                         column: x => x.AccountId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -759,8 +759,8 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_RefreshToken_AccountId",
-                table: "RefreshToken",
+                name: "IX_RefreshTokens_AccountId",
+                table: "RefreshTokens",
                 column: "AccountId");
 
             migrationBuilder.CreateIndex(
@@ -828,7 +828,7 @@ namespace ecommerce.infrutructure.Migrations
                 name: "ProductProperties");
 
             migrationBuilder.DropTable(
-                name: "RefreshToken");
+                name: "RefreshTokens");
 
             migrationBuilder.DropTable(
                 name: "Reviews");

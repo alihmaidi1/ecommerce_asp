@@ -42,7 +42,7 @@ namespace ecommerce_shared.OperationResult
 
         public JsonResult Success<T>(T Data) where T : class
         {
-            int StatusCode = (int)System.Net.HttpStatusCode.OK;
+            int StatusCode = (int)System.Net.HttpStatusCode.OK; 
             string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
 
             return this.ToJsonResult<T>(StatusCode, Data, Message);

@@ -748,7 +748,7 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("RefreshToken");
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Review", b =>
