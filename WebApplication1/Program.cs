@@ -89,9 +89,10 @@ builder.Services.AddInfrustucture(builder.Configuration);
 builder.Services.AddRepository();
 
 builder.Services.AddServices();
-builder.Services.AddCommondependency();
 builder.Services.AddAdmindependency();
 builder.Services.AddUserdependency();
+
+builder.Services.AddCommondependency();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Policy", policyBuilder =>

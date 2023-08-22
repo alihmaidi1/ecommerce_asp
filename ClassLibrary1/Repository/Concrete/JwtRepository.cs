@@ -4,6 +4,7 @@ using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Repository.interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -22,16 +23,20 @@ namespace ecommerce_shared.Repository.Concrete
 
         public readonly JwtSetting JWTOption;
         public readonly ApplicationDbContext Context;
-        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext)
+
+        public readonly UserManager<Account> UserManager;
+        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<Account> UserManager)
         {
 
             this.JWTOption = JWTOption.Value;
             this.Context = DbContext;
+            this.UserManager = UserManager;
         }
-        public TokenDto GetTokens(Account Account)
+        public async Task<TokenDto> GetTokens(Account Account)
         {
+            var Roles=await UserManager.GetRolesAsync(Account);
+            var claims = CreateClaim(Account,Roles.ToList());
 
-            var claims = CreateClaim(Account);
             var signingCredentials = GetSigningCredentials(JWTOption);            
             var JwtToken = GetJwtToken(JWTOption,claims, signingCredentials);
             var Token =  new JwtSecurityTokenHandler().WriteToken(JwtToken);
@@ -50,15 +55,22 @@ namespace ecommerce_shared.Repository.Concrete
     
     
     
-        public List<Claim> CreateClaim(Account Account)
+        public List<Claim> CreateClaim(Account Account,List<string> Roles)
         {
 
-            return new List<Claim>
+            var Claims= new List<Claim>
             {
-                new Claim("UserName",Account.UserName),
-                new Claim("Email",Account.Email)
+                new Claim(ClaimTypes.NameIdentifier,Account.UserName),
+                new Claim(ClaimTypes.Email,Account.Email)
+                
 
             };
+
+            Roles.ForEach(r => Claims.Add(new Claim(ClaimTypes.Role, r.ToString())));
+
+            return Claims;
+
+            
 
         }
 
@@ -93,7 +105,7 @@ namespace ecommerce_shared.Repository.Concrete
 
             var RandomNumber = new byte[32];
             var generator = new RNGCryptoServiceProvider();
-            generator.GetBytes( RandomNumber );
+            generator.GetBytes(RandomNumber);
 
 
             return new RefreshToken()
@@ -105,6 +117,5 @@ namespace ecommerce_shared.Repository.Concrete
 
         }
 
-        
     }
 }

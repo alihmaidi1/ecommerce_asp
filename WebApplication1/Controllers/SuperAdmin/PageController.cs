@@ -36,7 +36,7 @@ namespace ecommerce.Controllers.SuperAdmin
         }
 
 
-        [Authorize(Roles ="SuperAdmin")]
+        [Authorize(Roles = "DeliveryMan")]
         [HttpPost(PageRouter.AddPage)]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {

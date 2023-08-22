@@ -69,7 +69,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             mapper.Map(request,User,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
             this.DbContext.Users.Add(User);                       
             DbContext.SaveChanges();                        
-            TokenDto TokenInfo =jwtRepository.GetTokens(Account);
+            TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
             UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Created<UserWithToken>(result,"The User Was Created SuccessFully");
               

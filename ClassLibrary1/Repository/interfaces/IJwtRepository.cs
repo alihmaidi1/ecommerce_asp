@@ -16,10 +16,10 @@ namespace ecommerce_shared.Repository.interfaces
     public interface IJwtRepository
     {
 
-        public TokenDto GetTokens(Account Account);
+        public  Task<TokenDto> GetTokens(Account Account);
 
 
-        public List<Claim> CreateClaim(Account Account);
+        public List<Claim> CreateClaim(Account Account,List<string> Roles);
 
 
         public SigningCredentials GetSigningCredentials(JwtSetting JWTOption);
