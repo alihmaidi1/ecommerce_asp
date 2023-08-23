@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {}
+    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\ecommerce.Domain.csproj": {
+    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\ecommerce.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj",
         "projectName": "ecommerce.Domain",
-        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\ecommerce.Domain.csproj",
+        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj",
         "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -70,14 +70,14 @@
         }
       }
     },
-    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {
+    "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
+        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
         "projectName": "ecommerce.infrutructure",
-        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
+        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
         "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Infrutructure\\obj\\",
+        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Infrutructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -99,8 +99,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\ecommerce.Domain.csproj": {
-                "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce - Copy\\src\\Domain\\ecommerce.Domain.csproj"
+              "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj": {
+                "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj"
               }
             }
           }
