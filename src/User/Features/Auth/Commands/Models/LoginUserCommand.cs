@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ecommerce.user.Features.Auth.Commands.Models
 {
-    internal class LoginUserCommand: IRequest<JsonResult>
+    public class LoginUserCommand: IRequest<JsonResult>
     {
 
-        public string UserName { get; set; }
+        public string UserNameOrEmail { get; set; }
 
 
         public string Password { get; set; }

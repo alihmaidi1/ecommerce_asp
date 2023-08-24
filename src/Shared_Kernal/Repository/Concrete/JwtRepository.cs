@@ -23,14 +23,16 @@ namespace ecommerce_shared.Repository.Concrete
 
         public readonly JwtSetting JWTOption;
         public readonly ApplicationDbContext Context;
-
+        public readonly ICacheRepository CacheRepository;
         public readonly UserManager<Account> UserManager;
-        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<Account> UserManager)
+        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<Account> UserManager, ICacheRepository cacheRepository)
         {
 
             this.JWTOption = JWTOption.Value;
             this.Context = DbContext;
             this.UserManager = UserManager;
+            CacheRepository = cacheRepository;
+            this.CacheRepository= cacheRepository;
         }
         public async Task<TokenDto> GetTokens(Account Account)
         {
@@ -40,6 +42,9 @@ namespace ecommerce_shared.Repository.Concrete
             var signingCredentials = GetSigningCredentials(JWTOption);            
             var JwtToken = GetJwtToken(JWTOption,claims, signingCredentials);
             var Token =  new JwtSecurityTokenHandler().WriteToken(JwtToken);
+
+            var ExpiredAt=DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
+            CacheRepository.SetData<string>("Token:" + Token, Token,ExpiredAt);
             RefreshToken RefreshToken = GenerateRefreshToken();
 
             

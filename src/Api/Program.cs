@@ -109,7 +109,7 @@ builder.Services.AddJwtConfigration(builder.Configuration);
 
 
 builder.Services.AddTransient<IJwtRepository, JwtRepository>();
-
+builder.Services.AddScoped<ICacheRepository,CacheRepository>();
 
 
 

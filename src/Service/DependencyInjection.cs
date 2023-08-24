@@ -1,4 +1,5 @@
 ﻿using ecommerce.service.PageService;
+using ecommerce.service.UserService;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace ecommerce.service
         {
 
             services.AddTransient<IPageService, ecommerce.service.PageService.PageService>();
+            services.AddTransient<IAccountService, AccountService>();
             return services;
 
         }

@@ -19,5 +19,24 @@ namespace ecommerce.Controllers.User
             return response;
         }
 
+        [HttpPost(AuthUserRouter.Login)]
+
+        public async Task<IActionResult> LoginUser([FromBody] LoginUserCommand command)
+        {
+
+            var response=await this.Mediator.Send(command);
+            return response;
+
+        }
+
+        [HttpPost(AuthUserRouter.Logout)]
+
+        public async Task<IActionResult> Logout(LogoutUserCommand command)
+        {
+            var response=await this.Mediator.Send(command); 
+            return response;
+
+        }
+
     }
 }

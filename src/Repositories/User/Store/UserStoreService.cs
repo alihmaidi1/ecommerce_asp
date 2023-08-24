@@ -35,9 +35,9 @@ namespace Repositories.User.Store
                 Point = User.Point,
                 TokenInfo = TokenInfo
 
-
             };
         
+            
         }
 
 

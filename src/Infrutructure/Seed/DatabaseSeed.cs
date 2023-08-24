@@ -19,7 +19,7 @@ namespace ecommerce.infrutructure.seed
         {
 
             var context = services.GetRequiredService<ApplicationDbContext>();
-            await context.Database.MigrateAsync();
+            //await context.Database.MigrateAsync();
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
             var UserManager = services.GetRequiredService<UserManager<Account>>();

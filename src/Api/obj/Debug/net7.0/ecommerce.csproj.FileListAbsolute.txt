@@ -254,3 +254,7 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\obj\Debug\net7.0\scopedcss\bun
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\obj\Debug\net7.0\ecommerce.csproj.CopyComplete
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\obj\Debug\net7.0\ecommerce.genruntimeconfig.cache
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\obj\Debug\net7.0\ref\ecommerce.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\StackExchange.Redis.dll

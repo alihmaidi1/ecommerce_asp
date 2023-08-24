@@ -40,14 +40,24 @@ namespace ecommerce_shared.OperationResult
             return this.ToJsonResult<T>(StatusCode: StatusCode, Message: Message);
         }
 
-        public JsonResult Success<T>(T Data) where T : class
+        public JsonResult Success<T>(T Data,string ResultMessage="") where T : class
         {
-            int StatusCode = (int)System.Net.HttpStatusCode.OK; 
-            string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
-
+            int StatusCode = (int)System.Net.HttpStatusCode.OK;
+            //string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
+            string Message = ResultMessage;
             return this.ToJsonResult<T>(StatusCode, Data, Message);
 
         }
+
+        public JsonResult Success(string ResultMessage = "")
+        {
+            int StatusCode = (int)System.Net.HttpStatusCode.OK;
+            //string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
+            string Message = ResultMessage;
+            return this.ToJsonResult<object>(StatusCode,Message:Message);
+
+        }
+
         public JsonResult Created<T>(T Data, string Message = "") where T : class
         {
 
