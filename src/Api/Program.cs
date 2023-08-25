@@ -1,10 +1,8 @@
 using Common;
 using ecommerce.admin;
-using ecommerce.Dto;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
 using ecommerce.infrutructure.Services.Classes;
-using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce.service;
 using ecommerce.user;
 using ecommerce_shared.Attribute;
@@ -13,18 +11,9 @@ using ecommerce_shared.Middleware;
 using ecommerce_shared.Repository.Concrete;
 using ecommerce_shared.Repository.interfaces;
 using ecommerce_shared.Swagger;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Repositories;
-using Serilog;
-using System.Configuration;
-using System.Text;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,12 +51,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
 
-builder.Services.AddHttpClient("Region",c=> {
-
-
-    c.BaseAddress = new Uri("https://countriesnow.space");
-   
-    });
+builder.Services.AddHttpClient("Region",c=> {c.BaseAddress = new Uri("https://countriesnow.space");});
 
 builder.Services.AddTransient<ExternalRegionApi>();
 
@@ -131,6 +115,7 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 {
     ApplyCurrentCultureToResponseHeaders = true
 });
+
 
 
 // app.UseSerilogRequestLogging();
