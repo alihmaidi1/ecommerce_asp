@@ -15,5 +15,7 @@ namespace ecommerce_shared.Repository.interfaces
 
         object RemoveData(string key);
 
+        public bool IsExists(string key);
+
     }
 }

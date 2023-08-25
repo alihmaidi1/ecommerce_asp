@@ -1,11 +1,9 @@
 ﻿using ecommerce.admin.Features.Pages.Commands.Models;
 using ecommerce.admin.Features.Pages.Queries.Models;
 using ecommerce.Base;
-using ecommerce.Domain.AppMetaData;
 using ecommerce.Domain.AppMetaData.Admin;
-using MediatR;
+using ecommerce_shared.Attribute;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin
@@ -36,8 +34,10 @@ namespace ecommerce.Controllers.SuperAdmin
         }
 
 
-        [Authorize(Roles = "DeliveryMan")]
         [HttpPost(PageRouter.AddPage)]
+        [Authorize]
+        [CheckTokenInRedis]
+
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {
 
@@ -48,7 +48,8 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpDelete(PageRouter.Delete)]
-        
+
+        [CheckTokenInRedis]
         public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
         {
 

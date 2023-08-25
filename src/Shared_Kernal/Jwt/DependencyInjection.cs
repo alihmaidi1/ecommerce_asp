@@ -24,10 +24,12 @@ namespace ecommerce_shared.Jwt
             services.AddAuthentication(options =>
             {
 
+                
                 options.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>
             {
+                
                 options.SaveToken = true;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {

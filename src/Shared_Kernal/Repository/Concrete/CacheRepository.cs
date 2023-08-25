@@ -1,4 +1,5 @@
 ﻿using ecommerce_shared.Repository.interfaces;
+using Microsoft.Extensions.Configuration;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,11 @@ namespace ecommerce_shared.Repository.Concrete
     {
         IDatabase RedisDB;
 
-        public CacheRepository()
-        {
 
-            var redis = ConnectionMultiplexer.Connect("localhost:6379,abortConnect=false");
+        public CacheRepository(IConfiguration configration)
+        {
+            var RedisConnection=configration.GetRequiredSection("RedisConnection").Value;
+            var redis = ConnectionMultiplexer.Connect(RedisConnection);
             RedisDB=redis.GetDatabase();
 
         }
@@ -32,6 +34,13 @@ namespace ecommerce_shared.Repository.Concrete
             }
 
             return default;
+        }
+        public bool IsExists(string key)
+        {
+
+            var value = RedisDB.StringGet(key);
+            return !string.IsNullOrEmpty(value);
+
         }
 
         public object RemoveData(string key)

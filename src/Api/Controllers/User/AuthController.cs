@@ -30,7 +30,6 @@ namespace ecommerce.Controllers.User
         }
 
         [HttpPost(AuthUserRouter.Logout)]
-
         public async Task<IActionResult> Logout(LogoutUserCommand command)
         {
             var response=await this.Mediator.Send(command); 

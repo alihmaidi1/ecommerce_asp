@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Infrutructure\ecommerce.infrutructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Filter\" />
+  </ItemGroup>
+
 </Project>
