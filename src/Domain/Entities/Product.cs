@@ -49,7 +49,7 @@ public class Product: BaseEntity
 
         public virtual Brand? Brand { get; set; }
 
-        public virtual Copon? Copon { get; set; }   
+        public virtual Coupon? Copon { get; set; }   
 
 
         public virtual ICollection<Property>Properties { get; set; }

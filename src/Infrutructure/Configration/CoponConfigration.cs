@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ecommerce.infrutructure.Configration
 {
-    public class CoponConfigration : IEntityTypeConfiguration<Copon>
+    public class CoponConfigration : IEntityTypeConfiguration<Coupon>
     {
-        public void Configure(EntityTypeBuilder<Copon> builder)
+        public void Configure(EntityTypeBuilder<Coupon> builder)
         {
             builder.HasIndex(c=>c.Name).IsUnique();
             builder.HasMany(c=>c.Products)

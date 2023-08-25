@@ -8,10 +8,10 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;
 
-    public class Copon :BaseEntity
+    public class Coupon :BaseEntity
     {
 
-        public Copon()
+        public Coupon()
         {
 
             Products=new HashSet<Product>();

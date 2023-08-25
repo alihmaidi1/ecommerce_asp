@@ -45,7 +45,7 @@ namespace ecommerce.infrutructure
 
         public DbSet<City> Cities { get; set; }
 
-        public DbSet<Copon> Copons { get; set; }
+        public DbSet<Coupon> Copons { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Currency> Currencies { get; set; }
 //        public DbSet<Image> Images { get; set; }
