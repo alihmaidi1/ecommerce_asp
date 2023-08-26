@@ -19,14 +19,16 @@ namespace ecommerce.infrutructure.Seed
             if (count == 0)
             {
 
-                var roles=Enum.GetNames(typeof(Role));
+                var roles= System.Enum.GetNames(typeof(RoleEnum));
                 foreach (var name in roles)
                 {
                     await _roleManager.CreateAsync(new IdentityRole<Guid> { Name=name});
                 }
 
 
+
             }
+
 
         }
 

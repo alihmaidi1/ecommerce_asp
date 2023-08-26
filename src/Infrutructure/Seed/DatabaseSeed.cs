@@ -26,6 +26,7 @@ namespace ecommerce.infrutructure.seed
             var transaction =context.Database.BeginTransaction();
 
                 await RoleSeed.seedData(RoleManager);
+                await PermissionSeed.seedData(RoleManager,context);
                 await AdminSeed.seedData(context,UserManager);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);

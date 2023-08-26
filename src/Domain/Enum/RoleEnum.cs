@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.Domain.Enum
 {
-    public enum Role
+    public enum RoleEnum
     {
 
         SuperAdmin=0,

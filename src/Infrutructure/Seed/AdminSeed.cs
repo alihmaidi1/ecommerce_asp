@@ -54,8 +54,8 @@ namespace ecommerce.infrutructure.Seed
 
                 };
 
-                 await CreateAdmin(context, UserManager, SuperAdmin,nameof(Role.SuperAdmin));
-                 await CreateAdmin(context, UserManager, DeliveryMan, nameof(Role.DeliveryMan));
+                 await CreateAdmin(context, UserManager, SuperAdmin,nameof(RoleEnum.SuperAdmin));
+                 await CreateAdmin(context, UserManager, DeliveryMan, nameof(RoleEnum.DeliveryMan));
 
 
                 

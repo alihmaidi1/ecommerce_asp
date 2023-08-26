@@ -6484,11 +6484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
       "projectName": "ecommerce.service",
-      "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\obj\\",
+      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6510,8 +6510,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Repositories\\Repositories.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Repositories\\Repositories.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Repositories\\Repositories.csproj"
             }
           }
         }
