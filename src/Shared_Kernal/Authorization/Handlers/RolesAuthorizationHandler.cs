@@ -15,17 +15,16 @@ namespace ecommerce_shared.Authorization.Handlers
     public class RolesAuthorizationHandler : AuthorizationHandler<RolesAuthorizationRequirement>
     {
         public UserManager<Account> UserManager;
-        public RoleManager<IdentityRole<Guid>> RoleManager;
 
-        public RolesAuthorizationHandler(UserManager<Account> UserManager, RoleManager<IdentityRole<Guid>> RoleManager) { 
+        public RolesAuthorizationHandler(UserManager<Account> UserManager) { 
         
-            this.UserManager = UserManager;
-            this.RoleManager = RoleManager; 
+            this.UserManager = UserManager; 
         }
         protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, RolesAuthorizationRequirement requirement)
         {
 
-            if (context.User is null||!context.User.Identity.IsAuthenticated)
+            
+            if (context.User==null||context.User?.Identity?.IsAuthenticated==false)
             {
 
                 context.Fail();
@@ -33,6 +32,7 @@ namespace ecommerce_shared.Authorization.Handlers
 
             }
             var Roles = requirement.AllowedRoles;
+
             var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value;
             Account User=  UserManager.FindByIdAsync(Id).Result;
             var UserRole= UserManager.GetRolesAsync(User).Result;

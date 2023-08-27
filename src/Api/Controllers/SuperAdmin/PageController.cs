@@ -36,7 +36,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
         [HttpPost(PageRouter.AddPage)]
         [Authorize]
-        [CheckTokenInRedis(Roles ="SuperAdmin")]
+        [CheckTokenInRedis]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {
 
