@@ -1,23 +1,23 @@
 using Common;
 using ecommerce.admin;
+using ecommerce.Domain.Attribute;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
 using ecommerce.infrutructure.Services.Classes;
+using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce.service;
 using ecommerce.user;
-using ecommerce_shared.Attribute;
 using ecommerce_shared.Authorization.Handlers;
 using ecommerce_shared.Authorization.Providers;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
-using ecommerce_shared.Repository.Concrete;
-using ecommerce_shared.Repository.interfaces;
+using ecommerce_shared.Redis;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
+using Repositories.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 

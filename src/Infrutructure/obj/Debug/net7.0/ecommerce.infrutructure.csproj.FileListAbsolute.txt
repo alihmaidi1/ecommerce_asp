@@ -36,3 +36,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\en\
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Debug\net7.0\ecommerce.infrutructure.csproj.CopyComplete
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Debug\net7.0\ecommerce.infrutructure.genruntimeconfig.cache
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Debug\net7.0\ref\ecommerce.infrutructure.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce_shared.pdb

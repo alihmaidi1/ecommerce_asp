@@ -2,8 +2,7 @@
 using ecommerce.admin.Features.Pages.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using ecommerce_shared.Attribute;
-using Microsoft.AspNetCore.Authorization;
+using ecommerce.Domain.Attribute;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin

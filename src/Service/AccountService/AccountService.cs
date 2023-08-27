@@ -1,16 +1,8 @@
 ﻿using Azure.Core;
 using ecommerce.Domain.Abstract;
-using ecommerce.Domain.Entities;
-using ecommerce.Repository.PageRepository;
 using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using Repositories.ExtensionMethod;
-using Repositories.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce.service.UserService
 {

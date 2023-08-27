@@ -1,25 +1,16 @@
-﻿using ecommerce.Domain.SharedResources;
-using ecommerce_shared.OperationResult.Base;
-using ecommerce_shared.OperationResult.Enum;
+﻿using ecommerce_shared.OperationResult.Enum;
 using ecommerce_shared.OperationResult.MethodExtension;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce_shared.OperationResult
 {
     public class OperationResult
     {
 
-        public IStringLocalizer<SharedResource> _StringLocalizer;
-        public OperationResult(IStringLocalizer<SharedResource> stringLocalizer) {
+        //public IStringLocalizer<SharedResource> _StringLocalizer;
+        public OperationResult() {
         
-            _StringLocalizer = stringLocalizer;
         }    
 
 
@@ -28,7 +19,7 @@ namespace ecommerce_shared.OperationResult
         {
                 
             int StatusCode = (int)System.Net.HttpStatusCode.OK;
-            string Message = _StringLocalizer[SharedResourceKeys.Deleted];
+            string Message = "Deleted Successfully";
             return this.ToJsonResult<T>(StatusCode:StatusCode,Message:Message);
         }
 
@@ -52,7 +43,6 @@ namespace ecommerce_shared.OperationResult
         public JsonResult Success(string ResultMessage = "")
         {
             int StatusCode = (int)System.Net.HttpStatusCode.OK;
-            //string Message = _StringLocalizer[SharedResourceKeys.Operation_Success];
             string Message = ResultMessage;
             return this.ToJsonResult<object>(StatusCode,Message:Message);
 

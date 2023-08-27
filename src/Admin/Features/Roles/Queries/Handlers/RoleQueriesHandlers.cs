@@ -19,10 +19,12 @@ namespace ecommerce.admin.Features.Roles.Queries.Handlers
     {
 
         public IRoleRepository RoleRepository;
+        public IStringLocalizer<SharedResource> stringLocalizer;
         public RoleQueriesHandlers(IStringLocalizer<SharedResource> stringLocalizer,
-            IRoleRepository RoleRepository) : base(stringLocalizer)
+            IRoleRepository RoleRepository) 
         {
 
+            this.stringLocalizer = stringLocalizer;
             this.RoleRepository = RoleRepository;
         }
 

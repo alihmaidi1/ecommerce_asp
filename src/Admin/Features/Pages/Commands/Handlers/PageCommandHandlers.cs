@@ -29,9 +29,9 @@ namespace ecommerce.admin.Features.Pages.Commands.Handlers
         public IPageService pageService;
         public IMapper mapper;
 
-        public PageCommandHandlers(IPageService pageService, IMapper mapper, IStringLocalizer<SharedResource> stringLocalizer):base(stringLocalizer)
+        public PageCommandHandlers(IPageService pageService, IMapper mapper, IStringLocalizer<SharedResource> stringLocalizer)
         {
-
+            this._StringLocalizer = stringLocalizer;
             this.pageService = pageService;
             this.mapper = mapper;
             _StringLocalizer = stringLocalizer;

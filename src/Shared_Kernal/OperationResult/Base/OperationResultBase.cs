@@ -1,14 +1,4 @@
-﻿using Azure;
-using ecommerce.Domain.SharedResources;
-using ecommerce_shared.OperationResult.Enum;
-using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ecommerce_shared.OperationResult.Base
+﻿namespace ecommerce_shared.OperationResult.Base
 {
     public class OperationResultBase<T>
     {

@@ -1,14 +1,7 @@
 ﻿using ecommerce.Domain.Entities;
-using ecommerce_shared.Repository.interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ecommerce.Repository.PageRepository
+namespace ecommerce.Repository.Page
 {
-    public interface IPageRepository:IgenericRepository<Page>
+    public interface IPageRepository : Repositories.Base.IgenericRepository<ecommerce.Domain.Entities.Page>
     {
 
     }

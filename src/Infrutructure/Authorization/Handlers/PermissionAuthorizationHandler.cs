@@ -1,17 +1,9 @@
 ﻿using ecommerce.Domain.Abstract;
 using ecommerce.infrutructure;
-using ecommerce_shared.Authorization.Requirements;
-using ecommerce_shared.Filter;
+using ecommerce.infrutructure.Authorization.Requirements;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce_shared.Authorization.Handlers
 {

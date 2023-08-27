@@ -5,26 +5,18 @@ using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.Auth.Command;
 using ecommerce.infrutructure;
+using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce.service.UserService;
 using ecommerce.user.Features.Auth.Commands.Models;
-using ecommerce_shared.Exceptions;
 using ecommerce_shared.OperationResult;
-using ecommerce_shared.OperationResult.Base;
-using ecommerce_shared.Repository.Concrete;
-using ecommerce_shared.Repository.interfaces;
+using ecommerce_shared.Redis;
 using MediatR;
-using Microsoft.AspNetCore.Http.Headers;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using Repositories.Jwt;
 using Repositories.User.Store;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce.user.Features.Auth.Commands.Handlers
 {
@@ -42,8 +34,8 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
         public readonly IMapper mapper;
         public readonly UserManager<Account> userManager;
         public readonly IAccountService AccountService;
-
         public IJwtRepository jwtRepository;
+        
 
         public AuthUserCommandHandlers(
             IStringLocalizer<SharedResource> _StringLocalizer,
@@ -53,7 +45,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             UserManager<Account> UserManager,
             IMapper mapper,
             IJwtRepository jwtRepository
-            ) :base(_StringLocalizer)
+            ) 
             
         {
             this._StringLocalizer= _StringLocalizer;    

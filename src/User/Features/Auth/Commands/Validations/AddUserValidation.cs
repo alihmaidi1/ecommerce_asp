@@ -1,14 +1,8 @@
 ﻿using ecommerce.Domain.Abstract;
-using ecommerce.infrutructure;
 using ecommerce.user.Features.Auth.Commands.Models;
-using ecommerce_shared.Rule;
+
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce.user.Features.Auth.Commands.Validations
 {

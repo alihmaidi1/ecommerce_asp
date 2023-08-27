@@ -1,16 +1,13 @@
 ﻿using ecommerce_shared.OperationResult.Base;
-using ecommerce_shared.Repository.interfaces;
+using ecommerce_shared.Redis;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Net;
 using System.Text.Json;
 
-namespace ecommerce_shared.Attribute
+namespace ecommerce.Domain.Attribute
 {
     public class CheckTokenInRedisAttribute : AuthorizeAttribute,IAuthorizationFilter
     {

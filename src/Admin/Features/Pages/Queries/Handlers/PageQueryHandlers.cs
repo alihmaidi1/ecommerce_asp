@@ -28,17 +28,18 @@ namespace ecommerce.admin.Features.Pages.Queries.Handlers
         #region Field
         private IPageService pageService;
         private IMapper Mapper;
-
+        IStringLocalizer<SharedResource> stringLocalizer;
 
 
         #endregion
         #region constructor
 
-        public PageQueryHandlers(IPageService PageService, IMapper Mapper, IStringLocalizer<SharedResource> stringLocalizer) : base(stringLocalizer)
+        public PageQueryHandlers(IPageService PageService, IMapper Mapper, IStringLocalizer<SharedResource> stringLocalizer) 
         {
 
             pageService = PageService;
             this.Mapper = Mapper;
+            this.stringLocalizer = stringLocalizer;
         }
 
         #endregion

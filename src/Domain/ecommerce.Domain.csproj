@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Authorization\**" />
+    <EmbeddedResource Remove="Authorization\**" />
+    <None Remove="Authorization\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Base\Abstract\" />
     <Folder Include="Base\ValueObject\" />
     <Folder Include="ValuesObject\" />
@@ -14,6 +20,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared_Kernal\ecommerce_shared.csproj" />
   </ItemGroup>
 
 </Project>

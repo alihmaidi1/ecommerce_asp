@@ -36,3 +36,6 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Debug\net7.0\ecommerce.
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Debug\net7.0\refint\ecommerce.Domain.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Debug\net7.0\ecommerce.Domain.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Debug\net7.0\ref\ecommerce.Domain.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Debug\net7.0\ecommerce.Domain.csproj.CopyComplete

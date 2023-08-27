@@ -2220,7 +2220,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.9"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.9",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "ecommerce_shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ecommerce.Domain.dll": {}
@@ -2279,9 +2281,7 @@
           "Microsoft.Extensions.Caching.StackExchangeRedis": "7.0.10",
           "StackExchange.Redis": "2.6.122",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0",
-          "ecommerce.Dto": "1.0.0",
-          "ecommerce.infrutructure": "1.0.0"
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0"
         },
         "compile": {
           "bin/placeholder/ecommerce_shared.dll": {}
@@ -2294,6 +2294,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "ecommerce.Dto": "1.0.0",
+          "ecommerce.infrutructure": "1.0.0",
           "ecommerce_shared": "1.0.0"
         },
         "compile": {

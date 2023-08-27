@@ -1,12 +1,8 @@
 ﻿using ecommerce.Domain.Entities;
-using ecommerce.Repository.PageRepository;
+using ecommerce.Repository.Page;
 using ecommerce_shared.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ecommerce.service.PageService
 {

@@ -3,22 +3,13 @@ using ecommerce.Domain.Abstract;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.Admin.Auth.Commands;
-using ecommerce.Dto.Results.User.Auth.Command;
 using ecommerce.service.UserService;
 using ecommerce_shared.OperationResult;
-using ecommerce_shared.OperationResult.Base;
-using ecommerce_shared.Repository.Concrete;
-using ecommerce_shared.Repository.interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Repositories.Admin.Store;
-using Repositories.User.Store;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Repositories.Jwt;
 
 namespace ecommerce.admin.Features.Auth.Commands.Handlers
 {
@@ -27,16 +18,19 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
     {
 
         public readonly IAccountService AccountService;
-
+        public IStringLocalizer<SharedResource> stringLocalizer;
         public IJwtRepository jwtRepository;
 
-        public AuthCommandHandlers(IStringLocalizer<SharedResource> stringLocalizer
-            , IAccountService AccountService,
-            IJwtRepository jwtRepository) : base(stringLocalizer)
+        public AuthCommandHandlers(
+               IStringLocalizer<SharedResource> stringLocalizer,
+               IAccountService AccountService,
+                IJwtRepository jwtRepository
+                ) 
         {
 
             this.AccountService = AccountService;
             this.jwtRepository = jwtRepository;
+            
 
         }
 

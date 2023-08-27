@@ -1,12 +1,8 @@
-﻿using ecommerce.Repository.PageRepository;
+﻿using ecommerce.Repository.Page;
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Page;
 using Repositories.RefreshToken;
 using Repositories.Role;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories
 {

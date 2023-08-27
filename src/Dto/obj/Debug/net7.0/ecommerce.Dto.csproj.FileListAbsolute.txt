@@ -32,3 +32,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\ar\ecommerce.
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\en\ecommerce.Domain.resources.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Debug\net7.0\ecommerce.Dto.csproj.CopyComplete
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Debug\net7.0\ref\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\ecommerce_shared.pdb

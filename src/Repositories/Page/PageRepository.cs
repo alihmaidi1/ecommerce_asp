@@ -1,18 +1,15 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.infrutructure;
-using ecommerce_shared.Repository.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ecommerce.Repository.Page;
+using Repositories.Base.Concrete;
 
-namespace ecommerce.Repository.PageRepository
+namespace Repositories.Page
 {
-    public class PageRepository : GenericRepository<Page>, IPageRepository
+    public class PageRepository : GenericRepository<ecommerce.Domain.Entities.Page>, IPageRepository
     {
         public PageRepository(ApplicationDbContext DbContext) : base(DbContext)
         {
         }
+
     }
 }

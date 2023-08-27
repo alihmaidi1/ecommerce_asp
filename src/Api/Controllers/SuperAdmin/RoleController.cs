@@ -1,8 +1,7 @@
 ﻿using ecommerce.admin.Features.Roles.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using ecommerce.Domain.Enum;
-using ecommerce_shared.Attribute;
+using ecommerce.Domain.Attribute;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin
