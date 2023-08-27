@@ -24,8 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authorization\Providers\" />
-    <Folder Include="Authorization\Requirements\" />
     <Folder Include="Filter\" />
   </ItemGroup>
 

@@ -35,13 +35,12 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPost(PageRouter.AddPage)]
-        [Authorize]
-        [CheckTokenInRedis]
+        [CheckTokenInRedis(Policy = "DeleteBanner")]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {
 
             var response = await this.Mediator.Send(command);
-            return Ok(response);
+            return response;
         }
 
 

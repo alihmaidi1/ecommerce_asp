@@ -14,7 +14,7 @@ namespace Repositories.Role.Store
 
 
 
-        public static IQueryable<IdentityRole<Guid>> RoleWithoutBaseAdmins(this RoleManager<IdentityRole<Guid>> RoleManager)
+        public static IQueryable<ecommerce.Domain.Entities.Role> RoleWithoutBaseAdmins(this RoleManager<ecommerce.Domain.Entities.Role> RoleManager)
         {
 
 

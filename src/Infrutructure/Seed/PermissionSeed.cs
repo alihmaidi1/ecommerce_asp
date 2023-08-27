@@ -15,7 +15,7 @@ namespace ecommerce.infrutructure.Seed
     {
 
 
-        public static async Task seedData(RoleManager<IdentityRole<Guid>> RoleManager,ApplicationDbContext context)
+        public static async Task seedData(RoleManager<Role> RoleManager,ApplicationDbContext context)
         {
 
             await SuperAdminSeed(RoleManager, context);
@@ -23,7 +23,7 @@ namespace ecommerce.infrutructure.Seed
 
         }
 
-        public static async Task SuperAdminSeed(RoleManager<IdentityRole<Guid>> RoleManager, ApplicationDbContext context)
+        public static async Task SuperAdminSeed(RoleManager<Role> RoleManager, ApplicationDbContext context)
         {
 
             var SuperAdmin = RoleManager.Roles.FirstOrDefault(x => x.Name.Equals(nameof(RoleEnum.SuperAdmin)));

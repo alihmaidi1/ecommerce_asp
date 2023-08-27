@@ -12,7 +12,7 @@ namespace ecommerce.Controllers.User
     {
 
         [HttpPost(AuthUserRouter.Create)]
-        public async Task<IActionResult> AddPage([FromBody] AddUserCommand command)
+        public async Task<IActionResult> CreateUser([FromBody] AddUserCommand command)
         {
 
             var response = await this.Mediator.Send(command);

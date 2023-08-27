@@ -17,8 +17,7 @@ namespace ecommerce.Domain.Abstract
         }
         public virtual User User { get; set; }
         public virtual Admin Admin{ get; set; }
-
-
+        
         public virtual ICollection<RefreshToken>? RefreshTokens{ get; set; }    
 
     }

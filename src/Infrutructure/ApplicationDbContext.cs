@@ -16,7 +16,7 @@ using ecommerce.Domain.Enum;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext : IdentityDbContext<Account, IdentityRole<Guid>, Guid>
+    public class ApplicationDbContext : IdentityDbContext<Account, Role, Guid,IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
     {
 
         public ApplicationDbContext(DbContextOptions option):base(option)

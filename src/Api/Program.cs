@@ -7,6 +7,7 @@ using ecommerce.service;
 using ecommerce.user;
 using ecommerce_shared.Attribute;
 using ecommerce_shared.Authorization.Handlers;
+using ecommerce_shared.Authorization.Providers;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Repository.Concrete;
@@ -99,6 +100,8 @@ builder.Services.AddJwtConfigration(builder.Configuration);
 builder.Services.AddTransient<IJwtRepository, JwtRepository>();
 builder.Services.AddScoped<ICacheRepository,CacheRepository>();
 builder.Services.AddScoped<IAuthorizationHandler,RolesAuthorizationHandler>();
+builder.Services.AddTransient<IAuthorizationPolicyProvider,PermissionProvider>();
+builder.Services.AddTransient<IAuthorizationHandler,PermissionAuthorizationHandler>();
 
 builder.Services.AddTransient<CheckTokenInRedisAttribute>();
 

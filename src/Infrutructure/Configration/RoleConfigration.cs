@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Enum;
+﻿using ecommerce.Domain.Entities;
+using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -11,9 +12,9 @@ using tables.Entities;
 
 namespace ecommerce.infrutructure.Configration
 {
-    internal class IdentityRoleConfigration : IEntityTypeConfiguration<IdentityRole<Guid>>
+    internal class RoleConfigration : IEntityTypeConfiguration<Role>
     {
-        public void Configure(EntityTypeBuilder<IdentityRole<Guid>> builder)
+        public void Configure(EntityTypeBuilder<Role> builder)
         {
             
         }

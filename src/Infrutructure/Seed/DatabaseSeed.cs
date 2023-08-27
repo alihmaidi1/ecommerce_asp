@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Abstract;
+using ecommerce.Domain.Entities;
 using ecommerce.infrutructure.Seed;
 using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;
@@ -21,7 +22,7 @@ namespace ecommerce.infrutructure.seed
             var context = services.GetRequiredService<ApplicationDbContext>();
             await context.Database.MigrateAsync();
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
-            var RoleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+            var RoleManager = services.GetRequiredService<RoleManager<Role>>();
             var UserManager = services.GetRequiredService<UserManager<Account>>();
             var transaction =context.Database.BeginTransaction();
 

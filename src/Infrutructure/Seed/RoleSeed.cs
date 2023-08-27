@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Abstract;
+using ecommerce.Domain.Entities;
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,7 @@ namespace ecommerce.infrutructure.Seed
     public static class RoleSeed
     {
 
-        public static async Task seedData(RoleManager<IdentityRole<Guid>> _roleManager)
+        public static async Task seedData(RoleManager<Role> _roleManager)
         {
             bool exists=_roleManager.Roles.Any();
 
@@ -23,7 +24,7 @@ namespace ecommerce.infrutructure.Seed
                 var roles= System.Enum.GetNames(typeof(RoleEnum));
                 foreach (var name in roles)
                 {
-                    await _roleManager.CreateAsync(new IdentityRole<Guid> { Name=name});
+                    await _roleManager.CreateAsync(new Role { Name=name});
                 }
 
 

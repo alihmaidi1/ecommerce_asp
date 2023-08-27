@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ecommerce.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace Repositories.Role
     public interface IRoleRepository
     {
 
-        public  List<IdentityRole<Guid>> GetAllRole();
+        public  List<ecommerce.Domain.Entities.Role> GetAllRole();
     }
 }
