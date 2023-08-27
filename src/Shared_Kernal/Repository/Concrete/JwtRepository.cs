@@ -36,8 +36,7 @@ namespace ecommerce_shared.Repository.Concrete
         }
         public async Task<TokenDto> GetTokens(Account Account)
         {
-            var Roles=await UserManager.GetRolesAsync(Account);
-            var claims = CreateClaim(Account,Roles.ToList());
+            var claims = CreateClaim(Account);
 
             var signingCredentials = GetSigningCredentials(JWTOption);            
             var JwtToken = GetJwtToken(JWTOption,claims, signingCredentials);
@@ -60,19 +59,18 @@ namespace ecommerce_shared.Repository.Concrete
     
     
     
-        public List<Claim> CreateClaim(Account Account,List<string> Roles)
+        public List<Claim> CreateClaim(Account Account)
         {
 
             var Claims= new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier,Account.UserName),
-                new Claim(ClaimTypes.Email,Account.Email)
+                new Claim(ClaimTypes.Name,Account.UserName),
+                new Claim(ClaimTypes.Email,Account.Email),
+                new Claim(ClaimTypes.NameIdentifier,Account.Id.ToString())
                 
-
             };
 
-            Roles.ForEach(r => Claims.Add(new Claim(ClaimTypes.Role, r.ToString())));
-
+            
             return Claims;
 
             

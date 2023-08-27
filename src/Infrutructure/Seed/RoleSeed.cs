@@ -15,8 +15,9 @@ namespace ecommerce.infrutructure.Seed
 
         public static async Task seedData(RoleManager<IdentityRole<Guid>> _roleManager)
         {
-            int count=await _roleManager.Roles.CountAsync();
-            if (count == 0)
+            bool exists=_roleManager.Roles.Any();
+
+            if (!exists)
             {
 
                 var roles= System.Enum.GetNames(typeof(RoleEnum));

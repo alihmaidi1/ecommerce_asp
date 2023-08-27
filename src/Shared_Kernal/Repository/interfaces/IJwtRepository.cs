@@ -19,7 +19,7 @@ namespace ecommerce_shared.Repository.interfaces
         public  Task<TokenDto> GetTokens(Account Account);
 
 
-        public List<Claim> CreateClaim(Account Account,List<string> Roles);
+        public List<Claim> CreateClaim(Account Account);
 
 
         public SigningCredentials GetSigningCredentials(JwtSetting JWTOption);

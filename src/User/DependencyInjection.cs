@@ -1,12 +1,9 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce.user
 {
@@ -14,9 +11,13 @@ namespace ecommerce.user
     {
         public static IServiceCollection AddUserdependency(this IServiceCollection services)
         {
-            services.AddMediatR(config =>config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));                        
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddMediatR(config =>
+            {
+                config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+                config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            });
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            //services.AddTransient(typeof(IPipelineBehavior<,>),typeof(ValidationBehavior<,>));           
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;

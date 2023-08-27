@@ -10,10 +10,12 @@ namespace ecommerce.Domain.AppMetaData
     {
 
         public const string root= "Api";
-        public const string Version = "v1";
+        public const string Version = "V1";
         public const string Rule=root+"/"+Version+"/";
 
         public const string User = "User";
+        public const string Admin = "Admin";
+
 
     }
 }

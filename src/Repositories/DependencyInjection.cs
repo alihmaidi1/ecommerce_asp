@@ -1,6 +1,7 @@
 ﻿using ecommerce.Repository.PageRepository;
 using Microsoft.Extensions.DependencyInjection;
 using Repositories.RefreshToken;
+using Repositories.Role;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Repositories
         {
             services.AddTransient<IPageRepository,PageRepository>();
             services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
             return services;
 
         }

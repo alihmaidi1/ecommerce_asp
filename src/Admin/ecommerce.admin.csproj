@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Auth\Commands\Validations\" />
+    <Folder Include="Features\Roles\Queries\Validations\" />
   </ItemGroup>
 
 </Project>

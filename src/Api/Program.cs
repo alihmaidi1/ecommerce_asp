@@ -6,12 +6,15 @@ using ecommerce.infrutructure.Services.Classes;
 using ecommerce.service;
 using ecommerce.user;
 using ecommerce_shared.Attribute;
+using ecommerce_shared.Authorization.Handlers;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Repository.Concrete;
 using ecommerce_shared.Repository.interfaces;
 using ecommerce_shared.Swagger;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 
@@ -95,6 +98,7 @@ builder.Services.AddJwtConfigration(builder.Configuration);
 
 builder.Services.AddTransient<IJwtRepository, JwtRepository>();
 builder.Services.AddScoped<ICacheRepository,CacheRepository>();
+builder.Services.AddScoped<IAuthorizationHandler,RolesAuthorizationHandler>();
 
 builder.Services.AddTransient<CheckTokenInRedisAttribute>();
 
@@ -145,6 +149,6 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.MapControllers();
 
+app.MapControllers();
 app.Run();

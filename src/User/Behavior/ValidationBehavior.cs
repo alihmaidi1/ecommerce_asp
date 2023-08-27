@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 public  sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
-    where TResponse: JsonResult
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 

@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Reflection.Emit;
 using ecommerce.Domain.Base.Entity;
 using ecommerce.Domain.Abstract;
+using ecommerce.Domain.Enum;
 
 namespace ecommerce.infrutructure
 {
@@ -21,6 +22,7 @@ namespace ecommerce.infrutructure
         public ApplicationDbContext(DbContextOptions option):base(option)
         {
             
+            
 
         }
 
@@ -28,7 +30,6 @@ namespace ecommerce.infrutructure
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            
             base.OnModelCreating(builder);
 
         }
