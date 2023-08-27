@@ -260,6 +260,9 @@
             "projectReferences": {
               "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj": {
                 "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj"
+              },
+              "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj": {
+                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj"
               }
             }
           }

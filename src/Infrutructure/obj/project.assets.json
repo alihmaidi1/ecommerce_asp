@@ -1964,6 +1964,20 @@
           "bin/placeholder/ecommerce.Domain.dll": {}
         }
       },
+      "ecommerce.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "ecommerce.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ecommerce.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ecommerce.Dto.dll": {}
+        }
+      },
       "ecommerce_shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -5309,6 +5323,11 @@
       "path": "../Domain/ecommerce.Domain.csproj",
       "msbuildProject": "../Domain/ecommerce.Domain.csproj"
     },
+    "ecommerce.Dto/1.0.0": {
+      "type": "project",
+      "path": "../Dto/ecommerce.Dto.csproj",
+      "msbuildProject": "../Dto/ecommerce.Dto.csproj"
+    },
     "ecommerce_shared/1.0.0": {
       "type": "project",
       "path": "../Shared_Kernal/ecommerce_shared.csproj",
@@ -5329,7 +5348,8 @@
       "Microsoft.Extensions.Identity.Stores >= 7.0.9",
       "Newtonsoft.Json >= 13.0.3",
       "Z.EntityFramework.Extensions.EFCore >= 7.22.4",
-      "ecommerce.Domain >= 1.0.0"
+      "ecommerce.Domain >= 1.0.0",
+      "ecommerce.Dto >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5368,6 +5388,9 @@
           "projectReferences": {
             "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj": {
               "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj"
+            },
+            "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj"
             }
           }
         }

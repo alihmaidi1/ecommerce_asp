@@ -2384,7 +2384,8 @@
           "Microsoft.Extensions.Identity.Stores": "7.0.9",
           "Newtonsoft.Json": "13.0.3",
           "Z.EntityFramework.Extensions.EFCore": "7.22.4",
-          "ecommerce.Domain": "1.0.0"
+          "ecommerce.Domain": "1.0.0",
+          "ecommerce.Dto": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ecommerce.infrutructure.dll": {}

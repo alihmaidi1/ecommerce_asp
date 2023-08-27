@@ -38,3 +38,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Debug\net7.0\eco
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Debug\net7.0\ref\ecommerce.infrutructure.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Debug\net7.0\ecommerce.Dto.pdb

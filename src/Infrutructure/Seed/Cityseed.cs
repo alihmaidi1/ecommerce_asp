@@ -1,5 +1,5 @@
 ﻿using ecommerce.Domain.Entities;
-using ecommerce.infrutructure.Dto;
+using ecommerce.Dto;
 using ecommerce.infrutructure.Services.Interfaces;
 using System;
 using System.Collections.Generic;

@@ -1,9 +1,7 @@
-﻿using Azure.Core;
-using ecommerce.Domain.Abstract;
+﻿using ecommerce.Domain.Abstract;
 using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Identity;
-using Repositories.ExtensionMethod;
-
+using ecommerce.infrutructure.ExtensionMethod;
 namespace ecommerce.service.UserService
 {
     public class AccountService:IAccountService

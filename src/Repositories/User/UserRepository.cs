@@ -2,8 +2,7 @@
 using ecommerce.infrutructure;
 using Microsoft.AspNetCore.Identity;
 using Repositories.Base.Concrete;
-using Repositories.ExtensionMethod;
-
+using ecommerce.infrutructure.ExtensionMethod;
 namespace Repositories.User
 {
     public class UserRepository : GenericRepository<ecommerce.Domain.Entities.User>, IUserRepository

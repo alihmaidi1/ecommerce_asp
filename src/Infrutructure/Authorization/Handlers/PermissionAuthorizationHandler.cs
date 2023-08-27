@@ -1,6 +1,7 @@
 ﻿using ecommerce.Domain.Abstract;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.Authorization.Requirements;
+using ecommerce.infrutructure.ExtensionMethod;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
@@ -25,25 +26,15 @@ namespace ecommerce_shared.Authorization.Handlers
 
             if (context.User == null||context.User.Identity.IsAuthenticated==false)
             {
-
                 return;
             }
-            Guid Id=Guid.Empty;
-            Guid.TryParse(context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value,out Id);
-            var claims = (from ur in DBContext.UserRoles
-                         where ur.UserId==Id
-                         join r in DBContext.Roles on ur.RoleId equals r.Id
-                         join rc in DBContext.RoleClaims on r.Id equals rc.RoleId
-                         select rc).ToList();
-            
+            Guid Id=new Guid(context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            var claims = DBContext.GetAccountCalims(Id);   
             var RequiredPermission = requirement.Permission;
             var exists = claims.Any(c=>c.ClaimValue.Equals(RequiredPermission));
-
             if (exists)
             {
-
                 context.Succeed(requirement);
-
             }
             else
             {

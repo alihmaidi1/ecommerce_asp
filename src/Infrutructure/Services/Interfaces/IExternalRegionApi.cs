@@ -1,11 +1,4 @@
-﻿using ecommerce.infrutructure.Dto;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ecommerce.Dto;
 
 namespace ecommerce.infrutructure.Services.Interfaces
 {

@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\ecommerce.Domain.csproj" />
+    <ProjectReference Include="..\Dto\ecommerce.Dto.csproj" />
   </ItemGroup>
 
 </Project>

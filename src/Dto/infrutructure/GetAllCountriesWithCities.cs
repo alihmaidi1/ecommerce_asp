@@ -1,12 +1,5 @@
 ﻿using ecommerce.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ecommerce.infrutructure.Dto
+namespace ecommerce.Dto
 {
     public class GetAllCountriesWithCities
     {
