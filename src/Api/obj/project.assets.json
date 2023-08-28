@@ -160,6 +160,22 @@
           }
         }
       },
+      "LazZiya.ImageResize/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "5.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/LazZiya.ImageResize.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/LazZiya.ImageResize.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MediatR/12.1.1": {
         "type": "package",
         "dependencies": {
@@ -3516,6 +3532,7 @@
           "Blurhash.ImageSharp": "3.0.0",
           "FluentValidation": "11.7.1",
           "FluentValidation.DependencyInjectionExtensions": "11.7.1",
+          "LazZiya.ImageResize": "4.1.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -3725,6 +3742,22 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "LazZiya.ImageResize/4.1.4": {
+      "sha512": "/6Kexzt94MQtRXku8wFmwCrcS62hzHdZPyZGN7Qcrpg4jwQVzZjvv7ub/tM8SqE0hxPW62mW1yTSiSU6Ci7mmQ==",
+      "type": "package",
+      "path": "lazziya.imageresize/4.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.ico",
+        "icon.png",
+        "lazziya.imageresize.4.1.4.nupkg.sha512",
+        "lazziya.imageresize.nuspec",
+        "lib/netstandard2.0/LazZiya.ImageResize.dll",
+        "lib/netstandard2.0/LazZiya.ImageResize.xml",
+        "license.txt"
       ]
     },
     "MediatR/12.1.1": {

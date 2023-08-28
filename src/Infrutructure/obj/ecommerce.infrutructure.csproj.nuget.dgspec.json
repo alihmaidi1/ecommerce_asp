@@ -320,6 +320,10 @@
               "target": "Package",
               "version": "[11.7.1, )"
             },
+            "LazZiya.ImageResize": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.10, )"

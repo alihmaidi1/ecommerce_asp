@@ -25,7 +25,8 @@ namespace Common.Features.Image.Commands.Handlers
         {
 
             var image = request.Image.UploadImage(webHost.WebRootPath);
-            return Success(image,"The Image Was Uploaded Successfully");
+            var resize = image.resizeImage();
+            return Success(new{ image,resize },"The Image Was Uploaded Successfully");
 
         }
 

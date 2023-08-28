@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M12riijXIMlvlfjMXT0e5m+ZvOzN0heABTAaFdriJniJsW4oN6O22TyNLSOpDC/dwHm1wnUkCsM4hZVnMiNT8Q==",
+  "dgSpecHash": "Vb5bFG4UDGRq6JPTgZTF5E8dwyvyUVIMXBBqRkIvBqCMq9BNAe6lTjBKG4fPr5PEE1v0SG2h/2NEFtbEl6mHWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\lazziya.imageresize\\4.1.4\\lazziya.imageresize.4.1.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",

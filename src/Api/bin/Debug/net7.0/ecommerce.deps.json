@@ -153,6 +153,17 @@
           }
         }
       },
+      "LazZiya.ImageResize/4.1.4": {
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LazZiya.ImageResize.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.1.4.0"
+          }
+        }
+      },
       "MediatR/12.1.1": {
         "dependencies": {
           "MediatR.Contracts": "2.0.1",
@@ -1928,6 +1939,7 @@
           "Blurhash.ImageSharp": "3.0.0",
           "FluentValidation": "11.7.1",
           "FluentValidation.DependencyInjectionExtensions": "11.7.1",
+          "LazZiya.ImageResize": "4.1.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -2029,6 +2041,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "LazZiya.ImageResize/4.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/6Kexzt94MQtRXku8wFmwCrcS62hzHdZPyZGN7Qcrpg4jwQVzZjvv7ub/tM8SqE0hxPW62mW1yTSiSU6Ci7mmQ==",
+      "path": "lazziya.imageresize/4.1.4",
+      "hashPath": "lazziya.imageresize.4.1.4.nupkg.sha512"
     },
     "MediatR/12.1.1": {
       "type": "package",

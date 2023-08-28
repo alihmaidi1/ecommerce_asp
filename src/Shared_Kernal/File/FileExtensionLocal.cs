@@ -1,12 +1,8 @@
 ﻿using Blurhash.ImageSharp;
 using ecommerce_shared.Exceptions;
+using LazZiya.ImageResize;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
 
 namespace ecommerce_shared.File
 {
@@ -127,25 +123,46 @@ namespace ecommerce_shared.File
 
         }
 
-
         public static string GetImageHash(this string imagepath)
         {
-
             try
             {
-
+                
                 using var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(new FileStream(imagepath, FileMode.Open));
                 return Blurhasher.Encode(imageStream, 4, 3);
-
             }
             catch
             {
-
                 throw new IOException("Cannot Get Hashstring of image");
+            }
+        }
+
+
+        public static string resizeImage(this string imagepath,int Width=300,int Height = 300)
+        {
+            try
+            {
+
+
+                var img = System.Drawing.Image.FromFile(imagepath);
+                var imageResized = ImageResize.Scale(img, Width, Height);
+                var directory = Path.GetDirectoryName(imagepath);
+                var resizepath = Path.Combine(directory, Guid.NewGuid().ToString() + Path.GetExtension(imagepath));
+                imageResized.SaveAs(resizepath);
+                return resizepath;
+
+
+            }
+            catch 
+            {
+
+                throw new Exception("Cannot resize image");
+
             }
 
 
         }
+
 
     }
 }
