@@ -110,13 +110,19 @@ namespace ecommerce_shared.File
                 string imagePath = UploadImage(image, webRootPath);
                 UploadedImages.Add(imagePath);
 
-
-
             });
-
             
-
             return UploadedImages;
+
+        }
+
+
+        public static bool IsBase64Image(this string base64File)
+        {
+
+            var base64 = base64File.Substring(base64File.IndexOf(",") + 1);
+            Span<byte> buffer = new Span<byte>(new byte[base64.Length]);
+            return Convert.TryFromBase64String(base64,buffer,out int bytesParsed);
 
         }
 
