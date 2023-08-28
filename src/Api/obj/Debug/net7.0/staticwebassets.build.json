@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "Ouo69n1j56Wx6K+KvdTP57SFK4Q/sYLANKH3ZFuuQOw=",
+  "Hash": "Nm+HURxEzPnmqN5sEyGFmOYIuDHgSGwrqBqLP6oC53Y=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ecommerce\\wwwroot",
+      "Source": "ecommerce",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Api\\wwwroot\\Temps\\30fceb7f-0044-4685-affd-42b87f67fb42Screenshot (4).png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temps/30fceb7f-0044-4685-affd-42b87f67fb42Screenshot (4).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temps\\30fceb7f-0044-4685-affd-42b87f67fb42Screenshot (4).png"
+    }
+  ]
 }
