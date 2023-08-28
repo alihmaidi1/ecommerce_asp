@@ -1,4 +1,5 @@
-﻿using ecommerce_shared.Exceptions;
+﻿using Blurhash.ImageSharp;
+using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -123,6 +124,26 @@ namespace ecommerce_shared.File
             var base64 = base64File.Substring(base64File.IndexOf(",") + 1);
             Span<byte> buffer = new Span<byte>(new byte[base64.Length]);
             return Convert.TryFromBase64String(base64,buffer,out int bytesParsed);
+
+        }
+
+
+        public static string GetImageHash(this string imagepath)
+        {
+
+            try
+            {
+
+                using var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(new FileStream(imagepath, FileMode.Open));
+                return Blurhasher.Encode(imageStream, 4, 3);
+
+            }
+            catch
+            {
+
+                throw new IOException("Cannot Get Hashstring of image");
+            }
+
 
         }
 

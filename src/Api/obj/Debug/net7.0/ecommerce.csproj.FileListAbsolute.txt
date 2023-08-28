@@ -260,3 +260,6 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Pipelines.Soc
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\StackExchange.Redis.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\appsettings.Production.json
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\ecommerce.staticwebassets.runtime.json
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Blurhash.Core.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Blurhash.ImageSharp.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\SixLabors.ImageSharp.dll

@@ -1,14 +1,10 @@
-﻿using Common.Features.Image.Commands.Models;
+﻿
+using Common.Features.Image.Commands.Models;
 using ecommerce_shared.File;
 using ecommerce_shared.OperationResult;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common.Features.Image.Commands.Handlers
 {
