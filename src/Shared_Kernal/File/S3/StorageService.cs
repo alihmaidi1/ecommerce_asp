@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 namespace ecommerce_shared.File.S3
 {
-    public class StorageService : IStorageService
+    public class StorageService : IStorageService,IDisposable
     {
         private readonly IConfiguration Configration;
+        private AmazonS3Client client;
+        private bool isDisposed;
         public StorageService(IConfiguration Configration) {
         
             this.Configration = Configration;
@@ -52,7 +54,7 @@ namespace ecommerce_shared.File.S3
 
 
                 TransferUtilityUploadRequest uploadRequest = GetRequestUpload(obj);
-                var client = new AmazonS3Client(AwsCrediential, config);
+                client = new AmazonS3Client(AwsCrediential, config);
                 var transferUtility = new TransferUtility(client);
                 await transferUtility.UploadAsync(uploadRequest);
 
@@ -98,10 +100,25 @@ namespace ecommerce_shared.File.S3
 
         }
 
+        ~StorageService()
+        {
+
+            Dispose(false);
+
+        }
 
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-
-
+        protected virtual void Dispose(bool disposing)
+        {
+            if (isDisposed)
+                return;
+            this.client.Dispose();
+        }
     }
 }

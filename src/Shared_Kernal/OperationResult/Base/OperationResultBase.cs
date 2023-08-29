@@ -1,6 +1,6 @@
 ﻿namespace ecommerce_shared.OperationResult.Base
 {
-    public class OperationResultBase<T>
+    public class OperationResultBase<T>:IDisposable
     {
 
         
@@ -13,7 +13,31 @@
 
         public List<string> Errors { get; set; }
         
+        
+        protected bool disposed = false;
 
 
+        //~OperationResultBase()
+        //{
+
+        //    Dispose();
+        //}
+
+        public void Dispose()
+        {
+            
+
+            disposed = true;
+        }
+
+        //protected virtual void Dispose(bool disposing)
+        //{
+
+        //    if(disposed) return;
+
+
+        //    disposed = true;    
+
+        //}
     }
 }
