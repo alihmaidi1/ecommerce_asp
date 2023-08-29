@@ -1,6 +1,7 @@
 ﻿
 using Common.Features.Image.Commands.Models;
 using ecommerce_shared.File;
+using ecommerce_shared.File.S3;
 using ecommerce_shared.OperationResult;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
@@ -16,17 +17,20 @@ namespace Common.Features.Image.Commands.Handlers
     {
 
         private readonly IWebHostEnvironment webHost;
-        public ImageHandlers(IWebHostEnvironment webHost) { 
+        private readonly IStorageService Storageservice;
+
+        public ImageHandlers(IWebHostEnvironment webHost, IStorageService Storageservice) { 
         
 
             this.webHost = webHost;
+            this.Storageservice = Storageservice;
         }
         public async Task<JsonResult> Handle(UploadImageCommand request, CancellationToken cancellationToken)
         {
+            var image=await Storageservice.UploadToS3(request.Image);
+            //var image = request.Image.UploadImage(webHost.WebRootPath);
 
-            var image = request.Image.UploadImage(webHost.WebRootPath);
-            var resize = image.resizeImage();
-            return Success(new{ image,resize },"The Image Was Uploaded Successfully");
+            return Success(image,"The Image Was Uploaded Successfully");
 
         }
 

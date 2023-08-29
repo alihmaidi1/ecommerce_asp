@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1sQl+i1SkgEdnkUckqJsmD7LumLK9SVFZOd0AtllPMN68q53l0hdiShw407oxwWgNxDQdq90Ie6AApm5BrLwbw==",
+  "dgSpecHash": "NPFRUg09mDy7l5A/vY+NvCRBZTl6pQr0Lbx/Dq1VT8vr0VT4j3Btfrx2Frfbmo5zV/uCL322Xm8q7RrRUFjSJw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.core\\2.0.0\\blurhash.core.2.0.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.imagesharp\\3.0.0\\blurhash.imagesharp.3.0.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",

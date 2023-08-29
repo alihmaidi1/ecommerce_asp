@@ -264,3 +264,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Blurhash.Core
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\Blurhash.ImageSharp.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\SixLabors.ImageSharp.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\LazZiya.ImageResize.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\AWSSDK.Core.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\AWSSDK.S3.dll

@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Vb5bFG4UDGRq6JPTgZTF5E8dwyvyUVIMXBBqRkIvBqCMq9BNAe6lTjBKG4fPr5PEE1v0SG2h/2NEFtbEl6mHWQ==",
+  "dgSpecHash": "OkNUV8V6gdrubCN5HHLaacjIgyFkPEmPYN8k4liFCl6INeKh88zUutNOdZh4kSxtwaK1ARFWlE10Qx/Gn3druw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Service\\ecommerce.service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.core\\2.0.0\\blurhash.core.2.0.0.nupkg.sha512",

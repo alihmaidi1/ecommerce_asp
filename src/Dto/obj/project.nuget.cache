@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MZT501qRPy3bADgvRev5vB7f9PMIctTZjqmYjKAqlHvjsDNu3I8bU3YKTk5Y1Of1UN+mCBnzHyPe5mQvUZo75w==",
+  "dgSpecHash": "naTSQdIq1s+M2PdFd7az63d2rl+hrx0vQBht/ByuiRIlCCbcYXU0TmqTQqFSsjDrZfVDxhnc3Lm7avwXcyGRFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.core\\2.0.0\\blurhash.core.2.0.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.imagesharp\\3.0.0\\blurhash.imagesharp.3.0.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",

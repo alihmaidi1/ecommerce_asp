@@ -14,7 +14,7 @@ namespace ecommerce_shared.OperationResult.MethodExtension
     {
 
 
-        public static OperationResultBase<T> CreateOperationResultBase<T>(T Result,string Message,int StatusCode) where T:class
+        public static OperationResultBase<T> CreateOperationResultBase<T>(T Result,string Message,int StatusCode) 
         {
 
             return new OperationResultBase<T>
@@ -26,7 +26,7 @@ namespace ecommerce_shared.OperationResult.MethodExtension
             };
 
         }
-        public static JsonResult ToJsonResult<T>(this OperationResult OperationResult, int StatusCode, T? Result=null,string Message="") where T:class
+        public static JsonResult ToJsonResult<T>(this OperationResult OperationResult, int StatusCode, T? Result=default(T),string Message="") 
         {
 
             var OperationResultBase=CreateOperationResultBase<T>(Result,Message,StatusCode);

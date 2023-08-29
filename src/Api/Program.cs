@@ -9,6 +9,7 @@ using ecommerce.service;
 using ecommerce.user;
 using ecommerce_shared.Authorization.Handlers;
 using ecommerce_shared.Authorization.Providers;
+using ecommerce_shared.File;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Redis;
@@ -80,7 +81,7 @@ builder.Services.AddRepository();
 builder.Services.AddServices();
 builder.Services.AddAdmindependency();
 builder.Services.AddUserdependency();
-
+builder.Services.AddS3Configration();
 builder.Services.AddCommondependency();
 builder.Services.AddCors(options =>
 {

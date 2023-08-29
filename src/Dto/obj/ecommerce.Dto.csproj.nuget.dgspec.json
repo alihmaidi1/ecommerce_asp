@@ -189,6 +189,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.203.1, )"
+            },
             "Blurhash.ImageSharp": {
               "target": "Package",
               "version": "[3.0.0, )"
