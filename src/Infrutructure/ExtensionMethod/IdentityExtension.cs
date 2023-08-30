@@ -30,5 +30,16 @@ namespace ecommerce.infrutructure.ExtensionMethod
                          select rc;
             return Claims;
         }
+
+        public static List<string> GetUserRoles(this ApplicationDbContext DBContext,Guid Id) 
+        {
+
+            var roles = from role in DBContext.Roles
+                        join userroles in DBContext.UserRoles on role.Id equals userroles.RoleId
+                        where userroles.UserId == Id
+                        select role.Name;
+            return roles.ToList();
+
+        }
     }
 }

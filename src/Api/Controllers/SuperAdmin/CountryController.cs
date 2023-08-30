@@ -1,8 +1,6 @@
-﻿using Azure.Core;
-using ecommerce.admin.Features.Country.Queries.Models;
+﻿using ecommerce.admin.Features.Country.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using ecommerce.Domain.Attribute;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
 using ecommerce_shared.Swagger;
@@ -18,7 +16,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(CountryRouter.List)]
-        [AppAuthorizeAttribute(RoleEnum.SuperAdmin)]
+        [AppAuthorize(RoleEnum.SuperAdmin)]
         public async Task<IActionResult> GetAllCountry()
         {
 

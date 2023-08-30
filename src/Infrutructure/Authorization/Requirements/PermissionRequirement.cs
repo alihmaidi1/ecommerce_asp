@@ -10,7 +10,7 @@ namespace ecommerce.infrutructure.Authorization.Requirements
 
         public PermissionRequirement(string Permission)
         {
-            this.Permission = Permission;   
+            this.Permission = Permission;
 
         }
 

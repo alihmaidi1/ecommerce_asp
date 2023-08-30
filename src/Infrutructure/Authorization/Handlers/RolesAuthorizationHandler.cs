@@ -1,4 +1,6 @@
 ﻿using ecommerce.Domain.Abstract;
+using ecommerce.infrutructure;
+using ecommerce.infrutructure.ExtensionMethod;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Identity;
@@ -8,11 +10,11 @@ namespace ecommerce_shared.Authorization.Handlers
 {
     public class RolesAuthorizationHandler : AuthorizationHandler<RolesAuthorizationRequirement>
     {
-        public UserManager<Account> UserManager;
+        public ApplicationDbContext DBContext;
 
-        public RolesAuthorizationHandler(UserManager<Account> UserManager) { 
+        public RolesAuthorizationHandler(ApplicationDbContext DBContext) { 
         
-            this.UserManager = UserManager; 
+            this.DBContext = DBContext; 
         }
         protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, RolesAuthorizationRequirement requirement)
         {
@@ -20,16 +22,14 @@ namespace ecommerce_shared.Authorization.Handlers
             
             if (context.User==null||context.User?.Identity?.IsAuthenticated==false)
             {
-
                 context.Fail();
                 return;
 
             }
             var Roles = requirement.AllowedRoles;
-
-            var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value;
-            Account User=  UserManager.FindByIdAsync(Id).Result;
-            var UserRole= UserManager.GetRolesAsync(User).Result;
+            var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value ;            
+            var UserRole= DBContext.GetUserRoles(new Guid(Id));
+            
             bool RolesExists=Roles.Any(r => UserRole.Any(ur => ur.Equals(r)));
             
             if (RolesExists) {
