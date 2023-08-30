@@ -1,5 +1,6 @@
 ﻿using ecommerce.Repository.Page;
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Country;
 using Repositories.Page;
 using Repositories.RefreshToken;
 using Repositories.Role;
@@ -14,6 +15,7 @@ namespace Repositories
             services.AddTransient<IPageRepository,PageRepository>();
             services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<ICountryRepository,CountryRepository>();
             return services;
 
         }

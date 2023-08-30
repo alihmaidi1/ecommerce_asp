@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Shared_Kernal\ecommerce_shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Page\Store\" />
+  </ItemGroup>
+
 </Project>

@@ -2,10 +2,13 @@
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Common;
 using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.Common
 {
+    [ApiGroup(ApiGroupName.User,ApiGroupName.SuperAdmin,ApiGroupName.DeliveryMan)]
+
     public class TokenController: ApiController
     {
         [HttpPost(TokenRouter.RefreshTheToken)]

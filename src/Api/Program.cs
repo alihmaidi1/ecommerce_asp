@@ -1,5 +1,6 @@
 using Common;
 using ecommerce.admin;
+using ecommerce.Controllers.Common;
 using ecommerce.Domain.Attribute;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
@@ -35,7 +36,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddJsonOptions(options =>
+builder.Services.AddControllers(option =>
+{
+    
+}).AddJsonOptions(options =>
 {
 
     //options.JsonSerializerOptions.NumberHandling=JsonNumberHandling.AllowReadingFromString| JsonNumberHandling.WriteAsString;
@@ -114,6 +118,7 @@ builder.Services.AddTransient<ErrorHandling>();
 var app = builder.Build();
 
 
+
 app.ConfigureOpenAPI();
 
 
@@ -155,4 +160,8 @@ app.UseAuthorization();
 
 
 app.MapControllers();
+
+
 app.Run();
+
+

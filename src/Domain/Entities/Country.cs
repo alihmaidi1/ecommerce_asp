@@ -23,10 +23,12 @@ namespace ecommerce.Domain.Entities
         public string Name { get; set; }
         public string Code { get; set; }
 
+
         public double lat { get; set; }
     
         public virtual ICollection<City> Cities { get; set;}
 
+        public bool Status { get; set; }
 
         public static Expression<Func<Country, Country>> SelectIDAndName = c => new Country
         {

@@ -3,14 +3,18 @@ using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.User;
 using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.User
 {
 
+    [ApiGroup(ApiGroupName.User)]
+
     public class AuthController: ApiController
     {
 
+        
         [HttpPost(AuthUserRouter.Create)]
         public async Task<IActionResult> CreateUser([FromBody] AddUserCommand command)
         {

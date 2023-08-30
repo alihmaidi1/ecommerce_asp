@@ -19,6 +19,9 @@ namespace ecommerce.infrutructure.Configration
             .WithOne(c => c.Country)
             .OnDelete(DeleteBehavior.Cascade);
 
+            builder.Property(c => c.Status)
+                   .HasDefaultValue(false);
+
         }
     }
 }

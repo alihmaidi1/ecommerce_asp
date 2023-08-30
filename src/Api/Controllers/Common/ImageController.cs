@@ -1,12 +1,16 @@
 ﻿using Common.Features.Image.Commands.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Common;
+using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.Common
 {
     public class ImageController: ApiController
     {
+
+        [ApiGroup(ApiGroupName.User, ApiGroupName.SuperAdmin, ApiGroupName.DeliveryMan)]
+
 
         [HttpPost(ImageRouter.UploadSingle)]
         public async Task<IActionResult> UploadImage(UploadImageCommand commands)

@@ -23,3 +23,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\obj\Release\net7.0\ecommerce.
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\obj\Release\net7.0\refint\ecommerce.user.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\obj\Release\net7.0\ecommerce.user.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\obj\Release\net7.0\ref\ecommerce.user.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\bin\Release\net7.0\ecommerce.service.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\User\bin\Release\net7.0\ecommerce.service.pdb

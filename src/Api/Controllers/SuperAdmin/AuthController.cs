@@ -3,11 +3,13 @@ using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.User;
 using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.Admin
 {
 
+    [ApiGroup(ApiGroupName.SuperAdmin)]
     public class AuthController: ApiController
     {
 

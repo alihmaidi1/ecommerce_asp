@@ -15,3 +15,5 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Release\net7.0\ecommerce.D
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Release\net7.0\refint\ecommerce.Dto.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Release\net7.0\ecommerce.Dto.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Release\net7.0\ref\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Release\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Release\net7.0\ecommerce_shared.pdb

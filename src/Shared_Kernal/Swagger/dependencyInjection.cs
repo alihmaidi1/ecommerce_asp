@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Amazon.Runtime.Internal.Transform;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
 using System.Collections.Generic;
@@ -22,44 +25,75 @@ namespace ecommerce_shared.Swagger
             services.AddSwaggerGen(option =>
             {
 
-                var openApiInfo = new OpenApiInfo()
-                {
-
-                    Version = "v1",
-                    Title = "WebApi",
-                };
 
                 //create  swagger document
                 typeof(ApiGroupName).GetFields().Skip(1).ToList().ForEach(f =>
                 {
                     var info = f.GetCustomAttribute<GroupInfoAttribute>();
-                        
-
-                        
-                        openApiInfo.Title = info.Title ;
-                        openApiInfo.Version = info.Version;
-                        openApiInfo.Description = info.Description;
-                         option.SwaggerDoc(f.Name, openApiInfo);
 
 
+                    var openApiInfo = new OpenApiInfo();
+                    openApiInfo.Title = info?.Title;
+                    openApiInfo.Version = info?.Version;
+                    openApiInfo.Description = info?.Description;
+                    option.SwaggerDoc(f.Name, openApiInfo);
+                });
 
-                }
-                
-                
-                
-                );
 
-                option.AddSecurityDefinition("Auth", new OpenApiSecurityScheme
+                option.DocInclusionPredicate((docName, ApiDescription) =>
+                {
+                    if (!ApiDescription.TryGetMethodInfo(out MethodInfo method)) return false;
+                    if (docName == "All") return true;
+
+                    var actionlist = ApiDescription.ActionDescriptor.EndpointMetadata.FirstOrDefault(x => x is ApiGroupAttribute);
+
+                    if (docName == "NoGroup") return actionlist == null ? true : false;
+                    if (actionlist != null)
+                    {
+                        //Determine whether to include this group
+                        var actionfilter = actionlist as ApiGroupAttribute;
+                        return actionfilter.GroupName.Any(x => x.ToString().Trim() == docName);
+                    }
+                    return false;
+
+                });
+
+
+                option.CustomSchemaIds(x => x.FullName);
+
+                option.AddSecurityDefinition("Bearer",new OpenApiSecurityScheme()
                 {
 
-                    Description="dfsfsdfs",
-                    Name="Alihmaidi",
-                    In=ParameterLocation.Header,
-                    Type=SecuritySchemeType.ApiKey,
+                    Description = "JWT Authorization header using the Bearer scheme. Example: Authorization: Bearer {token}",
+                    Type=SecuritySchemeType.Http,
+                    In= ParameterLocation.Header,
+                    Name = "Authorization",
+                    Scheme = "Bearer",
 
+                });
+
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+
+                              Reference = new OpenApiReference
+                              {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                              }
+
+
+                        },
+                        new string[]{}
+
+
+                    }
 
 
                 });
+
 
             });
 
@@ -79,9 +113,9 @@ namespace ecommerce_shared.Swagger
                     c.SwaggerEndpoint($"/swagger/{f.Name}/swagger.json",  f.Name);                    
                 });
 
-                //c.DocExpansion(DocExpansion.None);
+                c.DocExpansion(DocExpansion.None);
 
-
+                
 
             });
             return app;

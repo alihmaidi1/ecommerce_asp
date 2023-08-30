@@ -17,3 +17,7 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Release\net7.0\r
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Release\net7.0\ecommerce.infrutructure.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Release\net7.0\ecommerce.infrutructure.genruntimeconfig.cache
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\obj\Release\net7.0\ref\ecommerce.infrutructure.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Release\net7.0\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Release\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Release\net7.0\ecommerce.Dto.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Infrutructure\bin\Release\net7.0\ecommerce_shared.pdb
