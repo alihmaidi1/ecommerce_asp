@@ -1,7 +1,10 @@
-﻿using ecommerce.admin.Features.Country.Queries.Models;
+﻿using Azure.Core;
+using ecommerce.admin.Features.Country.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.Attribute;
+using ecommerce.Domain.Attributes;
+using ecommerce.Domain.Enum;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,12 +18,11 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(CountryRouter.List)]
-        [CheckTokenInRedis(Roles ="SuperAdmin")]
-
-        public async Task<IActionResult> GetAllCountry([FromQuery]GetAllCountriesQuery request)
+        [AppAuthorizeAttribute(RoleEnum.SuperAdmin)]
+        public async Task<IActionResult> GetAllCountry()
         {
 
-            var response = await Mediator.Send(request);
+            var response = await Mediator.Send(new GetAllCountriesQuery());
             return response;
         }
 

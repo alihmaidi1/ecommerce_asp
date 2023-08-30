@@ -35,7 +35,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPost(PageRouter.AddPage)]
-        [CheckTokenInRedis(Policy = "DeleteBanner")]
+        //[CheckTokenInRedis(Policy = "DeleteBanner")]
         public async Task<IActionResult> AddPage([FromBody] AddPageCommand command)
         {
 
@@ -47,7 +47,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
         [HttpDelete(PageRouter.Delete)]
 
-        [CheckTokenInRedis]
+        //[CheckTokenInRedis]
         public async Task<IActionResult> Delete([FromQuery] DeletePageCommand command)
         {
 

@@ -15,7 +15,7 @@ namespace ecommerce.Controllers.SuperAdmin
     {
 
 
-        [CheckTokenInRedis]
+        //[CheckTokenInRedis]
         [HttpGet(RoleRouter.List)]
         public async Task<IActionResult> GetAllRole([FromQuery]GetAllRoleQuery query)
         {
