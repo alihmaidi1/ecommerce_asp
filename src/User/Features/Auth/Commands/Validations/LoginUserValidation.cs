@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.user.Features.Auth.Commands.Validations
 {
-    internal class LoginUserValidation: AbstractValidator<LoginUserCommand>
+    public class LoginUserValidation: AbstractValidator<LoginUserCommand>
     {
 
 
@@ -25,7 +25,10 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
 
             RuleFor(x => x.UserNameOrEmail)
                 .NotNull()
-                .NotEmpty();
+                .WithMessage("UserName Or Email CAnn not be null")
+                .NotEmpty()
+                .WithMessage("UserName Or Email CAnn not be nil")
+                ;
         }
 
 

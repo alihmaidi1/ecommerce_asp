@@ -53,13 +53,9 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
-            "FluentValidation": {
+            "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[11.7.1, )"
-            },
-            "FluentValidation.DependencyInjectionExtensions": {
-              "target": "Package",
-              "version": "[11.7.1, )"
+              "version": "[11.3.0, )"
             },
             "LazZiya.ImageResize": {
               "target": "Package",

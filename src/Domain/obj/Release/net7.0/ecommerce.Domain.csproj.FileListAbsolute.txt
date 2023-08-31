@@ -20,5 +20,3 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Release\net7.0\ref\ecom
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\bin\Release\net7.0\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\bin\Release\net7.0\ecommerce_shared.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Release\net7.0\ecommerce.Domain.csproj.CopyComplete
-C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Release\net7.0\ar\ecommerce.Domain.resources.cs
-C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Domain\obj\Release\net7.0\en\ecommerce.Domain.resources.cs

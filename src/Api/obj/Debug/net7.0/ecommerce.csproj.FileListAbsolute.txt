@@ -266,3 +266,4 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\SixLabors.Ima
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\LazZiya.ImageResize.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\AWSSDK.Core.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\AWSSDK.S3.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Api\bin\Debug\net7.0\FluentValidation.AspNetCore.dll

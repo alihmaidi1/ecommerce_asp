@@ -15,30 +15,20 @@ using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Redis;
 using ecommerce_shared.Swagger;
+using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 using Repositories.Jwt;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<RequestLocalizationOptions>(options =>
-{
-    var supportedCultures = new[] { "en", "ar" };
-    options.SetDefaultCulture(supportedCultures[1])
-        .AddSupportedCultures(supportedCultures)
-        .AddSupportedUICultures(supportedCultures);
-
-});
-
-// builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
-
-// Add services to the container.
-
 builder.Services.AddControllers(option =>
 {
-    
+
 }).AddJsonOptions(options =>
 {
 
@@ -47,10 +37,49 @@ builder.Services.AddControllers(option =>
 
 }).AddNewtonsoftJson(options =>
 {
-    
-    options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
 });
+
+builder.Services.AddMediatR(configuration =>
+{
+
+    configuration.RegisterServicesFromAssembly(ecommerce.user.AssemblyReference.Assembly);
+
+});
+
+builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+builder.Services.AddValidatorsFromAssembly(ecommerce.user.AssemblyReference.Assembly);
+builder.Services.AddAutoMapper(ecommerce.user.AssemblyReference.Assembly);
+
+
+builder.Services.AddValidatorsFromAssembly(ecommerce.admin.AssemblyReference.Assembly);
+builder.Services.AddMediatR(configuration =>
+{
+
+    configuration.RegisterServicesFromAssembly(ecommerce.admin.AssemblyReference.Assembly);
+});
+
+
+builder.Services.AddAutoMapper(ecommerce.admin.AssemblyReference.Assembly);
+
+
+
+//builder.Services.Configure<RequestLocalizationOptions>(options =>
+//{
+//    var supportedCultures = new[] { "en", "ar" };
+//    options.SetDefaultCulture(supportedCultures[1])
+//        .AddSupportedCultures(supportedCultures)
+//        .AddSupportedUICultures(supportedCultures);
+
+//});
+
+// builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+
+// Add services to the container.
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
@@ -83,8 +112,6 @@ builder.Services.AddInfrustucture(builder.Configuration);
 builder.Services.AddRepository();
 
 builder.Services.AddServices();
-builder.Services.AddAdmindependency();
-builder.Services.AddUserdependency();
 builder.Services.AddS3Configration();
 builder.Services.AddCommondependency();
 builder.Services.AddCors(options =>
@@ -112,6 +139,7 @@ builder.Services.AddTransient<CheckTokenInRedisAttribute>();
 
 
 builder.Services.AddTransient<ErrorHandling>();
+
 
 
 
