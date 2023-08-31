@@ -7479,11 +7479,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj",
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Dto\\ecommerce.Dto.csproj",
       "projectName": "ecommerce.Dto",
-      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\ecommerce.Dto.csproj",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Dto\\ecommerce.Dto.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Dto\\obj\\",
+      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Dto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7505,8 +7505,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Domain\\ecommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Domain\\ecommerce.Domain.csproj"
             }
           }
         }

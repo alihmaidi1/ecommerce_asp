@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
 using ecommerce.Domain.Entities;
 using ecommerce.infrutructure.Seed;
 using ecommerce.infrutructure.Services.Classes;
@@ -23,7 +23,7 @@ namespace ecommerce.infrutructure.seed
             await context.Database.MigrateAsync();
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<Role>>();
-            var UserManager = services.GetRequiredService<UserManager<Account>>();
+            var UserManager = services.GetRequiredService<UserManager<IdentityUser<Guid>>>();
             var transaction =context.Database.BeginTransaction();
 
                 await RoleSeed.seedData(RoleManager);

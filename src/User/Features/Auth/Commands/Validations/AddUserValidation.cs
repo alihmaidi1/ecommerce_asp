@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
 using ecommerce.user.Features.Auth.Commands.Models;
 
 using FluentValidation;
@@ -9,8 +9,8 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
     public class AddUserValidation:AbstractValidator<AddUserCommand>
     {
 
-        public UserManager<Account> UserManager;
-        public AddUserValidation(UserManager<Account> userManager) {
+        public UserManager<IdentityUser<Guid>> UserManager;
+        public AddUserValidation(UserManager<IdentityUser<Guid>> userManager) {
 
 
             this.UserManager= userManager;

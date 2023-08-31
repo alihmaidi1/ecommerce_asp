@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
 using ecommerce.infrutructure;
 using Microsoft.AspNetCore.Identity;
 using Repositories.Base.Concrete;
@@ -7,20 +7,21 @@ namespace Repositories.User
 {
     public class UserRepository : GenericRepository<ecommerce.Domain.Entities.User>, IUserRepository
     {
-        public UserManager<Account> UserManager;
-        public UserRepository(ApplicationDbContext DbContext,UserManager<Account> UserManager) : base(DbContext)
+        public UserManager<IdentityUser<Guid>> UserManager;
+        public UserRepository(ApplicationDbContext DbContext,UserManager<IdentityUser<Guid>> UserManager) : base(DbContext)
         {
         
             this.UserManager = UserManager;
         
         }
 
-        public async Task<Account> GetUserByUserNameOrEmail(string UserNameOrEmail)
+        public async Task<IdentityUser<Guid>> GetUserByUserNameOrEmail(string UserNameOrEmail)
         {
 
-            var Account = await UserManager.FindByNameOrEmailAsync(UserNameOrEmail);
+            return null;
+            //var Account = await UserManager.FindByNameOrEmailAsync(UserNameOrEmail);
 
-            return Account;
+            //return Account;
             
 
 

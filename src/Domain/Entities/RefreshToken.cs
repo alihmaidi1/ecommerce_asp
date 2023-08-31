@@ -1,11 +1,11 @@
-﻿using ecommerce.Domain.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace ecommerce.Domain.Entities
 {
@@ -24,7 +24,7 @@ namespace ecommerce.Domain.Entities
 
         public Guid AccountId { get; set; }
 
-        public virtual Account Account { get; set; }
+        public virtual IdentityUser<Guid> Account { get; set; }
 
 
     }

@@ -1,5 +1,6 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
 using ecommerce.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace ecommerce.service.UserService
     public interface IAccountService
     {
 
-        public Task<Account> SignInAccountAsync(string UserNameOrEmail,string password);
+        public Task<IdentityUser<Guid>> SignInAccountAsync(string UserNameOrEmail,string password);
 
-        public Task<bool> CreateAccountAsync(Account Account,string password);
+        public Task<bool> CreateAccountAsync(IdentityUser<Guid> Account,string password);
     }
 }

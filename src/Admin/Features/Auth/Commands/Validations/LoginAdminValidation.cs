@@ -23,9 +23,10 @@ namespace ecommerce.admin.Features.Auth.Commands.Validations
 
             RuleFor(x => x.UsernameOrEmail)
                 .NotEmpty()
-                .WithMessage("username or email cannot be empty")
+                .WithMessage("username or email Cannot be empty")
                 .NotNull()
                 .WithMessage("username or email cannot be null");
+
 
 
         }

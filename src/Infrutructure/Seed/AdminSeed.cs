@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
+using ecommerce.Domain.Entities;
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -12,9 +13,9 @@ namespace ecommerce.infrutructure.Seed
     public static class AdminSeed
     {
 
-        public static async Task<bool> CreateAdmin(ApplicationDbContext context, UserManager<Account> UserManager, Account Account,string Role,string Password="12345678")
+        public static async Task<bool> CreateAdmin(ApplicationDbContext context, UserManager<IdentityUser<Guid>> UserManager, Admin Account,string Role,string Password="12345678")
         {
-
+         
             var Result = await UserManager.CreateAsync(Account,Password);
             if (Result.Succeeded)
             {
@@ -22,9 +23,8 @@ namespace ecommerce.infrutructure.Seed
 
                 if (RoleResult.Succeeded)
                 {
-
-                    context.Admins.Add(new Domain.Entities.Admin() { AccountId = Account.Id });
-                    context.SaveChanges();
+                    context.Admins.Add(Account);
+                    //context.SaveChanges();
 
                 }
 
@@ -34,20 +34,20 @@ namespace ecommerce.infrutructure.Seed
 
 
         }
-        public static async Task seedData(ApplicationDbContext context,UserManager<Account>UserManager )
+        public static async Task seedData(ApplicationDbContext context,UserManager<IdentityUser<Guid>> UserManager )
         {
 
             if (!context.Admins.Any())
             {
 
-                var SuperAdmin = new Account()
+                var SuperAdmin = new Admin()
                 {
 
                     UserName = "SuperAdmin",
                     Email = "admin@admin.com",
                 };
 
-                var DeliveryMan = new Account()
+                var DeliveryMan = new Admin()
                 {
                     UserName="DeliveryMan",
                     Email= "DeliveryMan@admin.com"

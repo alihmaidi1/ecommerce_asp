@@ -11,12 +11,11 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System.Reflection.Emit;
 using ecommerce.Domain.Base.Entity;
-using ecommerce.Domain.Abstract;
 using ecommerce.Domain.Enum;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext : IdentityDbContext<Account, Role, Guid,IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, Role, Guid,IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
     {
 
         public ApplicationDbContext(DbContextOptions option):base(option)
@@ -30,6 +29,8 @@ namespace ecommerce.infrutructure
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            builder.Entity<IdentityUser<Guid>>()
+                .UseTptMappingStrategy();
             base.OnModelCreating(builder);
 
         }

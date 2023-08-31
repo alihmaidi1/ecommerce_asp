@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VvmD2QBCDvPPe/Z6MYgrZk/YJ80A9u9aFvvFQexsBkYWuYeOBmV/Tr7PxBiY6eaBs6vjA8T6Qs0N5xVuhqK/qQ==",
+  "dgSpecHash": "6rMOowe004/e1mAMSmGrug+MQDBDC3GJ2gGy5Y8NSCMitOq6687jJvYPNMobj1asAR9ZCG2VypDOg58JMUdcmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommerce\\src\\Domain\\ecommerce.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Domain\\ecommerce.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",

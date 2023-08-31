@@ -18,7 +18,8 @@ namespace ecommerce.infrutructure.Configration
 
             builder.Property(u => u.Point).HasDefaultValue(0);
             builder.Property(u=>u.IsBlocked).HasDefaultValue(false);
-            
+            builder.HasMany(a => a.RefreshTokens).WithOne(r =>(User) r.Account).OnDelete(DeleteBehavior.Cascade);
+
 
         }
     }

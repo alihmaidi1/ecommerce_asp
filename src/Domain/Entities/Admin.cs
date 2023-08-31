@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,15 +9,19 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public class Admin : BaseEntity
+    public class Admin : IdentityUser<Guid>
     {
 
+        public Admin() {
+        
+            RefreshTokens=new HashSet<RefreshToken>();
+        }
+
         public Guid Id { get; set; }
-        public Guid AccountId { get; set; }
-
-        public virtual Account Account { get; set; }
-
+                
         public bool IsBlocked { get; set; }
+
+        public virtual ICollection<RefreshToken>RefreshTokens { get; set; }
 
     }
 

@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿
 using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using ecommerce.infrutructure.ExtensionMethod;
@@ -7,39 +7,41 @@ namespace ecommerce.service.UserService
     public class AccountService:IAccountService
     {
 
-        protected UserManager<Account> UserManager;
-        protected SignInManager<Account> SignInManager;
-        public AccountService(UserManager<Account> UserManager, SignInManager<Account> SignInManager)
+        protected UserManager<IdentityUser<Guid>> UserManager;
+        protected SignInManager<IdentityUser<Guid>> SignInManager;
+        public AccountService(UserManager<IdentityUser<Guid>> UserManager, SignInManager<IdentityUser<Guid>> SignInManager)
         {
             this.UserManager= UserManager;
             this.SignInManager = SignInManager; 
         }
 
-        public async Task<Account> SignInAccountAsync(string UserNameOrEmail,string Password)
+        public async Task<IdentityUser<Guid>> SignInAccountAsync(string UserNameOrEmail,string Password)
         {
 
-            Account Account = await UserManager.FindByNameOrEmailAsync(UserNameOrEmail);
 
-            if(Account == null)
-            {
+            return null;
+            //IdentityUser<Guid> Account = await UserManager.FindByNameOrEmailAsync(UserNameOrEmail);
 
-                throw new Exception("UserName Or Email Is Not Correct");
-            }
+            //if(Account == null)
+            //{
 
-            var SigninResult=await SignInManager.CheckPasswordSignInAsync(Account, Password,false);
-            if (!SigninResult.Succeeded)
-            {
+            //    throw new Exception("UserName Or Email Is Not Correct");
+            //}
 
-                throw new Exception("Your Credentials is Not Correct");
+            //var SigninResult=await SignInManager.CheckPasswordSignInAsync(Account, Password,false);
+            //if (!SigninResult.Succeeded)
+            //{
 
-            }
+            //    throw new Exception("Your Credentials is Not Correct");
 
-            return Account;
+            //}
+
+            //return Account;
 
         }
 
 
-        public async Task<bool> CreateAccountAsync(Account Account,string password)
+        public async Task<bool> CreateAccountAsync(IdentityUser<Guid> Account,string password)
         {
 
             var Accountresult = await this.UserManager.CreateAsync(Account, password);

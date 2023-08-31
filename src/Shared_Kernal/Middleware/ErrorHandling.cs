@@ -32,7 +32,7 @@ namespace ecommerce_shared.Middleware
                         Result.Message = exception.Message;
                         Result.StatusCode = (int)HttpStatusCode.UnprocessableEntity;
                         response.StatusCode = (int)HttpStatusCode.UnprocessableEntity;
-                        Result.Errors = exception.Errors.Select(f => f.PropertyName + ":" + f.ErrorMessage).ToList(); ;
+                        Result.Errors = exception.Errors.GroupBy(e=>e.PropertyName).ToDictionary(x=>x.Key,x=>x.Select(x=>x.ErrorMessage).ToList());
                         break;
 
                     case UnAuthenticationException exception:
