@@ -13,10 +13,13 @@ namespace tables.Base.Entity
     {
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
 
+        public BaseEntity() { 
+        
+            Id = Guid.NewGuid();
+        }
 
         public override bool Equals(object? obj)
         {

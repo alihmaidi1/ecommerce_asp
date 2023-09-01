@@ -12,8 +12,8 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230901064046_addcodereset")]
-    partial class addcodereset
+    [Migration("20230901123027_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

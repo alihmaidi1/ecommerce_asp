@@ -1,6 +1,7 @@
 ﻿
 using ecommerce.Dto;
 using ecommerce.infrutructure.Services.Interfaces;
+using EFCore.BulkExtensions;
 
 namespace ecommerce.infrutructure.Seed
 {
@@ -17,7 +18,7 @@ namespace ecommerce.infrutructure.Seed
 
                 ExternalRegionDto<List<CountriesDto>> response = await ExternalRegionApi.GetAllCountry();
                 var countries = response.data.Select(CountriesDto.ToCountryDto).ToList();
-                context.Countries.AddRange(countries);
+                context.BulkInsert(countries);
                 context.SaveChanges();                                                
           
             }

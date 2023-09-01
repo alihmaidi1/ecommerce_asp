@@ -16,7 +16,7 @@ namespace ecommerce.Dto
         {
             Name=c.Name,
             lat=c.Lat,
-            Code=c.Iso2
+            Code=c.Iso2,
 
 
         };
