@@ -14,16 +14,18 @@ namespace ecommerce_shared.Jwt
         public static IServiceCollection AddJwtConfigration(this IServiceCollection services, IConfiguration Configuration)
         {
             var JwtOption = Configuration.GetSection("AccessToken");
+            var ResetOption = Configuration.GetSection("ResetPassword");
+
 
             services.AddAuthentication(options =>
             {
 
                 
-                options.DefaultAuthenticateScheme=JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                
+                options.DefaultAuthenticateScheme= "MainSchema";
+                options.DefaultChallengeScheme= "MainSchema";
+                options.DefaultScheme = "MainSchema";
+            }).AddJwtBearer("MainSchema",options =>
+                {                
                 options.SaveToken = true;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
@@ -64,6 +66,50 @@ namespace ecommerce_shared.Jwt
 
                 };
                 
+
+
+            }).AddJwtBearer("ResetPassword",options =>
+            {
+                options.SaveToken = true;
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidIssuer = ResetOption["Issuer"],
+                    ValidAudience = ResetOption["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ResetOption["Key"]))
+
+
+                };
+                options.Events = new JwtBearerEvents
+                {
+
+                    OnChallenge = async context =>
+                    {
+                        context.HandleResponse();
+
+                        throw new UnAuthenticationException();
+
+
+                    },
+
+                    OnForbidden = async context =>
+                    {
+
+
+
+                        throw new UnAuthorizationException();
+
+
+                    }
+
+
+
+                };
+
 
 
             });
