@@ -9,6 +9,9 @@ using ecommerce_shared.Services.Email;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
 using ecommerce_shared.Enums;
+using ecommerce.Dto.Base;
+using Repositories.Account;
+using ecommerce_shared.Helper;
 
 namespace ecommerce.service.UserService
 {
@@ -19,16 +22,20 @@ namespace ecommerce.service.UserService
         public readonly ICacheRepository CacheRepository;
         public readonly IMailService MailService;
         public readonly IJwtRepository jwtRepository;
+        public readonly IAccountRepository AccountRepository;
 
+        public ISchemaFactory SchemaFactory;
         protected SignInManager<Account> SignInManager;
         
-        public AccountService(ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
+        public AccountService(IAccountRepository AccountRepository,ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
         {
             this.CacheRepository = CacheRepository; 
+            this.AccountRepository = AccountRepository;
+            this.SchemaFactory=SchemaFactory;
             this.UserManager= UserManager;
             this.SignInManager = SignInManager; 
             this.MailService= MailService;
-            this.jwtRepository= SchemaFactory.CreateJwt(JwtSchema.Main);
+            this.jwtRepository= SchemaFactory.CreateJwt(JwtSchema.ResetPassword);
         }
 
         public async Task<Account> SignInAccountAsync(string UserNameOrEmail,string Password)
@@ -75,7 +82,7 @@ namespace ecommerce.service.UserService
 
         }
 
-        public async Task<bool> SendEmail(string Email)
+        public async Task<string> SendEmail(string Email)
         {
 
             
@@ -86,11 +93,11 @@ namespace ecommerce.service.UserService
             Account.ResetExpire = DateTime.Now.AddMinutes(10);
             await UserManager.UpdateAsync(Account);
             MailService.SendMail(Email, Code);
-
-            return true;
+            return jwtRepository.GetToken(Account);
 
         }
 
+        
 
 
     }

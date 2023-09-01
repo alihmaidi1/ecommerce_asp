@@ -1,7 +1,9 @@
 ﻿using ecommerce.admin.Features.Password.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
+using SchmeaEnum=ecommerce_shared.Enums.JwtSchema;
 using ecommerce_shared.Swagger;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin
@@ -19,6 +21,14 @@ namespace ecommerce.Controllers.SuperAdmin
 
             var response=await this.Mediator.Send(request);
 
+            return response;
+        }
+
+        [Authorize(AuthenticationSchemes = nameof(SchmeaEnum.ResetPassword))]
+        [HttpPost(PasswordRouter.CheckCode)]
+        public async Task<IActionResult> CheckCode(CheckCodeCommand request)
+        {
+            var response= await this.Mediator.Send(request);    
             return response;
         }
 

@@ -36,7 +36,7 @@ namespace Repositories.Jwt.Factory
 
         public IJwtRepository CreateJwt(JwtSchema Schema)
         {
-            IJwtSetting Setting=(nameof(Schema) != nameof(JwtSchema.Main)) ?jwtSetting:ResetSetting;            
+            IJwtSetting Setting=(Schema.ToString().Equals(JwtSchema.Main.ToString())) ?jwtSetting:ResetSetting;            
             return new JwtRepository(Setting, DbContext, UserManager, CacheRepository);
         }
     }

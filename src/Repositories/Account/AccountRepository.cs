@@ -34,5 +34,13 @@ namespace Repositories.Account
 
         }
 
+        public bool CheckAccountCode(string Code, AccountEntity Account)
+        {
+                                    
+            return Code.Equals(Account.Code);
+
+        }
+
+
     }
 }

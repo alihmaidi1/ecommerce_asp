@@ -16,5 +16,7 @@ namespace Repositories.Account
 
         public bool CheckRoleUserNameOrEmail(string UserNameOrEmail,RoleEnum Role);
 
+        public bool CheckAccountCode(string Code, AccountEntity Account);
+
     }
 }
