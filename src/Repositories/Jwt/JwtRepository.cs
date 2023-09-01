@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
+=======
+﻿
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.Services.Interfaces;
@@ -20,8 +24,13 @@ namespace Repositories.Jwt
         public readonly JwtSetting JWTOption;
         public readonly ApplicationDbContext Context;
         public readonly ICacheRepository CacheRepository;
+<<<<<<< HEAD
         public readonly UserManager<AccountEntity> UserManager;
         public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
+=======
+        public readonly UserManager<IdentityUser<Guid>> UserManager;
+        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<IdentityUser<Guid>> UserManager, ICacheRepository cacheRepository)
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
         {
 
             this.JWTOption = JWTOption.Value;
@@ -30,24 +39,34 @@ namespace Repositories.Jwt
             CacheRepository = cacheRepository;
             CacheRepository = cacheRepository;
         }
+<<<<<<< HEAD
         public async Task<TokenDto> GetTokens(AccountEntity Account)
+=======
+        public async Task<TokenDto> GetTokens(IdentityUser<Guid> Account)
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
         {
-            var claims = CreateClaim(Account);
+            //var claims = CreateClaim(Account);
 
-            var signingCredentials = GetSigningCredentials(JWTOption);
-            var JwtToken = GetJwtToken(JWTOption, claims, signingCredentials);
-            var Token = new JwtSecurityTokenHandler().WriteToken(JwtToken);
+            //var signingCredentials = GetSigningCredentials(JWTOption);
+            //var JwtToken = GetJwtToken(JWTOption, claims, signingCredentials);
+            //var Token = new JwtSecurityTokenHandler().WriteToken(JwtToken);
 
+<<<<<<< HEAD
             var ExpiredAt = DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
             CacheRepository.SetData("Token:" + Token, Token, ExpiredAt);
             ecommerce.Domain.Entities.Identity.RefreshToken RefreshToken = GenerateRefreshToken();
+=======
+            //var ExpiredAt = DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
+            //CacheRepository.SetData("Token:" + Token, Token, ExpiredAt);
+            //ecommerce.Domain.Entities.RefreshToken RefreshToken = GenerateRefreshToken();
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 
 
-            Account.RefreshTokens.Add(RefreshToken);
-            Context.SaveChanges();
-            return TokenDto.ToTokenDto(Token, (int)(JWTOption.DurationInMinute * 60), RefreshToken);
+            //Account.RefreshTokens.Add(RefreshToken);
+            //Context.SaveChanges();
+            //return TokenDto.ToTokenDto(Token, (int)(JWTOption.DurationInMinute * 60), RefreshToken);
 
-
+            return null;
         }
 
 
@@ -55,7 +74,11 @@ namespace Repositories.Jwt
 
 
 
+<<<<<<< HEAD
         public List<Claim> CreateClaim(AccountEntity Account)
+=======
+        public List<Claim> CreateClaim(IdentityUser<Guid> Account)
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
         {
 
             var Claims = new List<Claim>

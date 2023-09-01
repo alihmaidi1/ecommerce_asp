@@ -31,6 +31,7 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Shared_Kernal\bin\Debug\net7.0\eco
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.pdb
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Shared_Kernal\obj\Debug\net7.0\ref\ecommerce_shared.dll
+<<<<<<< HEAD
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.deps.json
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.pdb
@@ -43,3 +44,17 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\obj\Debug\net7.0\eco
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\obj\Debug\net7.0\refint\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Shared_Kernal\obj\Debug\net7.0\ref\ecommerce_shared.dll
+=======
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.deps.json
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.csproj.AssemblyReference.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.AssemblyInfoInputs.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.AssemblyInfo.cs
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.csproj.CoreCompileInputs.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\refint\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Shared_Kernal\obj\Debug\net7.0\ref\ecommerce_shared.dll
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45

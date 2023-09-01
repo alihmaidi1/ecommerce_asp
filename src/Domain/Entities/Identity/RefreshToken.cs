@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace ecommerce.Domain.Entities.Identity
 {
@@ -23,7 +24,7 @@ namespace ecommerce.Domain.Entities.Identity
 
         public Guid AccountId { get; set; }
 
-        public virtual Account Account { get; set; }
+        public virtual IdentityUser<Guid> Account { get; set; }
 
 
     }

@@ -32,7 +32,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
         public readonly ICacheRepository CacheRepository;
         public readonly ApplicationDbContext DbContext;
         public readonly IMapper mapper;
-        public readonly UserManager<Account> userManager;
+        public readonly UserManager<IdentityUser<Guid>> userManager;
         public readonly IAccountService AccountService;
         public IJwtRepository jwtRepository;
         
@@ -42,7 +42,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             ApplicationDbContext DbContext,
             IAccountService AccountService,
             ICacheRepository CacheRepository,
-            UserManager<Account> UserManager,
+            UserManager<IdentityUser<Guid>> UserManager,
             IMapper mapper,
             IJwtRepository jwtRepository
             ) 
@@ -59,32 +59,33 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
 
         public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            var Account =mapper.Map<Account>(request);
-            await AccountService.CreateAccountAsync(Account,request.Password);
-                        
-            
-            var User = DbContext.Users.CreateProxy();
-            mapper.Map(request,User,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
-            this.DbContext.Users.Add(User);                       
-            DbContext.SaveChanges();      
-            
+            //var Account =mapper.Map<IdentityUser<Guid>>(request);
+            //await AccountService.CreateAccountAsync(Account,request.Password);
 
 
-            TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
-            UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
-            return Created<UserWithToken>(result,"The User Was Created SuccessFully");
-              
+            //var User = DbContext.Users.CreateProxy();
+            //mapper.Map(request,User,opts=>opts.AfterMap((src,desc)=>desc.AccountId=Account.Id));            
+            //this.DbContext.Users.Add(User);                       
+            //DbContext.SaveChanges();      
 
+
+
+            //TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
+            //UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
+            //return Created<UserWithToken>(result,"The User Was Created SuccessFully");
+
+            return null;
 
         }
 
         public async Task<JsonResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
 
-            Account Account = await AccountService.SignInAccountAsync(request.UserNameOrEmail,request.Password);
-            TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
-            UserWithToken result = UserStoreService.Query.CreateUserResponse(Account.User, TokenInfo);
-            return Success(result,"You Are Login Successfully");
+            return null;
+            //IdentityUser<Guid>  Account = await AccountService.SignInAccountAsync(request.UserNameOrEmail,request.Password);
+            //TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
+            //UserWithToken result = UserStoreService.Query.CreateUserResponse(Account.User, TokenInfo);
+            //return Success(result,"You Are Login Successfully");
 
         }
 

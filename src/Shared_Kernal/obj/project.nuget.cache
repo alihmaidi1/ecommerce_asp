@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "iXloQAqAXFUX4XFbw4er9JCfT4DhfCUd+NNJuiAplGmremEEWxiNtOGkrs6NH7lsHgE9gmnsPtjoiwFQKI30Nw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+=======
+  "dgSpecHash": "WRGH4T0eDY+gi+RW1c9bxi/vEKQEftKnOYQbneUFTJ5JQ8o11nR87uDhv9eo1YdaqZ91IjCWfd8sD5eU0iHS8w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",

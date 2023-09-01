@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.infrutructure;
+=======
+﻿
+using ecommerce.infrutructure;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.infrutructure.ExtensionMethod;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization.Infrastructure;
@@ -19,30 +24,30 @@ namespace ecommerce_shared.Authorization.Handlers
         {
 
             
-            if (context.User==null||context.User?.Identity?.IsAuthenticated==false)
-            {
-                context.Fail();
-                return;
+            //if (context.User==null||context.User?.Identity?.IsAuthenticated==false)
+            //{
+            //    context.Fail();
+            //    return;
 
-            }
-            var Roles = requirement.AllowedRoles;
-            var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value ;            
-            var UserRole= DBContext.GetUserRoles(new Guid(Id));
+            //}
+            //var Roles = requirement.AllowedRoles;
+            //var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value ;            
+            //var UserRole= DBContext.GetUserRoles(new Guid(Id));
             
-            bool RolesExists=Roles.Any(r => UserRole.Any(ur => ur.Equals(r)));
+            //bool RolesExists=Roles.Any(r => UserRole.Any(ur => ur.Equals(r)));
             
-            if (RolesExists) {
+            //if (RolesExists) {
 
-                context.Succeed(requirement);
+            //    context.Succeed(requirement);
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-                context.Fail();
-            }
+            //    context.Fail();
+            //}
 
-            return ;
+            //return ;
             
         }
     }

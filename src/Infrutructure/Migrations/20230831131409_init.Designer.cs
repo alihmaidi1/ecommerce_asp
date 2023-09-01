@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ecommerce.infrutructure;
 
@@ -11,9 +12,15 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+    [Migration("20230831171008_init")]
+========
+    [Migration("20230831131409_init")]
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -450,9 +457,6 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -486,9 +490,6 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ResetExpire")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -884,8 +885,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("Properties");
                 });
 
-<<<<<<< HEAD
-=======
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+========
             modelBuilder.Entity("ecommerce.Domain.Entities.RefreshToken", b =>
                 {
                     b.Property<Guid>("Id")
@@ -914,7 +915,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("RefreshTokens");
                 });
 
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
             modelBuilder.Entity("ecommerce.Domain.Entities.Review", b =>
                 {
                     b.Property<Guid>("ProductId")
@@ -955,8 +956,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("Reviews");
                 });
 
-<<<<<<< HEAD
-=======
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+========
             modelBuilder.Entity("ecommerce.Domain.Entities.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1009,7 +1010,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
             modelBuilder.Entity("ecommerce.Domain.Entities.Wishlist", b =>
                 {
                     b.Property<Guid>("ProductId")
@@ -1222,11 +1223,11 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-<<<<<<< HEAD
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", null)
-=======
+========
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser<System.Guid>", null)
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1235,9 +1236,9 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
-<<<<<<< HEAD
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", null)
-=======
+========
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser<System.Guid>", null)
                         .WithMany()
                         .HasForeignKey("UserId")
@@ -1254,7 +1255,7 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser<System.Guid>", null)
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1263,11 +1264,11 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
-<<<<<<< HEAD
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", null)
-=======
+========
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser<System.Guid>", null)
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1423,8 +1424,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("Property");
                 });
 
-<<<<<<< HEAD
-=======
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+========
             modelBuilder.Entity("ecommerce.Domain.Entities.RefreshToken", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.User", "Account")
@@ -1440,7 +1441,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("Account");
                 });
 
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
             modelBuilder.Entity("ecommerce.Domain.Entities.Review", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Product", "Product")
@@ -1460,8 +1461,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("User");
                 });
 
-<<<<<<< HEAD
-=======
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+========
             modelBuilder.Entity("ecommerce.Domain.Entities.RoleClaim", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Role", null)
@@ -1471,7 +1472,7 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
                 });
 
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
             modelBuilder.Entity("ecommerce.Domain.Entities.Wishlist", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Product", "Product")
@@ -1491,8 +1492,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("User");
                 });
 
-<<<<<<< HEAD
-=======
+<<<<<<<< HEAD:src/Infrutructure/Migrations/20230831171008_init.Designer.cs
+========
             modelBuilder.Entity("ecommerce.Domain.Entities.Admin", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser<System.Guid>", null)
@@ -1519,7 +1520,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("City");
                 });
 
->>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
+>>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45:src/Infrutructure/Migrations/20230831131409_init.Designer.cs
             modelBuilder.Entity("ecommerce.Domain.Entities.Brand", b =>
                 {
                     b.Navigation("Products");

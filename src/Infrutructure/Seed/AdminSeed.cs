@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+using ecommerce.Domain.Entities;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -12,9 +17,9 @@ namespace ecommerce.infrutructure.Seed
     public static class AdminSeed
     {
 
-        public static async Task<bool> CreateAdmin(ApplicationDbContext context, UserManager<Account> UserManager, Account Account,string Role,string Password="12345678")
+        public static async Task<bool> CreateAdmin(ApplicationDbContext context, UserManager<IdentityUser<Guid>> UserManager, Admin Account,string Role,string Password="12345678")
         {
-
+         
             var Result = await UserManager.CreateAsync(Account,Password);
             if (Result.Succeeded)
             {
@@ -22,9 +27,14 @@ namespace ecommerce.infrutructure.Seed
 
                 if (RoleResult.Succeeded)
                 {
+<<<<<<< HEAD
 
                     context.Admins.Add(new Domain.Entities.Identity.Admin() { AccountId = Account.Id });
                     context.SaveChanges();
+=======
+                    context.Admins.Add(Account);
+                    //context.SaveChanges();
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 
                 }
 
@@ -34,20 +44,20 @@ namespace ecommerce.infrutructure.Seed
 
 
         }
-        public static async Task seedData(ApplicationDbContext context,UserManager<Account>UserManager )
+        public static async Task seedData(ApplicationDbContext context,UserManager<IdentityUser<Guid>> UserManager )
         {
 
             if (!context.Admins.Any())
             {
 
-                var SuperAdmin = new Account()
+                var SuperAdmin = new Admin()
                 {
 
                     UserName = "SuperAdmin",
                     Email = "alihmaidi095@gmail.com",
                 };
 
-                var DeliveryMan = new Account()
+                var DeliveryMan = new Admin()
                 {
                     UserName="DeliveryMan",
                     Email= "DeliveryMan@admin.com"

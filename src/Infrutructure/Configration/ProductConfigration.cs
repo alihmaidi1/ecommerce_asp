@@ -18,7 +18,9 @@ namespace ecommerce.infrutructure.Configration
             builder.Property(p => p.SellingNumber).HasDefaultValue(0);
            
 
-            builder.HasMany(p => p.Properties).WithMany(p=>p.Products).UsingEntity<ProductProperty>();
+            builder.HasMany(p => p.Properties)
+                   .WithMany(p=>p.Products)
+                   .UsingEntity<ProductProperty>();
           
 
             builder.HasMany(p => p.Reviews)

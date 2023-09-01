@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.Authorization.Requirements;
 using ecommerce.infrutructure.ExtensionMethod;
@@ -11,10 +15,10 @@ namespace ecommerce_shared.Authorization.Handlers
     public class PermissionAuthorizationHandler : AuthorizationHandler<PermissionRequirement>
     {
 
-        public UserManager<Account> UserManager;
+        public UserManager<IdentityUser<Guid>> UserManager;
         public ApplicationDbContext DBContext ;
 
-        public PermissionAuthorizationHandler(UserManager<Account> UserManager, ApplicationDbContext DBContext) {
+        public PermissionAuthorizationHandler(UserManager<IdentityUser<Guid>> UserManager, ApplicationDbContext DBContext) {
             
             this.UserManager = UserManager;
             this.DBContext  = DBContext;
@@ -24,23 +28,23 @@ namespace ecommerce_shared.Authorization.Handlers
         protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
         {
 
-            if (context.User == null||context.User.Identity.IsAuthenticated==false)
-            {
-                return;
-            }
-            Guid Id=new Guid(context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
-            var claims = DBContext.GetAccountCalims(Id);   
-            var RequiredPermission = requirement.Permission;
-            var exists = claims.Any(c=>c.ClaimValue.Equals(RequiredPermission));
-            if (exists)
-            {
-                context.Succeed(requirement);
-            }
-            else
-            {
+            //if (context.User == null||context.User.Identity.IsAuthenticated==false)
+            //{
+            //    return;
+            //}
+            //Guid Id=new Guid(context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            //var claims = DBContext.GetAccountCalims(Id);   
+            //var RequiredPermission = requirement.Permission;
+            //var exists = claims.Any(c=>c.ClaimValue.Equals(RequiredPermission));
+            //if (exists)
+            //{
+            //    context.Succeed(requirement);
+            //}
+            //else
+            //{
 
-                context.Fail();
-            }
+            //    context.Fail();
+            //}
 
             return;
 

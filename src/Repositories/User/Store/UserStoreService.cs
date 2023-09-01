@@ -22,19 +22,24 @@ namespace Repositories.User.Store
         public static class Query {
 
 
+<<<<<<< HEAD
             public static Func<ecommerce.Domain.Entities.Identity.User, TokenDto, UserWithToken> CreateUserResponse=> (User, TokenInfo) => new UserWithToken()
             {
+=======
+            //public static Func<ecommerce.Domain.Entities.User, TokenDto, UserWithToken> CreateUserResponse=> (User, TokenInfo) => new UserWithToken()
+            //{
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 
-                Id = User.Id,
-                Name = User.Name,
-                UserName = User.Account.UserName,
-                City = CityStoreService.Query.ToCityName(User.City),
-                Email = User.Account.Email,
-                IsBlocked = User.IsBlocked,
-                Point = User.Point,
-                TokenInfo = TokenInfo
+            //    Id = User.Id,
+            //    Name = User.Name,
+            //    UserName = User.Account.UserName,
+            //    City = CityStoreService.Query.ToCityName(User.City),
+            //    Email = User.Account.Email,
+            //    IsBlocked = User.IsBlocked,
+            //    Point = User.Point,
+            //    TokenInfo = TokenInfo
 
-            };
+            //};
         
             
         }
