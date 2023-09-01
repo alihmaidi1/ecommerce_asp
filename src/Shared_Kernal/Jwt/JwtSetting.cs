@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce_shared.Jwt
 {
-    public  class JwtSetting
+    public  class JwtSetting:IJwtSetting
     {
 
         public string Key {get; set;}

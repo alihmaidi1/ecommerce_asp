@@ -1,11 +1,9 @@
 ﻿using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
-using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Redis;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,36 +15,37 @@ namespace Repositories.Jwt
     public class JwtRepository : IJwtRepository
     {
 
-        public readonly JwtSetting JWTOption;
+        public readonly IJwtSetting JWTOption;
         public readonly ApplicationDbContext Context;
         public readonly ICacheRepository CacheRepository;
         public readonly UserManager<AccountEntity> UserManager;
-        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
+        public JwtRepository(IJwtSetting Setting, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
         {
 
-            this.JWTOption = JWTOption.Value;
+            this.JWTOption = Setting;
             Context = DbContext;
             this.UserManager = UserManager;
             CacheRepository = cacheRepository;
-            CacheRepository = cacheRepository;
         }
-        public async Task<TokenDto> GetTokens(AccountEntity Account)
+        public async Task<TokenDto> GetTokensInfo(AccountEntity Account)
         {
-            var claims = CreateClaim(Account);
-
-            var signingCredentials = GetSigningCredentials(JWTOption);
-            var JwtToken = GetJwtToken(JWTOption, claims, signingCredentials);
-            var Token = new JwtSecurityTokenHandler().WriteToken(JwtToken);
-
-            var ExpiredAt = DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
-            CacheRepository.SetData("Token:" + Token, Token, ExpiredAt);
+            string Token = GetToken(Account);
             ecommerce.Domain.Entities.Identity.RefreshToken RefreshToken = GenerateRefreshToken();
-
-
             Account.RefreshTokens.Add(RefreshToken);
             Context.SaveChanges();
             return TokenDto.ToTokenDto(Token, (int)(JWTOption.DurationInMinute * 60), RefreshToken);
 
+        }
+
+        public string GetToken(AccountEntity Account)
+        {
+            var claims = CreateClaim(Account);
+            var signingCredentials = GetSigningCredentials(JWTOption);
+            var JwtToken = GetJwtToken(JWTOption, claims, signingCredentials);
+            var Token = new JwtSecurityTokenHandler().WriteToken(JwtToken);
+            var ExpiredAt = DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
+            CacheRepository.SetData("Token:" + Token, Token, ExpiredAt);
+            return Token;
 
         }
 
@@ -55,7 +54,7 @@ namespace Repositories.Jwt
 
 
 
-        public List<Claim> CreateClaim(AccountEntity Account)
+        private List<Claim> CreateClaim(AccountEntity Account)
         {
 
             var Claims = new List<Claim>
@@ -74,7 +73,7 @@ namespace Repositories.Jwt
         }
 
 
-        public SigningCredentials GetSigningCredentials(JwtSetting JWTOption)
+        private SigningCredentials GetSigningCredentials(IJwtSetting JWTOption)
         {
 
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTOption.Key));
@@ -85,7 +84,7 @@ namespace Repositories.Jwt
         }
 
 
-        public JwtSecurityToken GetJwtToken(JwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials)
+        private JwtSecurityToken GetJwtToken(IJwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials)
         {
 
             return new JwtSecurityToken(
@@ -99,7 +98,7 @@ namespace Repositories.Jwt
         }
 
 
-        public ecommerce.Domain.Entities.Identity.RefreshToken GenerateRefreshToken()
+        private ecommerce.Domain.Entities.Identity.RefreshToken GenerateRefreshToken()
         {
 
             var RandomNumber = new byte[32];

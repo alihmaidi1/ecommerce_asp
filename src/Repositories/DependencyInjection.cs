@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Repositories.Account;
 using Repositories.Country;
+using Repositories.Jwt.Factory;
 using Repositories.Page;
 using Repositories.RefreshToken;
 using Repositories.Role;
@@ -18,6 +19,7 @@ namespace Repositories
             services.AddTransient<IRoleRepository, RoleRepository>();
             services.AddTransient<ICountryRepository,CountryRepository>();
             services.AddTransient<IAccountRepository,AccountRepository>();
+            services.AddTransient<ISchemaFactory, SchemaFactory>();
 
             return services;
 

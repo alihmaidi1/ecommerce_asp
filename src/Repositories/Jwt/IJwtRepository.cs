@@ -12,19 +12,13 @@ namespace Repositories.Jwt
     public interface IJwtRepository
     {
 
-        public Task<TokenDto> GetTokens(AccountEntity Account);
+        public Task<TokenDto> GetTokensInfo(AccountEntity Account);
+
+        public string GetToken(AccountEntity Account);
 
 
-        public List<Claim> CreateClaim(AccountEntity Account);
 
 
-        public SigningCredentials GetSigningCredentials(JwtSetting JWTOption);
-
-
-        public JwtSecurityToken GetJwtToken(JwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials);
-
-
-        public RefreshTokenEntity GenerateRefreshToken();
 
     }
 }

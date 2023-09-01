@@ -96,6 +96,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
+builder.Services.Configure<ResetSetting>(builder.Configuration.GetSection("ResetPassword"));
+
 
 builder.Services.AddHttpClient("Region",c=> {c.BaseAddress = new Uri("https://countriesnow.space");});
 
@@ -137,7 +139,6 @@ builder.Services.AddJwtConfigration(builder.Configuration);
 
 
 
-builder.Services.AddTransient<IJwtRepository, JwtRepository>();
 builder.Services.AddScoped<ICacheRepository,CacheRepository>();
 builder.Services.AddScoped<IAuthorizationHandler,RolesAuthorizationHandler>();
 builder.Services.AddTransient<IAuthorizationPolicyProvider,PermissionProvider>();

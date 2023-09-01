@@ -8,6 +8,7 @@ using ecommerce.infrutructure;
 using ecommerce.infrutructure.Services.Interfaces;
 using ecommerce.service.UserService;
 using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce_shared.Enums;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.Redis;
 using MediatR;
@@ -16,6 +17,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Repositories.Jwt;
+using Repositories.Jwt.Factory;
 using Repositories.User.Store;
 
 namespace ecommerce.user.Features.Auth.Commands.Handlers
@@ -44,7 +46,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             ICacheRepository CacheRepository,
             UserManager<Account> UserManager,
             IMapper mapper,
-            IJwtRepository jwtRepository
+            ISchemaFactory SchemaFactory
             ) 
             
         {
@@ -53,7 +55,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             this.userManager = UserManager;
             this.mapper= mapper;    
             this.AccountService= AccountService;
-            this.jwtRepository= jwtRepository;
+            this.jwtRepository= SchemaFactory.CreateJwt(JwtSchema.Main);
             this.CacheRepository = CacheRepository;
         }
 
@@ -70,7 +72,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
             
 
 
-            TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
+            TokenDto TokenInfo =await jwtRepository.GetTokensInfo(Account);
             UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Created<UserWithToken>(result,"The User Was Created SuccessFully");
               
@@ -82,7 +84,7 @@ namespace ecommerce.user.Features.Auth.Commands.Handlers
         {
 
             Account Account = await AccountService.SignInAccountAsync(request.UserNameOrEmail,request.Password);
-            TokenDto TokenInfo =await jwtRepository.GetTokens(Account);
+            TokenDto TokenInfo =await jwtRepository.GetTokensInfo(Account);
             UserWithToken result = UserStoreService.Query.CreateUserResponse(Account.User, TokenInfo);
             return Success(result,"You Are Login Successfully");
 

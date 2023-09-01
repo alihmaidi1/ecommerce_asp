@@ -1,4 +1,5 @@
-﻿using ecommerce_shared.Exceptions;
+﻿using ecommerce_shared.Enums;
+using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 using Microsoft.Extensions.Configuration;
@@ -21,10 +22,10 @@ namespace ecommerce_shared.Jwt
             {
 
                 
-                options.DefaultAuthenticateScheme= "MainSchema";
-                options.DefaultChallengeScheme= "MainSchema";
-                options.DefaultScheme = "MainSchema";
-            }).AddJwtBearer("MainSchema",options =>
+                options.DefaultAuthenticateScheme= nameof(JwtSchema.Main);
+                options.DefaultChallengeScheme= nameof(JwtSchema.Main);
+                options.DefaultScheme = nameof(JwtSchema.Main);
+            }).AddJwtBearer(nameof(JwtSchema.Main), options =>
                 {                
                 options.SaveToken = true;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
@@ -68,7 +69,7 @@ namespace ecommerce_shared.Jwt
                 
 
 
-            }).AddJwtBearer("ResetPassword",options =>
+            }).AddJwtBearer(nameof(JwtSchema.ResetPassword),options =>
             {
                 options.SaveToken = true;
                 options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

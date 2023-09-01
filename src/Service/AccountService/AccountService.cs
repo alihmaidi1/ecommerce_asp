@@ -6,6 +6,9 @@ using ecommerce_shared.Redis;
 using ecommerce_shared.Extension;
 using Newtonsoft.Json.Linq;
 using ecommerce_shared.Services.Email;
+using Repositories.Jwt;
+using Repositories.Jwt.Factory;
+using ecommerce_shared.Enums;
 
 namespace ecommerce.service.UserService
 {
@@ -15,15 +18,17 @@ namespace ecommerce.service.UserService
         protected UserManager<Account> UserManager;
         public readonly ICacheRepository CacheRepository;
         public readonly IMailService MailService;
+        public readonly IJwtRepository jwtRepository;
 
         protected SignInManager<Account> SignInManager;
         
-        public AccountService(IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
+        public AccountService(ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
         {
             this.CacheRepository = CacheRepository; 
             this.UserManager= UserManager;
             this.SignInManager = SignInManager; 
             this.MailService= MailService;
+            this.jwtRepository= SchemaFactory.CreateJwt(JwtSchema.Main);
         }
 
         public async Task<Account> SignInAccountAsync(string UserNameOrEmail,string Password)
@@ -81,6 +86,7 @@ namespace ecommerce.service.UserService
             Account.ResetExpire = DateTime.Now.AddMinutes(10);
             await UserManager.UpdateAsync(Account);
             MailService.SendMail(Email, Code);
+
             return true;
 
         }

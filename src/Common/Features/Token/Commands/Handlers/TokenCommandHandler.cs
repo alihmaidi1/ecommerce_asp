@@ -3,12 +3,14 @@ using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
+using ecommerce_shared.Enums;
 using ecommerce_shared.OperationResult;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Repositories.Jwt;
+using Repositories.Jwt.Factory;
 using Repositories.RefreshToken;
 
 
@@ -25,11 +27,11 @@ namespace Common.Features.Token.Commands.Handlers
         
         public IJwtRepository JwtRepository;
 
-        public TokenCommandHandler(IStringLocalizer<SharedResource> stringLocalizer, ApplicationDbContext DbContext, IJwtRepository JwtRepository,IRefreshTokenRepository RefreshTokenRepository) 
+        public TokenCommandHandler(IStringLocalizer<SharedResource> stringLocalizer, ApplicationDbContext DbContext, ISchemaFactory SchemaFactory,IRefreshTokenRepository RefreshTokenRepository) 
         {
 
             this.DbContext=DbContext;
-            this.JwtRepository=JwtRepository;
+            this.JwtRepository= SchemaFactory.CreateJwt(JwtSchema.Main);
             this.stringLocalizer=stringLocalizer;
             this.RefreshTokenRepository=RefreshTokenRepository;
         }
@@ -40,7 +42,7 @@ namespace Common.Features.Token.Commands.Handlers
             var RefreshToken = await DbContext.RefreshTokens.Include(x => x.Account).SingleAsync(x => x.Token.Equals(request.RefreshToken));
             await RefreshTokenRepository.DeleteAsync(RefreshToken);
             Account Account = RefreshToken.Account;
-            TokenDto TokenInfo = await JwtRepository.GetTokens(Account);
+            TokenDto TokenInfo = await JwtRepository.GetTokensInfo(Account);
             return Success<TokenDto>(TokenInfo);
             
          }
