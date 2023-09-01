@@ -28,6 +28,7 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
                 .WithMessage("UserName Or Email CAnn not be null")
                 .NotEmpty()
                 .WithMessage("UserName Or Email CAnn not be nil")
+                .Must(x=>x.Equals("ali"))
                 ;
         }
 

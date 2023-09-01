@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "q9jGGYfX6ORdD85Kz3TtRJUgsyGoHcioIOPNI8qSzyS8dg0pDrz5CklCyhg/oKGBxinLr+ZEKk3fkqCeOfKsTQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj",
+=======
+  "dgSpecHash": "ONZTGJNGgJ1tptBC0CDtGFNsTjm0Iw6MoZGUChIQwE1d9J/AE268HRfil9KItnb37uZ3dTQ2yeAheOeMJD3lTQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Service\\ecommerce.service.csproj",
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

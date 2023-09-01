@@ -34,6 +34,7 @@ C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Debug\net7.0\ecommerce.Dto
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\obj\Debug\net7.0\ref\ecommerce.Dto.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\ecommerce_shared.dll
 C:\Users\Ali Hmaidi\Desktop\asp_ecommerce\src\Dto\bin\Debug\net7.0\ecommerce_shared.pdb
+<<<<<<< HEAD
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\bin\Debug\net7.0\ecommerce.Dto.deps.json
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\bin\Debug\net7.0\ecommerce.Dto.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\bin\Debug\net7.0\ecommerce.Dto.pdb
@@ -53,3 +54,24 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ecommerce.Dto
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\refint\ecommerce.Dto.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ecommerce.Dto.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ref\ecommerce.Dto.dll
+=======
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce.Dto.deps.json
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce.Dto.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce.Domain.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce.Domain.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\ar\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\bin\Debug\net7.0\en\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.csproj.AssemblyReference.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.AssemblyInfoInputs.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.AssemblyInfo.cs
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.csproj.CoreCompileInputs.cache
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.csproj.CopyComplete
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\refint\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ecommerce.Dto.pdb
+C:\Users\Ali Hmaidi\Desktop\asp_ecommercesss\src\Dto\obj\Debug\net7.0\ref\ecommerce.Dto.dll
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45

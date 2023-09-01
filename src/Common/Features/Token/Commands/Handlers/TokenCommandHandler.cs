@@ -1,10 +1,15 @@
 ﻿using Common.Features.Token.Commands.Models;
+<<<<<<< HEAD
 using ecommerce.Domain.Entities.Identity;
+=======
+
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
 using ecommerce_shared.OperationResult;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -37,12 +42,13 @@ namespace Common.Features.Token.Commands.Handlers
 
          public async Task<JsonResult> Handle(RefreshTheTokenCommand request, CancellationToken cancellationToken)
          {
-            var RefreshToken = await DbContext.RefreshTokens.Include(x => x.Account).SingleAsync(x => x.Token.Equals(request.RefreshToken));
-            await RefreshTokenRepository.DeleteAsync(RefreshToken);
-            Account Account = RefreshToken.Account;
-            TokenDto TokenInfo = await JwtRepository.GetTokens(Account);
-            return Success<TokenDto>(TokenInfo);
-            
+            //var RefreshToken = await DbContext.RefreshTokens.Include(x => x.Account).SingleAsync(x => x.Token.Equals(request.RefreshToken));
+            //await RefreshTokenRepository.DeleteAsync(RefreshToken);
+            //IdentityUser<Guid> Account = RefreshToken.Account;
+            //TokenDto TokenInfo = await JwtRepository.GetTokens(Account);
+            //return Success<TokenDto>(TokenInfo);
+
+            return null;
          }
     }
 }

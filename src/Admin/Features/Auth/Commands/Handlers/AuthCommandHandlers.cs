@@ -1,12 +1,20 @@
 ﻿using ecommerce.admin.Features.Auth.Commands.Models;
+<<<<<<< HEAD
 using ecommerce.Domain.Entities.Identity;
+=======
+
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.Admin.Auth.Commands;
 using ecommerce.service.UserService;
 using ecommerce_shared.OperationResult;
 using MediatR;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Http;
+=======
+using Microsoft.AspNetCore.Identity;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Repositories.Admin.Store;
@@ -44,7 +52,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
         public async Task<JsonResult> Handle(LoginAdminCommand request, CancellationToken cancellationToken)
         {
 
-            Account Account = await AccountService.SignInAccountAsync(request.UsernameOrEmail, request.Password);
+            IdentityUser<Guid> Account = await AccountService.SignInAccountAsync(request.UsernameOrEmail, request.Password);
             TokenDto TokenInfo = await jwtRepository.GetTokens(Account);
             AdminWithToken result = AdminStoreRepository.Dto.AdminWithToken(Account,TokenInfo);
             return Success(result, "You Are Login Successfully");

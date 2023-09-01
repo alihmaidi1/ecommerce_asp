@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj",
         "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\obj\\",
+=======
+    "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\ecommerce_shared.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+        "projectName": "ecommerce_shared",
+        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Shared_Kernal\\obj\\",
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

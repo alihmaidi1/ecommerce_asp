@@ -9286,11 +9286,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj",
       "projectName": "ecommerce.service",
       "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Service\\ecommerce.service.csproj",
+      "projectName": "ecommerce.service",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Service\\ecommerce.service.csproj",
+      "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Service\\obj\\",
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -9312,11 +9320,16 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj": {
               "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj"
             },
             "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
               "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+=======
+            "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Repositories\\Repositories.csproj"
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
             }
           }
         }

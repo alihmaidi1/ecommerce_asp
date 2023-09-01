@@ -19,7 +19,11 @@ using EntityFrameworkCore.EncryptColumn.Extension;
 
 namespace ecommerce.infrutructure
 {
+<<<<<<< HEAD
     public class ApplicationDbContext : IdentityDbContext<Account, Role, Guid,IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
+=======
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, Role, Guid,IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
     {
 
         public IEncryptionProvider EncryptionProvider { get; set; }
@@ -36,6 +40,8 @@ namespace ecommerce.infrutructure
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            builder.Entity<IdentityUser<Guid>>()
+                .UseTptMappingStrategy();
             base.OnModelCreating(builder);
             builder.UseEncryption(EncryptionProvider);
 

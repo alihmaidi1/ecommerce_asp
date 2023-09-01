@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.user.Features.Auth.Commands.Models;
 
 using FluentValidation;
@@ -9,8 +13,8 @@ namespace ecommerce.user.Features.Auth.Commands.Validations
     public class AddUserValidation:AbstractValidator<AddUserCommand>
     {
 
-        public UserManager<Account> UserManager;
-        public AddUserValidation(UserManager<Account> userManager) {
+        public UserManager<IdentityUser<Guid>> UserManager;
+        public AddUserValidation(UserManager<IdentityUser<Guid>> userManager) {
 
 
             this.UserManager= userManager;

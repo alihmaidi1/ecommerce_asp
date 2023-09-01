@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+using ecommerce.Domain.Entities;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,7 +22,7 @@ namespace ecommerce.infrutructure.Configration
             builder.Property(a=>a.IsBlocked)
                    .HasDefaultValue(false);
 
-            
+            builder.HasMany(a => a.RefreshTokens).WithOne(r =>(Admin) r.Account).OnDelete(DeleteBehavior.Cascade);
             
         }
     }

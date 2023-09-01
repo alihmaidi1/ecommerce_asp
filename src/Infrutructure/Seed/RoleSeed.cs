@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+using ecommerce.Domain.Entities;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

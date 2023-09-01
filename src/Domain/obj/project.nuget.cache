@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "5JPdLo2+IGapkUS8mc/834TFpUJ2zYLI+4f8uZO0TvUmYwVB+jpYntLNqlhiPizlm5M7EkkvYqJFTR0TQSFAGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Domain\\ecommerce.Domain.csproj",
+=======
+  "dgSpecHash": "6rMOowe004/e1mAMSmGrug+MQDBDC3GJ2gGy5Y8NSCMitOq6687jJvYPNMobj1asAR9ZCG2VypDOg58JMUdcmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\asp_ecommercesss\\src\\Domain\\ecommerce.Domain.csproj",
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.core\\3.7.201.6\\awssdk.core.3.7.201.6.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\awssdk.s3\\3.7.203.1\\awssdk.s3.3.7.203.1.nupkg.sha512",

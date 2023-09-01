@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+using ecommerce.Domain.Entities;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using ecommerce.infrutructure.Seed;
 using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;
@@ -22,7 +27,7 @@ namespace ecommerce.infrutructure.seed
             await context.Database.MigrateAsync();
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<Role>>();
-            var UserManager = services.GetRequiredService<UserManager<Account>>();
+            var UserManager = services.GetRequiredService<UserManager<IdentityUser<Guid>>>();
             var transaction =context.Database.BeginTransaction();
 
                 await RoleSeed.seedData(RoleManager);

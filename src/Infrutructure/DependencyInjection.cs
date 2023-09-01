@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using ecommerce.Domain.Entities.Identity;
+=======
+﻿
+using ecommerce.Domain.Entities;
+>>>>>>> 90bac4133691690d5adc946ac38d3faf668d9f45
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +24,7 @@ namespace ecommerce.infrutructure
         public static IServiceCollection AddInfrustucture(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddIdentity<Account, Role>(options =>
+            services.AddIdentity<IdentityUser<Guid>, Role>(options =>
             {
                 options.User.RequireUniqueEmail = true;
                 options.Password.RequireNonAlphanumeric = false;
