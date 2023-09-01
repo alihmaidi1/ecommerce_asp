@@ -2,7 +2,7 @@
 
 namespace Repositories.RefreshToken
 {
-    public interface IRefreshTokenRepository: IgenericRepository<ecommerce.Domain.Entities.RefreshToken>
+    public interface IRefreshTokenRepository: IgenericRepository<ecommerce.Domain.Entities.Identity.RefreshToken>
     {
 
 

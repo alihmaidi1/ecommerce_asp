@@ -1,5 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
-using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.infrutructure.Seed;
 using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;

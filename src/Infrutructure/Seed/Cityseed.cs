@@ -22,7 +22,7 @@ namespace ecommerce.infrutructure.Seed
                 ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
                 List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
                 List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
-                context.Cities.BulkInsert(data);
+                context.Cities.AddRange(data);
                 
                 context.SaveChanges();
 

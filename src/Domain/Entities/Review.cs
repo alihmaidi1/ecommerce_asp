@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base.Entity;
+using ecommerce.Domain.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

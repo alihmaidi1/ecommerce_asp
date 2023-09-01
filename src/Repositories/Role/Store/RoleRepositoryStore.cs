@@ -8,7 +8,7 @@ namespace Repositories.Role.Store
 
 
 
-        public static IQueryable<ecommerce.Domain.Entities.Role> RoleWithoutBaseAdmins(this RoleManager<ecommerce.Domain.Entities.Role> RoleManager)
+        public static IQueryable<ecommerce.Domain.Entities.Identity.Role> RoleWithoutBaseAdmins(this RoleManager<ecommerce.Domain.Entities.Identity.Role> RoleManager)
         {
 
 

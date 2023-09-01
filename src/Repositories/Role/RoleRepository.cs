@@ -5,8 +5,8 @@ namespace Repositories.Role
 {
     public class RoleRepository:IRoleRepository
     {
-        public RoleManager<ecommerce.Domain.Entities.Role> RoleManager;
-        public RoleRepository(RoleManager<ecommerce.Domain.Entities.Role> RoleManager) { 
+        public RoleManager<ecommerce.Domain.Entities.Identity.Role> RoleManager;
+        public RoleRepository(RoleManager<ecommerce.Domain.Entities.Identity.Role> RoleManager) { 
         
 
             this.RoleManager = RoleManager;
@@ -15,7 +15,7 @@ namespace Repositories.Role
 
 
 
-        public List<ecommerce.Domain.Entities.Role> GetAllRole()
+        public List<ecommerce.Domain.Entities.Identity.Role> GetAllRole()
         {
             
             var Roles=RoleManager.RoleWithoutBaseAdmins().ToList();

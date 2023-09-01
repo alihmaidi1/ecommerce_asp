@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
+    <ProjectReference Include="..\Shared_Kernal\ecommerce_shared.csproj" />
   </ItemGroup>
 
 </Project>

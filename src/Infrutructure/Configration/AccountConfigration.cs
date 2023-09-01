@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using ecommerce.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -25,6 +26,8 @@ namespace ecommerce.infrutructure.Configration
                    .WithOne(a => a.Account);
             builder.HasMany(a => a.RefreshTokens)
                    .WithOne(r => r.Account);
+
+
         }
     }
 }

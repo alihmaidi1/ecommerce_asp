@@ -1,5 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
-using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.City.Query;
 using System;

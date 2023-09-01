@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -23,7 +23,7 @@ namespace ecommerce.infrutructure.Seed
                 if (RoleResult.Succeeded)
                 {
 
-                    context.Admins.Add(new Domain.Entities.Admin() { AccountId = Account.Id });
+                    context.Admins.Add(new Domain.Entities.Identity.Admin() { AccountId = Account.Id });
                     context.SaveChanges();
 
                 }
@@ -44,7 +44,7 @@ namespace ecommerce.infrutructure.Seed
                 {
 
                     UserName = "SuperAdmin",
-                    Email = "admin@admin.com",
+                    Email = "alihmaidi095@gmail.com",
                 };
 
                 var DeliveryMan = new Account()

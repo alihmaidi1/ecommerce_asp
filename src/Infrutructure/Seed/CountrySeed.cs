@@ -17,7 +17,7 @@ namespace ecommerce.infrutructure.Seed
 
                 ExternalRegionDto<List<CountriesDto>> response = await ExternalRegionApi.GetAllCountry();
                 var countries = response.data.Select(CountriesDto.ToCountryDto).ToList();
-                context.Countries.BulkInsert(countries);
+                context.Countries.AddRange(countries);
                 context.SaveChanges();                                                
           
             }

@@ -1,5 +1,5 @@
 ﻿using Common.Features.Token.Commands.Models;
-using ecommerce.Domain.Abstract;
+using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;

@@ -1,5 +1,4 @@
-﻿using ecommerce.Domain.Entities;
-using ecommerce.Dto.Base;
+﻿using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.Auth.Command;
 using Repositories.City.CityStore;
 using System;
@@ -23,7 +22,7 @@ namespace Repositories.User.Store
         public static class Query {
 
 
-            public static Func<ecommerce.Domain.Entities.User, TokenDto, UserWithToken> CreateUserResponse=> (User, TokenInfo) => new UserWithToken()
+            public static Func<ecommerce.Domain.Entities.Identity.User, TokenDto, UserWithToken> CreateUserResponse=> (User, TokenInfo) => new UserWithToken()
             {
 
                 Id = User.Id,

@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

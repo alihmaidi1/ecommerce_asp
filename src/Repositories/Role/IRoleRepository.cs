@@ -3,6 +3,6 @@
     public interface IRoleRepository
     {
 
-        public  List<ecommerce.Domain.Entities.Role> GetAllRole();
+        public  List<ecommerce.Domain.Entities.Identity.Role> GetAllRole();
     }
 }

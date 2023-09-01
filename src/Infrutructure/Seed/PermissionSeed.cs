@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -31,7 +31,7 @@ namespace ecommerce.infrutructure.Seed
             if (SuperAdmin != null && !Claims.Any())
             {
                 List<RoleClaim> Permissions = Enum.GetNames(typeof(PermissionEnum)).Select(x=>new RoleClaim { RoleId=SuperAdmin.Id,ClaimType=nameof(ClaimEnum.Permission),ClaimValue=x }).ToList();                    
-                context.BulkInsert(Permissions);
+                context.AddRange(Permissions);
                 context.SaveChanges();
             }
 

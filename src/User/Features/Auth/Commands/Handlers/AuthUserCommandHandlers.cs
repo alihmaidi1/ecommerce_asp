@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using ecommerce.Domain.Abstract;
 using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.Auth.Command;

@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.Authorization.Requirements;
 using ecommerce.infrutructure.ExtensionMethod;

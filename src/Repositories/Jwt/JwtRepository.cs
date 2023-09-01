@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.Services.Interfaces;
@@ -20,8 +20,8 @@ namespace Repositories.Jwt
         public readonly JwtSetting JWTOption;
         public readonly ApplicationDbContext Context;
         public readonly ICacheRepository CacheRepository;
-        public readonly UserManager<Account> UserManager;
-        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<Account> UserManager, ICacheRepository cacheRepository)
+        public readonly UserManager<AccountEntity> UserManager;
+        public JwtRepository(IOptions<JwtSetting> JWTOption, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
         {
 
             this.JWTOption = JWTOption.Value;
@@ -30,7 +30,7 @@ namespace Repositories.Jwt
             CacheRepository = cacheRepository;
             CacheRepository = cacheRepository;
         }
-        public async Task<TokenDto> GetTokens(Account Account)
+        public async Task<TokenDto> GetTokens(AccountEntity Account)
         {
             var claims = CreateClaim(Account);
 
@@ -40,7 +40,7 @@ namespace Repositories.Jwt
 
             var ExpiredAt = DateTimeOffset.Now.AddMinutes(JWTOption.DurationInMinute);
             CacheRepository.SetData("Token:" + Token, Token, ExpiredAt);
-            ecommerce.Domain.Entities.RefreshToken RefreshToken = GenerateRefreshToken();
+            ecommerce.Domain.Entities.Identity.RefreshToken RefreshToken = GenerateRefreshToken();
 
 
             Account.RefreshTokens.Add(RefreshToken);
@@ -55,7 +55,7 @@ namespace Repositories.Jwt
 
 
 
-        public List<Claim> CreateClaim(Account Account)
+        public List<Claim> CreateClaim(AccountEntity Account)
         {
 
             var Claims = new List<Claim>
@@ -99,7 +99,7 @@ namespace Repositories.Jwt
         }
 
 
-        public ecommerce.Domain.Entities.RefreshToken GenerateRefreshToken()
+        public ecommerce.Domain.Entities.Identity.RefreshToken GenerateRefreshToken()
         {
 
             var RandomNumber = new byte[32];
@@ -107,7 +107,7 @@ namespace Repositories.Jwt
             generator.GetBytes(RandomNumber);
 
 
-            return new ecommerce.Domain.Entities.RefreshToken()
+            return new ecommerce.Domain.Entities.Identity.RefreshToken()
             {
                 Token = Convert.ToBase64String(RandomNumber),
                 ExpireAt = DateTime.UtcNow.AddDays(30),

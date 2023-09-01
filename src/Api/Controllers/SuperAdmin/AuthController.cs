@@ -2,6 +2,8 @@
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.User;
+using ecommerce.Domain.Attributes;
+using ecommerce.Domain.Enum;
 using ecommerce.user.Features.Auth.Commands.Models;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +24,15 @@ namespace ecommerce.Controllers.Admin
             var response = await this.Mediator.Send(command);
             return response;
 
+        }
+
+        [AppAuthorize(RoleEnum.SuperAdmin)]
+        [HttpPost(AuthAdminRouter.Logout)]
+        public async Task<IActionResult> LogoutAdmin()
+        {
+
+            var response = await this.Mediator.Send(new LogoutCommand());
+            return response;
         }
 
     }

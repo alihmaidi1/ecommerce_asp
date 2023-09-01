@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.user.Features.Auth.Commands.Models;
 
 using FluentValidation;

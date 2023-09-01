@@ -11,17 +11,23 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System.Reflection.Emit;
 using ecommerce.Domain.Base.Entity;
-using ecommerce.Domain.Abstract;
 using ecommerce.Domain.Enum;
+using ecommerce.Domain.Entities.Identity;
+using EntityFrameworkCore.EncryptColumn.Interfaces;
+using EntityFrameworkCore.EncryptColumn.Util;
+using EntityFrameworkCore.EncryptColumn.Extension;
 
 namespace ecommerce.infrutructure
 {
-    public class ApplicationDbContext : IdentityDbContext<Account, Role, Guid,IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
+    public class ApplicationDbContext : IdentityDbContext<Account, Role, Guid,IdentityUserClaim<Guid>, UserRole, IdentityUserLogin<Guid>, RoleClaim, IdentityUserToken<Guid>>
     {
+
+        public IEncryptionProvider EncryptionProvider { get; set; }
 
         public ApplicationDbContext(DbContextOptions option):base(option)
         {
-            
+
+            EncryptionProvider = new GenerateEncryptionProvider("fjui2398rh9043hr8tg62riu3ry80230hfeiwu");
             
 
         }
@@ -31,12 +37,14 @@ namespace ecommerce.infrutructure
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             base.OnModelCreating(builder);
+            builder.UseEncryption(EncryptionProvider);
 
         }
 
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Account> Accounts { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
 

@@ -7,8 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ecommerce.Dto.Results.User.Auth.Command;
 using ecommerce.user.Features.Auth.Commands.Models;
-using ecommerce.Domain.Abstract;
-using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Identity;
 
 namespace ecommerce.user.Mapper.User.Auth
 {
@@ -20,7 +19,7 @@ namespace ecommerce.user.Mapper.User.Auth
 
 
             CreateMap<AddUserCommand, Account>();
-            CreateMap<AddUserCommand, ecommerce.Domain.Entities.User>();
+            CreateMap<AddUserCommand, Domain.Entities.Identity.User>();
 
         }
 

@@ -14,11 +14,13 @@ using ecommerce_shared.File;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Redis;
+using ecommerce_shared.Services.Email;
 using ecommerce_shared.Swagger;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Repositories;
 using Repositories.Jwt;
@@ -42,6 +44,9 @@ builder.Services.AddControllers(option =>
 
 });
 
+
+builder.Services.Configure<MailSetting>(builder.Configuration.GetSection("EmailConfiguration"));
+
 builder.Services.AddMediatR(configuration =>
 {
 
@@ -49,7 +54,10 @@ builder.Services.AddMediatR(configuration =>
 
 });
 
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(option => option.TokenLifespan = TimeSpan.FromMinutes(10));
 builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
 
 builder.Services.AddValidatorsFromAssembly(ecommerce.user.AssemblyReference.Assembly);
 builder.Services.AddAutoMapper(ecommerce.user.AssemblyReference.Assembly);
@@ -135,6 +143,7 @@ builder.Services.AddScoped<IAuthorizationHandler,RolesAuthorizationHandler>();
 builder.Services.AddTransient<IAuthorizationPolicyProvider,PermissionProvider>();
 builder.Services.AddTransient<IAuthorizationHandler,PermissionAuthorizationHandler>();
 
+builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddTransient<CheckTokenInRedisAttribute>();
 
 

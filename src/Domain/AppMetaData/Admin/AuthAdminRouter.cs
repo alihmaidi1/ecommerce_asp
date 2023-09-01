@@ -11,6 +11,7 @@ namespace ecommerce.Domain.AppMetaData.Admin
         
         private const string prefix = Router.Rule + Router.Admin+ "/Auth";
         public const string Login = prefix + "/Login";
+        public const string Logout = prefix + "/Logout";
 
 
     }

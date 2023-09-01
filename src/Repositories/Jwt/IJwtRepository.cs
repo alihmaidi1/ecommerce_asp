@@ -1,4 +1,6 @@
-﻿using ecommerce.Domain.Abstract;
+﻿using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
+using RefreshTokenEntity = ecommerce.Domain.Entities.Identity.RefreshToken;
+
 using ecommerce.Dto.Base;
 using ecommerce_shared.Jwt;
 using Microsoft.IdentityModel.Tokens;
@@ -10,10 +12,10 @@ namespace Repositories.Jwt
     public interface IJwtRepository
     {
 
-        public Task<TokenDto> GetTokens(Account Account);
+        public Task<TokenDto> GetTokens(AccountEntity Account);
 
 
-        public List<Claim> CreateClaim(Account Account);
+        public List<Claim> CreateClaim(AccountEntity Account);
 
 
         public SigningCredentials GetSigningCredentials(JwtSetting JWTOption);
@@ -22,7 +24,7 @@ namespace Repositories.Jwt
         public JwtSecurityToken GetJwtToken(JwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials);
 
 
-        public ecommerce.Domain.Entities.RefreshToken GenerateRefreshToken();
+        public RefreshTokenEntity GenerateRefreshToken();
 
     }
 }
