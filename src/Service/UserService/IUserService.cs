@@ -16,5 +16,7 @@ namespace ecommerce.service.UserService
 
         public Task<User> ConfirmAccount(string Email,string Code);
 
+        public Task<User> SigninUser(string UserNameOrEmail, string Passowrd);
+
     }
 }

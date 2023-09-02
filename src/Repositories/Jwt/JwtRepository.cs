@@ -15,11 +15,11 @@ namespace Repositories.Jwt
     public class JwtRepository : IJwtRepository
     {
 
-        public readonly IJwtSetting JWTOption;
+        public readonly JwtSetting JWTOption;
         public readonly ApplicationDbContext Context; 
         public readonly ICacheRepository CacheRepository;
         public readonly UserManager<AccountEntity> UserManager;
-        public JwtRepository(IJwtSetting Setting, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
+        public JwtRepository(JwtSetting Setting, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)
         {
 
             this.JWTOption = Setting;
@@ -73,7 +73,7 @@ namespace Repositories.Jwt
         }
 
 
-        private SigningCredentials GetSigningCredentials(IJwtSetting JWTOption)
+        private SigningCredentials GetSigningCredentials(JwtSetting JWTOption)
         {
 
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTOption.Key));
@@ -84,7 +84,7 @@ namespace Repositories.Jwt
         }
 
 
-        private JwtSecurityToken GetJwtToken(IJwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials)
+        private JwtSecurityToken GetJwtToken(JwtSetting JWTOption, List<Claim> claims, SigningCredentials SigningCredentials)
         {
 
             return new JwtSecurityToken(

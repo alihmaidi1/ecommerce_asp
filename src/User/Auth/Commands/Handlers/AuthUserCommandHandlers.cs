@@ -8,6 +8,7 @@ using ecommerce_shared.Enums;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.Redis;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
@@ -18,10 +19,9 @@ namespace ecommerce.user.Auth.Commands.Handlers
     internal class AuthUserCommandHandlers : OperationResult,
 
         IRequestHandler<AddUserCommand, JsonResult>,
-    IRequestHandler<ConfirmAccountCommand, JsonResult>
-
-    //IRequestHandler<LoginUserCommand, JsonResult>,
-    //IRequestHandler<LogoutUserCommand, JsonResult>
+    IRequestHandler<ConfirmAccountCommand, JsonResult>,
+    IRequestHandler<LoginUserCommand, JsonResult>,
+    IRequestHandler<LogoutUserCommand, JsonResult>
 
 
     {
@@ -29,7 +29,7 @@ namespace ecommerce.user.Auth.Commands.Handlers
         public readonly ICacheRepository CacheRepository;
         public readonly IAccountService AccountService;
         public IJwtRepository jwtRepository;
-
+        public IHttpContextAccessor httpContextAccessor;
         public IUserService UserService;
 
         public IMapper mapper;
@@ -40,14 +40,16 @@ namespace ecommerce.user.Auth.Commands.Handlers
             ICacheRepository CacheRepository,
             ISchemaFactory SchemaFactory,
             IUserService UserService,
-            IMapper mapper
+            IMapper mapper,
+            IHttpContextAccessor httpContextAccessor
             )
 
         {
             this.AccountService = AccountService;
-            jwtRepository = SchemaFactory.CreateJwt(JwtSchema.Main);
+            jwtRepository = SchemaFactory.CreateJwt(JwtSchema.User);
             this.CacheRepository = CacheRepository;
             this.UserService = UserService;
+            this.httpContextAccessor= httpContextAccessor;
             this.mapper=mapper; 
         }
 
@@ -69,23 +71,25 @@ namespace ecommerce.user.Auth.Commands.Handlers
 
         }
 
-        //public async Task<JsonResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
-        //{
 
-        //    Account Account = await AccountService.SignInAccountAsync(request.UserNameOrEmail, request.Password);
-        //    TokenDto TokenInfo = await jwtRepository.GetTokensInfo(Account);
-        //    UserWithToken result = UserStoreService.Query.CreateUserResponse(Account.User, TokenInfo);
-        //    return Success(result, "You Are Login Successfully");
+        public async Task<JsonResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+        {
 
-        //}
+            User User =  await UserService.SigninUser(request.UserNameOrEmail, request.Password);
+            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User.Account);
+            UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
+            return Success(result, "You Are Login Successfully");
 
-        //public async Task<JsonResult> Handle(LogoutUserCommand request, CancellationToken cancellationToken)
-        //{
+        }
 
-        //    CacheRepository.RemoveData("Token:" + request.Token);
-        //    return Success("You Are Logout Successfully");
+        public async Task<JsonResult> Handle(LogoutUserCommand request, CancellationToken cancellationToken)
+        {
 
-        //}
+            string Token = httpContextAccessor.HttpContext.Request.Headers.Authorization.ToString().Split(" ")[1];
+            CacheRepository.RemoveData("Token:" + Token);
+            return Success("You Are Logout Successfully");
+
+        }
 
     }
 }

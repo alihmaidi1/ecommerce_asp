@@ -10,6 +10,7 @@ namespace ecommerce_shared.Enums
     {
 
         Main,
+        User,
         ResetPassword
 
 

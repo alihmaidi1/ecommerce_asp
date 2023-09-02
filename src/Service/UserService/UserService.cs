@@ -53,6 +53,15 @@ namespace ecommerce.service.UserService
 
         }
 
+        public async Task<User> SigninUser(string UserNameOrEmail,string Passowrd)
+        {
+
+
+            Account Account = await AccountService.SignInAccountAsync(UserNameOrEmail, Passowrd);
+            Account.EmailConfirmed.ThrowIfFalse("Your Email Is Not Confirmed");
+            return Account.User;
+        }
+
 
 
 

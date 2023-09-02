@@ -14,6 +14,7 @@ namespace Repositories
 
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
+            
             services.AddTransient<IPageRepository,PageRepository>();
             services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddTransient<IRoleRepository, RoleRepository>();

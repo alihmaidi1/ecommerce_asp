@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 namespace Repositories.Jwt.Factory
 {
@@ -19,15 +21,13 @@ namespace Repositories.Jwt.Factory
         public ApplicationDbContext DbContext { get; set; }
 
         public UserManager<AccountEntity> UserManager;
-        public JwtSetting jwtSetting { get; set; }
-        public ResetSetting ResetSetting { get; set; }
-
+        
         public ICacheRepository CacheRepository;
 
-        public SchemaFactory(IOptions<JwtSetting> JwtSetting,IOptions<ResetSetting> ResetSetting,ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository CacheRepository) {
+        public IConfiguration configration { get; set; }
+        public SchemaFactory(IConfiguration configration, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository CacheRepository) {
 
-            this.jwtSetting = JwtSetting.Value;
-            this.ResetSetting = ResetSetting.Value;
+            this.configration = configration;
             this.DbContext = DbContext;
             this.UserManager = UserManager;
             this.CacheRepository = CacheRepository;
@@ -36,7 +36,7 @@ namespace Repositories.Jwt.Factory
 
         public IJwtRepository CreateJwt(JwtSchema Schema)
         {
-            IJwtSetting Setting=(Schema.ToString().Equals(JwtSchema.Main.ToString())) ?jwtSetting:ResetSetting;            
+            var Setting=configration.GetSection(Schema.ToString()).Get<JwtSetting>();
             return new JwtRepository(Setting, DbContext, UserManager, CacheRepository);
         }
     }

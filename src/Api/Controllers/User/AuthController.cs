@@ -1,5 +1,7 @@
 ﻿using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.User;
+using ecommerce.Domain.Attributes;
+using ecommerce.Domain.Enum;
 using ecommerce.models.Users.Auth.Commands;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
@@ -29,23 +31,24 @@ namespace ecommerce.Controllers.User
         }
 
 
-        //[HttpPost(AuthUserRouter.Login)]
+        [HttpPost(AuthUserRouter.Login)]
 
-        //public async Task<IActionResult> LoginUser([FromBody] LoginUserCommand command)
-        //{
+        public async Task<IActionResult> LoginUser([FromBody] LoginUserCommand command)
+        {
 
-        //    var response=await this.Mediator.Send(command);
-        //    return response;
+            var response=await this.Mediator.Send(command);
+            return response;
 
-        //}
+        }
 
-        //[HttpPost(AuthUserRouter.Logout)]
-        //public async Task<IActionResult> Logout(LogoutUserCommand command)
-        //{
-        //    var response=await this.Mediator.Send(command); 
-        //    return response;
+        [HttpPost(AuthUserRouter.Logout)]
+        [UserAuthorizeAtrribute]
+        public async Task<IActionResult> Logout()
+        {
+            var response = await this.Mediator.Send(new LogoutUserCommand());
+            return response;
 
-        //}
+        }
 
     }
 }
