@@ -144,14 +144,14 @@ builder.Services.AddTransient<ErrorHandling>();
 
 
 
-
+builder.Services.AddResponseCompression();
 var app = builder.Build();
 
 
 
 app.ConfigureOpenAPI();
 
-
+app.UseResponseCompression();
 
 
 app.UseRequestLocalization(new RequestLocalizationOptions
