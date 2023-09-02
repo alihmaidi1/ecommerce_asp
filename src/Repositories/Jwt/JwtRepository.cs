@@ -16,7 +16,7 @@ namespace Repositories.Jwt
     {
 
         public readonly IJwtSetting JWTOption;
-        public readonly ApplicationDbContext Context;
+        public readonly ApplicationDbContext Context; 
         public readonly ICacheRepository CacheRepository;
         public readonly UserManager<AccountEntity> UserManager;
         public JwtRepository(IJwtSetting Setting, ApplicationDbContext DbContext, UserManager<AccountEntity> UserManager, ICacheRepository cacheRepository)

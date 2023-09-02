@@ -2,17 +2,21 @@
 using Repositories.Base.Concrete;
 using ecommerce.infrutructure;
 using ecommerce.Domain.Enum;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace Repositories.Account
 {
     public class AccountRepository : GenericRepository<AccountEntity>, IAccountRepository
     {
      
+        
 
         public AccountRepository(ApplicationDbContext DBContext) : base(DBContext)
         {
 
-
+            
         }
 
         public bool CheckRoleUserNameOrEmail(string UserNameOrEmail, RoleEnum Role)
@@ -34,9 +38,8 @@ namespace Repositories.Account
 
         }
 
-        public bool CheckAccountCode(string Code, AccountEntity Account)
+        public bool CheckAccountCode(string Code,AccountEntity Account)
         {
-                                    
             return Code.Equals(Account.Code);
 
         }

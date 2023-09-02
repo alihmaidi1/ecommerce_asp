@@ -51,8 +51,7 @@ namespace ecommerce.admin.Features.Password.Commands
         {
             var Id = _httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(x=>x.Type.Equals(ClaimTypes.NameIdentifier)).Value;
             Account Account = await UserManager.FindByIdAsync(Id);
-            TokenDto TokenInfo = await JwtRepository.GetTokensInfo(Account);
-            
+            TokenDto TokenInfo = await JwtRepository.GetTokensInfo(Account);            
             return Success(TokenInfo,"The Code is Correct");
 
         }

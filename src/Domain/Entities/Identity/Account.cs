@@ -20,12 +20,11 @@ namespace ecommerce.Domain.Entities.Identity
         public virtual User User { get; set; }
         public virtual Admin Admin { get; set; }
 
-
+        [EncryptColumn]
         public string ? Code { get; set; }
 
 
-        public DateTime ?ResetExpire { get; set; }
-
+        
         public virtual ICollection<RefreshToken>? RefreshTokens { get; set; }
 
     }

@@ -27,7 +27,7 @@ namespace ecommerce.infrutructure
         public ApplicationDbContext(DbContextOptions option):base(option)
         {
 
-            EncryptionProvider = new GenerateEncryptionProvider("fjui2398rh9043hr8tg62riu3ry80230hfeiwu");
+            EncryptionProvider = new GenerateEncryptionProvider("45sdfow342joir53");
             
 
         }
@@ -36,8 +36,9 @@ namespace ecommerce.infrutructure
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            base.OnModelCreating(builder);
             builder.UseEncryption(EncryptionProvider);
+
+            base.OnModelCreating(builder);
 
         }
 

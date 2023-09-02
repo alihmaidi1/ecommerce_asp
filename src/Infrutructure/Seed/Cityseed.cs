@@ -23,7 +23,7 @@ namespace ecommerce.infrutructure.Seed
                 ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
                 List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
                 List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
-                context.BulkInsert(data);
+                context.BulkInsert(data, new BulkConfig { BulkCopyTimeout = 1000 }); ;
                 
                 context.SaveChanges();
 

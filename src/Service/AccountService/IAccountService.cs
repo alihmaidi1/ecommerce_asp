@@ -19,6 +19,6 @@ namespace ecommerce.service.UserService
         public Task<string> SendEmail(string Email);
 
         public Task<bool> CreateAccountAsync(Account Account,string password);
-
+        public Task<bool> CheckCode(string Code);
     }
 }

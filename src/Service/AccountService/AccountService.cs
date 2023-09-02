@@ -12,6 +12,8 @@ using ecommerce_shared.Enums;
 using ecommerce.Dto.Base;
 using Repositories.Account;
 using ecommerce_shared.Helper;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 namespace ecommerce.service.UserService
 {
@@ -22,14 +24,17 @@ namespace ecommerce.service.UserService
         public readonly ICacheRepository CacheRepository;
         public readonly IMailService MailService;
         public readonly IJwtRepository jwtRepository;
+        public readonly IHttpContextAccessor httpContextAccessor;
+
         public readonly IAccountRepository AccountRepository;
 
         public ISchemaFactory SchemaFactory;
         protected SignInManager<Account> SignInManager;
         
-        public AccountService(IAccountRepository AccountRepository,ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
+        public AccountService(IHttpContextAccessor httpContextAccessor,IAccountRepository AccountRepository,ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
         {
-            this.CacheRepository = CacheRepository; 
+            this.CacheRepository = CacheRepository;
+            this.httpContextAccessor = httpContextAccessor;
             this.AccountRepository = AccountRepository;
             this.SchemaFactory=SchemaFactory;
             this.UserManager= UserManager;
@@ -90,7 +95,6 @@ namespace ecommerce.service.UserService
             
             string Code= string.Empty.GenerateCode();
             Account.Code = Code;
-            Account.ResetExpire = DateTime.Now.AddMinutes(10);
             await UserManager.UpdateAsync(Account);
             MailService.SendMail(Email, Code);
             return jwtRepository.GetToken(Account);
@@ -98,6 +102,14 @@ namespace ecommerce.service.UserService
         }
 
         
+        public async Task<bool> CheckCode(string Code)
+        {
+
+            var Id = httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier)).Value;
+            var Account=await UserManager.FindByIdAsync(Id);
+            return AccountRepository.CheckAccountCode(Code,Account);
+
+        }
 
 
     }
