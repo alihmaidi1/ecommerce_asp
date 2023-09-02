@@ -95,7 +95,7 @@ builder.Services.AddOpenApi();
 
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
-builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("AccessToken"));
+builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("Main"));
 builder.Services.Configure<ResetSetting>(builder.Configuration.GetSection("ResetPassword"));
 
 

@@ -9,7 +9,6 @@ using ecommerce_shared.Services.Email;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
 using ecommerce_shared.Enums;
-using ecommerce.Dto.Base;
 using Repositories.Account;
 using ecommerce_shared.Helper;
 using Microsoft.AspNetCore.Http;
@@ -111,9 +110,7 @@ namespace ecommerce.service.UserService
             var CorrectCode=AccountRepository.CheckAccountCode(Code,Account);
             if (!CorrectCode)
             {
-
                 return false;
-
             }
             CacheRepository.RemoveData("Token:" + Token);
 
