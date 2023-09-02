@@ -14,8 +14,14 @@ namespace ecommerce.Domain.Attributes
 
         public AppAuthorizeAttribute(params RoleEnum[] roles) { 
         
-            Roles=string.Join(",", roles.Select(x=>x.ToString()));
-            
+            if(roles.Length != 0)
+            {
+
+                Roles = string.Join(",", roles.Select(x => x.ToString()));
+
+            }
+
+
         }
 
 

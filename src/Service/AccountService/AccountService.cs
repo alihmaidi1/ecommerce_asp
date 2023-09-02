@@ -106,9 +106,18 @@ namespace ecommerce.service.UserService
         {
 
             var Id = httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier)).Value;
-            var Account=await UserManager.FindByIdAsync(Id);
-            return AccountRepository.CheckAccountCode(Code,Account);
+            var Token = httpContextAccessor.HttpContext.Request.Headers.Authorization.ToString().Split(" ")[1];
+            var Account =await UserManager.FindByIdAsync(Id);
+            var CorrectCode=AccountRepository.CheckAccountCode(Code,Account);
+            if (!CorrectCode)
+            {
 
+                return false;
+
+            }
+            CacheRepository.RemoveData("Token:" + Token);
+
+            return true;
         }
 
 
