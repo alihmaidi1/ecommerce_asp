@@ -27,6 +27,12 @@ namespace Repositories.User
 
         }
 
+        public async Task<bool> CheckEmailExists(string Email)
+        {
+            var Account=await UserManager.FindByEmailAsync(Email);
+            return DbContext.Users.Any(x => x.AccountId == Account.Id);
+        }
+
 
 
     }

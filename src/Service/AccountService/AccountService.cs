@@ -90,7 +90,7 @@ namespace ecommerce.service.UserService
             
             var Account= await UserManager.FindByNameOrEmailAsync(Email);            
             string Code= string.Empty.GenerateCode();
-            Account.ConfirmCode= Code;
+            Account.Code= Code;
             await UserManager.UpdateAsync(Account);
             MailService.SendMail(Email, $"You Can Reset Your Password By This Code :${Code}");
             return true;

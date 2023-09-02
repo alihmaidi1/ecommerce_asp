@@ -8,5 +8,6 @@ namespace Repositories.User
 
         public  Task<ecommerce.Domain.Entities.Identity.Account> GetUserByUserNameOrEmail(string UserNameOrEmail);
 
+        public Task<bool> CheckEmailExists(string Email);
     }
 }

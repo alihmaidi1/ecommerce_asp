@@ -6,6 +6,7 @@ using Repositories.Jwt.Factory;
 using Repositories.Page;
 using Repositories.RefreshToken;
 using Repositories.Role;
+using Repositories.User;
 
 namespace Repositories
 {
@@ -21,6 +22,7 @@ namespace Repositories
             services.AddTransient<ICountryRepository,CountryRepository>();
             services.AddTransient<IAccountRepository,AccountRepository>();
             services.AddTransient<ISchemaFactory, SchemaFactory>();
+            services.AddTransient<IUserRepository, UserRepository>();   
 
             return services;
 
