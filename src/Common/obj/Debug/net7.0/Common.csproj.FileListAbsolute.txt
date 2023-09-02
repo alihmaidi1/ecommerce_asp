@@ -73,3 +73,5 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\obj\Debug\net7.0\Common.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\obj\Debug\net7.0\refint\Common.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\obj\Debug\net7.0\Common.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\obj\Debug\net7.0\ref\Common.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Common\bin\Debug\net7.0\ecommerce.models.pdb

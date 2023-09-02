@@ -60,8 +60,7 @@ builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavi
 
 
 builder.Services.AddValidatorsFromAssembly(ecommerce.user.AssemblyReference.Assembly);
-builder.Services.AddAutoMapper(ecommerce.user.AssemblyReference.Assembly);
-
+builder.Services.AddAutoMapper(ecommerce.Dto.AssemblyReference.Assembly);
 
 builder.Services.AddValidatorsFromAssembly(ecommerce.admin.AssemblyReference.Assembly);
 builder.Services.AddMediatR(configuration =>

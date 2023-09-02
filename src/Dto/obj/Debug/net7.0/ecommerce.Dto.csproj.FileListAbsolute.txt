@@ -53,3 +53,5 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ecommerce.Dto
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\refint\ecommerce.Dto.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ecommerce.Dto.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\obj\Debug\net7.0\ref\ecommerce.Dto.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Dto\bin\Debug\net7.0\ecommerce.models.pdb

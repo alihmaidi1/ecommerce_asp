@@ -16,7 +16,7 @@ namespace ecommerce_shared.Services.Email
 
             this.MailSetting = MailSetting.Value;
         }
-        public bool SendMail(string Email, string code)
+        public bool SendMail(string Email, string message)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace ecommerce_shared.Services.Email
                 emailMessage.Subject = "Reset Password Ecommerce :)";
                 emailMessage.Body = new TextPart(TextFormat.Text)
                 {
-                    Text=$"You Can Reset Password By This Code : {code}"
+                    Text=message
 
                 };
                 using SmtpClient mailClient = new SmtpClient();

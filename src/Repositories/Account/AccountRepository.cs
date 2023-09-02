@@ -44,6 +44,14 @@ namespace Repositories.Account
 
         }
 
+        public bool CheckConfirmCode(string Code, AccountEntity Account)
+        {
+
+            return Code.Equals(Account.ConfirmCode);
+
+
+        }
+
 
     }
 }

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ecommerce.models\ecommerce.models.csproj" />
     <ProjectReference Include="..\Service\ecommerce.service.csproj" />
     <ProjectReference Include="..\Shared_Kernal\ecommerce_shared.csproj" />
     <ProjectReference Include="..\Dto\ecommerce.Dto.csproj" />

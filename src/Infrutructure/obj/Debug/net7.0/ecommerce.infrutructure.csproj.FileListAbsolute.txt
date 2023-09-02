@@ -63,3 +63,5 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\obj\Debug\net7.0\ref
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\obj\Debug\net7.0\ecommerce.infrutructure.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\obj\Debug\net7.0\ecommerce.infrutructure.genruntimeconfig.cache
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\obj\Debug\net7.0\ref\ecommerce.infrutructure.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Infrutructure\bin\Debug\net7.0\ecommerce.models.pdb

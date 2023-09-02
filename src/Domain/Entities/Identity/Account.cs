@@ -23,8 +23,10 @@ namespace ecommerce.Domain.Entities.Identity
         [EncryptColumn]
         public string ? Code { get; set; }
 
+        [EncryptColumn]
+        public string? ConfirmCode { get; set; }
 
-        
+
         public virtual ICollection<RefreshToken>? RefreshTokens { get; set; }
 
     }

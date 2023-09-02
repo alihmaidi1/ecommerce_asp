@@ -67,3 +67,5 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\obj\Debug\net7.0\Repo
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\obj\Debug\net7.0\refint\Repositories.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\obj\Debug\net7.0\Repositories.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\obj\Debug\net7.0\ref\Repositories.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Repositories\bin\Debug\net7.0\ecommerce.models.pdb

@@ -10,7 +10,7 @@ namespace ecommerce_shared.Services.Email
     {
 
 
-        public bool SendMail(string Email,string code);
+        public bool SendMail(string Email,string message);
 
     }
 }

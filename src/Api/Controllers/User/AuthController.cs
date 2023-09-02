@@ -1,8 +1,6 @@
-﻿using ecommerce.admin.Features.Pages.Commands.Models;
-using ecommerce.Base;
-using ecommerce.Domain.AppMetaData.Admin;
+﻿using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.User;
-using ecommerce.user.Features.Auth.Commands.Models;
+using ecommerce.models.Users.Auth.Commands;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,24 +20,32 @@ namespace ecommerce.Controllers.User
             var response = await this.Mediator.Send(command);
             return response;
         }
+        [HttpPost(AuthUserRouter.Confirm)]
 
-        [HttpPost(AuthUserRouter.Login)]
-
-        public async Task<IActionResult> LoginUser([FromBody] LoginUserCommand command)
+        public async Task<IActionResult> ConfirmAccount([FromBody]ConfirmAccountCommand request)
         {
-
-            var response=await this.Mediator.Send(command);
+            var response=await this.Mediator.Send(request);
             return response;
-
         }
 
-        [HttpPost(AuthUserRouter.Logout)]
-        public async Task<IActionResult> Logout(LogoutUserCommand command)
-        {
-            var response=await this.Mediator.Send(command); 
-            return response;
 
-        }
+        //[HttpPost(AuthUserRouter.Login)]
+
+        //public async Task<IActionResult> LoginUser([FromBody] LoginUserCommand command)
+        //{
+
+        //    var response=await this.Mediator.Send(command);
+        //    return response;
+
+        //}
+
+        //[HttpPost(AuthUserRouter.Logout)]
+        //public async Task<IActionResult> Logout(LogoutUserCommand command)
+        //{
+        //    var response=await this.Mediator.Send(command); 
+        //    return response;
+
+        //}
 
     }
 }

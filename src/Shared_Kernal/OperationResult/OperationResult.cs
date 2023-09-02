@@ -48,7 +48,7 @@ namespace ecommerce_shared.OperationResult
 
         }
 
-        public JsonResult Created<T>(T Data, string Message = "") where T : class
+        public JsonResult Created<T>(T Data, string Message = "") 
         {
 
             int StatusCode = (int)System.Net.HttpStatusCode.Created;

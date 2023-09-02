@@ -4,7 +4,6 @@ using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.User;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
-using ecommerce.user.Features.Auth.Commands.Models;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 

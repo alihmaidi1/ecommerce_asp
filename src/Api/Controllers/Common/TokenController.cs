@@ -1,7 +1,6 @@
 ﻿using Common.Features.Token.Commands.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Common;
-using ecommerce.user.Features.Auth.Commands.Models;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 

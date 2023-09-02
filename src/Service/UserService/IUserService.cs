@@ -1,4 +1,6 @@
 ﻿using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Identity;
+using ecommerce.models.Users.Auth.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,10 @@ namespace ecommerce.service.UserService
 {
     public interface IUserService
     {
+
+        public Task<User> CreateUser(AddUserCommand request);
+
+        public Task<User> ConfirmAccount(string Email,string Code);
 
     }
 }

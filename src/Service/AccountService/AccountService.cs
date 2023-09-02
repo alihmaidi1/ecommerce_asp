@@ -4,7 +4,6 @@ using ecommerce.infrutructure.ExtensionMethod;
 using ecommerce.Domain.Entities.Identity;
 using ecommerce_shared.Redis;
 using ecommerce_shared.Extension;
-using Newtonsoft.Json.Linq;
 using ecommerce_shared.Services.Email;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
@@ -86,17 +85,15 @@ namespace ecommerce.service.UserService
 
         }
 
-        public async Task<string> SendEmail(string Email)
+        public async Task<bool> ResetCode(string Email)
         {
-
             
-            var Account= await UserManager.FindByNameOrEmailAsync(Email);
-            
+            var Account= await UserManager.FindByNameOrEmailAsync(Email);            
             string Code= string.Empty.GenerateCode();
-            Account.Code = Code;
+            Account.ConfirmCode= Code;
             await UserManager.UpdateAsync(Account);
-            MailService.SendMail(Email, Code);
-            return jwtRepository.GetToken(Account);
+            MailService.SendMail(Email, $"You Can Reset Your Password By This Code :${Code}");
+            return true;
 
         }
 

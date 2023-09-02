@@ -20,5 +20,18 @@ namespace ecommerce_shared.Helper
 
         }
 
+        public static void ThrowIfFalse(this bool condition,string message)
+        {
+
+
+            if (!condition)
+            {
+
+                throw new Exception(message);
+            }
+
+
+        }
+
     }
 }
