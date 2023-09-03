@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Entities.Identity;
+using ecommerce_shared.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -19,15 +20,14 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Account> builder)
         {
 
-            builder.HasOne(a => a.User)
-                   .WithOne(u=>u.Account);
-
-            builder.HasOne(a => a.Admin)
-                   .WithOne(a => a.Account);
             builder.HasMany(a => a.RefreshTokens)
                    .WithOne(r => r.Account);
 
+            builder.Property(x => x.ProviderType)
+                   .HasDefaultValue(ProviderAuthentication.Local);
 
+            builder.Property(x=>x.IsBlocked)
+                   .HasDefaultValue(false);
         }
     }
 }

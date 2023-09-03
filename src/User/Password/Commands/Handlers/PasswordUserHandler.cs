@@ -1,5 +1,6 @@
 ﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.Dto.Base;
+using ecommerce.infrutructure;
 using ecommerce.models.Users.Auth.Commands;
 using ecommerce.models.Users.Password.Commands;
 using ecommerce.service.UserService;
@@ -32,22 +33,26 @@ namespace ecommerce.user.Password.Commands.Handlers
         public ISchemaFactory SchemaFactory;
         public IHttpContextAccessor HttpContextAccessor;
         public IJwtRepository jwtRepository;
-        public PasswordUserHandler(ISchemaFactory SchemaFactory,IHttpContextAccessor HttpContextAccessor, IAccountService AccountService,UserManager<Account> UserManager)
+        public ApplicationDbContext Context;
+        public PasswordUserHandler(ApplicationDbContext Context,ISchemaFactory SchemaFactory,IHttpContextAccessor HttpContextAccessor, IAccountService AccountService,UserManager<Account> UserManager)
         {
             this.HttpContextAccessor = HttpContextAccessor;
             this.SchemaFactory = SchemaFactory;
             this.jwtRepository = SchemaFactory.CreateJwt(JwtSchema.User);
             this.UserManager = UserManager;
             this.AccountService = AccountService;   
+            this.Context= Context;
 
 
         }
 
         public async Task<JsonResult> Handle(ForgetPasswordCommand request, CancellationToken cancellationToken)
         {
-            await AccountService.ResetCode(request.Email);
-            Account Account = await UserManager.FindByEmailAsync(request.Email);
-            string Token = SchemaFactory.CreateJwt(JwtSchema.ResetPassword).GetToken(Account);
+            User ?User = Context.Accounts
+                                .OfType<User>()
+                                .FirstOrDefault(x=>x.Email.Equals(request.Email)&&x.ProviderType==ProviderAuthentication.Local                                        );
+            await AccountService.ResetCode(User);
+            string Token = SchemaFactory.CreateJwt(JwtSchema.ResetPassword).GetToken(User);
             return Success(new { Token }, "The Email Was Sended Successfully");
 
 

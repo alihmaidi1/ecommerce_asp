@@ -14,8 +14,8 @@ namespace Repositories.Admin.Store
             {
                 Email=Account.Email,
                 TokenInfo=Token,
-                IsBlocked=Account.Admin.IsBlocked,
-                Id=Account.Admin.Id,
+                IsBlocked=Account.IsBlocked,
+                Id=Account.Id,
                 UserName=Account.UserName
 
 

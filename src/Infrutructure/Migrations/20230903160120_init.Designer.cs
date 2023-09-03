@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230902055651_init")]
+    [Migration("20230903160120_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -392,12 +392,24 @@ namespace ecommerce.infrutructure.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ConfirmCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsBlocked")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -422,6 +434,14 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProviderId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProviderType")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -443,46 +463,10 @@ namespace ecommerce.infrutructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
 
-            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.Admin", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Account");
 
-                    b.Property<Guid>("AccountId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsBlocked")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique();
-
-                    b.ToTable("Admins");
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Identity.RefreshToken", b =>
@@ -558,60 +542,6 @@ namespace ecommerce.infrutructure.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AccountId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CityId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsBlocked")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Point")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
-
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique();
-
-                    b.HasIndex("CityId");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Identity.UserRole", b =>
@@ -1028,6 +958,34 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.Admin", b =>
+                {
+                    b.HasBaseType("ecommerce.Domain.Entities.Identity.Account");
+
+                    b.HasDiscriminator().HasValue("Admin");
+                });
+
+            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.User", b =>
+                {
+                    b.HasBaseType("ecommerce.Domain.Entities.Identity.Account");
+
+                    b.Property<Guid?>("CityId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Point")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.HasIndex("CityId");
+
+                    b.HasDiscriminator().HasValue("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", null)
@@ -1095,17 +1053,6 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.Admin", b =>
-                {
-                    b.HasOne("ecommerce.Domain.Entities.Identity.Account", "Account")
-                        .WithOne("Admin")
-                        .HasForeignKey("ecommerce.Domain.Entities.Identity.Admin", "AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-                });
-
             modelBuilder.Entity("ecommerce.Domain.Entities.Identity.RefreshToken", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", "Account")
@@ -1124,25 +1071,6 @@ namespace ecommerce.infrutructure.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.User", b =>
-                {
-                    b.HasOne("ecommerce.Domain.Entities.Identity.Account", "Account")
-                        .WithOne("User")
-                        .HasForeignKey("ecommerce.Domain.Entities.Identity.User", "AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ecommerce.Domain.Entities.City", "City")
-                        .WithMany("Users")
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-
-                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Identity.UserRole", b =>
@@ -1242,6 +1170,15 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Identity.User", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Entities.City", "City")
+                        .WithMany("Users")
+                        .HasForeignKey("CityId");
+
+                    b.Navigation("City");
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -1271,13 +1208,7 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Identity.Account", b =>
                 {
-                    b.Navigation("Admin")
-                        .IsRequired();
-
                     b.Navigation("RefreshTokens");
-
-                    b.Navigation("User")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Product", b =>

@@ -10,6 +10,7 @@ using ecommerce_shared.File;
 using ecommerce_shared.Jwt;
 using ecommerce_shared.Middleware;
 using ecommerce_shared.Redis;
+using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Services.Email;
 using ecommerce_shared.Swagger;
 using FluentValidation;
@@ -92,9 +93,11 @@ builder.Services.AddOpenApi();
 builder.Services.AddLocalization(options => options.ResourcesPath = "");
 
 builder.Services.AddHttpClient("Region",c=> {c.BaseAddress = new Uri("https://countriesnow.space");});
+builder.Services.AddHttpClient("GoogleAuth", c => { c.BaseAddress = new Uri("https://www.googleapis.com"); });
 
 builder.Services.AddTransient<ExternalRegionApi>();
 
+builder.Services.AddTransient<IAuthenticationService, GoogleAuthenticationService>();
 builder.Services.AddRateLimiter(Limitrateoption =>
 {
 
@@ -152,7 +155,6 @@ var app = builder.Build();
 app.ConfigureOpenAPI();
 
 app.UseResponseCompression();
-
 
 app.UseRequestLocalization(new RequestLocalizationOptions
 {

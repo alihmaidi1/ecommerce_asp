@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ecommerce.Domain.Enum;
+using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Enums;
 
 namespace Repositories.Account
 {
@@ -14,10 +16,14 @@ namespace Repositories.Account
 
 
 
-        public bool CheckRoleUserNameOrEmail(string UserNameOrEmail,RoleEnum Role);
+        public bool CheckRoleUserName(string UserName,RoleEnum Role);
+        public bool CheckRoleEmail(string UserName, RoleEnum Role);
 
         public bool CheckAccountCode(string Code, AccountEntity Account);
         public bool CheckConfirmCode(string Code, AccountEntity Account);
+
+
+        public Task<AccountEntity> CreateExternal(Response ApiResponse,ProviderAuthentication Provider);
 
 
     }

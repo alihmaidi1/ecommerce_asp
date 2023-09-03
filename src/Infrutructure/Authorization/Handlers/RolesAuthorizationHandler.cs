@@ -28,8 +28,7 @@ namespace ecommerce_shared.Authorization.Handlers
             var Roles = requirement.AllowedRoles;
 
             var Id= context.User.Claims.FirstOrDefault(r=>r.Type==ClaimTypes.NameIdentifier).Value ;            
-            var UserRole= DBContext.GetUserRoles(new Guid(Id));
-            
+            var UserRole= DBContext.GetAccountRoles(new Guid(Id));            
             bool RolesExists=Roles.Any(r => UserRole.Any(ur => ur.Equals(r)));
             
             if (RolesExists) {

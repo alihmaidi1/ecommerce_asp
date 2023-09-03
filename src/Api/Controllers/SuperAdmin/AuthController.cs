@@ -17,10 +17,10 @@ namespace ecommerce.Controllers.Admin
 
         [HttpPost(AuthAdminRouter.Login)]
 
-        public async Task<IActionResult> LoginAdmin([FromBody] LoginAdminCommand command)
+        public async Task<IActionResult> LoginAdmin([FromBody] LoginAdminCommand command,CancellationToken Token)
         {
 
-            var response = await this.Mediator.Send(command);
+            var response = await this.Mediator.Send(command,Token);
             return response;
 
         }

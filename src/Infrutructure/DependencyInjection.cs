@@ -21,7 +21,7 @@ namespace ecommerce.infrutructure
 
             services.AddIdentity<Account, Role>(options =>
             {
-                options.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;

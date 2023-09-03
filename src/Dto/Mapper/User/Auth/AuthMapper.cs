@@ -8,7 +8,6 @@ namespace ecommerce.Dto.Mapper.User.Auth
 
         public AuthMapper() {
 
-            CreateMap<AddUserCommand, Account>();
             CreateMap<AddUserCommand, Domain.Entities.Identity.User>();
 
         }

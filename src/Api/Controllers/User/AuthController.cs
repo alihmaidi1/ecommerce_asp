@@ -3,6 +3,7 @@ using ecommerce.Domain.AppMetaData.User;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
 using ecommerce.models.Users.Auth.Commands;
+using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,20 @@ namespace ecommerce.Controllers.User
 
     public class AuthController: ApiController
     {
+        public IAuthenticationService authenticationService;
+        public AuthController(IAuthenticationService authenticationService) { 
+        
+            this.authenticationService = authenticationService;
+        }
 
+        [HttpPost(AuthUserRouter.AuthWithGoogle)]
+        public async Task<IActionResult> AuthWithGoogle([FromBody]AuthenticateWithGoogleCommand request)
+        {
+            
+            var response = await Mediator.Send(request);
+            return response;
+
+        }
         
         [HttpPost(AuthUserRouter.Create)]
         public async Task<IActionResult> CreateUser([FromBody] AddUserCommand command)
@@ -22,6 +36,8 @@ namespace ecommerce.Controllers.User
             var response = await this.Mediator.Send(command);
             return response;
         }
+
+
         [HttpPost(AuthUserRouter.Confirm)]
 
         public async Task<IActionResult> ConfirmAccount([FromBody]ConfirmAccountCommand request)

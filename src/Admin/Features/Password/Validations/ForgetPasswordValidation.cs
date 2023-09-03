@@ -21,7 +21,7 @@ namespace ecommerce.admin.Features.Password.Validations
             RuleFor(x=>x.Email)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> accountRepository.CheckRoleUserNameOrEmail(x,RoleEnum.SuperAdmin));
+                .Must(x=> accountRepository.CheckRoleEmail(x,RoleEnum.SuperAdmin));
         
         }
 

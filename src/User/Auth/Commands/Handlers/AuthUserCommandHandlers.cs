@@ -7,6 +7,7 @@ using ecommerce.service.UserService;
 using ecommerce_shared.Enums;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.Redis;
+using ecommerce_shared.Services.Authentication;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,9 +20,11 @@ namespace ecommerce.user.Auth.Commands.Handlers
     internal class AuthUserCommandHandlers : OperationResult,
 
         IRequestHandler<AddUserCommand, JsonResult>,
-    IRequestHandler<ConfirmAccountCommand, JsonResult>,
-    IRequestHandler<LoginUserCommand, JsonResult>,
-    IRequestHandler<LogoutUserCommand, JsonResult>
+        IRequestHandler<ConfirmAccountCommand, JsonResult>,
+        IRequestHandler<LoginUserCommand, JsonResult>,
+        IRequestHandler<LogoutUserCommand, JsonResult>,
+        IRequestHandler<AuthenticateWithGoogleCommand, JsonResult>
+
 
 
     {
@@ -30,6 +33,8 @@ namespace ecommerce.user.Auth.Commands.Handlers
         public readonly IAccountService AccountService;
         public IJwtRepository jwtRepository;
         public IHttpContextAccessor httpContextAccessor;
+        public IAuthenticationService AuthenticationService;
+
         public IUserService UserService;
 
         public IMapper mapper;
@@ -41,7 +46,8 @@ namespace ecommerce.user.Auth.Commands.Handlers
             ISchemaFactory SchemaFactory,
             IUserService UserService,
             IMapper mapper,
-            IHttpContextAccessor httpContextAccessor
+            IHttpContextAccessor httpContextAccessor,
+            IAuthenticationService AuthenticationService
             )
 
         {
@@ -51,12 +57,14 @@ namespace ecommerce.user.Auth.Commands.Handlers
             this.UserService = UserService;
             this.httpContextAccessor= httpContextAccessor;
             this.mapper=mapper; 
+            this.AuthenticationService=AuthenticationService;
         }
 
         public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            await UserService.CreateUser(request);
-            await AccountService.ResetCode(request.Email);
+            User User=await UserService.CreateUser(request);
+            
+            await AccountService.SendConfirmCode(User);
             return Created(true, "Account Created Please Check Your Email To Confirm Your Account");
 
         }
@@ -65,7 +73,7 @@ namespace ecommerce.user.Auth.Commands.Handlers
         {
 
             User User = await UserService.ConfirmAccount(request.Email, request.Code);
-            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User.Account);
+            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User);
             UserWithToken UserWithToken = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Success(UserWithToken, "Your Account Was Confirmed Successfully");
 
@@ -75,8 +83,8 @@ namespace ecommerce.user.Auth.Commands.Handlers
         public async Task<JsonResult> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
 
-            User User =  await UserService.SigninUser(request.UserNameOrEmail, request.Password);
-            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User.Account);
+            User User =  await UserService.SigninUser(request.UserName, request.Password);
+            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User);
             UserWithToken result = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Success(result, "You Are Login Successfully");
 
@@ -91,5 +99,14 @@ namespace ecommerce.user.Auth.Commands.Handlers
 
         }
 
+        public async Task<JsonResult> Handle(AuthenticateWithGoogleCommand request, CancellationToken cancellationToken)
+        {
+            var ApiResponse = await AuthenticationService.GetUserInfo(request.Token);
+            User User=await UserService.AuthenticateExternal(ApiResponse,ProviderAuthentication.Google);
+            TokenDto TokenInfo =await jwtRepository.GetTokensInfo(User);
+            UserWithToken UserWithToken = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
+            return Success(UserWithToken, "You Are Login Successfully");
+
+        }
     }
 }

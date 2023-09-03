@@ -27,9 +27,9 @@ namespace Repositories.User.Store
 
                 Id = User.Id,
                 Name = User.Name,
-                UserName = User.Account.UserName,
-                City = CityStoreService.Query.ToCityName(User.City),
-                Email = User.Account.Email,
+                UserName = User.UserName,
+                City = User.City!=null?CityStoreService.Query.ToCityName(User.City):null,
+                Email = User.Email,
                 IsBlocked = User.IsBlocked,
                 Point = User.Point,
                 TokenInfo = TokenInfo

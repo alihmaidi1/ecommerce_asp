@@ -2,9 +2,12 @@
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.infrutructure;
 using ecommerce.models.Users.Auth.Commands;
+using ecommerce_shared.Enums;
 using ecommerce_shared.Helper;
+using ecommerce_shared.Services.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Repositories.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +24,14 @@ namespace ecommerce.service.UserService
         public UserManager<Account> UserManager;
 
         public readonly IAccountService AccountService;
-        public UserService(UserManager<Account> UserManager,IMapper mapper, IAccountService AccountService, ApplicationDbContext Context)
+        public readonly IUserRepository UserRepository;
+
+        public UserService(IUserRepository UserRepository,UserManager<Account> UserManager,IMapper mapper, IAccountService AccountService, ApplicationDbContext Context)
         {
 
             this.mapper = mapper;
             this.Context = Context;
+            this.UserRepository = UserRepository;   
             this.UserManager = UserManager;
             this.AccountService = AccountService;
 
@@ -33,23 +39,19 @@ namespace ecommerce.service.UserService
 
         public async Task<User> CreateUser(AddUserCommand request)
         {
-            var Account = mapper.Map<Account>(request);
-            await AccountService.CreateAccountAsync(Account, request.Password);
-            var User = Context.Users.CreateProxy();
-            User=mapper.Map(request, User, opts => opts.AfterMap((src, desc) => desc.AccountId = Account.Id));
-            Context.Users.Add(User);
-            Context.SaveChanges();
+            var User = mapper.Map<User>(request);
+            User=await AccountService.CreateAccountAsync(User, request.Password) as User;
             return User;
         }
 
         public async Task<User> ConfirmAccount(string Email, string Code)
         {
-            var Account = await UserManager.FindByEmailAsync(Email);
+            var Account = Context.Accounts.OfType<User>().FirstOrDefault(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
             Account.EmailConfirmed.ThrowIfTrue("Your Email Is Already Confirmed");
             Account.ConfirmCode.Equals(Code).ThrowIfFalse("Your Code Is Not Correct");
             Account.EmailConfirmed = true;
             await UserManager.UpdateAsync(Account);
-            return Account.User;
+            return Account as User;
 
         }
 
@@ -59,7 +61,21 @@ namespace ecommerce.service.UserService
 
             Account Account = await AccountService.SignInAccountAsync(UserNameOrEmail, Passowrd);
             Account.EmailConfirmed.ThrowIfFalse("Your Email Is Not Confirmed");
-            return Account.User;
+            return Account as User;
+        }
+
+
+        public async Task<User> AuthenticateExternal(Response ApiRespones,ProviderAuthentication provider)
+        {
+            User User = await UserRepository.GetUserByProviderId(ApiRespones.sub,provider);
+            if(User == null)
+            {
+                User= await UserRepository.CreateExternalUser(ApiRespones, provider);
+
+            }
+            return User;
+
+
         }
 
 

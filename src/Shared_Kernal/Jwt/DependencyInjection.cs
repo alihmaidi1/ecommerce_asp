@@ -75,8 +75,7 @@ namespace ecommerce_shared.Jwt
 
                  });
             }
-                
-            
+
             return services;
 
         }

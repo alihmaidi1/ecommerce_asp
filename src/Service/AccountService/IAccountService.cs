@@ -16,9 +16,10 @@ namespace ecommerce.service.UserService
 
         public Task<bool> Logout(string Token);
 
-        public Task<bool> ResetCode(string Email);
+        public Task<bool> ResetCode(Account Account);
+        public Task<bool> SendConfirmCode(Account Account);
 
-        public Task<bool> CreateAccountAsync(Account Account,string password);
+        public Task<Account> CreateAccountAsync(Account Account,string password);
         public Task<bool> CheckCode(string Code);
 
     }

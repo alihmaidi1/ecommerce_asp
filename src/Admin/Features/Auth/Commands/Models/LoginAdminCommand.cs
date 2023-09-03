@@ -12,7 +12,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Models
     public class LoginAdminCommand: IRequest<JsonResult>
     {
 
-        public string UsernameOrEmail { get; set; }
+        public string Username { get; set; }
 
         public string Password { get; set; }
 

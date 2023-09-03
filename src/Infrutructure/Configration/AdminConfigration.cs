@@ -14,8 +14,6 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
 
-            builder.Property(a=>a.IsBlocked)
-                   .HasDefaultValue(false);
 
             
             

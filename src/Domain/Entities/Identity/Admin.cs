@@ -2,15 +2,9 @@
 
 namespace ecommerce.Domain.Entities.Identity
 {
-    public class Admin : BaseEntity
+    public class Admin : Account
     {
 
-        public Guid Id { get; set; }
-        public Guid AccountId { get; set; }
-
-        public virtual Account Account { get; set; }
-
-        public bool IsBlocked { get; set; }
 
     }
 

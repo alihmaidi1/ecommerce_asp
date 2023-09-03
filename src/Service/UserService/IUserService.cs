@@ -1,6 +1,8 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.models.Users.Auth.Commands;
+using ecommerce_shared.Enums;
+using ecommerce_shared.Services.Authentication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +20,7 @@ namespace ecommerce.service.UserService
 
         public Task<User> SigninUser(string UserNameOrEmail, string Passowrd);
 
+
+        public Task<User> AuthenticateExternal(Response ApiRespones,ProviderAuthentication provider);
     }
 }

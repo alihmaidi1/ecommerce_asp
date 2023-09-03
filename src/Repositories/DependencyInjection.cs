@@ -1,6 +1,7 @@
 ﻿using ecommerce.Repository.Page;
 using Microsoft.Extensions.DependencyInjection;
 using Repositories.Account;
+using Repositories.Admin;
 using Repositories.Country;
 using Repositories.Jwt.Factory;
 using Repositories.Page;
@@ -23,7 +24,7 @@ namespace Repositories
             services.AddTransient<IAccountRepository,AccountRepository>();
             services.AddTransient<ISchemaFactory, SchemaFactory>();
             services.AddTransient<IUserRepository, UserRepository>();   
-
+            services.AddTransient<IAdminRepository,AdminRepository>();
             return services;
 
         }

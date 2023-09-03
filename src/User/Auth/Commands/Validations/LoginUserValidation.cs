@@ -24,7 +24,7 @@ namespace ecommerce.user.Auth.Commands.Validations
         public void ApplyUserNameOrEmailValidation()
         {
 
-            RuleFor(x => x.UserNameOrEmail)
+            RuleFor(x => x.UserName)
                 .NotNull()
                 .WithMessage("UserName Or Email Can not be null")
                 .NotEmpty()

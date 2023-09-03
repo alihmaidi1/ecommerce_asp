@@ -18,15 +18,7 @@ namespace ecommerce.infrutructure.Seed
             var Result = await UserManager.CreateAsync(Account,Password);
             if (Result.Succeeded)
             {
-                var RoleResult = await UserManager.AddToRoleAsync(Account, Role);
-
-                if (RoleResult.Succeeded)
-                {
-
-                    context.Admins.Add(new Domain.Entities.Identity.Admin() { AccountId = Account.Id });
-                    context.SaveChanges();
-
-                }
+                 await UserManager.AddToRoleAsync(Account, Role);
 
             }
 
@@ -40,14 +32,15 @@ namespace ecommerce.infrutructure.Seed
             if (!context.Admins.Any())
             {
 
-                var SuperAdmin = new Account()
+                var SuperAdmin = new Admin()
                 {
 
                     UserName = "SuperAdmin",
                     Email = "alihmaidi095@gmail.com",
+                    
                 };
 
-                var DeliveryMan = new Account()
+                var DeliveryMan = new Admin()
                 {
                     UserName="DeliveryMan",
                     Email= "DeliveryMan@admin.com"

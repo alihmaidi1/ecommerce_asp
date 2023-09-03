@@ -41,10 +41,10 @@ namespace ecommerce.service.UserService
             this.jwtRepository= SchemaFactory.CreateJwt(JwtSchema.ResetPassword);
         }
 
-        public async Task<Account> SignInAccountAsync(string UserNameOrEmail,string Password)
+        public async Task<Account> SignInAccountAsync(string UserName,string Password)
         {
 
-            Account Account = await UserManager.FindByNameOrEmailAsync(UserNameOrEmail);
+            Account Account = await UserManager.FindByNameAsync(UserName);
 
             if(Account == null)
             {
@@ -65,7 +65,7 @@ namespace ecommerce.service.UserService
         }
 
 
-        public async Task<bool> CreateAccountAsync(Account Account,string password)
+        public async Task<Account> CreateAccountAsync(Account Account,string password)
         {
 
             var Accountresult = await this.UserManager.CreateAsync(Account, password);
@@ -73,7 +73,7 @@ namespace ecommerce.service.UserService
             {
                 throw new CanotCreateAccountException(Accountresult.Errors);
             }
-            return true;
+            return Account;
 
         }
 
@@ -85,19 +85,29 @@ namespace ecommerce.service.UserService
 
         }
 
-        public async Task<bool> ResetCode(string Email)
+        public async Task<bool> ResetCode(Account Account)
         {
             
-            var Account= await UserManager.FindByNameOrEmailAsync(Email);            
             string Code= string.Empty.GenerateCode();
             Account.Code= Code;
             await UserManager.UpdateAsync(Account);
-            MailService.SendMail(Email, $"You Can Reset Your Password By This Code :${Code}");
+            MailService.SendMail(Account.Email, $"You Can Reset Your Password By This Code :{Code}");
             return true;
 
         }
 
-        
+        public async Task<bool> SendConfirmCode(Account Account)
+        {
+
+            string Code = string.Empty.GenerateCode();
+            Account.ConfirmCode= Code;
+            await UserManager.UpdateAsync(Account);
+            MailService.SendMail(Account.Email, $"You Can Verify Your Account By This Code :{Code}");
+            return true;
+
+
+        }
+
         public async Task<bool> CheckCode(string Code)
         {
 

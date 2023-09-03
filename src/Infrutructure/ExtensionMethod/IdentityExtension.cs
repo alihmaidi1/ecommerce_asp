@@ -1,5 +1,6 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.Domain.Entities.Identity;
+using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,16 +9,16 @@ namespace ecommerce.infrutructure.ExtensionMethod
     public static class IdentityExtension
     {
 
-        public static async Task<Account> FindByNameOrEmailAsync(this UserManager<Account> UserManager,string UserNameOrEmail)
-        {
-            var UserName = UserNameOrEmail;
-            var User = await UserManager.FindByEmailAsync(UserNameOrEmail);
-            if (User != null) { 
+        //public static async Task<Account> FindByNameOrEmailAsync(this UserManager<Account> UserManager,string UserNameOrEmail)
+        //{
+        //    var UserName = UserName;
+        //    var User = await UserManager.FindByEmailAsync(UserName);
+        //    if (User != null) { 
             
-                UserName=User.UserName;
-            }
-            return await UserManager.FindByNameAsync(UserName);            
-        }
+        //        UserName=User.UserName;
+        //    }
+        //    return await UserManager.FindByNameAsync(UserName);            
+        //}
 
 
         public static IQueryable<RoleClaim> GetAccountCalims(this ApplicationDbContext DBContext,Guid Id)
@@ -31,7 +32,27 @@ namespace ecommerce.infrutructure.ExtensionMethod
             return Claims;
         }
 
-        public static List<string> GetUserRoles(this ApplicationDbContext DBContext,Guid Id) 
+
+
+
+        public static Account FindAccountByEmailAndRole(this ApplicationDbContext Context, string Email,string RoleName)
+        {
+            var Account = from account in Context.Accounts
+                         where (
+                                  (account.Email == Email) &&
+                                  (from userrole in Context.UserRoles
+                                   join role in Context.Roles
+                                   on userrole.RoleId equals role.Id
+                                   where (account.Id == userrole.UserId && role.Name.Equals(RoleName))
+                                   select role.Name)
+                                   .Any()
+                               )
+                         select account;
+
+            return Account.FirstOrDefault();
+
+        }
+        public static List<string> GetAccountRoles(this ApplicationDbContext DBContext,Guid Id) 
         {
 
             var roles = from role in DBContext.Roles

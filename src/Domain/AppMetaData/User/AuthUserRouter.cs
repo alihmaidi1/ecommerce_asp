@@ -11,7 +11,12 @@ namespace ecommerce.Domain.AppMetaData.User
 
 
         private const string prefix = Router.Rule+Router.User+"Auth" ;
+        
+        
         public const string Create = prefix + "/Store";
+        public const string AuthWithGoogle = prefix + "/AuthWithGoogle";
+
+
         public const string Confirm = prefix + "/ConfirmAccount";
 
 

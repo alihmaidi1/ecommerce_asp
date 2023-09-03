@@ -23,13 +23,13 @@ namespace ecommerce.admin.Features.Auth.Commands.Validations
         public void ApplyUserNameOrEmailValidation(IAccountRepository AccountRepository)
         {
 
-            RuleFor(x => x.UsernameOrEmail)
+            RuleFor(x => x.Username)
                 .NotEmpty()
-                .WithMessage("username or email cannot be empty")
+                .WithMessage("username cannot be empty")
                 .NotNull()
-                .WithMessage("username or email cannot be null")
-                .Must(x=>AccountRepository.CheckRoleUserNameOrEmail(x,RoleEnum.SuperAdmin))
-                .WithMessage("This UserName Or Email Is Not Exists");
+                .WithMessage("username cannot be null")
+                .Must(x=>AccountRepository.CheckRoleUserName(x,RoleEnum.SuperAdmin))
+                .WithMessage("This UserName Is Not Exists");
 
 
         }

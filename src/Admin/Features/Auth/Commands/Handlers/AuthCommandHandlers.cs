@@ -46,7 +46,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
         public async Task<JsonResult> Handle(LoginAdminCommand request, CancellationToken cancellationToken)
         {
 
-            Account Account = await AccountService.SignInAccountAsync(request.UsernameOrEmail, request.Password);
+            Account Account = await AccountService.SignInAccountAsync(request.Username, request.Password);
             TokenDto TokenInfo = await jwtRepository.GetTokensInfo(Account);
             AdminWithToken result = AdminStoreRepository.Dto.AdminWithToken(Account,TokenInfo);
             return Success(result, "You Are Login Successfully");
@@ -59,7 +59,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
         public async Task<JsonResult> Handle(LogoutCommand request, CancellationToken cancellationToken)
         {
 
-            string Token = _httpContextAccessor.HttpContext.Request.Headers.Authorization;
+            string Token = _httpContextAccessor.HttpContext.Request.Headers.Authorization.ToString().Split(" ")[1];
             bool status=await AccountService.Logout(Token);
             return Success(status,"You Are Logout Successfully");
         }
