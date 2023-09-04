@@ -3,6 +3,7 @@ using ecommerce_shared.Exceptions;
 using LazZiya.ImageResize;
 using Microsoft.AspNetCore.Http;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace ecommerce_shared.File
 {
@@ -123,34 +124,33 @@ namespace ecommerce_shared.File
 
         }
 
-        public static string GetImageHash(this string imagepath)
+        public static string GetImageHash(this MemoryStream imagepath)
         {
             try
             {
                 
-                using var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(new FileStream(imagepath, FileMode.Open));
+                var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(imagepath.GetBuffer());
                 return Blurhasher.Encode(imageStream, 4, 3);
             }
-            catch
+            catch(Exception ex) 
             {
-                throw new IOException("Cannot Get Hashstring of image");
+                throw new IOException(ex.Message);
             }
         }
 
 
-        public static string resizeImage(this string imagepath,int Width=300,int Height = 300)
+        public static (string filename,MemoryStream MemoryStream) resizeImage(this MemoryStream imagepath,int Width=300,int Height = 300)
         {
             try
             {
 
-
-                var img = System.Drawing.Image.FromFile(imagepath);
-                var imageResized = ImageResize.Scale(img, Width, Height);
-                var directory = Path.GetDirectoryName(imagepath);
-                var resizepath = Path.Combine(directory, Guid.NewGuid().ToString() + Path.GetExtension(imagepath));
-                imageResized.SaveAs(resizepath);
-                return resizepath;
-
+                
+                var img = System.Drawing.Image.FromStream(imagepath);
+                var imageResized = ImageResize.Scale(img, Width, Height);                                 
+                var resizepath = Guid.NewGuid().ToString() + ".png";
+                 MemoryStream memoryStream = new MemoryStream();
+                imageResized.Save(memoryStream,ImageFormat.Png);
+                return (resizepath,memoryStream);
 
             }
             catch 

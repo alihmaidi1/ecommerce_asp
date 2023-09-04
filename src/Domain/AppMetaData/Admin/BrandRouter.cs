@@ -9,7 +9,7 @@ namespace ecommerce.Domain.AppMetaData.Admin
     public static class BrandRouter
     {
 
-        private const string prefix = Router.Rule + "Country";
+        private const string prefix = Router.Rule + "Brand";
         public const string Add = prefix + "/List";
 
     }

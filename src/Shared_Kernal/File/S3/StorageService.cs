@@ -6,6 +6,7 @@ using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Collections;
+using System.IO;
 
 namespace ecommerce_shared.File.S3
 {
@@ -103,6 +104,51 @@ namespace ecommerce_shared.File.S3
 
 
         }
+
+
+        public async Task<ImageResponse> OptimizeFile(string file)
+        {
+
+            string S3url = Configration.GetRequiredSection("S3")["url"];
+            string splitfile = file.Split(S3url + "/")[1];
+            var memorystream = await GetObjectFromS3(splitfile);
+            var hash = memorystream.GetImageHash();
+
+            var ReSizeedMemoryStream = memorystream.resizeImage(400, 400);
+
+            var S3Obj = GetResizeObject(ReSizeedMemoryStream.filename, ReSizeedMemoryStream.MemoryStream);
+            bool isUploaded = await UploadFileAsync(S3Obj);
+            if (!isUploaded)
+            {
+                throw new Exception("Can Not Upload Image");
+
+            }
+
+            var resizedpath=Configration.GetRequiredSection("S3")["url"] + $"/{S3Obj.Name}";
+
+            return new ImageResponse
+            {
+                Url=file,
+                hash=hash,
+                resized=resizedpath
+                
+            };
+        }
+
+
+        private S3Object GetResizeObject(string filename,MemoryStream MemoryStream) 
+        {
+
+            return new S3Object()
+            {
+                
+                Name = filename,
+                InputStream = MemoryStream
+            };
+
+
+        }
+
 
 
         public async Task<string> UploadToS3(IFormFile file)

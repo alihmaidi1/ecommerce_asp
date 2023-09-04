@@ -1,5 +1,7 @@
 ﻿using ecommerce.admin.Features.Auth.Commands.Models;
 using ecommerce.models.SuperAdmin.Brand.Commands;
+using ecommerce_shared.File;
+using ecommerce_shared.File.S3;
 using ecommerce_shared.OperationResult;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +18,19 @@ namespace ecommerce.admin.Features.Brand.Command.Handlers
 
     {
 
+        public IStorageService StorageService;
+        public BrandHandler(IStorageService StorageService) {
+        
+            this.StorageService = StorageService;
+        }   
 
-        public Task<JsonResult> Handle(AddBrandCommand request, CancellationToken cancellationToken)
+
+        public async Task<JsonResult> Handle(AddBrandCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+
+            ImageResponse image= await StorageService.OptimizeFile(request.Image);
+
+            return Success(image, "suucess");
         }
     }
 }

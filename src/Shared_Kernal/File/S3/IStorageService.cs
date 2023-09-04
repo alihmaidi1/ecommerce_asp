@@ -19,5 +19,7 @@ namespace ecommerce_shared.File.S3
         public Task<bool> CheckObjectExists(string file);
 
 
+        public Task<ImageResponse> OptimizeFile(string file);
+
     }
 }
