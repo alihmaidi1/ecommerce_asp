@@ -8,6 +8,7 @@ using ecommerce_shared.Enums;
 using ecommerce_shared.OperationResult;
 using ecommerce_shared.Redis;
 using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.Factory;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,9 @@ namespace ecommerce.user.Auth.Commands.Handlers
         IRequestHandler<ConfirmAccountCommand, JsonResult>,
         IRequestHandler<LoginUserCommand, JsonResult>,
         IRequestHandler<LogoutUserCommand, JsonResult>,
-        IRequestHandler<AuthenticateWithGoogleCommand, JsonResult>
+        IRequestHandler<AuthenticateWithGoogleCommand, JsonResult>,
+        IRequestHandler<AuthenticateWithGithubCommand, JsonResult>
+
 
 
 
@@ -33,7 +36,7 @@ namespace ecommerce.user.Auth.Commands.Handlers
         public readonly IAccountService AccountService;
         public IJwtRepository jwtRepository;
         public IHttpContextAccessor httpContextAccessor;
-        public IAuthenticationService AuthenticationService;
+        public IAuthenticationFactory AuthenticationFactory;
 
         public IUserService UserService;
 
@@ -47,7 +50,7 @@ namespace ecommerce.user.Auth.Commands.Handlers
             IUserService UserService,
             IMapper mapper,
             IHttpContextAccessor httpContextAccessor,
-            IAuthenticationService AuthenticationService
+            IAuthenticationFactory AuthenticationFactory
             )
 
         {
@@ -57,7 +60,8 @@ namespace ecommerce.user.Auth.Commands.Handlers
             this.UserService = UserService;
             this.httpContextAccessor= httpContextAccessor;
             this.mapper=mapper; 
-            this.AuthenticationService=AuthenticationService;
+            this.AuthenticationFactory=AuthenticationFactory;
+        
         }
 
         public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
@@ -101,11 +105,23 @@ namespace ecommerce.user.Auth.Commands.Handlers
 
         public async Task<JsonResult> Handle(AuthenticateWithGoogleCommand request, CancellationToken cancellationToken)
         {
-            var ApiResponse = await AuthenticationService.GetUserInfo(request.Token);
+            var ApiResponse = await AuthenticationFactory.CreateAuthenticationService(ProviderAuthentication.Google).GetUserInfo(request.Token);
             User User=await UserService.AuthenticateExternal(ApiResponse,ProviderAuthentication.Google);
             TokenDto TokenInfo =await jwtRepository.GetTokensInfo(User);
             UserWithToken UserWithToken = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
             return Success(UserWithToken, "You Are Login Successfully");
+
+        }
+
+        public async Task<JsonResult> Handle(AuthenticateWithGithubCommand request, CancellationToken cancellationToken)
+        {
+
+            var ApiResponse = await AuthenticationFactory.CreateAuthenticationService(ProviderAuthentication.Git).GetUserInfo(request.Token);
+            User User = await UserService.AuthenticateExternal(ApiResponse, ProviderAuthentication.Git);
+            TokenDto TokenInfo = await jwtRepository.GetTokensInfo(User);
+            UserWithToken UserWithToken = UserStoreService.Query.CreateUserResponse(User, TokenInfo);
+            return Success(UserWithToken, "You Are Login Successfully");
+
 
         }
     }

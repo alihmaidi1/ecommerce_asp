@@ -8,8 +8,9 @@ namespace ecommerce_shared.Enums
 {
     public enum ProviderAuthentication
     {
-
+        Local,
         Google,
-        Local
+        Git
+        
     }
 }

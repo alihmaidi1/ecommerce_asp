@@ -15,6 +15,7 @@ namespace ecommerce.Domain.AppMetaData.User
         
         public const string Create = prefix + "/Store";
         public const string AuthWithGoogle = prefix + "/AuthWithGoogle";
+        public const string AuthWithGithub = prefix + "/AuthWithGithub";
 
 
         public const string Confirm = prefix + "/ConfirmAccount";

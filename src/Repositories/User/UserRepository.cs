@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Identity;
 using Repositories.Base.Concrete;
 using ecommerce.infrutructure.ExtensionMethod;
-using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
+using AccountEntity = ecommerce.Domain.Entities.Identity.Account;
 using UserEntity = ecommerce.Domain.Entities.Identity.User;
 
 using ecommerce_shared.Enums;
-using ecommerce_shared.Services.Authentication;
 using Microsoft.EntityFrameworkCore;
 using ecommerce_shared.Helper;
 using Repositories.Account;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 
 namespace Repositories.User
 {

@@ -2,7 +2,7 @@
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.models.Users.Auth.Commands;
 using ecommerce_shared.Enums;
-using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -5,11 +5,11 @@ using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
-using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Helper;
 using Microsoft.EntityFrameworkCore;
 using ecommerce_shared.Enums;
-using UserEntity=ecommerce.Domain.Entities.Identity.User;
+using UserEntity = ecommerce.Domain.Entities.Identity.User;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 
 namespace Repositories.Account
 {

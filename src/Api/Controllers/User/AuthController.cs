@@ -3,7 +3,8 @@ using ecommerce.Domain.AppMetaData.User;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
 using ecommerce.models.Users.Auth.Commands;
-using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.Factory;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,10 +15,11 @@ namespace ecommerce.Controllers.User
 
     public class AuthController: ApiController
     {
-        public IAuthenticationService authenticationService;
-        public AuthController(IAuthenticationService authenticationService) { 
+
+        public IAuthenticationFactory AuthenticationFactory;
+        public AuthController(IAuthenticationFactory AuthenticationFactory) { 
         
-            this.authenticationService = authenticationService;
+            this.AuthenticationFactory = AuthenticationFactory;
         }
 
         [HttpPost(AuthUserRouter.AuthWithGoogle)]
@@ -28,7 +30,18 @@ namespace ecommerce.Controllers.User
             return response;
 
         }
-        
+
+
+
+        [HttpPost(AuthUserRouter.AuthWithGithub)]
+        public async Task<IActionResult> AuthWithGithub([FromBody] AuthenticateWithGithubCommand request)
+        {
+
+            var response=await Mediator.Send(request);
+            return response;
+
+        }
+
         [HttpPost(AuthUserRouter.Create)]
         public async Task<IActionResult> CreateUser([FromBody] AddUserCommand command)
         {

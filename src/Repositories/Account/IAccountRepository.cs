@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ecommerce.Domain.Enum;
-using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Enums;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 
 namespace Repositories.Account
 {

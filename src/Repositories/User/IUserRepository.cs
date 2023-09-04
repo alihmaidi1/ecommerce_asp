@@ -1,6 +1,6 @@
 ﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce_shared.Enums;
-using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 using Repositories.Base;
 
 namespace Repositories.User

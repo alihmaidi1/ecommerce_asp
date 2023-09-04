@@ -4,7 +4,7 @@ using ecommerce.infrutructure;
 using ecommerce.models.Users.Auth.Commands;
 using ecommerce_shared.Enums;
 using ecommerce_shared.Helper;
-using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.ResponseAuth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories.User;
