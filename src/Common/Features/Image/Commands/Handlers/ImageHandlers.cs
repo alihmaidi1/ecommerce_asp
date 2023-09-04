@@ -37,13 +37,15 @@ namespace Common.Features.Image.Commands.Handlers
         public async Task<JsonResult> Handle(UploadBase64ImageCommand request, CancellationToken cancellationToken)
         {
 
-            var image = request.Image.UploadBase64Image(webHost.WebRootPath);
+            var image = await Storageservice.UploadBase64ToS3(request.Image);
+            //var image = request.Image.UploadBase64Image(webHost.WebRootPath);
             return Success(image,"The Image Was Uploaded Successfully");
         }
 
         public async Task<JsonResult>  Handle(UploadImagesCommand request, CancellationToken cancellationToken)
         {
-            var images = request.images.UploadImages(webHost.WebRootPath);
+            //var images = request.images.UploadImages(webHost.WebRootPath);
+            var images =  await Storageservice.UploadFilesToS3(request.images);
             return Success(images, "The Images Was Uploaded Successfully");
         }
     }

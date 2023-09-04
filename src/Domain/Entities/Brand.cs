@@ -9,7 +9,7 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities
 {
-    public  class Brand :BaseEntity,IImage
+    public  class Brand :BaseEntity
     {
 
         public Brand()
@@ -20,6 +20,9 @@ namespace ecommerce.Domain.Entities
         }
         public string Name { get; set; }
         public string Url { get; set; }
+        public string Hash { get; set; }
+        public string ResizedUrl { get; set; }
+
 
         public virtual ICollection<Product> Products { get; set; }
 

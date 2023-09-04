@@ -10,7 +10,10 @@ namespace ecommerce_shared.File.S3
 {
     public interface IStorageService
     {
-        public Task<bool> UploadToS3(IFormFile file);
+        public Task<string> UploadToS3(IFormFile file);
+
+        public Task<string> UploadBase64ToS3(string file);
+        public Task<List<string>> UploadFilesToS3(List<IFormFile> Files);
 
     }
 }

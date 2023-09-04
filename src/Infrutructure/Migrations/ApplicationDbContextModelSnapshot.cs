@@ -110,9 +110,17 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<Guid?>("DeletedBy")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Hash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ResizedUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
@@ -437,7 +445,7 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<int>("ProviderType")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(1);
+                        .HasDefaultValue(0);
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
