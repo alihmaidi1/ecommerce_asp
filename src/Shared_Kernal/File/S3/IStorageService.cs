@@ -15,5 +15,9 @@ namespace ecommerce_shared.File.S3
         public Task<string> UploadBase64ToS3(string file);
         public Task<List<string>> UploadFilesToS3(List<IFormFile> Files);
 
+        public Task<MemoryStream> GetObjectFromS3(string file);
+        public Task<bool> CheckObjectExists(string file);
+
+
     }
 }

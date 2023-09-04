@@ -1,5 +1,6 @@
 ﻿using Amazon.Runtime;
 using Amazon.S3;
+using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Http;
@@ -8,10 +9,12 @@ using System.Collections;
 
 namespace ecommerce_shared.File.S3
 {
-    public class StorageService : IStorageService,IDisposable
+    public class StorageService : IStorageService
     {
         private readonly IConfiguration Configration;
         private AmazonS3Client client;
+        private AmazonS3Config BucketConfig;
+        private BasicAWSCredentials BasicAWSCredentials;
         private bool isDisposed;
         public StorageService(IConfiguration Configration) {
         
@@ -20,18 +23,21 @@ namespace ecommerce_shared.File.S3
 
         private BasicAWSCredentials GetCredentials()
         {
-            var Credentials = Configration.GetSection("S3");
-            return new BasicAWSCredentials(Credentials["AccessKey"], Credentials["SecretKey"]);
 
+            var Credentials = Configration.GetSection("S3");
+            BasicAWSCredentials=new BasicAWSCredentials(Credentials["AccessKey"], Credentials["SecretKey"]);
+            return BasicAWSCredentials;
         }
 
         private AmazonS3Config GetBucketConfig()
         {
-            return new AmazonS3Config()
+
+            BucketConfig= new AmazonS3Config()
             {
                 RegionEndpoint = Amazon.RegionEndpoint.USEast1
 
             };
+            return BucketConfig;
 
         }
 
@@ -55,12 +61,49 @@ namespace ecommerce_shared.File.S3
             var config = GetBucketConfig();
             TransferUtilityUploadRequest uploadRequest = GetRequestUpload(obj);
             client = new AmazonS3Client(AwsCrediential, config);
-            var transferUtility = new TransferUtility(client);
+            var transferUtility = new TransferUtility(client);            
             await transferUtility.UploadAsync(uploadRequest);
             return true;
 
 
         }
+        
+        private async Task<GetObjectResponse> GetObjectResponse(string file)
+        {
+
+            var AwsCrediential = GetCredentials();
+            var Credentials = Configration.GetSection("S3");
+            var config = GetBucketConfig();
+            client = new AmazonS3Client(AwsCrediential, config);
+            GetObjectResponse response = await client.GetObjectAsync(Credentials["BucketName"], file);
+
+            return response;
+
+        }
+
+        public async Task<MemoryStream> GetObjectFromS3(string file)
+        {
+            var response= await GetObjectResponse(file);
+            MemoryStream memoryStream = new MemoryStream();
+            using (Stream responseStream = response.ResponseStream)
+            {
+                responseStream.CopyTo(memoryStream);
+            }
+
+            return memoryStream;
+
+        }
+
+        public async Task<bool> CheckObjectExists(string file)
+        {
+            string S3url=Configration.GetRequiredSection("S3")["url"];
+            file = file.Split(S3url+"/")[1];
+            var response = await GetObjectResponse(file);
+            return response.HttpStatusCode == System.Net.HttpStatusCode.OK;
+
+
+        }
+
 
         public async Task<string> UploadToS3(IFormFile file)
         {
@@ -70,6 +113,7 @@ namespace ecommerce_shared.File.S3
 
 
                 var S3Obj = await GetS3Object(file);
+                
                 bool isUploaded=await UploadFileAsync(S3Obj);
                 if (!isUploaded)
                 {
@@ -96,7 +140,6 @@ namespace ecommerce_shared.File.S3
 
             var fileExt = Path.GetExtension(file.FileName);
             var fileName = $"{Guid.NewGuid().ToString()}{fileExt}";
-
             return new S3Object(){
 
                 Name=fileName,
@@ -106,27 +149,7 @@ namespace ecommerce_shared.File.S3
 
         }
 
-        ~StorageService()
-        {
-
-            Dispose(false);
-
-        }
-
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (isDisposed)
-                return;
-            this.client.Dispose();
-        }
-
+        
         public async Task<List<string>> UploadFilesToS3(List<IFormFile> Files)
         {
             List<Task<string>> uploadTasks = new List<Task<string>>();
@@ -208,6 +231,28 @@ namespace ecommerce_shared.File.S3
             var extension = base64File.Substring(base64File.IndexOf("/") + 1, ExtensionLength - 1);
             return (base64, extension);
         }
+
+
+        //~StorageService()
+        //{
+
+        //    Dispose(false);
+
+        //}
+
+
+        //public void Dispose()
+        //{
+        //    Dispose(true);
+        //    GC.SuppressFinalize(this);
+        //}
+
+        //protected virtual void Dispose(bool disposing)
+        //{
+        //    if (isDisposed)
+        //        return;
+        //    this.client?.Dispose();
+        //}
 
 
     }
