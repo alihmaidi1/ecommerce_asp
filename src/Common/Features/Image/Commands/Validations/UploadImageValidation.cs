@@ -1,4 +1,5 @@
 ﻿using Common.Features.Image.Commands.Models;
+using ecommerce_shared.Rule;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -11,15 +12,17 @@ namespace Common.Features.Image.Commands.Validations
     public class UploadImageValidation:AbstractValidator<UploadImageCommand>
     {
         public UploadImageValidation() {
-        
-            RuleFor(x=>x.Image).NotEmpty(); 
 
-            RuleFor(x=>x.Image.ContentType)
+            RuleFor(x => x.Image)
                 .NotEmpty()
                 .WithMessage("image can not be empty")
-                .Must(x=>x.Equals("image/jpeg")||x.Equals("image/jpg")||x.Equals("image/png"))
-                .WithMessage("this type is not allowed")
-                ;
+                .NotNull()
+                .WithMessage("image can not be null")
+                .Must(FileRule.IsFile)
+                .WithMessage("this file should be image");
+            
+
+            
                 
         }
 

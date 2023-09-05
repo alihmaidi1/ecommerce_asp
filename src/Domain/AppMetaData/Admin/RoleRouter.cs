@@ -9,8 +9,8 @@ namespace ecommerce.Domain.AppMetaData.Admin
     public static class RoleRouter
     {
 
-        private const string prefix = Router.Rule + "Role";
-        public const string List = prefix + "/GetAllRole";
+        private const string prefix = Router.Rule + "role";
+        public const string List = prefix + "/getAllRole";
 
     }
 }

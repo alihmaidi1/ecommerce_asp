@@ -9,9 +9,9 @@ namespace ecommerce.Domain.AppMetaData.Admin
     public static class AuthAdminRouter
     {
         
-        private const string prefix = Router.Rule + Router.Admin+ "/Auth";
-        public const string Login = prefix + "/Login";
-        public const string Logout = prefix + "/Logout";
+        private const string prefix = Router.Rule + Router.Admin+ "/auth";
+        public const string Login = prefix + "/login";
+        public const string Logout = prefix + "/logout";
 
 
     }

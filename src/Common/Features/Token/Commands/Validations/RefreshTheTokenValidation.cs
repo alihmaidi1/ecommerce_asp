@@ -1,5 +1,6 @@
 ﻿using Common.Features.Token.Commands.Models;
 using FluentValidation;
+using Repositories.RefreshToken;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,15 @@ namespace Common.Features.Token.Commands.Validations
     {
 
 
-        public RefreshTheTokenValidation() {
+        public RefreshTheTokenValidation(IRefreshTokenRepository RefreshTokenRepository) {
 
             RuleFor(x => x.RefreshToken)
                 .NotEmpty()
-                .NotNull();
+                .WithMessage("refresh token can not be empty")
+                .NotNull()
+                .WithMessage("refresh token can not be null")
+                .Must(x=> RefreshTokenRepository.IsValid(x))
+                .WithMessage("this refresh token is not valid");
         
         }  
 

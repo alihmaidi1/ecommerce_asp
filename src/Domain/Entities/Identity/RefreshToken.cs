@@ -19,7 +19,8 @@ namespace ecommerce.Domain.Entities.Identity
 
         public DateTime ExpireAt { get; set; }
 
-        public bool IsExpired => DateTime.UtcNow >= ExpireAt;
+
+        //public bool IsExpired => DateTime.UtcNow >= ExpireAt;
 
         public Guid AccountId { get; set; }
 

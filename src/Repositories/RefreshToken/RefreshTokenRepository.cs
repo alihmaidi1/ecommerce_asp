@@ -7,6 +7,16 @@ namespace Repositories.RefreshToken
     {
         public RefreshTokenRepository(ApplicationDbContext DbContext) : base(DbContext)
         {
+
         }
+
+        public bool IsValid(string Token)
+        {
+
+            return DbContext.RefreshTokens.Any(t => (t.Token.Equals(Token) && (t.ExpireAt >= DateTime.UtcNow)));
+
+
+        }
+
     }
 }

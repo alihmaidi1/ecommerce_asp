@@ -10,11 +10,11 @@ namespace ecommerce.Domain.AppMetaData.Admin
 
     public static class PageRouter
     {
-        private const string prefix = Router.Rule+"Page";
-        public const string List = prefix + "/List";
-        public const string GetById = prefix + "/{id}/GetById";
+        private const string prefix = Router.Rule+"page";
+        public const string List = prefix + "/list";
+        public const string GetById = prefix + "/{id}/getById";
         public const string AddPage = prefix + "/store";
-        public const string Delete = prefix + "/{id}/Delete";
+        public const string Delete = prefix + "/{id}/delete";
 
 
     }

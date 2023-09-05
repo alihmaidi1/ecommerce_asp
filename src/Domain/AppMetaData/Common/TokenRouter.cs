@@ -9,7 +9,7 @@ namespace ecommerce.Domain.AppMetaData.Common
     public static class TokenRouter
     {
 
-        private const string prefix = Router.Rule + "Token";
+        private const string prefix = Router.Rule + "token";
         public const string RefreshTheToken = prefix + "/refresh";
 
 

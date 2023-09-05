@@ -10,7 +10,7 @@ namespace ecommerce.Domain.AppMetaData.User
     {
 
 
-        private const string prefix = Router.Rule+Router.User+"Auth" ;
+        private const string prefix = Router.Rule+Router.User+"auth" ;
         
         
         public const string Create = prefix + "/Store";

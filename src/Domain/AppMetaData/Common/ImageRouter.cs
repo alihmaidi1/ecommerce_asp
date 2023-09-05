@@ -9,10 +9,10 @@ namespace ecommerce.Domain.AppMetaData.Common
     public class ImageRouter
     {
 
-        private const string prefix = Router.Rule + "Image";
-        public const string UploadSingle = prefix + "/UploadSingle";
-        public const string UploadBase64Image = prefix + "/UploadBase64Image";
-        public const string UploadImages = prefix + "/UploadImages";
+        private const string prefix = Router.Rule + "image";
+        public const string UploadSingle = prefix + "/uploadSingle";
+        public const string UploadBase64Image = prefix + "/uploadBase64Image";
+        public const string UploadImages = prefix + "/uploadImages";
 
 
     }

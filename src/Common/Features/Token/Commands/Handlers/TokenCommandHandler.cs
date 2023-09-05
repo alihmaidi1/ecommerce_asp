@@ -43,7 +43,7 @@ namespace Common.Features.Token.Commands.Handlers
             await RefreshTokenRepository.DeleteAsync(RefreshToken);
             Account Account = RefreshToken.Account;
             TokenDto TokenInfo = await JwtRepository.GetTokensInfo(Account);
-            return Success<TokenDto>(TokenInfo);
+            return Success(TokenInfo);
             
          }
     }

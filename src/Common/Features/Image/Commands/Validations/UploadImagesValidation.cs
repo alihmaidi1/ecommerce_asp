@@ -1,4 +1,5 @@
 ﻿using Common.Features.Image.Commands.Models;
+using ecommerce_shared.Rule;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace Common.Features.Image.Commands.Validations
 
             RuleForEach(x=>x.images)
                 .NotNull()
-                .Must(x=>x.ContentType.Equals("image/png")||
-                         x.ContentType.Equals("image/jpg")||
-                         x.ContentType.Equals("image/jpeg"));
+                .WithMessage("image can not be null")
+                .NotEmpty()
+                .WithMessage("image can not be empty")
+                .Must(FileRule.IsFile)
+                .WithMessage("image extension should be png,jpg,jpeg");
 
 
 
