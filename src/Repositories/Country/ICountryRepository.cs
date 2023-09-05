@@ -18,6 +18,7 @@ namespace Repositories.Country
         
         
         public CountryEntity GetCountry(Guid id);
+        public bool IsExists(Guid Id);
 
 
     }

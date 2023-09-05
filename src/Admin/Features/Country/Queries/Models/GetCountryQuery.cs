@@ -12,7 +12,6 @@ namespace ecommerce.admin.Features.Country.Queries.Models
     public class GetCountryQuery:IRequest<JsonResult>
     {
 
-        [FromRoute]
         public Guid Id { get; set; }
 
 

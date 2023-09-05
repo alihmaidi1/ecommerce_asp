@@ -11,7 +11,6 @@ namespace ecommerce.Controllers.SuperAdmin
 {
 
 
-    [ApiController]
     [ApiGroup(ApiGroupName.SuperAdmin)]
     public class PasswordController: ApiController
     {

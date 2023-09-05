@@ -9,14 +9,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace ecommerce.Controllers.SuperAdmin
 {
 
+    [AppAuthorize(RoleEnum.SuperAdmin)]
+
     [ApiGroup(ApiGroupName.SuperAdmin)]
-    [ApiController]
     public class CountryController: ApiController
     {
 
 
         [HttpGet(CountryRouter.List)]
-        [AppAuthorize(RoleEnum.SuperAdmin)]
         public async Task<IActionResult> GetAllCountry()
         {
 
@@ -26,7 +26,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(CountryRouter.Get)]
-        public async Task<IActionResult> GetCountry(GetCountryQuery request)
+        public async Task<IActionResult> GetCountry([FromRoute]GetCountryQuery request)
         {
          
             var response=await Mediator.Send(request);

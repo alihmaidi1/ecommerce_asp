@@ -5,6 +5,7 @@ using ecommerce_shared.File.S3;
 using FluentValidation;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Repositories.Brand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,35 +16,41 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
 {
     public class AddBrandCommandValidation:AbstractValidator<AddBrandCommand>
     {
-        public AddBrandCommandValidation(IWebHostEnvironment WebHostEnvironment, IConfiguration configration) {
+        public AddBrandCommandValidation(IWebHostEnvironment WebHostEnvironment,IBrandRepository BrandRepository)
+        {
 
-            string host = configration.GetValue<string>("host");
             string wwwroot = WebHostEnvironment.WebRootPath;
-            ApplyNameValidation();
-            ApplyImageValidation( host, wwwroot);
+            ApplyNameValidation(BrandRepository);
+            ApplyImageValidation(wwwroot);
 
         }
 
 
-        public void ApplyNameValidation()
+        public void ApplyNameValidation(IBrandRepository BrandRepository)
         {
          
             RuleFor(x=>x.Name)
                 .NotEmpty()
-                .NotNull();
+                .WithMessage("brand name should be not empty")
+                .NotNull()
+                .WithMessage("brand name should be not null")
+                .Must(x=> !BrandRepository.IsNameExists(x))
+                .WithMessage("This Brand with this name is exists");
 
         }
 
 
-        public void ApplyImageValidation(string host,string wwwroot)
+        public void ApplyImageValidation(string wwwroot)
         {
 
 
             RuleFor(x=>x.Image)
                 .NotNull()
-                .Must(x=>x.StartsWith(host))
+                .WithMessage("image should be not null")
                 .NotEmpty()
-                .Must(x=> FileExtensionLocal.IsImageExists(x,host,wwwroot));
+                .WithMessage("image should be not empty")
+                .Must(x=> FileExtensionLocal.IsImageExists(x,wwwroot))
+                .WithMessage("This File Is Not Exists");
 
         }
     }

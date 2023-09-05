@@ -2,6 +2,7 @@
 using ecommerce.Domain.Enum;
 using FluentValidation;
 using Repositories.Account;
+using Repositories.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +16,13 @@ namespace ecommerce.admin.Features.Password.Validations
 
 
 
-        public ForgetPasswordValidation(IAccountRepository accountRepository) { 
+        public ForgetPasswordValidation(IAdminRepository AdminRepository) { 
         
                 
             RuleFor(x=>x.Email)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> accountRepository.CheckRoleEmail(x,RoleEnum.SuperAdmin));
+                .Must(x=> AdminRepository.CheckEmailExists(x));
         
         }
 

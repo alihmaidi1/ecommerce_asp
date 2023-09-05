@@ -1,9 +1,11 @@
 ﻿using ecommerce.Domain.Entities;
+using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce_shared.Constant;
 using ecommerce_shared.File;
 using ecommerce_shared.File.S3;
 using Repositories.Brand;
+using Repositories.Brand.Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +24,19 @@ namespace ecommerce.service.BrandService
             this.BrandRepository = BrandRepository;
         
         }
-        public async Task<ImageResponse> CreateBrand(AddBrandCommand request)
+        public async Task<AddBrandResponse> CreateBrand(AddBrandCommand request)
         {
 
             ImageResponse images=await StorageService.OptimizeFile(request.Image, FolderName.Brand);
-            return images;
             Brand Brand=new Brand();
             Brand.Name=request.Name;
             Brand.Hash = images.hash;
             Brand.Url = images.Url;
             Brand.ResizedUrl = images.resized;
             Brand=await BrandRepository.AddAsync(Brand);
-            //return Brand;
+            AddBrandResponse Response= BrandStore.Query.ToBrandResponse(Brand);
+
+            return Response;
 
 
         }

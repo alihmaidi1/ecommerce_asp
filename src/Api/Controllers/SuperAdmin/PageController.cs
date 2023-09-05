@@ -3,13 +3,16 @@ using ecommerce.admin.Features.Pages.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.Attribute;
+using ecommerce.Domain.Attributes;
+using ecommerce.Domain.Enum;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers.SuperAdmin
 {
-    [ApiController]
     [ApiGroup(ApiGroupName.SuperAdmin)]
+    [AppAuthorize(RoleEnum.SuperAdmin)]
+
     public class PageController : ApiController
     {
         

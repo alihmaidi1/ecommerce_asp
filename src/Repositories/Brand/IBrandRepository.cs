@@ -11,5 +11,8 @@ namespace Repositories.Brand
     public interface IBrandRepository:IgenericRepository<BrandEntity>
     {
 
+
+        public bool IsNameExists(string Name);
+
     }
 }

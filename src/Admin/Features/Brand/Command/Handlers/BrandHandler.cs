@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Dto.Results.Admin.Brand;
 
 namespace ecommerce.admin.Features.Brand.Command.Handlers
 {
@@ -31,10 +32,8 @@ namespace ecommerce.admin.Features.Brand.Command.Handlers
         public async Task<JsonResult> Handle(AddBrandCommand request, CancellationToken cancellationToken)
         {
 
-            //ImageResponse image= await StorageService.OptimizeFile(request.Image);
-            ImageResponse Brand =await BrandService.CreateBrand(request);
+            AddBrandResponse Brand =await BrandService.CreateBrand(request);
             return Success(Brand,"The Brand Was Created Successfully");
-            //return Success(image, "suucess");
         }
     }
 }

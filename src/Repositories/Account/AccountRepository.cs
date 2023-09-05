@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using ecommerce_shared.Enums;
 using UserEntity = ecommerce.Domain.Entities.Identity.User;
 using ecommerce_shared.Services.Authentication.ResponseAuth;
+using AdminEntity=ecommerce.Domain.Entities.Identity.Admin;
 
 namespace Repositories.Account
 {
@@ -43,23 +44,6 @@ namespace Repositories.Account
 
         }
 
-        public bool CheckRoleEmail(string Email, RoleEnum Role)
-        {
-            var exists = from account in DbContext.Accounts
-                         where (
-                                  (account.Email== Email) &&
-                                  (from userrole in DbContext.UserRoles
-                                   join role in DbContext.Roles
-                                   on userrole.RoleId equals role.Id
-                                   where (account.Id == userrole.UserId && role.Name.Equals(Role.ToString()))
-                                   select role.Name)
-                                   .Any()
-                               )
-                         select 1;
-
-            return exists.Any();
-
-        }
 
 
         public bool CheckAccountCode(string Code,AccountEntity Account)

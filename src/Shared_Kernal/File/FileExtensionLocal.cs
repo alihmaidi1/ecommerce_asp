@@ -113,10 +113,10 @@ namespace ecommerce_shared.File
 
         }
 
-        public static bool IsImageExists(string imagepath,string host,string wwwroot)
+        public static bool IsImageExists(string imagepath,string wwwroot)
         {
-            string image = imagepath.Split(host)[1];  
-            string newimage= wwwroot+ image;
+            string image = Path.GetFileName(imagepath);
+            string newimage = Path.Combine(wwwroot, FolderName.Temp, image);
             return  System.IO.File.Exists(newimage);
                         
 

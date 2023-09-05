@@ -2,6 +2,7 @@
 using ecommerce_shared.OperationResult.Base;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
+using System;
 using System.Net;
 using System.Text.Json;
 
@@ -54,6 +55,12 @@ namespace ecommerce_shared.Middleware
                         Result.StatusCode= (int)HttpStatusCode.InternalServerError;
                         response.StatusCode= (int)HttpStatusCode.InternalServerError;
                         break;
+                    default :
+                        Result.Message = error.Message;
+                        Result.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        break;
+
 
                 }
 

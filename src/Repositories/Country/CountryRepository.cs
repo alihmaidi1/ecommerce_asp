@@ -39,6 +39,13 @@ namespace Repositories.Country
 
         }
 
+        public bool IsExists(Guid Id)
+        {
+
+            return DbContext.Countries.Any(x=>x.Id==Id);
+
+        }
+
 
     }
 }

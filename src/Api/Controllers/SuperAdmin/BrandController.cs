@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace ecommerce.Controllers.SuperAdmin
 {
 
+    [AppAuthorize(RoleEnum.SuperAdmin)]
+
     [ApiGroup(ApiGroupName.SuperAdmin)]
     public class BrandController: ApiController
     {

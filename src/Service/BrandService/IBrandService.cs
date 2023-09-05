@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Entities;
+using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce_shared.File;
 using System;
@@ -12,7 +13,7 @@ namespace ecommerce.service.BrandService
     public interface IBrandService
     {
 
-        public Task<ImageResponse> CreateBrand(AddBrandCommand request);
+        public Task<AddBrandResponse> CreateBrand(AddBrandCommand request);
 
 
     }

@@ -15,5 +15,12 @@ namespace Repositories.Brand
         {
         }
 
+        public bool IsNameExists(string Name)
+        {
+
+            return DbContext.Brands.Any(b => b.Name == Name);   
+        }
+
+
     }
 }
