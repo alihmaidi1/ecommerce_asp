@@ -1,4 +1,5 @@
 ﻿using Blurhash.ImageSharp;
+using ecommerce_shared.Constant;
 using ecommerce_shared.Exceptions;
 using LazZiya.ImageResize;
 using Microsoft.AspNetCore.Http;
@@ -10,14 +11,14 @@ namespace ecommerce_shared.File
     public static class FileExtensionLocal
     {
 
-        public static string UploadImage(this IFormFile image,string WebRootPath)
+        public static string UploadImage(this IFormFile image,string WebRootPath,string host)
         {
             try
             {
-                var imagePath = image.GetImagePath(WebRootPath);
-                using FileStream fileStream = new FileStream(imagePath, FileMode.Create);
+                var imageinfo = image.GetImagePath(WebRootPath);
+                using FileStream fileStream = new FileStream(imageinfo.imagepath, FileMode.Create);
                 image.CopyTo(fileStream);
-                return imagePath;
+                return Path.Combine(host, imageinfo.imagename);
 
             }
             catch (Exception ex)
@@ -30,59 +31,57 @@ namespace ecommerce_shared.File
 
 
 
-        public static string GetImagePath(this IFormFile image,string WebRootPath)
+        public static (string imagepath,string imagename) GetImagePath(this IFormFile image,string wwwroot)
         {
 
-            string TempDirectory = Path.Combine(WebRootPath, "Temps");
+            string TempDirectory = Path.Combine(wwwroot, FolderName.Temp);
             if (!Directory.Exists(TempDirectory))
             {
                 Directory.CreateDirectory(TempDirectory);
             }
             string imageName = Guid.NewGuid().ToString() + image.FileName;
-            string imagePath = Path.Combine(TempDirectory, imageName);
-
-            return imagePath; 
+            imageName=Path.Combine(FolderName.Temp,imageName);
+            string imagePath = Path.Combine(wwwroot, imageName);
+            return (imagePath,imageName); 
 
         }
 
 
-        public static string UploadBase64Image(this string image, string WebRootPath)
+        public static string UploadBase64Image(this string image, string wwwroot,string host)
         {
 
             try
             {
-                var Stream=image.createBase64Stream(WebRootPath);
-                using FileStream fileStream = new FileStream(Stream.fileName, FileMode.Create);
-
+                var Stream=image.createBase64Stream(wwwroot);
+                using FileStream fileStream = new FileStream(Stream.imagePath, FileMode.Create);
                 fileStream.Write(Stream.bytes,0, Stream.bytes.Length);
-                return Stream.fileName; 
+                return Path.Combine(host,Stream.imageName); 
 
 
             }
-            catch
+            catch(Exception ex)
             {
-                throw new IOStreamException("Cannot Upload Base64 Image");
+                throw new IOStreamException(ex.Message);
             }
 
 
         }
 
 
-        private static (string fileName, byte[] bytes) createBase64Stream(this string image,string WebRootPath)
+        private static (string imagePath,string imageName, byte[] bytes) createBase64Stream(this string image,string WebRootPath)
         {
             (string base64, string extension) file = image.GetBase64Info();
             var bytes = Convert.FromBase64String(file.base64);
-            string TempDirectory = Path.Combine(WebRootPath, "Temps");
+            string TempDirectory = Path.Combine(WebRootPath, FolderName.Temp);
             if (!Directory.Exists(TempDirectory))
             {
                 Directory.CreateDirectory(TempDirectory);
             }
-            var uniqueFileName = Guid.NewGuid().ToString() + "." + file.extension;
-            string imageName = Guid.NewGuid().ToString() + uniqueFileName;
+            var imageName = Guid.NewGuid().ToString() + "." + file.extension;
             string imagePath = Path.Combine(TempDirectory, imageName);
+            imageName = Path.Combine(FolderName.Temp, imageName);
 
-
-            return (imagePath,bytes);
+            return (imagePath,imageName,bytes);
         }
 
 
@@ -97,7 +96,7 @@ namespace ecommerce_shared.File
 
 
 
-        public static List<string> UploadImages(this List<IFormFile>images, string webRootPath) 
+        public static List<string> UploadImages(this List<IFormFile>images, string webRootPath,string host) 
         {
 
             List<string> UploadedImages=Enumerable.Empty<string>().ToList();
@@ -105,12 +104,21 @@ namespace ecommerce_shared.File
             images.ForEach(image =>
             {
 
-                string imagePath = UploadImage(image, webRootPath);
+                string imagePath = UploadImage(image, webRootPath,host);
                 UploadedImages.Add(imagePath);
 
             });
             
             return UploadedImages;
+
+        }
+
+        public static bool IsImageExists(string imagepath,string host,string wwwroot)
+        {
+            string image = imagepath.Split(host)[1];  
+            string newimage= wwwroot+ image;
+            return  System.IO.File.Exists(newimage);
+                        
 
         }
 
@@ -124,12 +132,14 @@ namespace ecommerce_shared.File
 
         }
 
-        public static string GetImageHash(this MemoryStream imagepath)
+
+
+        public static string GetImageHash(this FileStream imagepath)
         {
             try
             {
                 
-                var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(imagepath.GetBuffer());
+                using var imageStream = SixLabors.ImageSharp.Image.Load<Rgb24>(imagepath);
                 return Blurhasher.Encode(imageStream, 4, 3);
             }
             catch(Exception ex) 
@@ -139,26 +149,17 @@ namespace ecommerce_shared.File
         }
 
 
-        public static (string filename,MemoryStream MemoryStream) resizeImage(this MemoryStream imagepath,int Width=300,int Height = 300)
+        public static (string imagefile,MemoryStream memorystream)resizeImage(this FileStream imagepath,string Folder,int Width=300,int Height = 300)
         {
-            try
-            {
+            var img=System.Drawing.Image.FromStream(imagepath);
+            var imageResized = ImageResize.Scale(img, Width, Height);
+            var resizepath = Guid.NewGuid().ToString() + ".png";
+            resizepath=Folder+"/"+ resizepath;
+            MemoryStream memoryStream = new MemoryStream();
+            imageResized.Save(memoryStream, ImageFormat.Png);
+            return (resizepath, memoryStream);
 
-                
-                var img = System.Drawing.Image.FromStream(imagepath);
-                var imageResized = ImageResize.Scale(img, Width, Height);                                 
-                var resizepath = Guid.NewGuid().ToString() + ".png";
-                 MemoryStream memoryStream = new MemoryStream();
-                imageResized.Save(memoryStream,ImageFormat.Png);
-                return (resizepath,memoryStream);
-
-            }
-            catch 
-            {
-
-                throw new Exception("Cannot resize image");
-
-            }
+         
 
         }
 

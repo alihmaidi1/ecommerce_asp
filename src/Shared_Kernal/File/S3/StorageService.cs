@@ -2,24 +2,33 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
+using ecommerce_shared.Constant;
 using ecommerce_shared.Exceptions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using System.Collections;
-using System.IO;
+using Microsoft.Extensions.Hosting;
 
 namespace ecommerce_shared.File.S3
 {
-    public class StorageService : IStorageService
+    public class StorageService : IStorageService,IDisposable
     {
         private readonly IConfiguration Configration;
         private AmazonS3Client client;
         private AmazonS3Config BucketConfig;
+        private string wwwroot;
+        public string host;
+        public string awsUrl;
+
         private BasicAWSCredentials BasicAWSCredentials;
         private bool isDisposed;
-        public StorageService(IConfiguration Configration) {
+        public StorageService(IWebHostEnvironment webhostEnvironment,IConfiguration Configration) {
         
             this.Configration = Configration;
+            this.wwwroot = webhostEnvironment.WebRootPath;
+            this.host = Configration.GetValue<string>("host");
+            this.awsUrl = Configration.GetRequiredSection("S3")["url"];
+
         }
 
         private BasicAWSCredentials GetCredentials()
@@ -95,70 +104,47 @@ namespace ecommerce_shared.File.S3
 
         }
 
-        public async Task<bool> CheckObjectExists(string file)
-        {
-            string S3url=Configration.GetRequiredSection("S3")["url"];
-            file = file.Split(S3url+"/")[1];
-            var response = await GetObjectResponse(file);
-            return response.HttpStatusCode == System.Net.HttpStatusCode.OK;
 
 
-        }
-
-
-        public async Task<ImageResponse> OptimizeFile(string file)
+        public async Task<ImageResponse> OptimizeFile(string file,string Folder)
         {
 
-            string S3url = Configration.GetRequiredSection("S3")["url"];
-            string splitfile = file.Split(S3url + "/")[1];
-            var memorystream = await GetObjectFromS3(splitfile);
-            var hash = memorystream.GetImageHash();
+            string splitfile = Path.GetFileName(file);            
+            string fullpath = Path.Combine(wwwroot,FolderName.Temp,splitfile);
+            string newpath=Folder+"/"+Guid.NewGuid()+Path.GetExtension(splitfile);
+            using var Filestream = new FileStream(fullpath,FileMode.Open);
+            var hash = Filestream.GetImageHash();
+            var resized = (Filestream).resizeImage(Folder, 400, 400);
 
-            var ReSizeedMemoryStream = memorystream.resizeImage(400, 400);
+            Filestream.Position= 0;
+            using MemoryStream memoryStream = new MemoryStream();
+            Filestream.CopyTo(memoryStream);
 
-            var S3Obj = GetResizeObject(ReSizeedMemoryStream.filename, ReSizeedMemoryStream.MemoryStream);
-            bool isUploaded = await UploadFileAsync(S3Obj);
-            if (!isUploaded)
-            {
-                throw new Exception("Can Not Upload Image");
-
-            }
-
-            var resizedpath=Configration.GetRequiredSection("S3")["url"] + $"/{S3Obj.Name}";
-
+            var reziedimage= UploadToS3(resized.imagefile, resized.memorystream);
+            var uploadedfile = UploadToS3(newpath, memoryStream);
+            await Task.WhenAll(uploadedfile, reziedimage);
             return new ImageResponse
             {
-                Url=file,
+                Url=uploadedfile.Result,
                 hash=hash,
-                resized=resizedpath
+                resized=reziedimage.Result
                 
             };
         }
 
 
-        private S3Object GetResizeObject(string filename,MemoryStream MemoryStream) 
-        {
 
-            return new S3Object()
-            {
-                
-                Name = filename,
-                InputStream = MemoryStream
-            };
+        
 
 
-        }
-
-
-
-        public async Task<string> UploadToS3(IFormFile file)
+        public async Task<string> UploadToS3(string filename,MemoryStream file)
         {
 
             try
             {
 
 
-                var S3Obj = await GetS3Object(file);
+                var S3Obj = GetS3Object(filename,file);
                 
                 bool isUploaded=await UploadFileAsync(S3Obj);
                 if (!isUploaded)
@@ -167,7 +153,7 @@ namespace ecommerce_shared.File.S3
 
                 }
 
-                return Configration.GetRequiredSection("S3")["url"]+$"/{S3Obj.Name}";
+                return awsUrl+$"/{filename}";
 
             }
             catch(Exception ex)
@@ -179,126 +165,60 @@ namespace ecommerce_shared.File.S3
 
         }
 
-        public async Task<S3Object> GetS3Object(IFormFile file)
+        public  S3Object GetS3Object(string filename,MemoryStream file)
         {
-            var memoryStream = new MemoryStream();
-            await file.CopyToAsync(memoryStream);
 
-            var fileExt = Path.GetExtension(file.FileName);
-            var fileName = $"{Guid.NewGuid().ToString()}{fileExt}";
             return new S3Object(){
 
-                Name=fileName,
-                InputStream=memoryStream
+                Name=filename,
+                InputStream=file
             };
 
 
         }
 
         
-        public async Task<List<string>> UploadFilesToS3(List<IFormFile> Files)
-        {
-            List<Task<string>> uploadTasks = new List<Task<string>>();
+        //public async Task<List<string>> UploadFilesToS3(List<IFormFile> Files)
+        //{
+        //    List<Task<string>> uploadTasks = new List<Task<string>>();
             
-            foreach (var file in Files)
-            {
-                uploadTasks.Add(UploadToS3(file));
-            }
-            await Task.WhenAll(uploadTasks);
-            List<string> result = uploadTasks.Select(t => t.Result).ToList();
-            return result;
-        }
-
-
-
-        public async Task<string> UploadBase64ToS3(string file)
-        {
-            try
-            {
-
-                var Stream = createBase64Stream(file);
-                var S3Obj =await GetBase64S3Object(Stream.fileName,Stream.bytes);
-                bool isUploaded = await UploadFileAsync(S3Obj);
-                if (!isUploaded)
-                {
-                    throw new Exception("Can Not Upload Image");
-
-                }
-
-                return Configration.GetRequiredSection("S3")["url"] + $"/{S3Obj.Name}";
-
-
-            }
-            catch
-            {
-
-
-                throw new IOStreamException("Cannot Upload Base64 Image");
-
-            }
-
-            
-        }
-
-        public async Task<S3Object> GetBase64S3Object(string fileName, byte[] bytes)
-        {
-            var memoryStream = new MemoryStream(bytes);
-            return new S3Object()
-            {
-
-                Name = fileName,
-                InputStream = memoryStream
-            };
-
-
-        }
-        private (string fileName, byte[] bytes) createBase64Stream(string image)
-        {
-            (string base64, string extension) file = GetBase64Info(image);
-            var bytes = Convert.FromBase64String(file.base64);
-            string TempDirectory ="Temps";
-            if (!Directory.Exists(TempDirectory))
-            {
-                Directory.CreateDirectory(TempDirectory);
-            }
-            var uniqueFileName = Guid.NewGuid().ToString() + "." + file.extension;
-            string imageName = Guid.NewGuid().ToString() + uniqueFileName;
-            string imagePath = TempDirectory+ $"/{imageName}";
-
-            return (imagePath, bytes);
-        }
-
-
-        private  (string base64, string extension) GetBase64Info(string base64File)
-        {
-
-            var base64 = base64File.Substring(base64File.IndexOf(",") + 1);
-            var ExtensionLength = base64File.IndexOf(";") - base64File.IndexOf("/");
-            var extension = base64File.Substring(base64File.IndexOf("/") + 1, ExtensionLength - 1);
-            return (base64, extension);
-        }
-
-
-        //~StorageService()
-        //{
-
-        //    Dispose(false);
-
+        //    foreach (var file in Files)
+        //    {
+        //        uploadTasks.Add(UploadToS3(file));
+        //    }
+        //    await Task.WhenAll(uploadTasks);
+        //    List<string> result = uploadTasks.Select(t => t.Result).ToList();
+        //    return result;
         //}
 
 
-        //public void Dispose()
-        //{
-        //    Dispose(true);
-        //    GC.SuppressFinalize(this);
-        //}
 
-        //protected virtual void Dispose(bool disposing)
-        //{
-        //    if (isDisposed)
-        //        return;
-        //    this.client?.Dispose();
-        //}
+        
+
+
+
+       
+
+        ~StorageService()
+        {
+
+            Dispose(false);
+
+        }
+
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (isDisposed)
+                return;
+            this.client?.Dispose();
+        }
 
 
     }

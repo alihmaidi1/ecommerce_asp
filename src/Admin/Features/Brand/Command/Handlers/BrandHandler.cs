@@ -1,5 +1,7 @@
 ﻿using ecommerce.admin.Features.Auth.Commands.Models;
+using BrandEntity=ecommerce.Domain.Entities.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
+using ecommerce.service.BrandService;
 using ecommerce_shared.File;
 using ecommerce_shared.File.S3;
 using ecommerce_shared.OperationResult;
@@ -18,19 +20,21 @@ namespace ecommerce.admin.Features.Brand.Command.Handlers
 
     {
 
-        public IStorageService StorageService;
-        public BrandHandler(IStorageService StorageService) {
+        public IBrandService BrandService;
+        public BrandHandler(IBrandService BrandService) { 
         
-            this.StorageService = StorageService;
-        }   
 
+            this.BrandService = BrandService;
+        }   
+        
 
         public async Task<JsonResult> Handle(AddBrandCommand request, CancellationToken cancellationToken)
         {
 
-            ImageResponse image= await StorageService.OptimizeFile(request.Image);
-
-            return Success(image, "suucess");
+            //ImageResponse image= await StorageService.OptimizeFile(request.Image);
+            ImageResponse Brand =await BrandService.CreateBrand(request);
+            return Success(Brand,"The Brand Was Created Successfully");
+            //return Success(image, "suucess");
         }
     }
 }

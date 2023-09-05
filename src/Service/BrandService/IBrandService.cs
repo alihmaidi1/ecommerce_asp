@@ -1,5 +1,6 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.models.SuperAdmin.Brand.Commands;
+using ecommerce_shared.File;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ecommerce.service.BrandService
     public interface IBrandService
     {
 
-        public Task<Brand> CreateBrand(AddBrandCommand request);
+        public Task<ImageResponse> CreateBrand(AddBrandCommand request);
 
 
     }

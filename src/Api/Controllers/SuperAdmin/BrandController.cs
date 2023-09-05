@@ -11,7 +11,6 @@ namespace ecommerce.Controllers.SuperAdmin
 {
 
     [ApiGroup(ApiGroupName.SuperAdmin)]
-    [AppAuthorize(RoleEnum.SuperAdmin)]
     public class BrandController: ApiController
     {
 

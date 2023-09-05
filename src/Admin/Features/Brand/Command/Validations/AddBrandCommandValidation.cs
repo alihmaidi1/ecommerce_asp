@@ -1,6 +1,9 @@
 ﻿using ecommerce.models.SuperAdmin.Brand.Commands;
+using ecommerce_shared.Constant;
+using ecommerce_shared.File;
 using ecommerce_shared.File.S3;
 using FluentValidation;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -12,11 +15,12 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
 {
     public class AddBrandCommandValidation:AbstractValidator<AddBrandCommand>
     {
-        public AddBrandCommandValidation(IStorageService StorageService,IConfiguration configration) {
+        public AddBrandCommandValidation(IWebHostEnvironment WebHostEnvironment, IConfiguration configration) {
 
-            string S3Url = configration.GetRequiredSection("S3")["url"];
+            string host = configration.GetValue<string>("host");
+            string wwwroot = WebHostEnvironment.WebRootPath;
             ApplyNameValidation();
-            ApplyImageValidation(StorageService,S3Url);
+            ApplyImageValidation( host, wwwroot);
 
         }
 
@@ -31,15 +35,15 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
         }
 
 
-        public void ApplyImageValidation(IStorageService StorageService, string S3url)
+        public void ApplyImageValidation(string host,string wwwroot)
         {
 
 
             RuleFor(x=>x.Image)
                 .NotNull()
-                .Must(x=>x.StartsWith(S3url))
+                .Must(x=>x.StartsWith(host))
                 .NotEmpty()
-                .Must(x=> StorageService.CheckObjectExists(x).Result);
+                .Must(x=> FileExtensionLocal.IsImageExists(x,host,wwwroot));
 
         }
     }

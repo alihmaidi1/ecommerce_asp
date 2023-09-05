@@ -152,7 +152,7 @@ builder.Services.AddTransient<ErrorHandling>();
 builder.Services.AddResponseCompression();
 var app = builder.Build();
 
-
+app.UseStaticFiles();
 
 app.ConfigureOpenAPI();
 
