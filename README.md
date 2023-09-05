@@ -11,9 +11,16 @@
 
     "AccessKey": "your access key",
     "SecretKey": "your secret key",
-    "BucketName": "your bucket name"
+    "BucketName": "your bucket name",
+    "url": "https://ecommerceasp.s3.amazonaws.com"
+
 
   }
+```
+### you should add your application host in application.json like this:
+```
+  "host": "https://localhost:44318"
+
 ```
 ###### do not forget that your bucket publiclly read access only   
 ### to Use This Project You Just Need  Docker and you should run the below command
