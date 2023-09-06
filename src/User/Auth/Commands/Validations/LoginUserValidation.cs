@@ -1,10 +1,6 @@
 ﻿using ecommerce.models.Users.Auth.Commands;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Repositories.User;
 
 namespace ecommerce.user.Auth.Commands.Validations
 {
@@ -12,16 +8,16 @@ namespace ecommerce.user.Auth.Commands.Validations
     {
 
 
-        public LoginUserValidation()
+        public LoginUserValidation(IUserRepository UserRepository)
         {
 
-            ApplyUserNameOrEmailValidation();
+            ApplyUserNameOrEmailValidation(UserRepository);
             ApplyPasswordValiation();
 
         }
 
 
-        public void ApplyUserNameOrEmailValidation()
+        public void ApplyUserNameOrEmailValidation(IUserRepository UserRepository)
         {
 
             RuleFor(x => x.UserName)
@@ -29,7 +25,8 @@ namespace ecommerce.user.Auth.Commands.Validations
                 .WithMessage("UserName Or Email Can not be null")
                 .NotEmpty()
                 .WithMessage("UserName Or Email Can not be empty")
-                ;
+                .Must(x=>UserRepository.IsLocalUserNameExists(x))
+                .WithMessage("this username is not register loacally or not exists");
         }
 
 
@@ -38,7 +35,9 @@ namespace ecommerce.user.Auth.Commands.Validations
 
             RuleFor(x => x.Password)
                 .NotEmpty()
-                .NotNull();
+                .WithMessage("password should be empty")
+                .NotNull()
+                .WithMessage("password should be null");
         }
 
 

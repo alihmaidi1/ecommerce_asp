@@ -18,6 +18,14 @@ namespace ecommerce.Domain.Entities.Identity
         public int Point { get; set; }
 
 
+
+        public string ? Logo { get; set; }  
+
+        public string ? hash {get; set;}
+
+        public string resizedLogo { get; set;}
+
+
         
         
         

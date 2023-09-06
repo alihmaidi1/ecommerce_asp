@@ -1,7 +1,6 @@
 ﻿using ecommerce.admin.Features.Roles.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using ecommerce.Domain.Attribute;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
 using ecommerce_shared.Swagger;

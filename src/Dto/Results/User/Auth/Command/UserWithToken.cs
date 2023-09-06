@@ -1,6 +1,7 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.City.Query;
+using ecommerce_shared.File;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace ecommerce.Dto.Results.User.Auth.Command
 
         public TokenDto TokenInfo { get; set; }
 
+        public ImageResponse ?image { get; set; }
 
 
     }

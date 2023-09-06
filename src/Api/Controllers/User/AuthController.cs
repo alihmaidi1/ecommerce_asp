@@ -1,10 +1,8 @@
 ﻿using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.User;
 using ecommerce.Domain.Attributes;
-using ecommerce.Domain.Enum;
 using ecommerce.models.Users.Auth.Commands;
 using ecommerce_shared.Services.Authentication.Factory;
-using ecommerce_shared.Services.Authentication.ResponseAuth;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 

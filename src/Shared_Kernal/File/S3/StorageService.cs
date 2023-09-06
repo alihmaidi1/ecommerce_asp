@@ -3,11 +3,9 @@ using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using ecommerce_shared.Constant;
-using ecommerce_shared.Exceptions;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
+
 
 namespace ecommerce_shared.File.S3
 {

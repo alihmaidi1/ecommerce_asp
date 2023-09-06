@@ -977,6 +977,9 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<Guid?>("CityId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -985,6 +988,13 @@ namespace ecommerce.infrutructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(0);
+
+                    b.Property<string>("hash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("resizedLogo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasIndex("CityId");
 

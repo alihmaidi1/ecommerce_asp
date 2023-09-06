@@ -13,6 +13,8 @@ namespace ecommerce.Domain.AppMetaData.User
         private const string prefix = Router.Rule + Router.User + "password";
         public const string ResetEmail = prefix + "/resetEmail";
         public const string CheckCode = prefix + "/checkCode";
+        public const string ChangePassword = prefix + "/changePassword";
+
 
     }
 }

@@ -31,6 +31,18 @@ namespace ecommerce.Controllers.User
             return response;
         }
 
+        [UserAuthorizeAtrribute]
+
+        [HttpPost(PasswordRouter.ChangePassword)]
+
+        public async Task<IActionResult> ChangePassword([FromBody]ChangePasswordCommand request)
+        {
+
+            var response = await this.Mediator.Send(request);
+            return response; 
+
+        }
+
 
     }
 }

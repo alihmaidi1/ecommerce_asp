@@ -10,7 +10,9 @@ namespace ecommerce_shared.Constant
     {
 
          public  const string Temp = "Temp";
-         public const string Brand = "Brand";
+        public const string User = "User";
+
+        public const string Brand = "Brand";
 
     }
 }

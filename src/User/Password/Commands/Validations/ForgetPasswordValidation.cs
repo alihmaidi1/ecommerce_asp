@@ -19,8 +19,11 @@ namespace ecommerce.user.Password.Commands.Validations
 
             RuleFor(x => x.Email)
                 .NotEmpty()
-                .NotNull()        
-                .Must(x => UserRepository.CheckEmailExists(x).Result);
+                .WithMessage("email should be not empty")
+                .NotNull()
+                .WithMessage("email should be not null")
+                .Must(x => UserRepository.CheckEmailExists(x).Result)
+                .WithMessage("email is not register locally or not exists");
 
         }
 

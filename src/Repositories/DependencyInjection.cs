@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Repositories.Account;
 using Repositories.Admin;
 using Repositories.Brand;
+using Repositories.City;
 using Repositories.Country;
 using Repositories.Jwt.Factory;
 using Repositories.Page;
@@ -27,6 +28,7 @@ namespace Repositories
             services.AddTransient<IUserRepository, UserRepository>();   
             services.AddTransient<IAdminRepository,AdminRepository>();
             services.AddTransient<IBrandRepository, BrandRepository>();
+            services.AddTransient<ICityRepository, CityRepository>();
 
             return services;
 

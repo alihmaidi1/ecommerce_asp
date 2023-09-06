@@ -12,6 +12,7 @@ using Repositories.Account;
 using ecommerce_shared.Helper;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
+using ecommerce_shared.File;
 
 namespace ecommerce.service.UserService
 {
@@ -68,6 +69,7 @@ namespace ecommerce.service.UserService
         public async Task<Account> CreateAccountAsync(Account Account,string password)
         {
 
+            
             var Accountresult = await this.UserManager.CreateAsync(Account, password);
             if (!Accountresult.Succeeded)
             {

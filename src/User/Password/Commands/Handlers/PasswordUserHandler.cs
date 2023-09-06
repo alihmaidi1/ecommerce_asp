@@ -1,7 +1,6 @@
 ﻿using ecommerce.Domain.Entities.Identity;
 using ecommerce.Dto.Base;
 using ecommerce.infrutructure;
-using ecommerce.models.Users.Auth.Commands;
 using ecommerce.models.Users.Password.Commands;
 using ecommerce.service.UserService;
 using ecommerce_shared.Enums;
@@ -12,18 +11,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Repositories.User;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ecommerce.user.Password.Commands.Handlers
 {
     public class PasswordUserHandler : OperationResult,
         IRequestHandler<ForgetPasswordCommand, JsonResult>,
-        IRequestHandler<CheckCodeCommand, JsonResult>
+        IRequestHandler<CheckCodeCommand, JsonResult>,
+        IRequestHandler<ChangePasswordCommand, JsonResult>
+
 
 
     {
@@ -34,7 +31,9 @@ namespace ecommerce.user.Password.Commands.Handlers
         public IHttpContextAccessor HttpContextAccessor;
         public IJwtRepository jwtRepository;
         public ApplicationDbContext Context;
-        public PasswordUserHandler(ApplicationDbContext Context,ISchemaFactory SchemaFactory,IHttpContextAccessor HttpContextAccessor, IAccountService AccountService,UserManager<Account> UserManager)
+        public IUserRepository UserRepository;
+
+        public PasswordUserHandler(IUserRepository UserRepository,ApplicationDbContext Context,ISchemaFactory SchemaFactory,IHttpContextAccessor HttpContextAccessor, IAccountService AccountService,UserManager<Account> UserManager)
         {
             this.HttpContextAccessor = HttpContextAccessor;
             this.SchemaFactory = SchemaFactory;
@@ -42,15 +41,17 @@ namespace ecommerce.user.Password.Commands.Handlers
             this.UserManager = UserManager;
             this.AccountService = AccountService;   
             this.Context= Context;
+            this.UserRepository = UserRepository;
 
 
         }
 
         public async Task<JsonResult> Handle(ForgetPasswordCommand request, CancellationToken cancellationToken)
         {
-            User ?User = Context.Accounts
-                                .OfType<User>()
-                                .FirstOrDefault(x=>x.Email.Equals(request.Email)&&x.ProviderType==ProviderAuthentication.Local                                        );
+            User ?User = Context.Users
+                                .FirstOrDefault(
+                                x=>x.Email.Equals(request.Email)&&
+                                x.ProviderType==ProviderAuthentication.Local);
             await AccountService.ResetCode(User);
             string Token = SchemaFactory.CreateJwt(JwtSchema.ResetPassword).GetToken(User);
             return Success(new { Token }, "The Email Was Sended Successfully");
@@ -65,6 +66,20 @@ namespace ecommerce.user.Password.Commands.Handlers
             TokenDto TokenInfo = await jwtRepository.GetTokensInfo(Account);
             return Success(TokenInfo, "The Code is Correct");
 
+        }
+
+        public async Task<JsonResult> Handle(ChangePasswordCommand request, CancellationToken cancellationToken)
+        {
+
+            var Id = HttpContextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type.Equals(ClaimTypes.NameIdentifier)).Value;
+            bool isPasswordChanged = await UserRepository.ChangePassword(new Guid(Id), request.password);
+            if(isPasswordChanged)
+            {
+
+                return Success("the password was changed successfully");
+
+            }
+            throw new Exception("we can not change password");
         }
     }
 }

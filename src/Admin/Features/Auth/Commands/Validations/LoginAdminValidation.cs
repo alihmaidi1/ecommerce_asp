@@ -39,7 +39,9 @@ namespace ecommerce.admin.Features.Auth.Commands.Validations
 
             RuleFor(x => x.Password)
                 .NotEmpty()
-                .NotNull();
+                .WithMessage("password can not be empty")
+                .NotNull()
+                .WithMessage("password can not be null");
 
         }
     }

@@ -39,7 +39,33 @@ namespace Repositories.User
 
         public async Task<bool> CheckEmailExists(string Email)
         {
-            return DbContext.Accounts.OfType<UserEntity>().Any(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
+            return DbContext.Users.Any(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
+        }
+
+        public bool IsEmailConfirmed(string Email)
+        {
+
+            return DbContext.Users.Any(x => 
+            x.Email.Equals(Email) && 
+            x.ProviderType == ProviderAuthentication.Local &&
+            !x.EmailConfirmed);
+
+        }
+
+
+        public async Task<bool> ChangePassword(Guid Id, string Password)
+        {
+
+            UserEntity User=DbContext.Users.FirstOrDefault(x=>x.Id==Id);
+            User.PasswordHash= UserManager.PasswordHasher.HashPassword(User, Password);
+            var Result=await UserManager.UpdateAsync(User);
+            if (Result.Succeeded)
+            {
+
+                return true;
+            }
+
+            return false;
         }
 
 
@@ -56,6 +82,21 @@ namespace Repositories.User
             AccountEntity Account=await AccountRepository.CreateExternal(ApiResponse,provider);
             return Account as UserEntity;
 
+        }
+
+        public bool IsUserNameExists(string UserName)
+        {
+
+
+            return DbContext.Users.Any(x=>x.UserName.Equals(UserName));
+
+
+        }
+
+        public bool IsLocalUserNameExists(string UserName)
+        {
+
+            return DbContext.Users.Any(x => x.UserName.Equals(UserName)&&x.ProviderType==ProviderAuthentication.Local);
         }
 
 

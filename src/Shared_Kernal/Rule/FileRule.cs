@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ecommerce_shared.File;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace ecommerce_shared.Rule
 
         public static Func<IFormFile,bool> IsFile = x =>
         {
+
             if (x?.ContentType is null)
                 return false;
             if (x.ContentType.Equals("image/jpeg") ||
@@ -20,6 +22,21 @@ namespace ecommerce_shared.Rule
                )
                 return true;
             return false;
+        };
+
+
+        public static Func<string,string, bool> isFileExists = (x,wwwroot) =>
+        {
+
+            if (x is null)
+            {
+
+                return true;
+
+            }
+
+            return FileExtensionLocal.IsImageExists(x, wwwroot);
+            
         };
     }
 }

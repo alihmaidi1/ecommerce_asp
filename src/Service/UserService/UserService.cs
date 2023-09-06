@@ -2,7 +2,10 @@
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.infrutructure;
 using ecommerce.models.Users.Auth.Commands;
+using ecommerce_shared.Constant;
 using ecommerce_shared.Enums;
+using ecommerce_shared.File;
+using ecommerce_shared.File.S3;
 using ecommerce_shared.Helper;
 using ecommerce_shared.Services.Authentication.ResponseAuth;
 using Microsoft.AspNetCore.Identity;
@@ -25,8 +28,9 @@ namespace ecommerce.service.UserService
 
         public readonly IAccountService AccountService;
         public readonly IUserRepository UserRepository;
+        public readonly IStorageService StorageService;
 
-        public UserService(IUserRepository UserRepository,UserManager<Account> UserManager,IMapper mapper, IAccountService AccountService, ApplicationDbContext Context)
+        public UserService(IStorageService StorageService,IUserRepository UserRepository,UserManager<Account> UserManager,IMapper mapper, IAccountService AccountService, ApplicationDbContext Context)
         {
 
             this.mapper = mapper;
@@ -34,20 +38,31 @@ namespace ecommerce.service.UserService
             this.UserRepository = UserRepository;   
             this.UserManager = UserManager;
             this.AccountService = AccountService;
+            this.StorageService= StorageService;
 
         }
 
         public async Task<User> CreateUser(AddUserCommand request)
         {
             var User = mapper.Map<User>(request);
-            User=await AccountService.CreateAccountAsync(User, request.Password) as User;
+            if(request.Logo != null)
+            {
+
+                ImageResponse image = await StorageService.OptimizeFile(request.Logo, FolderName.User);
+                User.Logo = image.Url;
+                User.hash = image.hash;
+                User.resizedLogo = image.resized;
+
+
+            }
+            User = await AccountService.CreateAccountAsync(User, request.Password) as User;
             return User;
+        
         }
 
         public async Task<User> ConfirmAccount(string Email, string Code)
         {
-            var Account = Context.Accounts.OfType<User>().FirstOrDefault(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
-            Account.EmailConfirmed.ThrowIfTrue("Your Email Is Already Confirmed");
+            var Account = Context.Users.FirstOrDefault(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
             Account.ConfirmCode.Equals(Code).ThrowIfFalse("Your Code Is Not Correct");
             Account.EmailConfirmed = true;
             await UserManager.UpdateAsync(Account);

@@ -1,5 +1,6 @@
 ﻿using ecommerce.Dto.Base;
 using ecommerce.Dto.Results.User.Auth.Command;
+using ecommerce_shared.File;
 using Repositories.City.CityStore;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,14 @@ namespace Repositories.User.Store
                 Email = User.Email,
                 IsBlocked = User.IsBlocked,
                 Point = User.Point,
+                image=(User.Logo==null)?null: new ImageResponse()
+                {
+                    resized = User.resizedLogo,
+                    Url=User.Logo,
+                    hash=User.hash
+
+                },
+
                 TokenInfo = TokenInfo
 
             };
