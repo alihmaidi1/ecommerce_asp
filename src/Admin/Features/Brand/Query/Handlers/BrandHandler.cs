@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Repositories.Brand;
 using ecommerce.Dto.Results.Admin.Brand;
+using ecommerce_shared.Pagination;
 
 namespace ecommerce.admin.Features.Brand.Query.Handlers
 {
@@ -31,8 +32,8 @@ namespace ecommerce.admin.Features.Brand.Query.Handlers
         public async Task<JsonResult> Handle(GetAllBrandQuery request, CancellationToken cancellationToken)
         {
 
-            List<AddBrandResponse> Brands = BrandRepository.GetAll();
-            //
+            PageList<AddBrandResponse> Brands = await BrandRepository.GetAll(request.OrderBy,request.isDes,request.pageNumber,request.pageSize);
+            
 
             return Success(Brands,"this is all your brands");
         }

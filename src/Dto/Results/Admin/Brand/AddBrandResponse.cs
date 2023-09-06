@@ -13,7 +13,9 @@ namespace ecommerce.Dto.Results.Admin.Brand
 
         public Guid Id { get; set; }
 
-        public string Name { get; set; }    
+        public string Name { get; set; }
+
+        public DateTime CreatedAt { get; set; }
 
 
         public ImageResponse image { get; set; }

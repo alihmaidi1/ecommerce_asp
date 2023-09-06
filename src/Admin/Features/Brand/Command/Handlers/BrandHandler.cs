@@ -48,7 +48,7 @@ namespace ecommerce.admin.Features.Brand.Command.Handlers
          
             BrandEntity brand= await BrandRepository.Update(request);
             
-            return  Success(BrandStore.Query.ToBrandResponse.Compile()(brand),"the brand was updated successfully");
+            return  Success(BrandQuery.ToBrandResponse.Compile()(brand),"the brand was updated successfully");
         }
 
         public async Task<JsonResult> Handle(DeletebrandCommand request, CancellationToken cancellationToken)

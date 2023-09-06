@@ -8,6 +8,7 @@ using Repositories.Base;
 using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce_shared.File;
+using ecommerce_shared.Pagination;
 
 namespace Repositories.Brand
 {
@@ -21,7 +22,7 @@ namespace Repositories.Brand
         public bool IsUniqueName(string Name);
 
         public Task<BrandEntity> Update(UpdateBrandCommand brand);
-        public List<AddBrandResponse> GetAll();
+        public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,bool? IsDes,int? pageNumber, int? pageSize);
 
         public bool Delete(Guid Id);
 

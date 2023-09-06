@@ -34,7 +34,7 @@ namespace ecommerce.service.BrandService
             Brand.Url = images.Url;
             Brand.ResizedUrl = images.resized;
             Brand=await BrandRepository.AddAsync(Brand);
-            AddBrandResponse Response= BrandStore.Query.ToBrandResponse.Compile()(Brand);
+            AddBrandResponse Response= BrandQuery.ToBrandResponse.Compile()(Brand);
 
             return Response;
 

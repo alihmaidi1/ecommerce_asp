@@ -12,6 +12,9 @@ using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce_shared.File;
 using ecommerce_shared.File.S3;
 using ecommerce_shared.Constant;
+using ecommerce_shared.Pagination;
+using ecommerce.Domain.Base;
+using Repositories.Brand.Operations;
 
 namespace Repositories.Brand
 {
@@ -31,11 +34,13 @@ namespace Repositories.Brand
         }
 
 
-        public List<AddBrandResponse> GetAll()
+        public async Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,bool? isDes, int? pageNumber,int? pageSize)
         {
-
-            return DbContext.Brands.Select(BrandStore.Query.ToBrandResponse).ToList();
-
+            PageList<AddBrandResponse> Result= await DbContext.Brands
+                .Sort(OrderBy,isDes)
+                .Select(BrandQuery.ToBrandResponse)
+                .ToPagedList(pageNumber,pageSize);
+            return Result;
         }
 
         public bool IsExists(Guid Id)

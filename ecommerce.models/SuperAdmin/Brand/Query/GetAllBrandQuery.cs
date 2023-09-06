@@ -10,5 +10,12 @@ namespace ecommerce.models.SuperAdmin.Brand.Query
 {
     public class GetAllBrandQuery:IRequest<JsonResult>
     {
+
+        public string? OrderBy { get; set; }
+
+        public bool? isDes { get; set; }    
+
+        public int? pageNumber { get; set; }
+        public int? pageSize { get; set; }
     }
 }

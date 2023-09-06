@@ -29,10 +29,10 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPost(BrandRouter.List)]
-        public async Task<IActionResult> GetAllBtand()
+        public async Task<IActionResult> GetAllBtand([FromQuery]GetAllBrandQuery request)
         {
 
-            var response = await Mediator.Send(new GetAllBrandQuery());
+            var response = await Mediator.Send(request);
             return response;
         }
 
