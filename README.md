@@ -22,11 +22,6 @@
   "host": "https://localhost:44318"
 
 ```
-###### do not forget that your bucket publiclly read access only   
-### to Use This Project You Just Need  Docker and you should run the below command
-```
-docker-compose up --build
-```
 ### you should put in appsetting.json file
 
 ```
@@ -37,6 +32,14 @@ docker-compose up --build
     "Username": "your email",
     "Password": "your password"
   },
+```
+
+
+###### do not forget that your bucket publiclly read access only   
+
+### to Use This Project You Just Need  Docker and you should run the below command
+```
+docker-compose up --build
 ```
 
 
