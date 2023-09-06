@@ -40,7 +40,6 @@ namespace ecommerce.user.Auth.Commands.Validations
             RuleFor(x => x.Email)
                 .NotEmpty()
                 .WithMessage("the email can not be empty")
-
                 .NotNull()
                 .WithMessage("the email code can not be empty")
                 .Must(x=>UserRepository.IsEmailConfirmed(x))

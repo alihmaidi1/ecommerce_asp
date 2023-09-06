@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ecommerce_shared.File;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +15,8 @@ namespace ecommerce.Dto.Results.Admin.Brand
 
         public string Name { get; set; }    
 
-        public string hash { get; set; }
 
-        public string Url { get; set; }
-
-        public string ResizeUrl { get; set; }
+        public ImageResponse image { get; set; }
 
     }
 }
