@@ -27,6 +27,17 @@
 ```
 docker-compose up --build
 ```
+### you should put in appsetting.json file
+
+```
+  "EmailConfiguration": {
+    "From": "your email",
+    "SmtpServer": "smtp.gmail.com",
+    "Port": 587,
+    "Username": "your email",
+    "Password": "your password"
+  },
+```
 
 
 ### To See Your APi You Can Check the Following [link](http://localhost:8080/swagger/index.html)
