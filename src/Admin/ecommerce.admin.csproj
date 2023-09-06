@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brand\Query\Validations\" />
     <Folder Include="Features\Roles\Queries\Validations\" />
   </ItemGroup>
 

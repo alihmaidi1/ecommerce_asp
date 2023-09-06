@@ -32,7 +32,7 @@ namespace ecommerce.admin.Features.Brand.Query.Handlers
         public async Task<JsonResult> Handle(GetAllBrandQuery request, CancellationToken cancellationToken)
         {
 
-            PageList<AddBrandResponse> Brands = await BrandRepository.GetAll(request.OrderBy,request.isDes,request.pageNumber,request.pageSize);
+            PageList<AddBrandResponse> Brands = await BrandRepository.GetAll(request.OrderBy,request.pageNumber,request.pageSize);
             
 
             return Success(Brands,"this is all your brands");

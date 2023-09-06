@@ -15,6 +15,7 @@ using ecommerce_shared.Constant;
 using ecommerce_shared.Pagination;
 using ecommerce.Domain.Base;
 using Repositories.Brand.Operations;
+using Repositories.Base;
 
 namespace Repositories.Brand
 {
@@ -34,13 +35,14 @@ namespace Repositories.Brand
         }
 
 
-        public async Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,bool? isDes, int? pageNumber,int? pageSize)
+        public async Task<PageList<AddBrandResponse>> GetAll(string? OrderBy, int? pageNumber,int? pageSize)
         {
+
             PageList<AddBrandResponse> Result= await DbContext.Brands
-                .Sort(OrderBy,isDes)
+                .Sort(OrderBy,BrandSorting.switchOrdering)                
                 .Select(BrandQuery.ToBrandResponse)
                 .ToPagedList(pageNumber,pageSize);
-            return Result;
+           return Result;
         }
 
         public bool IsExists(Guid Id)

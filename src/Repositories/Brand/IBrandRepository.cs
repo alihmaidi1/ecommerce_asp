@@ -22,7 +22,7 @@ namespace Repositories.Brand
         public bool IsUniqueName(string Name);
 
         public Task<BrandEntity> Update(UpdateBrandCommand brand);
-        public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,bool? IsDes,int? pageNumber, int? pageSize);
+        public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,int? pageNumber, int? pageSize);
 
         public bool Delete(Guid Id);
 

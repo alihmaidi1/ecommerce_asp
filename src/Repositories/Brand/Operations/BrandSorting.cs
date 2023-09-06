@@ -1,12 +1,8 @@
 ﻿using BrandEntity=ecommerce.Domain.Entities.Brand;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.Domain.Base;
+using System.Linq.Expressions;
+using NetTopologySuite.Index.HPRtree;
+using tables.Base.Entity;
 
 namespace Repositories.Brand.Operations
 {
@@ -15,31 +11,24 @@ namespace Repositories.Brand.Operations
 
         public static List<string> OrderBy = new List<string>()
         {
-            "Name"
-
+            "Name",
+            "CreatedAt"
         };
-
-
-        public static IQueryable<BrandEntity> Sort(this IQueryable<BrandEntity> brand, string? sortType,bool? isDes)
-        {
-
-            if (sortType == null)
-
-                return brand.SortBy(x=>x.DateCreated,isDes);
-
-            return sortType switch
+        
+        
+        public static Func<string, Expression<Func<BrandEntity, object>>> switchOrdering= key
+            
+            =>key switch
             {
 
+                "Name" => x => x.Name,
+                _ => x => x.DateCreated,
 
-                "Name"=> brand.SortBy(x => x.Name,isDes),
-                _=> brand.SortBy(x => x.DateCreated,isDes)
-                
             };
+            
 
-
-
-        }
         
+
     }
 
 

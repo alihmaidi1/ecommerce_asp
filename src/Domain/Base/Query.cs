@@ -10,9 +10,16 @@ namespace ecommerce.Domain.Base
 {
     public static class Query
     {
-        public static IQueryable<T> SortBy<T,Tkey>(this IQueryable<T> source,Expression<Func<T,Tkey>> by,bool? isDes) 
+        public static IOrderedQueryable<T> SortThenBy<T,Tkey>(this IOrderedQueryable<T> source,Expression<Func<T,Tkey>> by,bool? isDes=false) 
 
-            =>(!isDes.HasValue||isDes.Value)?source.OrderByDescending(by)
-                                            :source.OrderBy(by);
+            =>(!isDes.HasValue||isDes.Value)?source?.ThenByDescending(by)
+                                            :source?.ThenBy(by);
+
+        public static IOrderedQueryable<T> SortBy<T, Tkey>(this IQueryable<T> source, Expression<Func<T, Tkey>> by, bool? isDes = false)
+
+            => (!isDes.HasValue || isDes.Value) ? source?.OrderByDescending(by)
+                                            : source?.OrderBy(by);
+
+
     }
 }
