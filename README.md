@@ -43,5 +43,12 @@ docker-compose up --build
 ```
 
 
+### you can see your kibana for elasticsearch by this  url
+```
+
+http://localhost:5601
+
+```
+
 ### To See Your APi You Can Check the Following [link](http://localhost:8080/swagger/index.html)
 ##### to Customize Port you can Edit By Open **`docker-compose`** And Change Port to  - "YourPort:80" 
