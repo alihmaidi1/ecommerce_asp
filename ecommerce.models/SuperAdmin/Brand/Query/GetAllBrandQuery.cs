@@ -13,7 +13,7 @@ namespace ecommerce.models.SuperAdmin.Brand.Query
 
         public string? OrderBy { get; set; }
 
-
+        
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
     }
