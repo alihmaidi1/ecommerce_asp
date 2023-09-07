@@ -66,6 +66,7 @@ services:
       - discovery.type=single-node
     networks:
      - elasticsearch
+     
   
   kibana:
     container_name: kibana

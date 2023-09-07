@@ -11913,11 +11913,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\ecommerce.user.csproj",
+      "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\ecommerce.user.csproj",
       "projectName": "ecommerce.user",
-      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\ecommerce.user.csproj",
+      "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\ecommerce.user.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\obj\\",
+      "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\User\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -11939,20 +11939,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\ecommerce.models\\ecommerce.models.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\ecommerce.models\\ecommerce.models.csproj"
+            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\ecommerce.models\\ecommerce.models.csproj": {
+              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\ecommerce.models\\ecommerce.models.csproj"
             },
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Dto\\ecommerce.Dto.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Dto\\ecommerce.Dto.csproj"
+            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Dto\\ecommerce.Dto.csproj": {
+              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Dto\\ecommerce.Dto.csproj"
             },
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj"
+            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Repositories\\Repositories.csproj"
             },
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj"
+            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj": {
+              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj"
             },
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Shared_Kernal\\ecommerce_shared.csproj"
             }
           }
         }
