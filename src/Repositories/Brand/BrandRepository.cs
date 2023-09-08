@@ -39,7 +39,9 @@ namespace Repositories.Brand
         {
 
             var Result = ElasticClient.Search<BrandEntity>(s=>s
+                .Index(nameof(ElasticSearchIndexName.brand))
                 .Query(q=>q.MatchAll())
+
                 .Sort(s=>s.SortQuery(OrderBy,BrandSorting.switchOrdering))
                 .PaginateQuery<BrandEntity>(pageNumber, pageSize)
             );

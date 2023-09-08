@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T2zSF9Oux6bF/MO3hnsBsvGjgDJY7cK0XjpfSwuUPTM=",
+  "Hash": "+1ymn9o+DCjvVyaHSUoIOp3YxApSrOke4ktJImlQGBc=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -967,6 +967,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\d34288ca-f0f3-479c-b803-e2303783879cphoto_6026250385632640788_y.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\d93a0f02-a5df-4c7f-b506-f2a7e86bddfdphoto_6026250385632640788_y.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/d93a0f02-a5df-4c7f-b506-f2a7e86bddfdphoto_6026250385632640788_y.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\d93a0f02-a5df-4c7f-b506-f2a7e86bddfdphoto_6026250385632640788_y.jpg"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\da7a682a-e9a5-4db6-abfa-52bcf0eeca31download (3).jpg",
