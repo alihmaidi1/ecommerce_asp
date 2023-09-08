@@ -15,6 +15,7 @@ namespace ecommerce_shared.Middleware
         {
 			try
 			{
+                
 				await next(context);
             }
             catch (Exception error)

@@ -1,5 +1,6 @@
 using Common;
 using ecommerce.Domain.Attribute;
+using ecommerce.Domain.ElasticSearch;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
 using ecommerce.infrutructure.Services.Classes;
@@ -88,7 +89,7 @@ builder.Services.AddAutoMapper(ecommerce.admin.AssemblyReference.Assembly);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
-
+builder.Services.AddElasticSearch(builder.Configuration);
 
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "");

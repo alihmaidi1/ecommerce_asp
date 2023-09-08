@@ -2,16 +2,9 @@
 using BrandEntity=ecommerce.Domain.Entities.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce.service.BrandService;
-using ecommerce_shared.File;
-using ecommerce_shared.File.S3;
 using ecommerce_shared.OperationResult;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ecommerce.Dto.Results.Admin.Brand;
 using Repositories.Brand;
 using Repositories.Brand.Store;

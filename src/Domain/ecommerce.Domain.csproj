@@ -10,22 +10,22 @@
     <Compile Remove="Authorization\**" />
     <Compile Remove="Base\Abstract\**" />
     <Compile Remove="Base\ValueObject\**" />
+    <Compile Remove="ValuesObject\**" />
     <EmbeddedResource Remove="Authorization\**" />
     <EmbeddedResource Remove="Base\Abstract\**" />
     <EmbeddedResource Remove="Base\ValueObject\**" />
+    <EmbeddedResource Remove="ValuesObject\**" />
     <None Remove="Authorization\**" />
     <None Remove="Base\Abstract\**" />
     <None Remove="Base\ValueObject\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ValuesObject\" />
+    <None Remove="ValuesObject\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="EntityFrameworkCore.EncryptColumn" Version="6.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="NEST" Version="7.17.5" />
   </ItemGroup>
 
   <ItemGroup>
