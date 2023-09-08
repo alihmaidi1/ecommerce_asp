@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CqRybjVtQCLn1mlk6IOgKQ4+EH7Tq2bEUtejuQKQ1FQ=",
+  "Hash": "T2zSF9Oux6bF/MO3hnsBsvGjgDJY7cK0XjpfSwuUPTM=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\0a853f2c-40ab-445b-8a90-318dd37a276edownload (3).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\0de079dc-f108-4b8a-9240-d520ddb9824bphoto_6026250385632640788_y.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/0de079dc-f108-4b8a-9240-d520ddb9824bphoto_6026250385632640788_y.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\0de079dc-f108-4b8a-9240-d520ddb9824bphoto_6026250385632640788_y.jpg"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\0e9693c6-118f-4964-8fbf-e849ffafd614download (3).jpg",
@@ -457,6 +474,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\5de03114-4cb2-419d-aac1-bb5f3c7378afphoto_6026250385632640788_y.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\65e53fb4-c477-42f0-aada-5e41f01c0d3cphoto_6026250385632640788_y.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/65e53fb4-c477-42f0-aada-5e41f01c0d3cphoto_6026250385632640788_y.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\65e53fb4-c477-42f0-aada-5e41f01c0d3cphoto_6026250385632640788_y.jpg"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Api\\wwwroot\\Temp\\6689d6f0-1be4-48ec-b52e-99c68b5a7a3dphoto_6026250385632640788_y.jpg",

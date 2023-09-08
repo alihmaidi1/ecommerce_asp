@@ -3,6 +3,7 @@ using ecommerce.Domain.Base;
 using System.Linq.Expressions;
 using NetTopologySuite.Index.HPRtree;
 using tables.Base.Entity;
+using Nest;
 
 namespace Repositories.Brand.Operations
 {
@@ -21,7 +22,7 @@ namespace Repositories.Brand.Operations
             =>key switch
             {
 
-                "Name" => x => x.Name,
+                "Name" => x => x.Name.Suffix("keyword"),
                 _ => x => x.DateCreated,
 
             };

@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base;
+using Nest;
 using System.Linq.Expressions;
 using tables.Base.Entity;
 
@@ -33,6 +34,8 @@ namespace Repositories.Base
 
         }
 
+
+      
 
     }
 }

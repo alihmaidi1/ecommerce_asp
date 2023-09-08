@@ -13,6 +13,7 @@ using Repositories.Brand.Operations;
 using Repositories.Base;
 using Nest;
 using ecommerce_shared.Enums;
+using ecommerce.Domain.ElasticSearch;
 
 namespace Repositories.Brand
 {
@@ -39,10 +40,16 @@ namespace Repositories.Brand
 
             var Result = ElasticClient.Search<BrandEntity>(s=>s
                 .Query(q=>q.MatchAll())
+                .Sort(s=>s.SortQuery(OrderBy,BrandSorting.switchOrdering))
                 .PaginateQuery<BrandEntity>(pageNumber, pageSize)
             );
 
 
+            if (!Result.IsValid)
+            {
+
+                throw new Exception(Result.ServerError.ToString());
+            }
 
            // PageList<AddBrandResponse> Result= await DbContext.Brands
            //     .Sort(OrderBy,BrandSorting.switchOrdering)                
