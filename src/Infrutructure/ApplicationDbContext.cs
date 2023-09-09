@@ -31,6 +31,7 @@ namespace ecommerce.infrutructure
 
             builder.UseEncryption(EncryptionProvider);
 
+            
             base.OnModelCreating(builder);
 
         }

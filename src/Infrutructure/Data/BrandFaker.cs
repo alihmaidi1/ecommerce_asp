@@ -17,8 +17,8 @@ namespace ecommerce.infrutructure.Data
             var Brand = new Faker<Brand>();
             Brand.RuleFor(x => x.Id, Guid.NewGuid);
             Brand.RuleFor(x => x.Name, x => x.Company.CompanyName());
-            Brand.RuleFor(x => x.Url, x => x.Image.Business(300,300,true,true));
-            Brand.RuleFor(x => x.ResizedUrl, x => x.Image.Transport(400,400,false,false));
+            Brand.RuleFor(x => x.Url, x => x.Image.PicsumUrl());
+            Brand.RuleFor(x => x.ResizedUrl, x => x.Image.PicsumUrl());
             Brand.RuleFor(x => x.Hash, x => x.Random.AlphaNumeric(10));
 
             return Brand;

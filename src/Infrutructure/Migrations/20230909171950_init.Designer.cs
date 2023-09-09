@@ -12,8 +12,8 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230906071633_with_user_logo")]
-    partial class with_user_logo
+    [Migration("20230909171950_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -204,9 +204,6 @@ namespace ecommerce.infrutructure.Migrations
                     b.Property<string>("Meta_Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Meta_Logo")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Meta_Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -225,10 +222,6 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -565,6 +558,42 @@ namespace ecommerce.infrutructure.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("ecommerce.Domain.Entities.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Hash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RelatedId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ResizedUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("RelatedId");
+
+                    b.ToTable("Image");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Page", b =>
@@ -992,6 +1021,13 @@ namespace ecommerce.infrutructure.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(0);
 
+                    b.Property<string>("hash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("resizedLogo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CityId");
 
                     b.HasDiscriminator().HasValue("User");
@@ -1099,6 +1135,18 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Image", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Entities.Product", null)
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId");
+
+                    b.HasOne("ecommerce.Domain.Entities.Category", null)
+                        .WithMany("images")
+                        .HasForeignKey("RelatedId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Product", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Brand", "Brand")
@@ -1200,6 +1248,8 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("Child");
 
                     b.Navigation("Products");
+
+                    b.Navigation("images");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.City", b =>
@@ -1224,6 +1274,8 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Product", b =>
                 {
+                    b.Navigation("Images");
+
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618

@@ -9,15 +9,21 @@ using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;
 
-public class Image:BaseEntity
+public class Image
     {
 
+
+        public Guid Id { get; set; }
         public string Url { get; set; }
         public string Hash { get; set; }
 
         public string ResizedUrl { get; set; }
 
+    
+    
         public EntitiesHasImages Type { get; set; }
+        
+        public Guid RelatedId { get; set; }
 
 
 

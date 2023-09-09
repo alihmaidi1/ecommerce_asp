@@ -13,11 +13,12 @@ namespace ecommerce.Domain.Entities
         {
             Child = new HashSet<Category>();
             Products= new HashSet<Product>();
+            images = new HashSet<Image>();
 
         }
         public string Name { get; set; }
 
-        public string Url { get; set; }
+        public virtual ICollection<Image>? images { get; set; }
         public virtual Category? Parent { get;set; }
         public virtual ICollection<Category> Child { get; set; }
 
@@ -30,7 +31,6 @@ namespace ecommerce.Domain.Entities
 
 //        public ICollection<Tag> Tags { get; set; }
 
-        public string ? Meta_Logo { get; set; }
 
 
     }

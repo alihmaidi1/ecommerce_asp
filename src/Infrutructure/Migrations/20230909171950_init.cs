@@ -74,14 +74,12 @@ namespace ecommerce.infrutructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ParentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
                     Rank = table.Column<int>(type: "int", nullable: false),
                     Meta_Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Meta_Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Meta_Logo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -316,6 +314,34 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Image",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ResizedUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    RelatedId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Image", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Image_Categories_RelatedId",
+                        column: x => x.RelatedId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Image_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductProperties",
                 columns: table => new
                 {
@@ -359,6 +385,9 @@ namespace ecommerce.infrutructure.Migrations
                     CityId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Point = table.Column<int>(type: "int", nullable: true, defaultValue: 0),
+                    Logo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    hash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    resizedLogo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -690,6 +719,16 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Image_ProductId",
+                table: "Image",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Image_RelatedId",
+                table: "Image",
+                column: "RelatedId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductProperties_ProductId",
                 table: "ProductProperties",
                 column: "ProductId");
@@ -763,6 +802,9 @@ namespace ecommerce.infrutructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Currencies");
+
+            migrationBuilder.DropTable(
+                name: "Image");
 
             migrationBuilder.DropTable(
                 name: "Pages");

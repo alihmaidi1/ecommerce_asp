@@ -25,8 +25,16 @@ namespace ecommerce.infrutructure.Configration
             .WithOne(r=>r.Product)
             .OnDelete(DeleteBehavior.Cascade);
 
-            
+            //builder.HasMany(p => p.Images)
+            //    .WithOne()
+            //    .HasPrincipalKey(x => x.Id)
+            //    .HasForeignKey(x => x.RelatedId)
+            //    .IsRequired(false)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-        }   
+
+
+
+        }
     }
 }

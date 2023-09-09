@@ -25,6 +25,12 @@ namespace ecommerce.infrutructure.Configration
             .WithOne(c => c.Parent)
             .OnDelete(DeleteBehavior.Restrict);
 
+            builder.HasMany(c => c.images)
+                .WithOne()
+                .HasPrincipalKey(x=>x.Id)
+                .HasForeignKey(x=>x.RelatedId)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
 
