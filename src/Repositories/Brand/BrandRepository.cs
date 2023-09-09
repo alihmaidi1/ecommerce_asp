@@ -13,20 +13,20 @@ using Repositories.Brand.Operations;
 using Nest;
 using ecommerce_shared.Enums;
 using ecommerce.Domain.ElasticSearch;
-using ecommerce.Repository.ElasticSearch;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Repositories.Brand
 {
     public class BrandRepository : GenericRepository<BrandEntity>, IBrandRepository
     {
         public IStorageService StorageService;
-        public IElasticSearch ElasticSearch;
+        public IWebHostEnvironment WebHostEnvironment;
         public IElasticClient ElasticClient;
-        public BrandRepository(IElasticClient ElasticClient,IElasticSearch ElasticSearch, IStorageService StorageService,ApplicationDbContext DbContext) : base(DbContext)
+        public BrandRepository(IWebHostEnvironment WebHostEnvironment,IElasticClient ElasticClient,IStorageService StorageService,ApplicationDbContext DbContext) : base(DbContext)
         {
             this.ElasticClient = ElasticClient;
+            this.WebHostEnvironment= WebHostEnvironment;
             this.StorageService = StorageService;
-            this.ElasticSearch=ElasticSearch;
         }
 
         public bool IsNameExists(string Name)
@@ -87,16 +87,16 @@ namespace Repositories.Brand
                 DbContext.SaveChanges();      
                 
             }
-            ElasticSearch.Update(DBBrand, ElasticSearchIndexName.brand);            
+            ElasticClient.Update(DBBrand, ElasticSearchIndexName.brand);            
             return DBBrand;
 
 
         }
 
-        public bool IsUniqueName(string Name)
+        public bool IsUniqueName(Guid Id,string Name)
         {
 
-           return !DbContext.Brands.Any(x=>x.Name.Equals(Name));
+           return !DbContext.Brands.Any(x=>x.Name.Equals(Name)&&x.Id!=Id);
 
         }
 
@@ -107,10 +107,37 @@ namespace Repositories.Brand
             var brand=new BrandEntity { Id = Id };
             DbContext.Brands.Remove(brand);            
             DbContext.SaveChanges();
-            ElasticSearch.Delete(brand, ElasticSearchIndexName.brand);
+            ElasticClient.Delete(brand, ElasticSearchIndexName.brand);
             return true; 
 
         }
+
+        public bool IsValidLogo(Guid Id, string logo)
+        {
+
+            if (FileExtensionLocal.IsImageExists(logo, WebHostEnvironment.WebRootPath))
+            {
+
+                return true;
+
+            }
+
+            var brand = DbContext.Brands.FirstOrDefault(x => x.Id == Id);
+            if (brand == null)
+            {
+
+                return false;
+            }
+            if(brand.Url==logo)
+            {
+
+                return true;
+            }
+
+            return false;
+
+        }
+
 
     }
 }

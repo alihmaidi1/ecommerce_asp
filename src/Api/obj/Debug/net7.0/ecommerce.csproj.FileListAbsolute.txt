@@ -445,3 +445,4 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Api\bin\Debug\net7.0\ecommerce.mod
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Api\bin\Debug\net7.0\ecommerce.models.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Api\bin\Debug\net7.0\Elasticsearch.Net.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Api\bin\Debug\net7.0\Nest.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\src\Api\bin\Debug\net7.0\Bogus.dll

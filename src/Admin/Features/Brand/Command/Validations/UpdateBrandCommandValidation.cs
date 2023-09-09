@@ -9,34 +9,35 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
     {
         public UpdateBrandCommandValidation(IBrandRepository BrandRepository,IHttpContextAccessor httpContextAccessor) {
 
+            
             ApplyIdValidation(BrandRepository);
             ApplyNameValidation(BrandRepository);
-            ApplyLogoValidation();
+            ApplyLogoValidation(BrandRepository);
 
         }
 
 
-        public void ApplyLogoValidation()
+        public void ApplyLogoValidation(IBrandRepository BrandRepository)
         {
 
-            RuleFor(x => x.Logo)
-                .NotEmpty()
-                .WithMessage("Logo can not be empty")
-                .NotNull()
-                .WithMessage("Logo can not be null");
-
+            RuleFor(x => x)
+                
+                .Must(x => BrandRepository.IsValidLogo(x.Id,x.Logo))
+                .OverridePropertyName("logo");
+                
 
         }
 
         public void ApplyNameValidation(IBrandRepository BrandRepository)
         {
 
-            RuleFor(x => x.Name)
+            RuleFor(x => x)
                 .NotEmpty()
                 .WithMessage("name can not be empty")
                 .NotNull()
                 .WithMessage("name can not be null")
-                .Must(x=>BrandRepository.IsUniqueName(x))
+                .Must(x=>BrandRepository.IsUniqueName(x.Id,x.Name))
+                .OverridePropertyName("name")
                 .WithMessage("name is already exists in our database");
 
 

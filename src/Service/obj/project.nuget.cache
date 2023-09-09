@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tJFFB0hNURnvcWGAB8YTDObSGkFQJa0kEjEVfPuPhwn70KEtVqqOlTc+6jbQ+gvlHNVbJwMwQxOZHKbxVKUoQQ==",
+  "dgSpecHash": "8ETR0BmO/81FG6eW7Dh3xjVef6Zn6ymll/iBl5xwpgvAdrrdzW7ffFBFc0M2obf+Ah72yVRTtUXMgotR1pOhog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\src\\Service\\ecommerce.service.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.core\\2.0.0\\blurhash.core.2.0.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\blurhash.imagesharp\\3.0.0\\blurhash.imagesharp.3.0.0.nupkg.sha512",
+    "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\dotmorten.microsoft.sqlserver.types\\1.5.0\\dotmorten.microsoft.sqlserver.types.1.5.0.nupkg.sha512",

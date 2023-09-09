@@ -18,8 +18,9 @@ namespace Repositories.Brand
 
         public bool IsNameExists(string Name);
         public bool IsExists(Guid Id);
+        public bool IsValidLogo(Guid Id,string logo);
 
-        public bool IsUniqueName(string Name);
+        public bool IsUniqueName(Guid Id,string Name);
 
         public Task<BrandEntity> Update(UpdateBrandCommand brand);
         public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,int? pageNumber, int? pageSize);

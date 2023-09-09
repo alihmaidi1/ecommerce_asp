@@ -4,6 +4,7 @@ using ecommerce.infrutructure.Services.Classes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Nest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace ecommerce.infrutructure.seed
             var RegionApi = services.GetRequiredService<ExternalRegionApi>();
             var RoleManager = services.GetRequiredService<RoleManager<Role>>();
             var UserManager = services.GetRequiredService<UserManager<Account>>();
+            var ElasticService = services.GetRequiredService<IElasticClient>();
             var transaction =context.Database.BeginTransaction();
 
                 await RoleSeed.seedData(RoleManager);
@@ -32,7 +34,7 @@ namespace ecommerce.infrutructure.seed
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);
                 await BannerSeed.seedData(context);
-                await BrandSeed.seedData(context);
+                await BrandSeed.seedData(context, ElasticService);
                 await CartSeed.seedData(context);
                 await CategorySeed.seedData(context);
                 await CountrySeed.seedData(context, RegionApi);
