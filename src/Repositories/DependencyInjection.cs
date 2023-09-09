@@ -1,4 +1,5 @@
-﻿using ecommerce.Repository.Page;
+﻿using ecommerce.Repository.ElasticSearch;
+using ecommerce.Repository.Page;
 using Microsoft.Extensions.DependencyInjection;
 using Repositories.Account;
 using Repositories.Admin;
@@ -29,6 +30,7 @@ namespace Repositories
             services.AddTransient<IAdminRepository,AdminRepository>();
             services.AddTransient<IBrandRepository, BrandRepository>();
             services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<IElasticSearch, ElasticSearch>();
 
             return services;
 

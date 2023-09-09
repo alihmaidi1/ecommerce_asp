@@ -1,6 +1,7 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
+using ecommerce.Repository.ElasticSearch;
 using ecommerce_shared.Constant;
 using ecommerce_shared.Enums;
 using ecommerce_shared.File;
@@ -20,11 +21,11 @@ namespace ecommerce.service.BrandService
     {
         public IStorageService StorageService;
         public IBrandRepository BrandRepository;
-        public IElasticClient ElasticClient;
-        public BrandService(IElasticClient ElasticClient,IStorageService StorageService, IBrandRepository BrandRepository) {
+        public IElasticSearch ElasticService;
+        public BrandService(IElasticSearch ElasticService, IStorageService StorageService, IBrandRepository BrandRepository) {
         
             this.StorageService = StorageService;   
-            this.ElasticClient = ElasticClient;
+            this.ElasticService= ElasticService;
             this.BrandRepository = BrandRepository;
         
         }
@@ -38,7 +39,7 @@ namespace ecommerce.service.BrandService
             Brand.Url = images.Url;
             Brand.ResizedUrl = images.resized;
             Brand=await BrandRepository.AddAsync(Brand);
-            var result=ElasticClient.Index(Brand,i=>i.Index(nameof(ElasticSearchIndexName.brand)));                          
+            ElasticService.Add(Brand, ElasticSearchIndexName.brand);
             AddBrandResponse Response= BrandQuery.ToBrandResponse.Compile()(Brand);
 
             return Response;

@@ -4,12 +4,12 @@ using ecommerce.Domain.ElasticSearch;
 using ecommerce.infrutructure;
 using ecommerce.infrutructure.seed;
 using ecommerce.infrutructure.Services.Classes;
+using ecommerce.Middleware;
 using ecommerce.service;
 using ecommerce_shared.Authorization.Handlers;
 using ecommerce_shared.Authorization.Providers;
 using ecommerce_shared.File;
 using ecommerce_shared.Jwt;
-using ecommerce_shared.Middleware;
 using ecommerce_shared.Redis;
 using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Services.Authentication.Factory;
@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
+using Nest;
 using Repositories;
 using Repositories.Jwt;
 using System.Reflection;
@@ -170,7 +171,12 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 app.UseCors("Policy");
 
 
-app.UseMiddleware<ErrorHandling>();
+
+    app.UseMiddleware<ErrorHandling>();
+
+
+
+
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {

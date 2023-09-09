@@ -10,22 +10,23 @@ using ecommerce_shared.File.S3;
 using ecommerce_shared.Constant;
 using ecommerce_shared.Pagination;
 using Repositories.Brand.Operations;
-using Repositories.Base;
 using Nest;
 using ecommerce_shared.Enums;
 using ecommerce.Domain.ElasticSearch;
+using ecommerce.Repository.ElasticSearch;
 
 namespace Repositories.Brand
 {
     public class BrandRepository : GenericRepository<BrandEntity>, IBrandRepository
     {
         public IStorageService StorageService;
+        public IElasticSearch ElasticSearch;
         public IElasticClient ElasticClient;
-
-        public BrandRepository(IElasticClient ElasticClient,IStorageService StorageService,ApplicationDbContext DbContext) : base(DbContext)
+        public BrandRepository(IElasticClient ElasticClient,IElasticSearch ElasticSearch, IStorageService StorageService,ApplicationDbContext DbContext) : base(DbContext)
         {
+            this.ElasticClient = ElasticClient;
             this.StorageService = StorageService;
-            this.ElasticClient= ElasticClient;
+            this.ElasticSearch=ElasticSearch;
         }
 
         public bool IsNameExists(string Name)
@@ -41,7 +42,6 @@ namespace Repositories.Brand
             var Result = ElasticClient.Search<BrandEntity>(s=>s
                 .Index(nameof(ElasticSearchIndexName.brand))
                 .Query(q=>q.MatchAll())
-
                 .Sort(s=>s.SortQuery(OrderBy,BrandSorting.switchOrdering))
                 .PaginateQuery<BrandEntity>(pageNumber, pageSize)
             );
@@ -87,10 +87,7 @@ namespace Repositories.Brand
                 DbContext.SaveChanges();      
                 
             }
-            ElasticClient.Update<BrandEntity>(DBBrand.Id, d =>d
-            .Index(nameof(ElasticSearchIndexName.brand))
-            .Doc(DBBrand)            
-             ) ;
+            ElasticSearch.Update(DBBrand, ElasticSearchIndexName.brand);            
             return DBBrand;
 
 
@@ -107,9 +104,10 @@ namespace Repositories.Brand
 
         public bool Delete(Guid Id)
         {
-
-            DbContext.Brands.Remove(new BrandEntity { Id=Id});
+            var brand=new BrandEntity { Id = Id };
+            DbContext.Brands.Remove(brand);            
             DbContext.SaveChanges();
+            ElasticSearch.Delete(brand, ElasticSearchIndexName.brand);
             return true; 
 
         }

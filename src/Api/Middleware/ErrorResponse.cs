@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce_shared.Middleware
+namespace ecommerce.Middleware
 {
     public class ErrorResponse
     {

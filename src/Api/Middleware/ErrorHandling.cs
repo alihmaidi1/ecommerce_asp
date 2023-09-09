@@ -1,26 +1,39 @@
-﻿using ecommerce_shared.Exceptions;
+﻿using ecommerce.infrutructure;
+using ecommerce_shared.Exceptions;
 using ecommerce_shared.OperationResult.Base;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
-using System;
 using System.Net;
 using System.Text.Json;
 
 
-namespace ecommerce_shared.Middleware
+namespace ecommerce.Middleware
 {
     public class ErrorHandling : IMiddleware
     {
+        ApplicationDbContext DbContext;
+        public ErrorHandling(ApplicationDbContext DbContext)
+        {
+
+            this.DbContext = DbContext;
+
+        }
+
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
 			try
 			{
+                DbContext.Database.BeginTransaction();             
+
                 
 				await next(context);
+
+                DbContext.Database.CommitTransaction();
+
             }
             catch (Exception error)
             {
             
+                DbContext.Database.RollbackTransaction();
                 var response=context.Response;
                 response.ContentType= "application/json";
                 var Result = new OperationResultBase<string>() { };

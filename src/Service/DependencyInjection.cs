@@ -13,7 +13,7 @@ namespace ecommerce.service
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IUserService, ecommerce.service.UserService.UserService>();
             services.AddTransient<IBrandService, ecommerce.service.BrandService.BrandService>();
-
+            
             return services;
 
         }
