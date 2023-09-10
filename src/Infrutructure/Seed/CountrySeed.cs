@@ -16,10 +16,10 @@ namespace ecommerce.infrutructure.Seed
             if (!context.Countries.Any())
             {
 
-                ExternalRegionDto<List<CountriesDto>> response = await ExternalRegionApi.GetAllCountry();
-                var countries = response.data.Select(CountriesDto.ToCountryDto).ToList();
-                context.BulkInsert(countries, new BulkConfig { BulkCopyTimeout = 1000 }); ;
-                context.SaveChanges();                                                
+                //ExternalRegionDto<List<CountriesDto>> response = await ExternalRegionApi.GetAllCountry();
+                //var countries = response.data.Select(CountriesDto.ToCountryDto).ToList();
+                //context.AddRange(countries, new BulkConfig { BulkCopyTimeout = 1000 }); ;
+                //context.SaveChanges();                                                
           
             }
 

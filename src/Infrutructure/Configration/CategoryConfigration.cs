@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using tables.Entities;
@@ -25,13 +26,7 @@ namespace ecommerce.infrutructure.Configration
             .WithOne(c => c.Parent)
             .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasMany(c => c.images)
-                .WithOne()
-                .HasPrincipalKey(x=>x.Id)
-                .HasForeignKey(x=>x.RelatedId)
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Cascade);
-
+            
 
 
 

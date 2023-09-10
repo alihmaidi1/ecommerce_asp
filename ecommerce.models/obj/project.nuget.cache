@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OnPxpVtbFlQ5Gct+LzPF4SPwI7GdZl1hmd6O7ciJUtDIc3C54PVkSLtRTRkDkIRAEljpDkWtc5MMLDn1QdKhVQ==",
+  "dgSpecHash": "NUKd+37St9wXCHNwNouCL8nh3a5JJcawM3DFgCH2h1q6U/Uo/F3agFdLnmQelHhOYIoyBLwMRMcaK8J7z6r1ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_asp\\ecommerce.models\\ecommerce.models.csproj",
+  "projectFilePath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

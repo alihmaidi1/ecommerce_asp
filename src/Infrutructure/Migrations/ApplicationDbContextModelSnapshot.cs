@@ -563,6 +563,9 @@ namespace ecommerce.infrutructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Hash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -586,9 +589,11 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.HasIndex("ProductId");
 
-                    b.HasIndex("RelatedId");
+                    b.HasIndex("Id", "Type");
 
                     b.ToTable("Image");
                 });
@@ -1134,14 +1139,13 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Image", b =>
                 {
+                    b.HasOne("ecommerce.Domain.Entities.Category", null)
+                        .WithMany("images")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("ecommerce.Domain.Entities.Product", null)
                         .WithMany("Images")
                         .HasForeignKey("ProductId");
-
-                    b.HasOne("ecommerce.Domain.Entities.Category", null)
-                        .WithMany("images")
-                        .HasForeignKey("RelatedId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Product", b =>

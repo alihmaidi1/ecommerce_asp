@@ -19,8 +19,7 @@ public class Image
 
         public string ResizedUrl { get; set; }
 
-    
-    
+        
         public EntitiesHasImages Type { get; set; }
         
         public Guid RelatedId { get; set; }
