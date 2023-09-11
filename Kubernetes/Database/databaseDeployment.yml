@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: databasedeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+    spec:
+      containers:
+      - name: mssql
+        image: mcr.microsoft.com/mssql/server
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_PID
+          value: "Express"
+        - name: MSSQL_SA_PASSWORD
+          value: S3cur3P@ssW0rd!
+        - name: ACCEPT_EULA
+          value: "Y"
+        volumeMounts:
+        - mountPath: /var/opt/mssql/data
+          name: database-volume
+      volumes:
+      - name: database-volume
+        persistentVolumeClaim:
+          claimName: database-pvc

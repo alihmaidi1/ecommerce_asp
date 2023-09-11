@@ -12122,11 +12122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
       "projectName": "ecommerce.infrutructure",
-      "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\obj\\",
+      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -12148,11 +12148,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj"
             },
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
             }
           }
         }

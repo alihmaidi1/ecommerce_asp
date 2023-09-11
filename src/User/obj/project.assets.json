@@ -12025,11 +12025,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
       "projectName": "ecommerce.user",
-      "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\obj\\",
+      "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -12051,20 +12051,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj"
             },
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
             },
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj"
             },
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj"
             },
-            "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-              "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
             }
           }
         }

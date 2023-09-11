@@ -1,0 +1,15 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: database-service
+
+spec:
+  type: ClusterIP
+  selector:
+    app: database
+  ports:
+  - port: 1433
+    target-port: 1433
+

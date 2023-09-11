@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {}
+    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
+    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
         "projectName": "ecommerce.Domain",
-        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
+        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
         "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-                "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
         "projectName": "ecommerce_shared",
-        "projectPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
         "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\obj\\",
+        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
