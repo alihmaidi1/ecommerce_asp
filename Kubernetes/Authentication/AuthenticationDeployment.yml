@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
       - name: authenticationservice
-        image: alihmaidi/ecommerce_authentication
+        image: alihmaidi/asp_ecommerce
 
