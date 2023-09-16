@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Roles\Queries\Validations\**" />
+    <EmbeddedResource Remove="Roles\Queries\Validations\**" />
+    <None Remove="Roles\Queries\Validations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
@@ -19,10 +25,6 @@
     <ProjectReference Include="..\Dto\ecommerce.Dto.csproj" />
     <ProjectReference Include="..\Service\ecommerce.service.csproj" />
     <ProjectReference Include="..\Domain\ecommerce.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\Roles\Queries\Validations\" />
   </ItemGroup>
 
 </Project>

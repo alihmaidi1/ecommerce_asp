@@ -23,6 +23,8 @@ namespace ecommerce.Controllers.Common
 
         }
         [HttpPost(ImageRouter.UploadBase64Image)]
+        [ApiGroup(ApiGroupName.User, ApiGroupName.SuperAdmin, ApiGroupName.DeliveryMan)]
+
 
         public async Task<IActionResult> UploadBase64Image([FromBody] UploadBase64ImageCommand commands)
         {
@@ -35,6 +37,7 @@ namespace ecommerce.Controllers.Common
 
 
         [HttpPost(ImageRouter.UploadImages)]
+        [ApiGroup(ApiGroupName.User, ApiGroupName.SuperAdmin, ApiGroupName.DeliveryMan)]
 
         public async Task<IActionResult> UploadImages(UploadImagesCommand commands)
         {

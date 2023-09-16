@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hhawSXRAxT6zRjK62lFcM/9BqZ1/O0kAgSFemIHdkqY=",
+  "Hash": "xI9yA6koVeeefHGj8OfTlaJbyCnmblZCAOrOLSQYYl4=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\0a853f2c-40ab-445b-8a90-318dd37a276edownload (3).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\0c02f26c-1429-4674-8e57-fce89ce18269images.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/0c02f26c-1429-4674-8e57-fce89ce18269images.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\0c02f26c-1429-4674-8e57-fce89ce18269images.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\0d66238d-207e-482a-a6cc-8464ca138243Screenshot (2).png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/0d66238d-207e-482a-a6cc-8464ca138243Screenshot (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\0d66238d-207e-482a-a6cc-8464ca138243Screenshot (2).png"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\0de079dc-f108-4b8a-9240-d520ddb9824bphoto_6026250385632640788_y.jpg",
@@ -304,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\316062de-4a84-4cbc-bfd4-17daec56baf9photo_6026250385632640788_y.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\36ef4420-3561-499d-8ab1-15f07478a81dScreenshot (1).png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/36ef4420-3561-499d-8ab1-15f07478a81dScreenshot (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\36ef4420-3561-499d-8ab1-15f07478a81dScreenshot (1).png"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\38ed467d-e039-436e-a007-0883896ac5688342af8c-a723-44fe-b369-d3a9de23c63d.jpeg",
@@ -661,6 +712,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\86d53e3f-1134-4476-90e8-a0511a3d265fphoto_6026250385632640788_y.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\87715e35-8ad9-4894-97ed-d1ece2491ad9Screenshot (2).png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/87715e35-8ad9-4894-97ed-d1ece2491ad9Screenshot (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\87715e35-8ad9-4894-97ed-d1ece2491ad9Screenshot (2).png"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\97b8632a-3d19-4c35-9b4a-71abe3da1251photo_6026250385632640788_y.jpg",

@@ -1,11 +1,11 @@
-﻿using ecommerce.admin.Features.Password.Models;
-using ecommerce.Base;
+﻿using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using SchmeaEnum=ecommerce_shared.Enums.JwtSchema;
+using SchmeaEnum = ecommerce_shared.Enums.JwtSchema;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ecommerce.Domain.Attributes;
+using ecommerce.admin.Features.Password.Models;
 
 namespace ecommerce.Controllers.SuperAdmin
 {

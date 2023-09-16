@@ -11,8 +11,7 @@ namespace ecommerce.infrutructure.seed
             List<Brand> brands=BrandFaker.GetBrandFaker().Generate(5);
             context.AddRange(brands);            
             context.SaveChanges();
-            ElasticClient.IndexMany(brands, "brand");
-
+            ElasticClient.IndexMany(brands, "brand");            
 
         }
     }

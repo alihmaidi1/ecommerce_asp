@@ -18,18 +18,22 @@ namespace ecommerce.infrutructure.seed
 
         public static async Task InitializeAsync(IServiceProvider services)
         {
-
             var context = services.GetRequiredService<ApplicationDbContext>();
-            await context.Database.MigrateAsync();
-            var RegionApi = services.GetRequiredService<ExternalRegionApi>();
-            var RoleManager = services.GetRequiredService<RoleManager<Role>>();
-            var UserManager = services.GetRequiredService<UserManager<Account>>();
-            var ElasticService = services.GetRequiredService<IElasticClient>();
-            var transaction =context.Database.BeginTransaction();
 
+            var transaction = context.Database.BeginTransaction();
+
+            try
+            {
+
+                await context.Database.MigrateAsync();
+                var RegionApi = services.GetRequiredService<ExternalRegionApi>();
+                var RoleManager = services.GetRequiredService<RoleManager<Role>>();
+                var UserManager = services.GetRequiredService<UserManager<Account>>();
+                var ElasticService = services.GetRequiredService<IElasticClient>();
+                
                 await RoleSeed.seedData(RoleManager);
-                await PermissionSeed.seedData(RoleManager,context);
-                await AdminSeed.seedData(context,UserManager);
+                await PermissionSeed.seedData(RoleManager, context);
+                await AdminSeed.seedData(context, UserManager);
                 await SliderSeed.seedData(context);
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);
@@ -44,7 +48,17 @@ namespace ecommerce.infrutructure.seed
                 await PorpertySeed.seedData(context);
                 await ReviewSeed.seedData(context);
                 await transaction.CommitAsync();
+
+
+
+            }
+            catch
+            {
+
+                transaction.Rollback();
                 
+            }
+
 
         }
 

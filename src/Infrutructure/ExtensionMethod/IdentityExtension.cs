@@ -1,6 +1,7 @@
 ﻿using ecommerce.Domain.Entities;
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.Enum;
+using ecommerce.Dto.Results.Admin.Role;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,6 +34,27 @@ namespace ecommerce.infrutructure.ExtensionMethod
         }
 
 
+        public static IQueryable<object> GetRoleWithClaim(this ApplicationDbContext DBContext,Guid id)
+        {
+
+            var Role=from r in DBContext.Roles
+                     where r.Id == id
+                     join rc in DBContext.RoleClaims on r.Id equals rc.RoleId
+
+                     select new  { 
+                     
+                         Id=r.Id,
+                         Name=r.Name,
+                         permissions=rc
+
+                         
+                        
+                     };
+
+
+            return Role;
+
+        }
 
 
         public static Account FindAccountByEmailAndRole(this ApplicationDbContext Context, string Email,string RoleName)
