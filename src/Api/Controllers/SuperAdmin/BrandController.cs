@@ -37,6 +37,14 @@ namespace ecommerce.Controllers.SuperAdmin
         }
 
 
+        [HttpPost(BrandRouter.Get)]
+        public async Task<IActionResult> GetBrand(Guid id)
+        {
+
+            var response = await Mediator.Send(new GetBrandQuery { Id=id});
+            return response;
+        }
+
         [HttpPut(BrandRouter.Update)]
         public async Task<IActionResult> UpdateBrand([FromBody]UpdateBrandCommand request)
         {

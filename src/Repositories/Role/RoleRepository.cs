@@ -35,6 +35,7 @@ namespace Repositories.Role
 
         public async Task<GetRoleResponse> GetRoleAsync(string Id)
         {
+
             var Role = from r in Context.Roles
                        join rc in Context.RoleClaims
                        on r.Id equals rc.RoleId into permission

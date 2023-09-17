@@ -12,11 +12,14 @@ using System.Threading.Tasks;
 using Repositories.Brand;
 using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce_shared.Pagination;
+using Repositories.Brand.Store;
 
 namespace ecommerce.admin.Features.Brand.Query.Handlers
 {
     public class BrandHandler : OperationResult,
-        IRequestHandler<GetAllBrandQuery, JsonResult>
+        IRequestHandler<GetAllBrandQuery, JsonResult>,
+        IRequestHandler<GetBrandQuery, JsonResult>
+
 
     {
 
@@ -36,6 +39,14 @@ namespace ecommerce.admin.Features.Brand.Query.Handlers
             
 
             return Success(Brands,"this is all your brands");
+        }
+
+        public async Task<JsonResult> Handle(GetBrandQuery request, CancellationToken cancellationToken)
+        {
+
+            var Brand = BrandRepository.Get(request.Id);
+            return Success(BrandQuery.ToBrandQueryResponse.Compile()(Brand), "this is your brand");
+
         }
     }
 }

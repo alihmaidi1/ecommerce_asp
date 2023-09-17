@@ -30,6 +30,22 @@ namespace Repositories.Brand.Store
 
         };
 
+        public static Expression<Func<BrandEntity, GetBrandResponse>> ToBrandQueryResponse = b => new GetBrandResponse()
+        {
+
+            Id = b.Id,
+            Name = b.Name,            
+            image = new ecommerce_shared.File.ImageResponse()
+            {
+
+                hash = b.Hash,
+                resized = b.ResizedUrl,
+                Url = b.Url
+
+            }
+
+        };
+
 
 
 

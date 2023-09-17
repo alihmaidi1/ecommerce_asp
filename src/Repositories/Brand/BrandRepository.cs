@@ -139,5 +139,13 @@ namespace Repositories.Brand
         }
 
 
+        public BrandEntity Get(Guid Id)
+        {
+
+            return DbContext.Brands.FirstOrDefault(x=>x.Id==Id);
+
+        }
+
+
     }
 }
