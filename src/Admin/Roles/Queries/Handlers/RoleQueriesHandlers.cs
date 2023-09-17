@@ -41,7 +41,7 @@ namespace ecommerce.admin.Features.Roles.Queries.Handlers
 
         public async Task<JsonResult> Handle(GetRoleQuery request, CancellationToken cancellationToken)
         {
-            var Role = RoleRepository.GetRoleAsync(request.Id);
+            var Role = await RoleRepository.GetRoleAsync(request.Id);
             return Success(Role,"This is your role");
         }
 

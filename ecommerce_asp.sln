@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "src\Common\Common
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.user", "src\User\ecommerce.user.csproj", "{7451865E-D50C-4EE0-8799-5A0E59DB3FB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.admin", "src\Admin\ecommerce.admin.csproj", "{4D9C836D-2F1C-462F-80C6-6050B311B64A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.superadmin", "src\Admin\ecommerce.superadmin.csproj", "{4D9C836D-2F1C-462F-80C6-6050B311B64A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerce.models", "ecommerce.models\ecommerce.models.csproj", "{0948F33C-8E7E-4F02-99C8-CED5531EA170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ecommerce.models", "ecommerce.models\ecommerce.models.csproj", "{0948F33C-8E7E-4F02-99C8-CED5531EA170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,12 +2,13 @@
 using ecommerce.Domain.Enum;
 using ecommerce.Dto.Results.Admin.Role;
 using ecommerce.infrutructure;
-using ecommerce.infrutructure.ExtensionMethod;
 using ecommerce.models.SuperAdmin.Role.Query;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Role.Store;
 using RoleEntity =ecommerce.Domain.Entities.Identity.Role;
+using AdminEntity = ecommerce.Domain.Entities.Identity.Admin;
+
 namespace Repositories.Role
 {
     public class RoleRepository:IRoleRepository
@@ -34,22 +35,23 @@ namespace Repositories.Role
 
         public async Task<GetRoleResponse> GetRoleAsync(string Id)
         {
+            var Role = from r in Context.Roles
+                       join rc in Context.RoleClaims
+                       on r.Id equals rc.RoleId into permission
+                       join ur in Context.UserRoles
+                       on r.Id equals ur.RoleId
+                       join a in Context.Accounts
+                       on ur.UserId equals a.Id 
+                       select new GetRoleResponse
+                       {
+                           Id = r.Id,
+                           Name = r.Name,
+                           Permissions = permission.Select(p => p.ClaimValue).ToList()
 
-            //var Role= from r in Context.Roles
-            //          where r.Id.Equals(Id)
-            //          join rc in Context.RoleClaims on r.Id equals rc.RoleId
-            //          select r;
-            
-            //var Role = RoleManager.FindByIdAsync(Id).Result;
-            //var Claims=RoleManager.GetClaimsAsync(Role).Result.Select(c=>c.Value).ToList();
-            //var RoleClaims = new GetRoleResponse { 
-            //    Id = Role.Id,
-            //    Name=Role.Name,
-            //    Permissions=Claims
-            //};
-             
+                       };
 
-            return null;
+         
+            return Role.FirstOrDefault();
         }
 
 

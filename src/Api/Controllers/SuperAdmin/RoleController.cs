@@ -56,7 +56,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
 
-        [HttpPost(RoleRouter.Update)]
+        [HttpPut(RoleRouter.Update)]
         public async Task<IActionResult> Update([FromBody] UpdateRoleCommand request)
         {
             var response = await this.Mediator.Send(request);

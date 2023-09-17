@@ -25,9 +25,9 @@
           "Serilog.Settings.Configuration": "7.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Threading.RateLimiting": "7.0.0",
-          "ecommerce.admin": "1.0.0",
           "ecommerce.infrutructure": "1.0.0",
           "ecommerce.service": "1.0.0",
+          "ecommerce.superadmin": "1.0.0",
           "ecommerce.user": "1.0.0"
         },
         "runtime": {
@@ -2625,22 +2625,6 @@
           "Common.dll": {}
         }
       },
-      "ecommerce.admin/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "FluentValidation.AspNetCore": "11.3.0",
-          "MediatR": "12.1.1",
-          "NEST": "7.17.5",
-          "ecommerce.Domain": "1.0.0",
-          "ecommerce.Dto": "1.0.0",
-          "ecommerce.service": "1.0.0",
-          "ecommerce_shared": "1.0.0"
-        },
-        "runtime": {
-          "ecommerce.admin.dll": {}
-        }
-      },
       "ecommerce.Domain/1.0.0": {
         "dependencies": {
           "EntityFrameworkCore.EncryptColumn": "6.0.8",
@@ -2709,6 +2693,22 @@
         },
         "runtime": {
           "ecommerce.service.dll": {}
+        }
+      },
+      "ecommerce.superadmin/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "MediatR": "12.1.1",
+          "NEST": "7.17.5",
+          "ecommerce.Domain": "1.0.0",
+          "ecommerce.Dto": "1.0.0",
+          "ecommerce.service": "1.0.0",
+          "ecommerce_shared": "1.0.0"
+        },
+        "runtime": {
+          "ecommerce.superadmin.dll": {}
         }
       },
       "ecommerce.user/1.0.0": {
@@ -4697,11 +4697,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ecommerce.admin/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "ecommerce.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4723,6 +4718,11 @@
       "sha512": ""
     },
     "ecommerce.service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ecommerce.superadmin/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -4805,27 +4805,6 @@
           "bin/placeholder/Common.dll": {}
         }
       },
-      "ecommerce.admin/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "FluentValidation.AspNetCore": "11.3.0",
-          "MediatR": "12.1.1",
-          "NEST": "7.17.5",
-          "ecommerce.Domain": "1.0.0",
-          "ecommerce.Dto": "1.0.0",
-          "ecommerce.service": "1.0.0",
-          "ecommerce_shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/ecommerce.admin.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ecommerce.admin.dll": {}
-        }
-      },
       "ecommerce.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4911,6 +4890,27 @@
         },
         "runtime": {
           "bin/placeholder/ecommerce.service.dll": {}
+        }
+      },
+      "ecommerce.superadmin/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "MediatR": "12.1.1",
+          "NEST": "7.17.5",
+          "ecommerce.Domain": "1.0.0",
+          "ecommerce.Dto": "1.0.0",
+          "ecommerce.service": "1.0.0",
+          "ecommerce_shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ecommerce.superadmin.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ecommerce.superadmin.dll": {}
         }
       },
       "ecommerce.user/1.0.0": {
@@ -12954,11 +12954,6 @@
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
     },
-    "ecommerce.admin/1.0.0": {
-      "type": "project",
-      "path": "../Admin/ecommerce.admin.csproj",
-      "msbuildProject": "../Admin/ecommerce.admin.csproj"
-    },
     "ecommerce.Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/ecommerce.Domain.csproj",
@@ -12983,6 +12978,11 @@
       "type": "project",
       "path": "../Service/ecommerce.service.csproj",
       "msbuildProject": "../Service/ecommerce.service.csproj"
+    },
+    "ecommerce.superadmin/1.0.0": {
+      "type": "project",
+      "path": "../Admin/ecommerce.superadmin.csproj",
+      "msbuildProject": "../Admin/ecommerce.superadmin.csproj"
     },
     "ecommerce.user/1.0.0": {
       "type": "project",
@@ -13019,9 +13019,9 @@
       "Serilog.Settings.Configuration >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Threading.RateLimiting >= 7.0.0",
-      "ecommerce.admin >= 1.0.0",
       "ecommerce.infrutructure >= 1.0.0",
       "ecommerce.service >= 1.0.0",
+      "ecommerce.superadmin >= 1.0.0",
       "ecommerce.user >= 1.0.0"
     ]
   },
@@ -13060,8 +13060,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.admin.csproj": {
-              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.admin.csproj"
+            "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.superadmin.csproj": {
+              "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.superadmin.csproj"
             },
             "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Common\\Common.csproj": {
               "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Common\\Common.csproj"

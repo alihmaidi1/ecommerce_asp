@@ -20,7 +20,7 @@ namespace ecommerce.admin.Roles.Validations
             RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> RoleRepository.IsExists(x));
+                .Must(x=> RoleRepository.IsIdExists(Guid.Parse(x)));
 
             RuleFor(x => x.Permissions)
                 .NotEmpty()

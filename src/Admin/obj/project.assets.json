@@ -12025,9 +12025,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.admin.csproj",
-      "projectName": "ecommerce.admin",
-      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.admin.csproj",
+      "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.superadmin.csproj",
+      "projectName": "ecommerce.superadmin",
+      "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\ecommerce.superadmin.csproj",
       "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Admin\\obj\\",
       "projectStyle": "PackageReference",

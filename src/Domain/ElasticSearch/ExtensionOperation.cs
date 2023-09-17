@@ -16,7 +16,7 @@ namespace ecommerce.Domain.ElasticSearch
         public static void AddEntity<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : class
         {
 
-            var result = ElasticClient.Index<T>(entity, i => i.Index(nameof(ElasticSearchIndexName)));
+            var result = ElasticClient.Index<T>(entity, i => i.Index(nameof(name)));
 
             if (!result.IsValid || result.ServerError != null)
             {
