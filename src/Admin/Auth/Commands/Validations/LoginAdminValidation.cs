@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Auth.Commands.Models;
+﻿using ecommerce.admin.Auth.Commands.Models;
 using ecommerce.Domain.Enum;
 using FluentValidation;
 using Repositories.Account;
@@ -8,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Auth.Commands.Validations
+namespace ecommerce.admin.Auth.Commands.Validations
 {
-    public class LoginAdminValidation:AbstractValidator<LoginAdminCommand>
+    public class LoginAdminValidation : AbstractValidator<LoginAdminCommand>
     {
-        public LoginAdminValidation(IAccountRepository AccountRepository) {
+        public LoginAdminValidation(IAccountRepository AccountRepository)
+        {
 
 
             ApplyUserNameOrEmailValidation(AccountRepository);
@@ -28,7 +29,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Validations
                 .WithMessage("username cannot be empty")
                 .NotNull()
                 .WithMessage("username cannot be null")
-                .Must(x=>AccountRepository.CheckRoleUserName(x,RoleEnum.SuperAdmin))
+                .Must(x => AccountRepository.CheckRoleUserName(x, RoleEnum.SuperAdmin))
                 .WithMessage("This UserName Is Not Exists");
 
 

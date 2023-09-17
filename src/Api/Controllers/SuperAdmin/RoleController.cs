@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Roles.Queries.Models;
+﻿using ecommerce.admin.Roles.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.Attributes;

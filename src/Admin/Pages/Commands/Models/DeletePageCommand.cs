@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Pages.Commands.Models
+namespace ecommerce.admin.Pages.Commands.Models
 {
-    public class DeletePageCommand: IRequest<JsonResult>
+    public class DeletePageCommand : IRequest<JsonResult>
     {
- 
+
         public Guid Id { get; set; }
-    
+
     }
 }

@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Roles.Queries.Models
+namespace ecommerce.admin.Roles.Queries.Models
 {
-    public class GetAllRoleQuery:IRequest<JsonResult>
+    public class GetAllRoleQuery : IRequest<JsonResult>
     {
     }
 }

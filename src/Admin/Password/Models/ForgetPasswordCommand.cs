@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Password.Models
+namespace ecommerce.admin.Password.Models
 {
-    public class ForgetPasswordCommand:IRequest<JsonResult>
+    public class ForgetPasswordCommand : IRequest<JsonResult>
     {
 
         public string Email { get; set; }

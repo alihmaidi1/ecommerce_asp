@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ecommerce.admin.Features.Pages.Commands.Models;
+using ecommerce.admin.Pages.Commands.Models;
 using ecommerce.Domain.Entities;
 using ecommerce.Domain.SharedResources;
 using ecommerce.service.PageService;
@@ -14,24 +14,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Pages.Commands.Handlers
+namespace ecommerce.admin.Pages.Commands.Handlers
 {
     public class PageCommandHandlers : OperationResult,
         IRequestHandler<AddPageCommand, JsonResult>
-       // IRequestHandler<DeletePageCommand, JsonResult>
+    // IRequestHandler<DeletePageCommand, JsonResult>
 
 
     {
 
         public IStringLocalizer<SharedResource> _StringLocalizer;
-        
+
 
         public IPageService pageService;
         public IMapper mapper;
 
         public PageCommandHandlers(IPageService pageService, IMapper mapper, IStringLocalizer<SharedResource> stringLocalizer)
         {
-            this._StringLocalizer = stringLocalizer;
+            _StringLocalizer = stringLocalizer;
             this.pageService = pageService;
             this.mapper = mapper;
             _StringLocalizer = stringLocalizer;
@@ -41,7 +41,7 @@ namespace ecommerce.admin.Features.Pages.Commands.Handlers
         {
             var mapperResult = mapper.Map<Page>(request);
             var result = await pageService.AddPageAsync(mapperResult);
-            
+
             return Created<string>(_StringLocalizer[SharedResourceKeys.Page_Created_Successfully]);
         }
 

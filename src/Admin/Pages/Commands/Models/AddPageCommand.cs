@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Pages.Commands.Models
+namespace ecommerce.admin.Pages.Commands.Models
 {
     public class AddPageCommand : IRequest<JsonResult>
     {

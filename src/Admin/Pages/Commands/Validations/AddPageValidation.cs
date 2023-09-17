@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Pages.Commands.Models;
+﻿using ecommerce.admin.Pages.Commands.Models;
 using ecommerce.Domain.Enum;
 using FluentValidation;
 using System;
@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Pages.Commands.Validations
+namespace ecommerce.admin.Pages.Commands.Validations
 {
-    public class AddPageValidation:AbstractValidator<AddPageCommand>
+    public class AddPageValidation : AbstractValidator<AddPageCommand>
     {
 
 
-        public AddPageValidation() {
+        public AddPageValidation()
+        {
 
             //NameRule();
             ContentRule();

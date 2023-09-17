@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Password.Models;
+﻿using ecommerce.admin.Password.Models;
 using ecommerce.Domain.Enum;
 using FluentValidation;
 using Repositories.Account;
@@ -9,21 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Password.Validations
+namespace ecommerce.admin.Password.Validations
 {
-    public class ForgetPasswordValidation:AbstractValidator<ForgetPasswordCommand>
+    public class ForgetPasswordValidation : AbstractValidator<ForgetPasswordCommand>
     {
 
 
 
-        public ForgetPasswordValidation(IAdminRepository AdminRepository) { 
-        
-                
-            RuleFor(x=>x.Email)
+        public ForgetPasswordValidation(IAdminRepository AdminRepository)
+        {
+
+
+            RuleFor(x => x.Email)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> AdminRepository.CheckEmailExists(x));
-        
+                .Must(x => AdminRepository.CheckEmailExists(x));
+
         }
 
     }

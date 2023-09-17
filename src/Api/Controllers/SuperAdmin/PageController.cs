@@ -1,5 +1,5 @@
-﻿using ecommerce.admin.Features.Pages.Commands.Models;
-using ecommerce.admin.Features.Pages.Queries.Models;
+﻿using ecommerce.admin.Pages.Commands.Models;
+using ecommerce.admin.Pages.Queries.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.Attribute;

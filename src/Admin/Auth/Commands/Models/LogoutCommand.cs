@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Auth.Commands.Models
+namespace ecommerce.admin.Auth.Commands.Models
 {
-    public class LogoutCommand:IRequest<JsonResult>
+    public class LogoutCommand : IRequest<JsonResult>
     {
 
 

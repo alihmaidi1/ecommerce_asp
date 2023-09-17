@@ -1,5 +1,5 @@
-﻿using ecommerce.admin.Features.Pages.Commands.Models;
-using ecommerce.admin.Features.Roles.Queries.Models;
+﻿
+using ecommerce.admin.Roles.Queries.Models;
 using ecommerce.Domain.SharedResources;
 using ecommerce.models.SuperAdmin.Role.Query;
 using ecommerce_shared.OperationResult;
@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Roles.Queries.Handlers
+namespace ecommerce.admin.Roles.Queries.Handlers
 {
     public class RoleQueriesHandlers : OperationResult,
         IRequestHandler<GetAllRoleQuery, JsonResult>,
@@ -26,7 +26,7 @@ namespace ecommerce.admin.Features.Roles.Queries.Handlers
         public IRoleRepository RoleRepository;
         public IStringLocalizer<SharedResource> stringLocalizer;
         public RoleQueriesHandlers(IStringLocalizer<SharedResource> stringLocalizer,
-            IRoleRepository RoleRepository) 
+            IRoleRepository RoleRepository)
         {
 
             this.stringLocalizer = stringLocalizer;
@@ -35,14 +35,14 @@ namespace ecommerce.admin.Features.Roles.Queries.Handlers
 
         public async Task<JsonResult> Handle(GetAllRoleQuery request, CancellationToken cancellationToken)
         {
-            var roles=RoleRepository.GetAllRole();
-            return Success(roles,"This Is All Role");
+            var roles = RoleRepository.GetAllRole();
+            return Success(roles, "This Is All Role");
         }
 
         public async Task<JsonResult> Handle(GetRoleQuery request, CancellationToken cancellationToken)
         {
             var Role = await RoleRepository.GetRoleAsync(request.Id);
-            return Success(Role,"This is your role");
+            return Success(Role, "This is your role");
         }
 
 

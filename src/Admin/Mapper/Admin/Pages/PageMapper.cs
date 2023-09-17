@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ecommerce.admin.Features.Pages.Commands.Models;
+using ecommerce.admin.Pages.Commands.Models;
 using ecommerce.Domain.Entities;
 using ecommerce.Dto.Results.Admin.Pages;
 using ecommerce.Dto.Results.Admin.Pages.Command;

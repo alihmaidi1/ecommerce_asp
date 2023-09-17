@@ -11,12 +11,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Pages.Queries.Models
+namespace ecommerce.admin.Pages.Queries.Models
 {
     public class GetAllPagesQuery : IRequest<JsonResult>
     {
 
-        public int ? pageNumber { get; set; }
+        public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
     }

@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Password.Models
+namespace ecommerce.admin.Password.Models
 {
-    public class CheckCodeCommand:IRequest<JsonResult>
+    public class CheckCodeCommand : IRequest<JsonResult>
     {
-    
-        public string Code { get; set; }    
+
+        public string Code { get; set; }
 
     }
 }

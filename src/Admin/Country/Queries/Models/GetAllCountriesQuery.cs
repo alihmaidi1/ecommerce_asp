@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Country.Queries.Models
+namespace ecommerce.admin.Country.Queries.Models
 {
-     public class GetAllCountriesQuery:IRequest<JsonResult>
+    public class GetAllCountriesQuery : IRequest<JsonResult>
     {
 
 

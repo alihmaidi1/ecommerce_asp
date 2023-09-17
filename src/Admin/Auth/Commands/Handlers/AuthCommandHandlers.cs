@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Auth.Commands.Models;
+﻿using ecommerce.admin.Auth.Commands.Models;
 using ecommerce.Domain.Entities.Identity;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Base;
@@ -14,7 +14,7 @@ using Repositories.Admin.Store;
 using Repositories.Jwt;
 using Repositories.Jwt.Factory;
 
-namespace ecommerce.admin.Features.Auth.Commands.Handlers
+namespace ecommerce.admin.Auth.Commands.Handlers
 {
     public class AuthCommandHandlers : OperationResult,
         IRequestHandler<LoginAdminCommand, JsonResult>,
@@ -33,13 +33,13 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
                IAccountService AccountService,
                 ISchemaFactory SchemaFactory,
                 IHttpContextAccessor _httpContextAccessor
-                ) 
+                )
         {
 
             this._httpContextAccessor = _httpContextAccessor;
             this.AccountService = AccountService;
-            this.jwtRepository = SchemaFactory.CreateJwt(JwtSchema.Main);
-            
+            jwtRepository = SchemaFactory.CreateJwt(JwtSchema.Main);
+
 
         }
 
@@ -48,7 +48,7 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
 
             Account Account = await AccountService.SignInAccountAsync(request.Username, request.Password);
             TokenDto TokenInfo = await jwtRepository.GetTokensInfo(Account);
-            AdminWithToken result = AdminStoreRepository.Dto.AdminWithToken(Account,TokenInfo);
+            AdminWithToken result = AdminStoreRepository.Dto.AdminWithToken(Account, TokenInfo);
             return Success(result, "You Are Login Successfully");
 
 
@@ -60,8 +60,8 @@ namespace ecommerce.admin.Features.Auth.Commands.Handlers
         {
 
             string Token = _httpContextAccessor.HttpContext.Request.Headers.Authorization.ToString().Split(" ")[1];
-            bool status=await AccountService.Logout(Token);
-            return Success(status,"You Are Logout Successfully");
+            bool status = await AccountService.Logout(Token);
+            return Success(status, "You Are Logout Successfully");
         }
     }
 }

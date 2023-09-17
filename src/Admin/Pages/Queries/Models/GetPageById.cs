@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ecommerce.admin.Features.Pages.Queries.Models
+namespace ecommerce.admin.Pages.Queries.Models
 {
     public class GetPageById : IRequest<JsonResult>
     {

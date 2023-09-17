@@ -12,11 +12,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Brand.Command.Validations
+namespace ecommerce.admin.Brand.Command.Validations
 {
-    public class AddBrandCommandValidation:AbstractValidator<AddBrandCommand>
+    public class AddBrandCommandValidation : AbstractValidator<AddBrandCommand>
     {
-        public AddBrandCommandValidation(IWebHostEnvironment WebHostEnvironment,IBrandRepository BrandRepository)
+        public AddBrandCommandValidation(IWebHostEnvironment WebHostEnvironment, IBrandRepository BrandRepository)
         {
 
             string wwwroot = WebHostEnvironment.WebRootPath;
@@ -28,13 +28,13 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
 
         public void ApplyNameValidation(IBrandRepository BrandRepository)
         {
-         
-            RuleFor(x=>x.Name)
+
+            RuleFor(x => x.Name)
                 .NotEmpty()
                 .WithMessage("brand name should be not empty")
                 .NotNull()
                 .WithMessage("brand name should be not null")
-                .Must(x=> !BrandRepository.IsNameExists(x))
+                .Must(x => !BrandRepository.IsNameExists(x))
                 .WithMessage("This Brand with this name is exists");
 
         }
@@ -44,12 +44,12 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
         {
 
 
-            RuleFor(x=>x.Image)
+            RuleFor(x => x.Image)
                 .NotNull()
                 .WithMessage("image should be not null")
                 .NotEmpty()
                 .WithMessage("image should be not empty")
-                .Must(x=> FileExtensionLocal.IsImageExists(x,wwwroot))
+                .Must(x => FileExtensionLocal.IsImageExists(x, wwwroot))
                 .WithMessage("This File Is Not Exists");
 
         }

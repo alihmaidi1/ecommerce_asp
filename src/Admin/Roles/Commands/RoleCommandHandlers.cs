@@ -1,5 +1,4 @@
-﻿using ecommerce.admin.Features.Roles.Queries.Models;
-using ecommerce.models.SuperAdmin.Role.Commands;
+﻿using ecommerce.models.SuperAdmin.Role.Commands;
 using ecommerce.models.SuperAdmin.Role.Query;
 using ecommerce_shared.OperationResult;
 using MediatR;

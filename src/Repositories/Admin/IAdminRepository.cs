@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities.Identity;
+﻿using AdminEntity=ecommerce.Domain.Entities.Identity.Admin;
 using Repositories.Base;
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,11 @@ namespace Repositories.Admin
 
 
         public bool CheckEmailExists(string email);
+        public bool IsUniqueUserName(string userName);
+
+        public Task<AdminEntity> Store(string Email,string UserName,string Password,Guid RoleId);
+
+        public List<AdminEntity> GetAllForSuperAdmin();
 
     }
 }

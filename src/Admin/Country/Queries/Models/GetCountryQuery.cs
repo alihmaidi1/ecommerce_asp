@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Country.Queries.Models
+namespace ecommerce.admin.Country.Queries.Models
 {
-    public class GetCountryQuery:IRequest<JsonResult>
+    public class GetCountryQuery : IRequest<JsonResult>
     {
 
         public Guid Id { get; set; }

@@ -3,13 +3,14 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Repositories.Brand;
 
-namespace ecommerce.admin.Features.Brand.Command.Validations
+namespace ecommerce.admin.Brand.Command.Validations
 {
-    public class UpdateBrandCommandValidation:AbstractValidator<UpdateBrandCommand>
+    public class UpdateBrandCommandValidation : AbstractValidator<UpdateBrandCommand>
     {
-        public UpdateBrandCommandValidation(IBrandRepository BrandRepository,IHttpContextAccessor httpContextAccessor) {
+        public UpdateBrandCommandValidation(IBrandRepository BrandRepository, IHttpContextAccessor httpContextAccessor)
+        {
 
-            
+
             ApplyIdValidation(BrandRepository);
             ApplyNameValidation(BrandRepository);
             ApplyLogoValidation(BrandRepository);
@@ -21,10 +22,10 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
         {
 
             RuleFor(x => x)
-                
-                .Must(x => BrandRepository.IsValidLogo(x.Id,x.Logo))
+
+                .Must(x => BrandRepository.IsValidLogo(x.Id, x.Logo))
                 .OverridePropertyName("logo");
-                
+
 
         }
 
@@ -36,7 +37,7 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
                 .WithMessage("name can not be empty")
                 .NotNull()
                 .WithMessage("name can not be null")
-                .Must(x=>BrandRepository.IsUniqueName(x.Id,x.Name))
+                .Must(x => BrandRepository.IsUniqueName(x.Id, x.Name))
                 .OverridePropertyName("name")
                 .WithMessage("name is already exists in our database");
 
@@ -52,7 +53,7 @@ namespace ecommerce.admin.Features.Brand.Command.Validations
                 .WithMessage("id can not be empty")
                 .NotNull()
                 .WithMessage("id can not be null")
-                .Must(x=>BrandRepository.IsExists(x))
+                .Must(x => BrandRepository.IsExists(x))
                 .WithMessage("this brand is not exists in our data");
 
 

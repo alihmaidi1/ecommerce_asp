@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ecommerce.admin.Features.Pages.Queries.Models;
+using ecommerce.admin.Pages.Queries.Models;
 using ecommerce.Domain.SharedResources;
 using ecommerce.Dto.Results.Admin.Pages;
 using ecommerce.Dto.Results.Admin.Pages.Query;
@@ -10,9 +10,9 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
-namespace ecommerce.admin.Features.Pages.Queries.Handlers
+namespace ecommerce.admin.Pages.Queries.Handlers
 {
-    public class PageQueryHandlers :OperationResult,
+    public class PageQueryHandlers : OperationResult,
         IRequestHandler<GetAllPagesQuery, JsonResult>,
         IRequestHandler<GetPageById, JsonResult>
     {
@@ -26,7 +26,7 @@ namespace ecommerce.admin.Features.Pages.Queries.Handlers
         #endregion
         #region constructor
 
-        public PageQueryHandlers(IPageService PageService, IMapper Mapper, IStringLocalizer<SharedResource> stringLocalizer) 
+        public PageQueryHandlers(IPageService PageService, IMapper Mapper, IStringLocalizer<SharedResource> stringLocalizer)
         {
 
             pageService = PageService;
@@ -35,13 +35,13 @@ namespace ecommerce.admin.Features.Pages.Queries.Handlers
         }
 
         #endregion
-        public async Task<JsonResult> Handle( GetAllPagesQuery request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle(GetAllPagesQuery request, CancellationToken cancellationToken)
         {
 
-            var PagesList = await pageService.GetPagesQueryable().Select(GetAllPagesResult.GetAllPage).ToPagedList(request.pageNumber,request.pageSize);
-            
-              
-             return  Success(PagesList);
+            var PagesList = await pageService.GetPagesQueryable().Select(GetAllPagesResult.GetAllPage).ToPagedList(request.pageNumber, request.pageSize);
+
+
+            return Success(PagesList);
         }
 
         public async Task<JsonResult> Handle(GetPageById request, CancellationToken cancellationToken)

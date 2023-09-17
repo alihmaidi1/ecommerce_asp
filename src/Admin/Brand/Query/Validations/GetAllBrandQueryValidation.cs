@@ -8,17 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ecommerce.admin.Features.Brand.Query.Validations
+namespace ecommerce.admin.Brand.Query.Validations
 {
-    public class GetAllBrandQueryValidation:AbstractValidator<GetAllBrandQuery>
+    public class GetAllBrandQueryValidation : AbstractValidator<GetAllBrandQuery>
     {
 
 
-        public GetAllBrandQueryValidation() {
+        public GetAllBrandQueryValidation()
+        {
 
 
             RuleFor(x => x.OrderBy)
-                .Must(x=>CrudOpterationRule.IsValidOrder(x,BrandSorting.OrderBy))
+                .Must(x => CrudOpterationRule.IsValidOrder(x, BrandSorting.OrderBy))
                 .WithMessage("order by is not valid");
 
         }

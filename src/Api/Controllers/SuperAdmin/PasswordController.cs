@@ -5,7 +5,7 @@ using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ecommerce.Domain.Attributes;
-using ecommerce.admin.Features.Password.Models;
+using ecommerce.admin.Password.Models;
 
 namespace ecommerce.Controllers.SuperAdmin
 {

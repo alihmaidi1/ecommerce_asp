@@ -1,4 +1,4 @@
-﻿using ecommerce.admin.Features.Auth.Commands.Models;
+﻿using ecommerce.admin.Auth.Commands.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.User;

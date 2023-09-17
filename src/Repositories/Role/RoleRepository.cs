@@ -95,7 +95,8 @@ namespace Repositories.Role
         public async Task<GetRoleResponse> StoreRole(StoreRolecommand request)
         {
 
-            var Role = new RoleEntity { Name = request.Name };
+            var Role = new RoleEntity { Name = request.Name,NormalizedName=request.Name.ToUpper() };
+
             Context.Roles.Add(Role);
             Context.SaveChanges();
             
