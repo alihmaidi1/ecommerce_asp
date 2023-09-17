@@ -28,6 +28,7 @@ namespace Repositories.Brand
         public Task<BrandEntity> Update(UpdateBrandCommand brand);
         public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,int? pageNumber, int? pageSize);
 
+
         public bool Delete(Guid Id);
 
     }

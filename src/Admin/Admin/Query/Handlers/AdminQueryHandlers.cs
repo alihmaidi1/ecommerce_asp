@@ -13,7 +13,9 @@ using System.Threading.Tasks;
 namespace ecommerce.superadmin.Admin.Query.Handlers
 {
     public class AdminQueryHandlers : OperationResult,
-        IRequestHandler<GetAllAdminQuery, JsonResult>
+        IRequestHandler<GetAllAdminQuery, JsonResult>,
+        IRequestHandler<GetAdminQuery, JsonResult>
+
     {
 
         public IAdminRepository AdminRepository;
@@ -34,6 +36,16 @@ namespace ecommerce.superadmin.Admin.Query.Handlers
 
 
             return Success(Admins, "this is all admin");
+        }
+
+        public async Task<JsonResult> Handle(GetAdminQuery request, CancellationToken cancellationToken)
+        {
+
+
+            var Admin = AdminRepository.Get(request.Id);
+
+            return Success(AdminStoreQuery.ToAdminQueryResponse.Compile()(Admin), "this is the admin");
+
         }
     }
 }

@@ -12,6 +12,9 @@ using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
 using ecommerce.Domain.Entities.Identity;
+using Repositories.Role.Store;
+using Microsoft.EntityFrameworkCore;
+using Nest;
 
 namespace Repositories.Admin
 {
@@ -28,12 +31,6 @@ namespace Repositories.Admin
             this.UserManager=UserManager;
         }
 
-        public bool CheckEmailExists(string email)
-        {
-
-            return DbContext.Accounts.OfType<AdminEntity>().Any(a => a.Email.Equals(email));
-
-        }
 
         public bool IsUniqueUserName(string userName)
         {
@@ -42,12 +39,13 @@ namespace Repositories.Admin
 
         }
 
+
         public List<AdminEntity> GetAllForSuperAdmin()
         {
             return DbContext.Admins.
                 Where(a =>
                 !a.UserName.Equals(RoleEnum.SuperAdmin.ToString())&&
-                a.UserName.Equals(RoleEnum.DeliveryMan.ToString()) 
+                !a.UserName.Equals(RoleEnum.DeliveryMan.ToString()) 
                 )
                 .ToList();
 
@@ -68,18 +66,102 @@ namespace Repositories.Admin
             DbContext.Admins.Add(Admin);
             DbContext.SaveChanges();
             var Role = await RoleManager.FindByIdAsync(RoleId.ToString());
-
             var result=await UserManager.AddToRoleAsync(Admin, "Base Admin");
             if (result.Succeeded)
             {
-
                 return Admin;
-
             }
             throw new Exception(result.Errors.ToString());
 
         }
 
+        public bool isExists(Guid Id)
+        {
+
+
+            return DbContext.Admins.Where(a =>
+                !a.UserName.Equals(RoleEnum.SuperAdmin.ToString()) &&
+                !a.UserName.Equals(RoleEnum.DeliveryMan.ToString())
+                ).Any(x=>x.Id==Id);
+
+        }
+
+
+        public bool BlockAdmin(Guid Id)
+        {
+
+
+            DbContext.
+            Admins.
+            Where(x => x.Id == Id).
+            ExecuteUpdate(setter=>
+            setter.SetProperty(b=>b.IsBlocked,true)
+            );
+
+            return true;
+
+        }
+
+
+        public bool UnBlockAdmin(Guid Id)
+        {
+
+
+            DbContext.
+            Admins.
+            Where(x => x.Id == Id).
+            ExecuteUpdate(setter =>
+            setter.SetProperty(b => b.IsBlocked, false)
+            );
+
+            return true;
+
+        }
+
+
+        public AdminEntity Get(Guid Id)
+        {
+
+
+            return DbContext.Admins.FirstOrDefault(x => x.Id == Id);
+
+
+        }
+
+        public bool IsUniqueEmail(string email,Guid Id)
+        {
+            return !DbContext.Accounts.OfType<AdminEntity>().Any(a => a.Email.Equals(email) && a.Id != Id);
+
+        }
+
+        public bool CheckEmailExists(string email)
+        {
+            return DbContext.Accounts.OfType<AdminEntity>().Any(a => a.Email.Equals(email));
+
+        }
+
+        public bool IsUniqueUserName(string userName, Guid Id)
+        {
+
+            return !DbContext.Accounts.Any(x => x.UserName.Equals(userName)&& x.Id!=Id);
+
+        }
+ 
+        public async Task<AdminEntity> Update(Guid id,string Email, string UserName, string Password, Guid RoleId)
+        {
+            AdminEntity admin = DbContext.Admins.FirstOrDefault(x => x.Id == id);
+            admin.Email = Email;
+            admin.UserName= UserName;
+            admin.PasswordHash = UserManager.PasswordHasher.HashPassword(admin, Password);
+            DbContext.Admins.Update(admin);
+            DbContext.SaveChanges();
+            DbContext.UserRoles.Where(x => x.UserId == id).ExecuteDelete();
+            DbContext.UserRoles.Add(new UserRole { RoleId = RoleId ,UserId=id});
+            DbContext.SaveChanges();
+
+            return admin;
+
+        }
 
     }
 }
