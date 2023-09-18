@@ -11,7 +11,7 @@ using tables.Base.Entity;
 
 namespace tables.Entities
 {
-    public class Banner :BaseEntity,IImage
+    public class Banner :BaseEntity
     {
         public string Url   { get; set; }
         public string Link { get; set; }   

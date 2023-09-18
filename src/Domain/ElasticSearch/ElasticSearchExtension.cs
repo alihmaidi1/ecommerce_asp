@@ -39,6 +39,9 @@ namespace ecommerce.Domain.ElasticSearch
                   .Create(nameof(ElasticSearchIndexName.brand),
                   e => e.Map<Brand>(m => m.AutoMap<Brand>()));
 
+            Client.Indices
+                  .Create(nameof(ElasticSearchIndexName.slider),
+                  e => e.Map<Slider>(m => m.AutoMap<Slider>()));
 
             return Client;  
 

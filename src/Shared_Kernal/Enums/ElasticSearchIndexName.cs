@@ -10,7 +10,8 @@ namespace ecommerce_shared.Enums
     {
 
         banner,
-        brand
+        brand,
+        slider
 
     }
 }

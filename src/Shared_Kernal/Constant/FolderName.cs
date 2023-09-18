@@ -9,8 +9,11 @@ namespace ecommerce_shared.Constant
     public static class FolderName
     {
 
-         public  const string Temp = "Temp";
+        public  const string Temp = "Temp";
         public const string User = "User";
+
+        public const string Slider = "Slider";
+
 
         public const string Brand = "Brand";
 

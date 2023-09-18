@@ -9,6 +9,7 @@ using Repositories.Jwt.Factory;
 using Repositories.Page;
 using Repositories.RefreshToken;
 using Repositories.Role;
+using Repositories.Slider;
 using Repositories.User;
 
 namespace Repositories
@@ -29,7 +30,9 @@ namespace Repositories
             services.AddTransient<IAdminRepository,AdminRepository>();
             services.AddTransient<IBrandRepository, BrandRepository>();
             services.AddTransient<ICityRepository, CityRepository>();
-            
+            services.AddTransient<ISliderRepository, SliderRepository>();
+
+
             return services;
 
         }

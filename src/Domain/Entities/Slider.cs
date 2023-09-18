@@ -6,12 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace tables.Entities
+namespace ecommerce.Domain.Entities
 {
     public class Slider :BaseEntity
     {
         public string Url { get; set; }
-        public string Rank { get; set; }
+        public string Hash { get; set; }
+        public string ResizedUrl { get; set; }
+        public int Rank { get; set; }
         public bool  Status { get; set; }=true;
 
     }
