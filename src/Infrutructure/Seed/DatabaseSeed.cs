@@ -34,7 +34,7 @@ namespace ecommerce.infrutructure.seed
                 await RoleSeed.seedData(RoleManager);
                 await PermissionSeed.seedData(RoleManager, context);
                 await AdminSeed.seedData(context, UserManager);
-                await SliderSeed.seedData(context);
+                await SliderSeed.seedData(context, ElasticService);
                 await PageSeed.seedDate(context);
                 await CurrencySeed.seedData(context);
                 await BannerSeed.seedData(context);
