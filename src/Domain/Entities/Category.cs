@@ -14,23 +14,37 @@ namespace ecommerce.Domain.Entities
         {
             Child = new HashSet<Category>();
             Products= new HashSet<Product>();
-            images = new HashSet<Image>();
+            Images = new HashSet<Image>();
+            Tags= new HashSet<Tag>();
+
 
         }
         public string Name { get; set; }
 
-        public virtual ICollection<Image>? images { get; set; }
-        public virtual Category? Parent { get;set; }
-        public virtual ICollection<Category> Child { get; set; }
+        public string Description { get; set; }
+        public bool Status { get; set; } = true;
+
+        public int Rank { get; set; }
+
+        public string? Meta_Title { get; set; }
+
+        public string? Meta_Description { get; set; }
+
+        public virtual ICollection<Image> Images { get; set; }
+        public ICollection<Tag> Tags { get; set; }
+
 
         public virtual ICollection<Product> Products { get; set; }
-        public string Description { get; set; }
-        public bool Status { get; set; }
-        public int Rank { get; set; }
-        public string ? Meta_Description { get; set; }
-        public string ? Meta_Title { get; set; }
+        
+        public Guid ?ParentId { get; set; }
 
-//        public ICollection<Tag> Tags { get; set; }
+        
+        public virtual Category? Parent { get;set; }
+        
+
+        public virtual ICollection<Category> Child { get; set; }
+
+
 
 
 

@@ -26,10 +26,10 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(CountryRouter.Get)]
-        public async Task<IActionResult> GetCountry([FromRoute]GetCountryQuery request)
+        public async Task<IActionResult> GetCountry([FromRoute]Guid id)
         {
          
-            var response=await Mediator.Send(request);
+            var response=await Mediator.Send(new GetCountryQuery { Id=id});
             return response;
 
         }

@@ -1,11 +1,6 @@
 ﻿using CountryEntity=ecommerce.Domain.Entities.Country;
 using ecommerce.infrutructure;
 using Repositories.Base.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ecommerce.Dto.Results.Admin.Country;
 using Repositories.Country.Store;
 
@@ -27,11 +22,14 @@ namespace Repositories.Country
         }
 
 
-        public CountryEntity GetCountry(Guid id)
+        public GetCountryResponse GetCountry(Guid id)
         {
          
             
-            var Country=DbContext.Countries.SingleOrDefault(x=>x.Id==id);
+            var Country=DbContext
+                .Countries
+                .Select(CountryStore.Query.ToGetCountryDto)
+                .SingleOrDefault(x=>x.Id==id);
             return Country;
 
 

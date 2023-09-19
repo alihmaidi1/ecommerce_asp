@@ -1,6 +1,5 @@
 {
   "profiles": {
-    
     "WebApplication1": {
       "commandName": "Project",
       "launchBrowser": true,
@@ -19,11 +18,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
-    
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false,
+    "windowsAuthentication": true,
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:12783",

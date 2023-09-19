@@ -21,7 +21,7 @@ public class Product: BaseEntity
 
         }
 
-//    public ICollection<Tag> Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
 
         public string Name { get; set; }
         public string Title { get; set; }

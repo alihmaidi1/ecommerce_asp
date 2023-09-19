@@ -68,8 +68,8 @@ namespace ecommerce_shared.File.S3
             var AwsCrediential = GetCredentials();
             var config = GetBucketConfig();
             TransferUtilityUploadRequest uploadRequest = GetRequestUpload(obj);
-            client = new AmazonS3Client(AwsCrediential, config);
-            var transferUtility = new TransferUtility(client);            
+            var client = new AmazonS3Client(AwsCrediential, config);
+            var transferUtility = new TransferUtility(client);                        
             await transferUtility.UploadAsync(uploadRequest);
             return true;
 
@@ -82,7 +82,7 @@ namespace ecommerce_shared.File.S3
             var AwsCrediential = GetCredentials();
             var Credentials = Configration.GetSection("S3");
             var config = GetBucketConfig();
-            client = new AmazonS3Client(AwsCrediential, config);
+            var client = new AmazonS3Client(AwsCrediential, config);
             GetObjectResponse response = await client.GetObjectAsync(Credentials["BucketName"], file);
 
             return response;
@@ -118,21 +118,33 @@ namespace ecommerce_shared.File.S3
             using MemoryStream memoryStream = new MemoryStream();
             Filestream.CopyTo(memoryStream);
 
-            var reziedimage= UploadToS3(resized.imagefile, resized.memorystream);
-            var uploadedfile = UploadToS3(newpath, memoryStream);
-            await Task.WhenAll(uploadedfile, reziedimage);
+            var reziedimage=await UploadToS3(resized.imagefile, resized.memorystream);
+            var uploadedfile = await UploadToS3(newpath, memoryStream);
             return new ImageResponse
             {
-                Url=uploadedfile.Result,
+                Url=uploadedfile,
                 hash=hash,
-                resized=reziedimage.Result
+                resized=reziedimage
                 
             };
         }
 
 
 
-        
+        public async Task<List<ImageResponse>> OptimizeMany(List<string> files, string Folder)
+        {
+            List<Task<ImageResponse>> optimizeTasks = new List<Task<ImageResponse>>();
+            foreach (var file in files)
+            {
+                optimizeTasks.Add(OptimizeFile(file, Folder));
+            }
+            var result1=await Task.WhenAll(optimizeTasks);
+            List<ImageResponse> result = result1.ToList();
+            return result;
+
+            }
+
+
 
 
         public async Task<string> UploadToS3(string filename,MemoryStream file)
@@ -142,13 +154,11 @@ namespace ecommerce_shared.File.S3
             {
 
 
-                var S3Obj = GetS3Object(filename,file);
-                
+                var S3Obj = GetS3Object(filename,file);                
                 bool isUploaded=await UploadFileAsync(S3Obj);
                 if (!isUploaded)
                 {
                     throw new Exception("Can Not Upload Image");
-
                 }
 
                 return awsUrl+$"/{filename}";

@@ -1,7 +1,6 @@
 ﻿using ecommerce.admin.Auth.Commands.Models;
 using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
-using ecommerce.Domain.AppMetaData.User;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
 using ecommerce_shared.Swagger;

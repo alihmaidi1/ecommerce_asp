@@ -16,10 +16,10 @@ namespace ecommerce.infrutructure.Configration
             
             
             builder.Property(p => p.SellingNumber).HasDefaultValue(0);
-           
 
+            builder.OwnsMany(x => x.Tags);
             builder.HasMany(p => p.Properties).WithMany(p=>p.Products).UsingEntity<ProductProperty>();
-          
+            builder.OwnsMany(x => x.Images);
 
             builder.HasMany(p => p.Reviews)
             .WithOne(r=>r.Product)

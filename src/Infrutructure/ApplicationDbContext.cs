@@ -36,7 +36,6 @@ namespace ecommerce.infrutructure
 
         }
 
-        public DbSet<Banner> Banners { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
@@ -52,7 +51,7 @@ namespace ecommerce.infrutructure
         public DbSet<Coupon> Copons { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Currency> Currencies { get; set; }
-//        public DbSet<Image> Images { get; set; }
+
         public DbSet<Page> Pages { get; set; }
 
         public DbSet<Product> Products { get; set; }
@@ -66,7 +65,6 @@ namespace ecommerce.infrutructure
         public DbSet<Review> Reviews { get; set; }
 
         public DbSet<Slider> Sliders { get; set; }
-//        public DbSet<TageablePivot> TageablePivots { get; set; }
 
 
         public DbSet<Wishlist> Wishlists { get; set; }

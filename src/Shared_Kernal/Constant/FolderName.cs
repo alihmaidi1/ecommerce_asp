@@ -11,6 +11,8 @@ namespace ecommerce_shared.Constant
 
         public  const string Temp = "Temp";
         public const string User = "User";
+        public const string Category = "Category";
+
 
         public const string Slider = "Slider";
 

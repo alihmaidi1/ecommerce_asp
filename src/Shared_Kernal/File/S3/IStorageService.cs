@@ -18,6 +18,7 @@ namespace ecommerce_shared.File.S3
         
 
         public Task<ImageResponse> OptimizeFile(string file,string Folder);
+        public Task<List<ImageResponse>> OptimizeMany(List<string> files,string Folder);
 
     }
 }

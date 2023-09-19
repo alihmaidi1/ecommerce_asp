@@ -6,6 +6,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Repositories.City.CityStore;
+using ecommerce.Dto.Results.Admin.City;
+using ecommerce.Dto.Results.User.City.Query;
 
 namespace Repositories.Country.Store
 {
@@ -25,6 +28,16 @@ namespace Repositories.Country.Store
 
             };
 
+            public static Expression<Func<CountryEntity, GetCountryResponse>> ToGetCountryDto => c => new GetCountryResponse
+            {
+                Id = c.Id,
+                Code = c.Code,
+                lat = c.lat,
+                Name = c.Name,
+                Status = c.Status,
+                Cities = c.Cities.AsQueryable().Select(CityStoreService.Query.ToCountryWithCityResponse).ToList(),
+                
+            };
 
         }
 

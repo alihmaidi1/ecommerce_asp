@@ -17,7 +17,7 @@ namespace Repositories.Country
         public List<GetAllCountriesDto> GetAllCountries();
         
         
-        public CountryEntity GetCountry(Guid id);
+        public GetCountryResponse GetCountry(Guid id);
         public bool IsExists(Guid Id);
 
 

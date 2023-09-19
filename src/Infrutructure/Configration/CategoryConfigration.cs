@@ -22,9 +22,14 @@ namespace ecommerce.infrutructure.Configration
             .WithOne(p => p.Category)
             .OnDelete(DeleteBehavior.Cascade);
 
+            builder.OwnsMany(x => x.Images);
+
+            builder.OwnsMany(x => x.Tags);
+
             builder.HasMany(c => c.Child)
             .WithOne(c => c.Parent)
             .OnDelete(DeleteBehavior.Restrict);
+
 
             
 

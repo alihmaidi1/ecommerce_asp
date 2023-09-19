@@ -40,7 +40,7 @@ namespace ecommerce.admin.Country.Queries.Handlers
         public async Task<JsonResult> Handle(GetCountryQuery request, CancellationToken cancellationToken)
         {
 
-            CountryEntity Country = CountryRepository.GetCountry(request.Id);
+            var Country = CountryRepository.GetCountry(request.Id);
             return Success(Country, "This is The Country");
         }
     }
