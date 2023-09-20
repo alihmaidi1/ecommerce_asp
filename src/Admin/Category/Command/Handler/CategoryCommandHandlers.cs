@@ -13,7 +13,9 @@ using System.Threading.Tasks;
 namespace ecommerce.superadmin.Category.Command.Handler
 {
     public class CategoryCommandHandlers : OperationResult,
-        IRequestHandler<StoreCategoryCommand, JsonResult>
+        IRequestHandler<StoreCategoryCommand, JsonResult>,
+        IRequestHandler<UpdateCategoryCommand, JsonResult>
+
     {
         public ICategoryRepository CategoryRepository;
         public CategoryCommandHandlers(ICategoryRepository CategoryRepository) { 
@@ -27,6 +29,17 @@ namespace ecommerce.superadmin.Category.Command.Handler
                 ,request.Meta_Title,request.Rank,request.Meta_Description
                 ,request.ParentId,request.Tags,request.Images);
             return Success(Category, "the category was added successfully");
+        }
+
+        public async Task<JsonResult> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
+        {
+
+            var Category = await CategoryRepository.Update(request.Id, request.Name,
+                request.Description, request.Meta_Title, request.Rank,
+                request.Meta_Description, request.ParentId, request.Tags, 
+                request.Images, request.DeletedImages);
+            return Success(Category, "the category was updated successfully");
+
         }
     }
 }

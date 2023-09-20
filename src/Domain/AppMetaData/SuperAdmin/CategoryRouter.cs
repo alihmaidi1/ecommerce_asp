@@ -11,6 +11,9 @@ namespace ecommerce.Domain.AppMetaData.SuperAdmin
 
         private const string prefix = Router.Rule + "category";
         public const string Store= prefix + "/store";
+        public const string GetAll = prefix + "/getAll";
+        public const string Update = prefix + "/update";
+
 
 
 
