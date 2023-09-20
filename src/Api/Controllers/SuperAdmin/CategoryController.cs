@@ -37,6 +37,49 @@ namespace ecommerce.Controllers.SuperAdmin
         }
 
 
+
+
+
+        [HttpGet(CategoryRouter.GetAllAsTree)]
+        public async Task<IActionResult> GetAllAsTree([FromQuery] GetAllCategoryAsTreeQuery request)
+        {
+
+            var response = await Mediator.Send(request);
+            return response;
+        }
+
+
+        [HttpGet(CategoryRouter.Get)]
+        public async Task<IActionResult> Get([FromRoute]Guid id)
+        {
+
+            var response = await Mediator.Send(new GetCategoryQuery { Id=id});
+            return response;
+        }
+
+
+
+        [HttpPut(CategoryRouter.UnActive)]
+        public async Task<IActionResult> UnActive([FromRoute] Guid id)
+        {
+
+
+            var response = await Mediator.Send(new UnActiveCategoryCommand { Id = id });
+            return response;
+        }
+
+
+
+        [HttpPut(CategoryRouter.ActiveCategory)]
+        public async Task<IActionResult> ActiveCategory([FromRoute] Guid id)
+        {
+
+
+            var response = await Mediator.Send(new ActiveCategoryCommand { Id = id });
+            return response;
+        }
+
+
         [HttpPut(CategoryRouter.Update)]
         public async Task<IActionResult> Update([FromBody] UpdateCategoryCommand request)
         {
@@ -45,6 +88,15 @@ namespace ecommerce.Controllers.SuperAdmin
             return response;
         }
 
+
+
+        //[HttpDelete(CategoryRouter.Delete)]
+        //public async Task<IActionResult> Delete([FromRoute] Guid id)
+        //{
+
+        //    var response = await Mediator.Send(new DeleteCategoryCommand { Id=id});
+        //    return response;
+        //}
 
     }
 }

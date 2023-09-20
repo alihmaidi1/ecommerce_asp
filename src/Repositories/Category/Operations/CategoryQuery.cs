@@ -47,5 +47,23 @@ namespace Repositories.Category.Operations
         };
 
 
+
+        public static Expression<Func<CategoryEntity, GetCategoryWithParent>> ToAllCategoryWithParent= c => new GetCategoryWithParent
+        {
+
+            Id = c.Id,
+            Name = c.Name,
+            Status = c.Status,
+            Description = c.Description,
+            Images = c.Images.Select(x => new ImageResponse { hash = x.Hash, resized = x.Resized, Url = x.Url }).ToList(),
+            Tags = c.Tags.Select(x => x.Name).ToList(),
+            Meta_Description = c.Meta_Description,
+            Meta_Title = c.Meta_Title,
+            Rank = c.Rank,
+            ParentId=c.ParentId
+
+
+        };
+
     }
 }

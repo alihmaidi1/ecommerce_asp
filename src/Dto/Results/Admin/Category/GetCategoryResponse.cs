@@ -23,7 +23,7 @@ namespace ecommerce.Dto.Results.Admin.Category
 
         public virtual List<ImageResponse> Images { get; set; }
         public List<string> Tags { get; set; }
-        public GetCategoryResponse Childs { get; set; }
+        public List<GetCategoryResponse> Childs { get; set; }
 
 
     }

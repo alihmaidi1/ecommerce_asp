@@ -8,6 +8,6 @@ namespace ecommerce.Dto.Results.Admin.Category
 {
     public class GetCategoryWithParent: GetCategoryResponse
     {
-        public Guid ParentId { get; set; }
+        public Guid? ParentId { get; set; }
     }
 }

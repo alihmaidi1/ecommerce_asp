@@ -28,10 +28,22 @@ namespace Repositories.Category
         public Task<AddCategoryResponse> Store(string Name,string Description,string Meta_Title, int rank,string Meta_Description,Guid? ParentId,List<string> Tag,List<string>Images);
 
         public Task<AddCategoryResponse> Update(Guid Id,string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Tag, List<string> Images, List<string> deletedImages);
-
         
-
         public List<GetAllCategoryResponse> GetCategories();
-    
+
+        public List<GetCategoryResponse> GetCategoryTree();
+
+        public GetCategoryResponse? GetCategory(Guid Id);
+
+
+        public bool UnActive(Guid Id);
+
+
+        public bool Delete(Guid Id);    
+
+        public bool ActiveCategory(Guid Id);    
+
+
+
     }
 }
