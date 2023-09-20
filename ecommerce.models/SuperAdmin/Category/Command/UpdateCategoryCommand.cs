@@ -26,7 +26,6 @@ namespace ecommerce.models.SuperAdmin.Category.Command
         public List<string> Images { get; set; }
         public List<string> DeletedImages { get; set; }
 
-        public List<string> Tags { get; set; }
 
         public Guid? ParentId { get; set; }
 

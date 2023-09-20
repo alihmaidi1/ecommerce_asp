@@ -33,7 +33,7 @@ namespace ecommerce.superadmin.Category.Command.Handler
 
             var Category = await CategoryRepository.Store(request.Name,request.Description
                 ,request.Meta_Title,request.Rank,request.Meta_Description
-                ,request.ParentId,request.Tags,request.Images);
+                ,request.ParentId,request.Images);
             return Success(Category, "the category was added successfully");
         }
 
@@ -42,7 +42,7 @@ namespace ecommerce.superadmin.Category.Command.Handler
 
             var Category = await CategoryRepository.Update(request.Id, request.Name,
                 request.Description, request.Meta_Title, request.Rank,
-                request.Meta_Description, request.ParentId, request.Tags, 
+                request.Meta_Description, request.ParentId, 
                 request.Images, request.DeletedImages);
             return Success(Category, "the category was updated successfully");
 

@@ -44,10 +44,7 @@ namespace ecommerce.superadmin.Category.Command.Validation
             RuleFor(x => x.ParentId)
                 .Must(parentid=>CategoryRepository.IsExists(parentid));
             
-            RuleForEach(x => x.Tags)
-                .NotEmpty()
-                .NotNull();
-
+            
             RuleForEach(x => x.Images)
                 .NotNull()
                 .NotEmpty()

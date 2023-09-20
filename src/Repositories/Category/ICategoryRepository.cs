@@ -25,9 +25,9 @@ namespace Repositories.Category
         public bool IsExists(Guid ?Id);
 
 
-        public Task<AddCategoryResponse> Store(string Name,string Description,string Meta_Title, int rank,string Meta_Description,Guid? ParentId,List<string> Tag,List<string>Images);
+        public Task<AddCategoryResponse> Store(string Name,string Description,string Meta_Title, int rank,string Meta_Description,Guid? ParentId,List<string>Images);
 
-        public Task<AddCategoryResponse> Update(Guid Id,string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Tag, List<string> Images, List<string> deletedImages);
+        public Task<AddCategoryResponse> Update(Guid Id,string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Images, List<string> deletedImages);
         
         public List<GetAllCategoryResponse> GetCategories();
 

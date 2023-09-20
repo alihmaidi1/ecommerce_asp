@@ -24,7 +24,6 @@ namespace ecommerce.Dto.Results.Admin.Category
         public string? Meta_Description { get; set; }
 
         public virtual List<ImageResponse> Images { get; set; }
-        public List<string> Tags { get; set; }
         
 
 

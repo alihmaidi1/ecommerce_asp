@@ -557,6 +557,31 @@ namespace ecommerce.infrutructure.Migrations
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Hash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resized")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Image");
+
+                    b.UseTptMappingStrategy();
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Page", b =>
                 {
                     b.Property<Guid>("Id")
@@ -952,6 +977,30 @@ namespace ecommerce.infrutructure.Migrations
                     b.HasDiscriminator().HasValue("User");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.ImageCategory", b =>
+                {
+                    b.HasBaseType("ecommerce.Domain.Entities.Image");
+
+                    b.Property<Guid?>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ImageCategory");
+                });
+
+            modelBuilder.Entity("ecommerce.Domain.Entities.ImageProduct", b =>
+                {
+                    b.HasBaseType("ecommerce.Domain.Entities.Image");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ImageProduct");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Identity.Account", null)
@@ -1005,61 +1054,7 @@ namespace ecommerce.infrutructure.Migrations
                         .HasForeignKey("ParentId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.OwnsMany("ecommerce.Domain.Entities.Image", "Images", b1 =>
-                        {
-                            b1.Property<Guid>("CategoryId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<Guid>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<string>("Hash")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("Resized")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("Url")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.HasKey("CategoryId", "Id");
-
-                            b1.ToTable("Categories_Images");
-
-                            b1.WithOwner()
-                                .HasForeignKey("CategoryId");
-                        });
-
-                    b.OwnsMany("ecommerce.Domain.Entities.Tag", "Tags", b1 =>
-                        {
-                            b1.Property<Guid>("CategoryId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<Guid>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<string>("Name")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.HasKey("CategoryId", "Id");
-
-                            b1.ToTable("Categories_Tags");
-
-                            b1.WithOwner()
-                                .HasForeignKey("CategoryId");
-                        });
-
-                    b.Navigation("Images");
-
                     b.Navigation("Parent");
-
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.City", b =>
@@ -1126,65 +1121,11 @@ namespace ecommerce.infrutructure.Migrations
                         .HasForeignKey("CoponId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.OwnsMany("ecommerce.Domain.Entities.Image", "Images", b1 =>
-                        {
-                            b1.Property<Guid>("ProductId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<Guid>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<string>("Hash")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("Resized")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("Url")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.HasKey("ProductId", "Id");
-
-                            b1.ToTable("Products_Images");
-
-                            b1.WithOwner()
-                                .HasForeignKey("ProductId");
-                        });
-
-                    b.OwnsMany("ecommerce.Domain.Entities.Tag", "Tags", b1 =>
-                        {
-                            b1.Property<Guid>("ProductId")
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<Guid>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("uniqueidentifier");
-
-                            b1.Property<string>("Name")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.HasKey("ProductId", "Id");
-
-                            b1.ToTable("Products_Tags");
-
-                            b1.WithOwner()
-                                .HasForeignKey("ProductId");
-                        });
-
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("Copon");
-
-                    b.Navigation("Images");
-
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.ProductProperty", b =>
@@ -1253,6 +1194,38 @@ namespace ecommerce.infrutructure.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("ecommerce.Domain.Entities.ImageCategory", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Entities.Category", "Category")
+                        .WithMany("Images")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ecommerce.Domain.Entities.Image", null)
+                        .WithOne()
+                        .HasForeignKey("ecommerce.Domain.Entities.ImageCategory", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("ecommerce.Domain.Entities.ImageProduct", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Entities.Image", null)
+                        .WithOne()
+                        .HasForeignKey("ecommerce.Domain.Entities.ImageProduct", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Domain.Entities.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -1261,6 +1234,8 @@ namespace ecommerce.infrutructure.Migrations
             modelBuilder.Entity("ecommerce.Domain.Entities.Category", b =>
                 {
                     b.Navigation("Child");
+
+                    b.Navigation("Images");
 
                     b.Navigation("Products");
                 });
@@ -1287,6 +1262,8 @@ namespace ecommerce.infrutructure.Migrations
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Product", b =>
                 {
+                    b.Navigation("Images");
+
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618

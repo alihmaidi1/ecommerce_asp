@@ -139,6 +139,20 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Image",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resized = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Hash = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Image", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Pages",
                 columns: table => new
                 {
@@ -219,53 +233,22 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categories_Images",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Resized = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories_Images", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Categories_Images_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Categories_Tags",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories_Tags", x => x.Id);
+                    table.PrimaryKey("PK_Categories_Tags", x => new { x.CategoryId, x.Id });
                     table.ForeignKey(
                         name: "FK_Categories_Tags_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -344,6 +327,54 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ImageCategory",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ImageCategory", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ImageCategory_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ImageCategory_Image_Id",
+                        column: x => x.Id,
+                        principalTable: "Image",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ImageProduct",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ImageProduct", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ImageProduct_Image_Id",
+                        column: x => x.Id,
+                        principalTable: "Image",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ImageProduct_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductProperties",
                 columns: table => new
                 {
@@ -374,49 +405,16 @@ namespace ecommerce.infrutructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Products_Images",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Resized = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Hash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products_Images", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Images_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Products_Tags",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DateUpdated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products_Tags", x => x.Id);
+                    table.PrimaryKey("PK_Products_Tags", x => new { x.ProductId, x.Id });
                     table.ForeignKey(
                         name: "FK_Products_Tags_Products_ProductId",
                         column: x => x.ProductId,
@@ -738,16 +736,6 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Categories_Images_CategoryId",
-                table: "Categories_Images",
-                column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Categories_Tags_CategoryId",
-                table: "Categories_Tags",
-                column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Cities_CountryId",
                 table: "Cities",
                 column: "CountryId");
@@ -777,6 +765,16 @@ namespace ecommerce.infrutructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_ImageCategory_CategoryId",
+                table: "ImageCategory",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ImageProduct_ProductId",
+                table: "ImageProduct",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductProperties_ProductId",
                 table: "ProductProperties",
                 column: "ProductId");
@@ -795,16 +793,6 @@ namespace ecommerce.infrutructure.Migrations
                 name: "IX_Products_CoponId",
                 table: "Products",
                 column: "CoponId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_Images_ProductId",
-                table: "Products_Images",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_Tags_ProductId",
-                table: "Products_Tags",
-                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Properties_Name",
@@ -856,22 +844,22 @@ namespace ecommerce.infrutructure.Migrations
                 name: "Carts");
 
             migrationBuilder.DropTable(
-                name: "Categories_Images");
-
-            migrationBuilder.DropTable(
                 name: "Categories_Tags");
 
             migrationBuilder.DropTable(
                 name: "Currencies");
 
             migrationBuilder.DropTable(
+                name: "ImageCategory");
+
+            migrationBuilder.DropTable(
+                name: "ImageProduct");
+
+            migrationBuilder.DropTable(
                 name: "Pages");
 
             migrationBuilder.DropTable(
                 name: "ProductProperties");
-
-            migrationBuilder.DropTable(
-                name: "Products_Images");
 
             migrationBuilder.DropTable(
                 name: "Products_Tags");
@@ -890,6 +878,9 @@ namespace ecommerce.infrutructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Image");
 
             migrationBuilder.DropTable(
                 name: "Properties");

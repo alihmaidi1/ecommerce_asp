@@ -14,8 +14,8 @@ namespace ecommerce.Domain.Entities
         {
             Child = new HashSet<Category>();
             Products= new HashSet<Product>();
-            Images = new HashSet<Image>();
-            Tags= new HashSet<Tag>();
+            Images = new HashSet<ImageCategory>();
+            
 
 
         }
@@ -30,9 +30,8 @@ namespace ecommerce.Domain.Entities
 
         public string? Meta_Description { get; set; }
 
-        public virtual ICollection<Image> Images { get; set; }
-        public ICollection<Tag> Tags { get; set; }
-
+        public virtual ICollection<ImageCategory> Images { get; set; }
+        
 
         public virtual ICollection<Product> Products { get; set; }
         

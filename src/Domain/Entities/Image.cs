@@ -11,12 +11,29 @@ namespace ecommerce.Domain.Entities
     {
 
         public Guid Id { get; set; }
-
         public string Url { get; set; }
         public string Resized { get; set; }
         public string Hash { get; set; }
 
 
+    }
+
+
+    public class ImageCategory : Image
+    {
+
+        public virtual Category? Category { get; set; }
+
 
     }
+
+
+    public class ImageProduct: Image
+    {
+
+        public virtual Product? Product { get; set; }
+
+
+    }
+
 }

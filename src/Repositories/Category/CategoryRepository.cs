@@ -75,7 +75,7 @@ namespace Repositories.Category
 
 
 
-        public async Task<AddCategoryResponse> Store(string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Tag, List<string> Images)
+        public async Task<AddCategoryResponse> Store(string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Images)
         {
 
 
@@ -88,14 +88,10 @@ namespace Repositories.Category
                 Rank= rank,
                 ParentId=ParentId,                                
             };
-            Tag.ForEach(item =>
-            {
-                Category.Tags.Add(new Tag { Name=item});
-            });
             List<ImageResponse> images = await StorageService.OptimizeMany(Images, FolderName.Category);
             images.ForEach(item =>
             {
-                Category.Images.Add(new Image { Url=item.Url,Hash=item.hash,Resized=item.resized});
+                Category.Images.Add(new ImageCategory { Url=item.Url,Hash=item.hash,Resized=item.resized});
 
             });
             DbContext.Categories.Add(Category);            
@@ -105,14 +101,13 @@ namespace Repositories.Category
         }
 
 
-        public async Task<AddCategoryResponse> Update(Guid Id, string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Tag, List<string> Images, List<string> deletedImages)
+        public async Task<AddCategoryResponse> Update(Guid Id, string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId,  List<string> Images, List<string> deletedImages)
         {
 
 
 
             CategoryEntity Category = DbContext.
                 Categories.
-                Include(x=>x.Tags).
                 Include(x=>x.Images).
                 First(x=>x.Id==Id);
 
@@ -123,13 +118,9 @@ namespace Repositories.Category
             Category.Meta_Description = Meta_Description;
             Category.Rank = rank;
             Category.ParentId = ParentId;
-            Category.Tags.Clear();
 
-            Tag.ForEach(item =>
-            {
-                Category.Tags.Add(new Tag { Name = item });
-            });
-            List<Image> oldImages= new List<Image>();
+
+            List<ImageCategory> oldImages= new List<ImageCategory>();
             Category.Images.ToList().ForEach(item =>
             {
 
@@ -146,7 +137,7 @@ namespace Repositories.Category
             List<ImageResponse> images = await StorageService.OptimizeMany(Images, FolderName.Category);
             images.ForEach(item =>
             {
-                Category.Images.Add(new Image { Url = item.Url, Hash = item.hash, Resized = item.resized });
+                Category.Images.Add(new ImageCategory { Url = item.Url, Hash = item.hash, Resized = item.resized });
 
             });
             oldImages.ForEach(item =>

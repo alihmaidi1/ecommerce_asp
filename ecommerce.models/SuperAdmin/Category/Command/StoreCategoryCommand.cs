@@ -23,7 +23,6 @@ namespace ecommerce.models.SuperAdmin.Category.Command
         public string? Meta_Description { get; set; }
 
         public  List<string> Images { get; set; }
-        public List<string> Tags { get; set; }
 
         public Guid ?ParentId { get; set; }
 

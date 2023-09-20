@@ -15,18 +15,17 @@ public class Product: BaseEntity
         {
             
             Properties=new HashSet<Property>();
-            Images= new HashSet<Image>();
+            Images= new HashSet<ImageProduct>();
             Reviews=new HashSet<Review>();
 
 
         }
 
-        public ICollection<Tag> Tags { get; set; }
 
         public string Name { get; set; }
         public string Title { get; set; }
 
-        public virtual ICollection<Image> Images { get; set; }
+        public virtual ICollection<ImageProduct> Images { get; set; }
 
         
         public string Description { get; set; }

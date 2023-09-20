@@ -20,11 +20,21 @@ namespace ecommerce.infrutructure.Seed
             if (!context.Cities.Any())
             {
 
+
                 ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
                 List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
                 List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
-                context.AddRange(data); ;                
-                context.SaveChanges();
+                
+
+
+                data.Chunk(50).ToList().ForEach(city =>
+                {
+                    context.AddRange(city);
+                    context.SaveChanges();
+                
+                });
+                
+
 
             }
 

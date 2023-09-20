@@ -90,13 +90,13 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
 
-        //[HttpDelete(CategoryRouter.Delete)]
-        //public async Task<IActionResult> Delete([FromRoute] Guid id)
-        //{
+        [HttpDelete(CategoryRouter.Delete)]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        {
 
-        //    var response = await Mediator.Send(new DeleteCategoryCommand { Id=id});
-        //    return response;
-        //}
+            var response = await Mediator.Send(new DeleteCategoryCommand { Id = id });
+            return response;
+        }
 
     }
 }
