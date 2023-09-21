@@ -12,6 +12,10 @@ namespace ecommerce.Domain.AppMetaData.Admin
         public const string List = prefix + "/list";
 
         public const string Get = prefix + "/{id:guid}/get";
+        public const string Active = prefix + "/{id:guid}/active";
+        public const string UnActive = prefix + "/{id:guid}/unactive";
+
+
 
     }
 }

@@ -355,9 +355,9 @@ namespace Repositories.Category
 
         public bool Delete(Guid Id)
         {
-
             DbContext.Categories.Where(x => x.Id == Id).ExecuteDelete();
             return true;
+
 
 
         }

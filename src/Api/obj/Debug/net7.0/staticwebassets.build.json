@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SUkQSe5RNx2Wwt8ox4RMwXwKDvidK/06BwFgGbgdFw4=",
+  "Hash": "rqxFiv8rybIjTsHAUeKrYpgOi4L8pK2hT3bRwkZyNoo=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -1970,6 +1970,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Temp\\f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png"
+    },
+    {
+      "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\f9eee753-ff9f-4a93-ad37-aa4652c1b614Screenshot (3).png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/f9eee753-ff9f-4a93-ad37-aa4652c1b614Screenshot (3).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Temp\\f9eee753-ff9f-4a93-ad37-aa4652c1b614Screenshot (3).png"
     },
     {
       "Identity": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Api\\wwwroot\\Temp\\fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png",

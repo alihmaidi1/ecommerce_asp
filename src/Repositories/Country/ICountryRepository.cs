@@ -20,6 +20,12 @@ namespace Repositories.Country
         public GetCountryResponse GetCountry(Guid id);
         public bool IsExists(Guid Id);
 
+        public bool Active(Guid Id);
+
+
+        public bool UnActive(Guid Id);
+        
+
 
     }
 }

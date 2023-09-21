@@ -4,6 +4,7 @@ using ecommerce.Domain.Enum;
 using ecommerce.Dto.Results.Admin.Role;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Nest;
 
 namespace ecommerce.infrutructure.ExtensionMethod
 {
@@ -84,5 +85,18 @@ namespace ecommerce.infrutructure.ExtensionMethod
             return roles.ToList();
 
         }
+
+
+        public static bool Toggle(this ApplicationDbContext Context,string EntityName,string EntityValue,Guid Id) 
+        {
+
+
+            
+
+            var query = $"UPDATE {EntityName} SET {EntityValue} = ~{EntityValue} WHERE Id = {Id}";
+            Context.Database.ExecuteSqlRaw(query);
+            return true;
+        }
+
     }
 }

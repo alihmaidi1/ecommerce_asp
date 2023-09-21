@@ -3,6 +3,7 @@ using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.Attributes;
 using ecommerce.Domain.Enum;
+using ecommerce.models.SuperAdmin.Country;
 using ecommerce_shared.Swagger;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,5 +37,24 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
 
+        [HttpPut(CountryRouter.Active)]
+        public async Task<IActionResult> Active([FromRoute] Guid id)
+        {
+
+            var response = await Mediator.Send(new ActiveCountryCommand { Id = id });
+            return response;
+
+        }
+
+
+
+        [HttpPut(CountryRouter.UnActive)]
+        public async Task<IActionResult> UnActive([FromRoute] Guid id)
+        {
+
+            var response = await Mediator.Send(new UnActiveCountryCommand { Id = id });
+            return response;
+
+        }
     }
 }
