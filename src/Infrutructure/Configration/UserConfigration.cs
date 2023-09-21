@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using tables.Entities;
 using ecommerce.Domain.Entities.Identity;
 
 namespace ecommerce.infrutructure.Configration

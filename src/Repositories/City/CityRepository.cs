@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ecommerce.infrutructure;
+using ecommerce.infrutructure.ExtensionMethod;
 
 namespace Repositories.City
 {
@@ -22,6 +23,17 @@ namespace Repositories.City
             return DbContext.Cities.Any(c => c.Id == id);
 
         }
+
+
+        public bool Toggle(Guid id)
+        {
+
+            DbContext.Toggle("Cities", "Status", id);
+            return true;
+
+
+        }
+
 
 
     }

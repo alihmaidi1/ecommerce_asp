@@ -118,13 +118,15 @@ namespace ecommerce_shared.File.S3
             using MemoryStream memoryStream = new MemoryStream();
             Filestream.CopyTo(memoryStream);
 
-            var reziedimage=await UploadToS3(resized.imagefile, resized.memorystream);
-            var uploadedfile = await UploadToS3(newpath, memoryStream);
+            var rezisedimage= UploadToS3(resized.imagefile, resized.memorystream);
+            var uploadedfile =  UploadToS3(newpath, memoryStream);
+            var result= await Task.WhenAll(rezisedimage, uploadedfile);
+            List<string> images = result.ToList();
             return new ImageResponse
             {
-                Url=uploadedfile,
+                Url=result.First(),
                 hash=hash,
-                resized=reziedimage
+                resized=result.Last()
                 
             };
         }

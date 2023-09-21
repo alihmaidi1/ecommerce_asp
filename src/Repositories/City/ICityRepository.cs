@@ -13,5 +13,7 @@ namespace Repositories.City
 
         public bool IsCityIdExists(Guid id);
 
+        public bool Toggle(Guid id);    
+
     }
 }

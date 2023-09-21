@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace tables.Entities;
+namespace ecommerce.Domain.Entities;
 
     public class Currency : BaseEntity
     {
         public string Code { get; set; }    
         public string Name { get; set; }
-        public string Status { get; set; }
+        public bool Status { get; set; }
 
     }
 

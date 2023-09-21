@@ -93,7 +93,7 @@ namespace ecommerce.infrutructure.ExtensionMethod
 
             
 
-            var query = $"UPDATE {EntityName} SET {EntityValue} = ~{EntityValue} WHERE Id = {Id}";
+            var query = $"UPDATE {EntityName} SET {EntityValue} = ~{EntityValue} WHERE Id = '{Id}'";
             Context.Database.ExecuteSqlRaw(query);
             return true;
         }
