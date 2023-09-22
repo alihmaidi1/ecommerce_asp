@@ -1,4 +1,5 @@
 ﻿
+using ecommerce.Domain.Entities.Currency;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,7 +13,7 @@ namespace ecommerce.models.SuperAdmin.Currency
     public class ToggleCurrencyCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CurrencyId Id { get; set; }
 
     }
 }

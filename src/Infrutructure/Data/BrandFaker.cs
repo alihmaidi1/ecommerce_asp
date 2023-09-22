@@ -1,5 +1,5 @@
 ﻿using Bogus;
-using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Brand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace ecommerce.infrutructure.Data
         {
 
             var Brand = new Faker<Brand>();
-            Brand.RuleFor(x => x.Id, Guid.NewGuid);
+            Brand.RuleFor(x => x.Id, new BrandId(Guid.NewGuid()));
             Brand.RuleFor(x => x.Name, x => x.Company.CompanyName());
             Brand.RuleFor(x => x.Url, x => x.Image.PicsumUrl());
             Brand.RuleFor(x => x.ResizedUrl, x => x.Image.PicsumUrl());

@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Property;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,6 +13,13 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Property> builder)
         {
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id)
+                .HasConversion(PropertyId => PropertyId.Value, Value => new PropertyId(Value)); ;
+
+
             builder.HasIndex(p=>p.Name).IsUnique();
         }
     }

@@ -11,7 +11,7 @@ namespace ecommerce.Domain.Base.Entity
 {
     public class BaseEntityWithoutId:IBaseEntity
     {
-        public DateTime DateCreated { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
         public DateTime? DateDeleted { get; set; }
         public DateTime? DateUpdated { get; set; }
         public Guid? CreatedBy { get; set; }

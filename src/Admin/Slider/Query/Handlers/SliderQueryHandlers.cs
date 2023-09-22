@@ -22,11 +22,12 @@ namespace ecommerce.superadmin.Slider.Query.Handlers
         public ISliderRepository SliderRepository;
 
 
-        public SliderQueryHandlers(ISliderRepository SliderRepository) { 
-        
+        public SliderQueryHandlers(ISliderRepository SliderRepository)
+        {
+
 
             this.SliderRepository = SliderRepository;
-        
+
         }
 
 
@@ -35,7 +36,7 @@ namespace ecommerce.superadmin.Slider.Query.Handlers
             var Sliders = SliderRepository.GetAll();
 
 
-            return Success(Sliders,"this is all your sliders");
+            return Success(Sliders, "this is all your sliders");
 
         }
 
@@ -43,7 +44,7 @@ namespace ecommerce.superadmin.Slider.Query.Handlers
         {
 
             var Slider = SliderRepository.Get(request.Id);
-            return Success(Slider,"this is the slider");
+            return Success(Slider, "this is the slider");
 
 
         }

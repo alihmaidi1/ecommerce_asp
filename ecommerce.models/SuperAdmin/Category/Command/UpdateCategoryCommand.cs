@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Category;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
     public class UpdateCategoryCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CategoryId Id { get; set; }
 
         public string Name { get; set; }
 
@@ -27,7 +28,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
         public List<string> DeletedImages { get; set; }
 
 
-        public Guid? ParentId { get; set; }
+        public CategoryId? ParentId { get; set; }
 
     }
 }

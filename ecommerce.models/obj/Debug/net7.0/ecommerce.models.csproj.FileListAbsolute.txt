@@ -22,3 +22,10 @@ C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\ne
 C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\refint\ecommerce.models.dll
 C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.pdb
 C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ref\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.Domain.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.Domain.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ar\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\en\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CopyComplete

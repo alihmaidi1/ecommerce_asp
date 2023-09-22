@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Brand;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Brand.Commands
     public class UpdateBrandCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public BrandId Id { get; set; }
 
         public string Name { get; set; }
 

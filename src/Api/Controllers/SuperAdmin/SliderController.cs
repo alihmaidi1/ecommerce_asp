@@ -3,6 +3,7 @@ using ecommerce.Base;
 using ecommerce.Domain.AppMetaData.Admin;
 using ecommerce.Domain.AppMetaData.SuperAdmin;
 using ecommerce.Domain.Attributes;
+using ecommerce.Domain.Base.ValueObject;
 using ecommerce.Domain.Enum;
 using ecommerce.models.SuperAdmin.Slider.Command;
 using ecommerce.models.SuperAdmin.Slider.Query;
@@ -14,7 +15,7 @@ namespace ecommerce.Controllers.SuperAdmin
     [AppAuthorize(RoleEnum.SuperAdmin)]
     [ApiGroup(ApiGroupName.SuperAdmin)]
 
-    public class SliderController: ApiController
+    public class SliderController : ApiController
     {
 
         [HttpPost(SliderRouter.Store)]
@@ -37,7 +38,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPut(SliderRouter.Update)]
-        public async Task<IActionResult> Update([FromBody]UpdateSliderCommand request)
+        public async Task<IActionResult> Update([FromBody] UpdateSliderCommand request)
         {
             var response = await this.Mediator.Send(request);
             return response;
@@ -47,18 +48,18 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpDelete(SliderRouter.Delete)]
-        public async Task<IActionResult> Delete([FromRoute]Guid id)
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
-            var response = await this.Mediator.Send(new DeleteSliderCommand { Id=id});
+            var response = await this.Mediator.Send(new DeleteSliderCommand { Id = id });
             return response;
 
         }
 
 
         [HttpPost(SliderRouter.Get)]
-        public async Task<IActionResult> Get([FromRoute]Guid id)
+        public async Task<IActionResult> Get([FromRoute] Guid id)
         {
-            var response = await this.Mediator.Send(new GetSliderQuery { Id=id});
+            var response = await this.Mediator.Send(new GetSliderQuery { Id = id });
             return response;
 
         }

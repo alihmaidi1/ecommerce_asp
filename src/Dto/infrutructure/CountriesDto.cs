@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Country;
 
 namespace ecommerce.Dto
 {

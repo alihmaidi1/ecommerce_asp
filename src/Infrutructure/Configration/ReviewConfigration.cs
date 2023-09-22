@@ -1,6 +1,7 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Review;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ecommerce.Domain.Entities.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace ecommerce.infrutructure.Configration
 
             builder.HasKey(r => new { r.ProductId,r.UserId });
 
+            builder.Property(x=>x.ProductId)
+                .HasConversion(ProductId=>ProductId.Value,Value=>new ProductId(Value));
         }
     }
 }

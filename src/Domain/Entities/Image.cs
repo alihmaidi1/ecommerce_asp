@@ -1,9 +1,11 @@
-﻿using System;
+﻿using CategoryEntity=ecommerce.Domain.Entities.Category.Category;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
+using ProductEntity=ecommerce.Domain.Entities.Product.Product;
 
 namespace ecommerce.Domain.Entities
 {
@@ -22,7 +24,7 @@ namespace ecommerce.Domain.Entities
     public class ImageCategory : Image
     {
 
-        public virtual Category? Category { get; set; }
+        public virtual CategoryEntity? Category { get; set; }
 
 
     }
@@ -31,7 +33,7 @@ namespace ecommerce.Domain.Entities
     public class ImageProduct: Image
     {
 
-        public virtual Product? Product { get; set; }
+        public virtual ProductEntity? Product { get; set; }
 
 
     }

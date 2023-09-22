@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Slider.Command.Validations
 {
-    public class DeleteSliderCommandValidation:AbstractValidator<DeleteSliderCommand>
+    public class DeleteSliderCommandValidation : AbstractValidator<DeleteSliderCommand>
     {
 
-        public DeleteSliderCommandValidation(ISliderRepository SliderRepository) {
+        public DeleteSliderCommandValidation(ISliderRepository SliderRepository)
+        {
 
             RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> SliderRepository.IsExists(x));
-        
+                .Must(x => SliderRepository.IsExists(x));
+
         }
 
     }

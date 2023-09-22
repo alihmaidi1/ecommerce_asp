@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.City;
+using ecommerce.Domain.Entities.Country;
 using ecommerce.Dto;
 using ecommerce.infrutructure.Services.Interfaces;
 using EFCore.BulkExtensions;
@@ -17,26 +18,26 @@ namespace ecommerce.infrutructure.Seed
         {
 
 
-            if (!context.Cities.Any())
-            {
+            //if (!context.Cities.Any())
+            //{
 
 
-                ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
-                List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
-                List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
+            //    ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
+            //    List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
+            //    List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
                 
 
 
-                data.Chunk(50).ToList().ForEach(city =>
-                {
-                    context.AddRange(city);
-                    context.SaveChanges();
+            //    data.Chunk(50).ToList().ForEach(city =>
+            //    {
+            //        context.AddRange(city);
+            //        context.SaveChanges();
                 
-                });
+            //    });
                 
 
 
-            }
+            //}
 
 
         }

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Brand;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace ecommerce.models.SuperAdmin.Brand.Commands
 
         public DeletebrandCommand(Guid id)
         {
-            Id = id;
+            Id = new BrandId(id);
         }
 
-        public Guid Id { get; set; }
+        public BrandId Id { get; set; }
     }
 }

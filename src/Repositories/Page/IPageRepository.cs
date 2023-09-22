@@ -1,8 +1,7 @@
-﻿using ecommerce.Domain.Entities;
-namespace ecommerce.Repository.Page
-{
-    public interface IPageRepository : Repositories.Base.IgenericRepository<ecommerce.Domain.Entities.Page>
-    {
+﻿//namespace ecommerce.Repository.Page
+//{
+//    public interface IPageRepository : Repositories.Base.IgenericRepository<Domain.Entities.Page.Page>
+//    {
 
-    }
-}
+//    }
+//}

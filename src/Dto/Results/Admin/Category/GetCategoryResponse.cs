@@ -1,4 +1,5 @@
-﻿using ecommerce_shared.File;
+﻿using ecommerce.Domain.Entities.Category;
+using ecommerce_shared.File;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ecommerce.Dto.Results.Admin.Category
 {
     public class GetCategoryResponse
     {
-        public Guid Id { get; set; }
+        public CategoryId Id { get; set; }
         public string Name { get; set; }
 
         public string Description { get; set; }

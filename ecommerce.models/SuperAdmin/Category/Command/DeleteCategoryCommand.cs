@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Category;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
     public class DeleteCategoryCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CategoryId Id { get; set; }
 
 
     }

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Category;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
 
         public  List<string> Images { get; set; }
 
-        public Guid ?ParentId { get; set; }
+        public CategoryId ?ParentId { get; set; }
 
 
     }

@@ -9,15 +9,12 @@
   <ItemGroup>
     <Compile Remove="Authorization\**" />
     <Compile Remove="Base\Abstract\**" />
-    <Compile Remove="Base\ValueObject\**" />
     <Compile Remove="ValuesObject\**" />
     <EmbeddedResource Remove="Authorization\**" />
     <EmbeddedResource Remove="Base\Abstract\**" />
-    <EmbeddedResource Remove="Base\ValueObject\**" />
     <EmbeddedResource Remove="ValuesObject\**" />
     <None Remove="Authorization\**" />
     <None Remove="Base\Abstract\**" />
-    <None Remove="Base\ValueObject\**" />
     <None Remove="ValuesObject\**" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base.Entity;
+using ecommerce.Domain.Base.ValueObject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,27 +10,10 @@ using System.Threading.Tasks;
 
 namespace tables.Base.Entity
 {
-    public class BaseEntity : BaseEntityWithoutId
+    public class BaseEntity<TKey> : BaseEntityWithoutId  where TKey : StronglyTypeId
     {
 
-        [Key]
-        public Guid Id { get; set; }
-
-
-        public BaseEntity() { 
-        
-            Id = Guid.NewGuid();
-        }
-
-        public override bool Equals(object? obj)
-        {
-            return true;
-            if(obj == null) return false;
-
-            BaseEntity other = obj as BaseEntity;   
-            if(ReferenceEquals(this, obj)) return true;
-            return this.Id == other.Id;
-        }
+        public TKey Id { get; set; }
 
     }
 }

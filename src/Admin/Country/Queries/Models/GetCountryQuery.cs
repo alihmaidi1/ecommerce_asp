@@ -1,4 +1,5 @@
 ﻿using Amazon.Runtime.Internal;
+using ecommerce.Domain.Entities.Country;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,7 +13,7 @@ namespace ecommerce.admin.Country.Queries.Models
     public class GetCountryQuery : IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CountryId Id { get; set; }
 
 
     }

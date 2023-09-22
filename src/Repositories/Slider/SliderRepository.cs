@@ -1,4 +1,4 @@
-﻿using SliderEntity=ecommerce.Domain.Entities.Slider;
+﻿using SliderEntity = ecommerce.Domain.Entities.Slider.Slider;
 using Repositories.Base.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,14 +12,14 @@ using ecommerce_shared.File;
 using Repositories.Slider.Operations;
 using ecommerce.Dto.Results.Admin;
 using Microsoft.AspNetCore.Hosting;
-using ecommerce.Domain.Entities;
 using ecommerce_shared.Enums;
 using Nest;
 using ecommerce.Domain.ElasticSearch;
+using ecommerce.Domain.Entities.Slider;
 
 namespace Repositories.Slider
 {
-    public class SliderRepository : GenericRepository<SliderEntity> ,ISliderRepository
+    public class SliderRepository : GenericRepository<SliderEntity>, ISliderRepository
     {
 
         public IStorageService StorageService;
@@ -28,11 +28,11 @@ namespace Repositories.Slider
 
         public IWebHostEnvironment WebHostEnvironment;
 
-        public SliderRepository(IElasticClient ElasticClient,IWebHostEnvironment WebHostEnvironment,ApplicationDbContext DbContext, IStorageService StorageService) : base(DbContext)
+        public SliderRepository(IElasticClient ElasticClient, IWebHostEnvironment WebHostEnvironment, ApplicationDbContext DbContext, IStorageService StorageService) : base(DbContext)
         {
             this.WebHostEnvironment = WebHostEnvironment;
             this.StorageService = StorageService;
-            this.ElasticClient = ElasticClient; 
+            this.ElasticClient = ElasticClient;
 
         }
 
@@ -61,7 +61,7 @@ namespace Repositories.Slider
 
 
             }
-            
+
 
 
 
@@ -77,15 +77,15 @@ namespace Repositories.Slider
         }
 
 
-        public bool IsExists(Guid Id)
+        public bool IsExists(SliderId Id)
         {
 
 
-            return DbContext.Sliders.Any(x=>x.Id==Id);
+            return DbContext.Sliders.Any(x => x.Id == Id);
 
         }
 
-        public AddSliderResponse Get(Guid id)
+        public AddSliderResponse Get(SliderId id)
         {
 
             return DbContext.Sliders
@@ -94,16 +94,16 @@ namespace Repositories.Slider
 
         }
 
-        public bool IsUniqueRank(Guid Id, int Rank)
+        public bool IsUniqueRank(SliderId Id, int Rank)
         {
 
-            return !DbContext.Sliders.Any(x=>x.Id!=Id&&x.Rank==Rank);
+            return !DbContext.Sliders.Any(x => x.Id != Id && x.Rank == Rank);
 
         }
 
 
 
-        public bool IsValidLogo(Guid Id, string logo)
+        public bool IsValidLogo(SliderId Id, string logo)
         {
 
             if (FileExtensionLocal.IsImageExists(logo, WebHostEnvironment.WebRootPath))
@@ -132,9 +132,9 @@ namespace Repositories.Slider
         }
 
 
-        public async Task<AddSliderResponse> Update(Guid id, string url, int rank)
+        public async Task<AddSliderResponse> Update(SliderId id, string url, int rank)
         {
-            SliderEntity DBSlider= DbContext.Sliders.FirstOrDefault(b => b.Id ==id);
+            SliderEntity DBSlider = DbContext.Sliders.FirstOrDefault(b => b.Id == id);
             if (url == DBSlider.Url)
             {
 
@@ -144,14 +144,14 @@ namespace Repositories.Slider
             else
             {
                 ImageResponse image = await StorageService.OptimizeFile(url, FolderName.Slider);
-                DBSlider.Rank= rank;
+                DBSlider.Rank = rank;
                 DBSlider.Url = image.Url;
                 DBSlider.ResizedUrl = image.resized;
                 DBSlider.Hash = image.hash;
                 DbContext.SaveChanges();
 
             }
-            ElasticClient.Update<SliderEntity>(DBSlider, ElasticSearchIndexName.slider);
+            //ElasticClient.Update<SliderEntity>(DBSlider, ElasticSearchIndexName.slider);
             return SliderStoreQuery.ToSliderResponse.Compile()(DBSlider);
 
 
@@ -160,11 +160,11 @@ namespace Repositories.Slider
         }
 
 
-        public bool Delete(Guid id)
+        public bool Delete(SliderId id)
         {
-            var slider= new SliderEntity { Id = id };
+            var slider = new SliderEntity { Id = id };
             DbContext.Sliders.Remove(slider);
-            ElasticClient.Delete(slider, ElasticSearchIndexName.slider);
+            //ElasticClient.Delete(slider, ElasticSearchIndexName.slider);
             return true;
         }
 
