@@ -12,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Slider.Query
     public class GetSliderQuery:IRequest<JsonResult>
     {
 
-        public SliderId Id { get; set; }
+        public Guid Id { get; set; }
 
     }
 }

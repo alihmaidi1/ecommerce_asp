@@ -1,4 +1,6 @@
 ﻿using ecommerce.Domain.Base.ValueObject;
+using ecommerce.Domain.Entities.Slider;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,13 @@ namespace ecommerce.Domain.Entities.Brand
         {
 
 
-
+        
 
         }
+
+        public static implicit operator Guid(BrandId StronglyId) => StronglyId.Value;
+        public static implicit operator BrandId(Guid value) => new BrandId(value);
+
+        
     }
 }

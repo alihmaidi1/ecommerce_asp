@@ -49,7 +49,7 @@ namespace Repositories.Slider
                 Slider.Hash = image.hash;
                 DbContext.Sliders.Add(Slider);
                 DbContext.SaveChanges();
-                ElasticClient.AddEntity(Slider, ElasticSearchIndexName.slider);
+                //ElasticClient.AddEntity(Slider, ElasticSearchIndexName.slider);
                 return Slider;
 
 
@@ -164,6 +164,7 @@ namespace Repositories.Slider
         {
             var slider = new SliderEntity { Id = id };
             DbContext.Sliders.Remove(slider);
+            DbContext.SaveChanges();
             //ElasticClient.Delete(slider, ElasticSearchIndexName.slider);
             return true;
         }

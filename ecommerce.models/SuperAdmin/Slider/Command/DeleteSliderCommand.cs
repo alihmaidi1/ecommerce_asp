@@ -13,7 +13,7 @@ namespace ecommerce.models.SuperAdmin.Slider.Command
     {
 
 
-        public SliderId Id { get; set; }
+        public Guid Id { get; set; }
 
 
     }

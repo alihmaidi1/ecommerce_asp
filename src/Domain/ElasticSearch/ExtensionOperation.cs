@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base.ValueObject;
+using ecommerce.Domain.Entities.Brand;
 using ecommerce_shared.Enums;
 using ecommerce_shared.Exceptions;
 using Nest;
@@ -28,7 +29,7 @@ namespace ecommerce.Domain.ElasticSearch
 
         }
 
-        public static void Update<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity<StronglyTypeId>
+        public static void UpdateEntity<T,Y>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where Y : StronglyTypeId where T : BaseEntity<Y>
         {
 
 
@@ -43,10 +44,10 @@ namespace ecommerce.Domain.ElasticSearch
         }
 
 
-        public static void Delete<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity<StronglyTypeId>
+        public static void DeleteEntity<T>(this IElasticClient ElasticClient, Guid entityId, ElasticSearchIndexName name) where T : class
         {
 
-            var Result = ElasticClient.Delete<T>(entity.Id.Value, d => d
+            var Result = ElasticClient.Delete<T>(entityId, d => d
             .Index(name.ToString())
             );
 

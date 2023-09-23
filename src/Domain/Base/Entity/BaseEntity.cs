@@ -1,5 +1,6 @@
 ﻿using ecommerce.Domain.Base.Entity;
 using ecommerce.Domain.Base.ValueObject;
+using ecommerce.Domain.Entities.Brand;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
