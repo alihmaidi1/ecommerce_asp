@@ -13,7 +13,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
     {
 
 
-        public CategoryId Id { get; set; }
+        public Guid Id { get; set; }
 
     }
 }

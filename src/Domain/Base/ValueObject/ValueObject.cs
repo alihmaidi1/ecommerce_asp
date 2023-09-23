@@ -6,37 +6,34 @@ using System.Threading.Tasks;
 
 namespace ecommerce.Domain.Base.ValueObject
 {
-    public abstract class ValueObject:IEquatable<ValueObject>
+    public abstract class ValueObject
     {
-        public  bool Equals(ValueObject? other)
-        {
-            if (other == null || other.GetType() != GetType())
-                return false;
 
-            var ValueObject = (ValueObject)other;
-            return GetValues().SequenceEqual(ValueObject.GetValues());
-            
+
+        protected static bool EqualOperator(ValueObject? left, ValueObject? right)
+        {
+            if (ReferenceEquals(left, objB: null) ^ ReferenceEquals(right, objB: null)) return false;
+
+            return ReferenceEquals(left, objB: null) || left.Equals(right);
         }
 
 
 
-        public static bool operator ==(ValueObject left,ValueObject right)
+
+
+        protected static bool NotEqualOperator(ValueObject left, ValueObject right)
         {
-
-
-            return left.Equals(right);  
+            return !(EqualOperator(left, right));
         }
 
-
-        public static bool operator !=(ValueObject left, ValueObject right)
+        public override bool Equals(object? obj)
         {
+            if (obj == null || obj.GetType() != GetType()) return false;
 
-            return !left.Equals(right);
+            var other = (ValueObject)obj;
 
+            return this.GetValues().SequenceEqual(other.GetValues());
         }
-
-        
-
 
         public abstract IEnumerable<object> GetValues();
 

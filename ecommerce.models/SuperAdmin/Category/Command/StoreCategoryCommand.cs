@@ -25,7 +25,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
 
         public  List<string> Images { get; set; }
 
-        public CategoryId ?ParentId { get; set; }
+        public Guid ?ParentId { get; set; }
 
 
     }

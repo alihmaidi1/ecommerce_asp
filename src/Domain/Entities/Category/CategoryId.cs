@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base.ValueObject;
+using ecommerce.Domain.Entities.Brand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,9 @@ namespace ecommerce.Domain.Entities.Category
         public CategoryId(Guid Value) : base(Value)
         {
         }
+
+        public static implicit operator Guid(CategoryId StronglyId) => StronglyId.Value;
+        public static implicit operator CategoryId(Guid value) => new CategoryId(value);
+
     }
 }

@@ -12,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
     public class UpdateCategoryCommand:IRequest<JsonResult>
     {
 
-        public CategoryId Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 
@@ -28,7 +28,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
         public List<string> DeletedImages { get; set; }
 
 
-        public CategoryId? ParentId { get; set; }
+        public Guid? ParentId { get; set; }
 
     }
 }

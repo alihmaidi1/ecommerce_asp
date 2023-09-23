@@ -12,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Category.Command
     public class DeleteCategoryCommand:IRequest<JsonResult>
     {
 
-        public CategoryId Id { get; set; }
+        public Guid Id { get; set; }
 
 
     }

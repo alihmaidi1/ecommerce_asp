@@ -12,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Category.Query
     public class GetCategoryQuery:IRequest<JsonResult>
     {
 
-        public CategoryId Id { get; set; }
+        public Guid Id { get; set; }
 
     }
 }
