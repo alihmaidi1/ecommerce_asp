@@ -30,7 +30,7 @@ namespace Repositories
             services.AddTransient<ISchemaFactory, SchemaFactory>();
             //services.AddTransient<IUserRepository, UserRepository>();   
             services.AddTransient<IAdminRepository, AdminRepository>();
-            //services.AddTransient<IBrandRepository, BrandRepository>();
+            services.AddTransient<IBrandRepository, BrandRepository>();
             //services.AddTransient<ICityRepository, CityRepository>();
             services.AddTransient<ISliderRepository, SliderRepository>();
             //services.AddTransient<ICategoryRepository, CategoryRepository>();

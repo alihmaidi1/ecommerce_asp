@@ -12,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Brand.Commands
     public class UpdateBrandCommand:IRequest<JsonResult>
     {
 
-        public BrandId Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

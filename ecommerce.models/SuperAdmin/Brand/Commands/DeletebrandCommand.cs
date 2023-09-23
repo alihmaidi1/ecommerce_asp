@@ -15,9 +15,9 @@ namespace ecommerce.models.SuperAdmin.Brand.Commands
 
         public DeletebrandCommand(Guid id)
         {
-            Id = new BrandId(id);
+            Id = id;
         }
 
-        public BrandId Id { get; set; }
+        public Guid Id { get; set; }
     }
 }
