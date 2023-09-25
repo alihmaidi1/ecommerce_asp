@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Dto.Results.User.City.Query;
 
 namespace Repositories.Country
 {
@@ -16,9 +17,15 @@ namespace Repositories.Country
 
         public List<GetAllCountriesDto> GetAllCountries();
         
+        public List<GetAllCountriesDto> GetAllActiveCountries();
+
+
+        public List<OnlyCityDto> GetActiveCities(Guid CountryId);
         
         public GetCountryResponse GetCountry(Guid id);
         public bool IsExists(Guid Id);
+
+        public bool IsActiveExists(Guid Id);
 
         public bool Active(Guid Id);
 

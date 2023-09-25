@@ -105,6 +105,7 @@ namespace ecommerce.infrutructure.Migrations
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lat = table.Column<double>(type: "float", nullable: false),
+                    lon = table.Column<double>(type: "float", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDeleted = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -247,7 +248,7 @@ namespace ecommerce.infrutructure.Migrations
                     Price = table.Column<float>(type: "real", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     MinQuantity = table.Column<int>(type: "int", nullable: false),
-                    SellingNumber = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
+                    SellingNumber = table.Column<int>(type: "int", nullable: false),
                     BrandId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CoponId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -351,8 +352,7 @@ namespace ecommerce.infrutructure.Migrations
                         name: "FK_ImageProduct_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -380,6 +380,30 @@ namespace ecommerce.infrutructure.Migrations
                     table.ForeignKey(
                         name: "FK_ProductProperties_Properties_PropertyId",
                         column: x => x.PropertyId,
+                        principalTable: "Properties",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductProperty",
+                columns: table => new
+                {
+                    ProductsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PropertiesId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductProperty", x => new { x.ProductsId, x.PropertiesId });
+                    table.ForeignKey(
+                        name: "FK_ProductProperty_Products_ProductsId",
+                        column: x => x.ProductsId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProductProperty_Properties_PropertiesId",
+                        column: x => x.PropertiesId,
                         principalTable: "Properties",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -742,6 +766,11 @@ namespace ecommerce.infrutructure.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductProperty_PropertiesId",
+                table: "ProductProperty",
+                column: "PropertiesId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Products_BrandId",
                 table: "Products",
                 column: "BrandId");
@@ -819,6 +848,9 @@ namespace ecommerce.infrutructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProductProperties");
+
+            migrationBuilder.DropTable(
+                name: "ProductProperty");
 
             migrationBuilder.DropTable(
                 name: "RefreshTokens");

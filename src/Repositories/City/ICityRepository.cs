@@ -11,6 +11,8 @@ namespace Repositories.City
     public interface ICityRepository:IgenericRepository<CityEntity>
     {
 
+        
+        
         public bool IsCityIdExists(Guid id);
 
         public bool Toggle(Guid id);    

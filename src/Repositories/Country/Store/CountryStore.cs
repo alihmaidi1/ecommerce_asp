@@ -23,6 +23,8 @@ namespace Repositories.Country.Store
                 Id = c.Id,
                 Code = c.Code,
                 lat = c.lat,
+                lon=c.lon,
+                
                 Name = c.Name,
                 Status = c.Status,
 

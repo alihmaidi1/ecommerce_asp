@@ -25,6 +25,7 @@ using Nest;
 using Repositories;
 using Repositories.Jwt;
 using System.Reflection;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,8 @@ builder.Services.AddControllers(option =>
 
 });
 
+builder.Services.AddHangfire(x => x.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHangfireServer();
 
 builder.Services.Configure<MailSetting>(builder.Configuration.GetSection("EmailConfiguration"));
 
@@ -171,8 +174,8 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 app.UseCors("Policy");
 
 
-
-    app.UseMiddleware<ErrorHandling>();
+app.UseHangfireDashboard("/hangfire/dashbaord");
+app.UseMiddleware<ErrorHandling>();
 
 
 
@@ -188,6 +191,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 
 using(var scope= app.Services.CreateScope()){
     
+
     
     await DatabaseSeed.InitializeAsync(scope.ServiceProvider);
 

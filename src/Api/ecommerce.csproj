@@ -10,10 +10,15 @@
 
   <ItemGroup>
     <Compile Remove="WeatherForecast.cs" />
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+    <Compile Remove="Controllers\User\CityController.cs" />
+
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ereno.linux-x64.eugeneereno.System.Drawing" Version="6.1.1.4" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Hangfire" Version="1.8.5" />
     <PackageReference Include="MediatR" Version="12.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />

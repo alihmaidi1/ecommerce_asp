@@ -9,12 +9,15 @@
   <ItemGroup>
     <Compile Remove="Repository\**" />
     <EmbeddedResource Remove="Repository\**" />
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <None Remove="Repository\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.7.203.1" />
     <PackageReference Include="Blurhash.ImageSharp" Version="3.0.0" />
+    <PackageReference Include="ereno.linux-x64.eugeneereno.System.Drawing" Version="6.1.1.4" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="LazZiya.ImageResize" Version="4.1.4" />
     <PackageReference Include="MailKit" Version="4.1.0" />

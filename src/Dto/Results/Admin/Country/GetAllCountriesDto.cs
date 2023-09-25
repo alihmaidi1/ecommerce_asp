@@ -19,6 +19,7 @@ namespace ecommerce.Dto.Results.Admin.Country
 
         public double lat { get; set; }
 
+        public double lon { get; set; }
         
         public bool Status { get; set; }
 
