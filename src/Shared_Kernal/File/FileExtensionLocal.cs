@@ -5,6 +5,7 @@ using LazZiya.ImageResize;
 using Microsoft.AspNetCore.Http;
 using System.Drawing;
 using System.Drawing.Imaging;
+using Image = System.Drawing.Image;
 
 namespace ecommerce_shared.File
 {
@@ -151,7 +152,9 @@ namespace ecommerce_shared.File
 
         public static (string imagefile,MemoryStream memorystream)resizeImage(this FileStream imagepath,string Folder,int Width=300,int Height = 300)
         {
-            var img=System.Drawing.Image.FromStream(imagepath);
+            
+            Image img = Bitmap.FromStream(imagepath);
+            
             var imageResized = ImageResize.Scale(img, Width, Height);
             var resizepath = Guid.NewGuid().ToString() + ".png";
             resizepath=Folder+"/"+ resizepath;

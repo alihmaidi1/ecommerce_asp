@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <Compile Remove="Authorization\**" />
     <Compile Remove="Base\Abstract\**" />
     <Compile Remove="Base\ValueObject\**" />

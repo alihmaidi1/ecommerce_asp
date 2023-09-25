@@ -5,6 +5,7 @@ using ecommerce.Dto.Results.Admin.Country;
 using Repositories.Country.Store;
 using Microsoft.EntityFrameworkCore;
 using ecommerce.Domain.Entities;
+using ecommerce.Dto.Results.User.City.Query;
 using Nest;
 using ecommerce.infrutructure.ExtensionMethod;
 
@@ -23,6 +24,16 @@ namespace Repositories.Country
             var Countries = DbContext.Countries.Select(CountryStore.Query.ToGetAllCountryDto).ToList();
 
             return Countries;
+        }
+
+        public List<GetAllCountriesDto> GetAllActiveCountries()
+        {
+            
+            var Countries = DbContext.Countries.Select(CountryStore.Query.ToGetAllCountryDto).Where(x=>x.Status==true).ToList();
+
+            return Countries;
+            
+            
         }
 
 
@@ -84,6 +95,23 @@ namespace Repositories.Country
 
 
             return true;
+
+        }
+
+        public List<OnlyCityDto> GetActiveCities(Guid CountryId)
+        {
+
+            return DbContext.Cities.Select(x => new OnlyCityDto { Id = x.Id,status = x.status, Delivery_Price = x.Delivery_Price, Name = x.Name }).Where(x=>x.status==true).ToList();
+
+            
+
+        }
+
+        public bool IsActiveExists(Guid Id)
+        {
+            return DbContext.Countries.Any(x => x.Id == Id && x.Status == true);
+
+
 
         }
 

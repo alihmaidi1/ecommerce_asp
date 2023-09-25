@@ -9,6 +9,7 @@ using ecommerce_shared.OperationResult;
 using ecommerce_shared.Redis;
 using ecommerce_shared.Services.Authentication;
 using ecommerce_shared.Services.Authentication.Factory;
+using Hangfire;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -66,9 +67,10 @@ namespace ecommerce.user.Auth.Commands.Handlers
 
         public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
+            
             User User=await UserService.CreateUser(request);
             
-            await AccountService.SendConfirmCode(User);
+            BackgroundJob.Enqueue(() => AccountService.SendConfirmCode(User.Id,User.Email));
             return Created(true, "Account Created Please Check Your Email To Confirm Your Account");
 
         }

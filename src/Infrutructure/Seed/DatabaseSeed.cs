@@ -25,6 +25,7 @@ namespace ecommerce.infrutructure.seed
             try
             {
 
+                context.Database.EnsureCreated();
                 await context.Database.MigrateAsync();
                 var RegionApi = services.GetRequiredService<ExternalRegionApi>();
                 var RoleManager = services.GetRequiredService<RoleManager<Role>>();
@@ -52,11 +53,11 @@ namespace ecommerce.infrutructure.seed
 
 
             }
-            catch
+            catch(Exception ex)
             {
 
                 transaction.Rollback();
-                
+                throw new Exception(ex.Message);
             }
 
 

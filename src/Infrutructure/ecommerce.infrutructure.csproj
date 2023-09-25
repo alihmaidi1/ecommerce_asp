@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Compile Remove="Services\**" />
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <EmbeddedResource Remove="Services\**" />
     <None Remove="Services\**" />
   </ItemGroup>

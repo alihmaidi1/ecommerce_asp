@@ -1,24 +1,36 @@
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.deps.json
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.pdb
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.AssemblyReference.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfoInputs.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfo.cs
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CoreCompileInputs.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\refint\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.pdb
-C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ref\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.deps.json
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.pdb
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.AssemblyReference.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfoInputs.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfo.cs
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CoreCompileInputs.cache
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\refint\ecommerce.models.dll
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.pdb
-C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ref\ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.deps.json
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.AssemblyReference.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfoInputs.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfo.cs
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.CoreCompileInputs.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb
+C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/bin/Debug/net7.0/ecommerce.models.deps.json
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.AssemblyReference.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfoInputs.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfo.cs
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.CoreCompileInputs.cache
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb
+C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll

@@ -12,7 +12,7 @@ using ecommerce.infrutructure;
 namespace ecommerce.infrutructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230921133652_init")]
+    [Migration("20230925124505_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -90,6 +90,21 @@ namespace ecommerce.infrutructure.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("ProductProperty", b =>
+                {
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PropertiesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ProductsId", "PropertiesId");
+
+                    b.HasIndex("PropertiesId");
+
+                    b.ToTable("ProductProperty");
                 });
 
             modelBuilder.Entity("ecommerce.Domain.Entities.Brand", b =>
@@ -322,6 +337,9 @@ namespace ecommerce.infrutructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<double>("lat")
+                        .HasColumnType("float");
+
+                    b.Property<double>("lon")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
@@ -727,9 +745,7 @@ namespace ecommerce.infrutructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("SellingNumber")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -1030,6 +1046,21 @@ namespace ecommerce.infrutructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ProductProperty", b =>
+                {
+                    b.HasOne("ecommerce.Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Domain.Entities.Property", null)
+                        .WithMany()
+                        .HasForeignKey("PropertiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ecommerce.Domain.Entities.Cart", b =>
                 {
                     b.HasOne("ecommerce.Domain.Entities.Product", "Product")
@@ -1222,8 +1253,7 @@ namespace ecommerce.infrutructure.Migrations
 
                     b.HasOne("ecommerce.Domain.Entities.Product", "Product")
                         .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
                 });
