@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.City;
+using ecommerce.Domain.Entities.Country;
 using ecommerce.Dto;
 using ecommerce.infrutructure.Services.Interfaces;
 using EFCore.BulkExtensions;
@@ -17,10 +18,11 @@ namespace ecommerce.infrutructure.Seed
         {
 
 
-            if (!context.Cities.Any())
-            {
+            //if (!context.Cities.Any())
+            //{
 
 
+<<<<<<< HEAD
                 var Country=context.Countries.First(x=>x.Name=="Syria");
                 List<City> Cities = new List<City>();
                 Cities.Add(new City{Name = "Idlib",CountryId = Country.Id});
@@ -56,9 +58,24 @@ namespace ecommerce.infrutructure.Seed
                 //
                 // });
                 //
+=======
+            //    ExternalRegionDto<List<GetAllCountriesWithCities>> response = await ExternalRegionApi.GetAllCountriesWithCities();
+            //    List<Country> Countries = context.Countries.Select(Country.SelectIDAndName).ToList();
+            //    List<City> data = response.data.SelectMany(x => x.ToListOfCities(x, Countries)).ToList();
+                
 
 
-            }
+            //    data.Chunk(50).ToList().ForEach(city =>
+            //    {
+            //        context.AddRange(city);
+            //        context.SaveChanges();
+                
+            //    });
+                
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
+
+
+            //}
 
 
         }

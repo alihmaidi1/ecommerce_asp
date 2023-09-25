@@ -11,28 +11,29 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Category.Command.Validation
 {
-    public class UpdateCategoryCommandValidation:AbstractValidator<UpdateCategoryCommand>
+    public class UpdateCategoryCommandValidation : AbstractValidator<UpdateCategoryCommand>
     {
 
-        public UpdateCategoryCommandValidation(ICategoryRepository CategoryRepository,IWebHostEnvironment WebHostEnvironment) {
-        
+        public UpdateCategoryCommandValidation(ICategoryRepository CategoryRepository, IWebHostEnvironment WebHostEnvironment)
+        {
 
-            RuleFor(x=>x.Id)
+
+            RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(id=> CategoryRepository.IsExists(id));
+                .Must(id => CategoryRepository.IsExists(id));
 
             RuleFor(x => x)
                 .NotNull()
                 .NotEmpty()
-                .Must(x=>CategoryRepository.IsUniqueName(x.Name,x.Id))
+                .Must(x => CategoryRepository.IsUniqueName(x.Name, x.Id))
                 .OverridePropertyName("Name");
-            
-            
+
+
             RuleFor(x => x)
                 .NotNull()
                 .NotEmpty()
-                .Must(x=>CategoryRepository.IsUniqueRank(x.Rank,x.Id))
+                .Must(x => CategoryRepository.IsUniqueRank(x.Rank, x.Id))
                 .OverridePropertyName("Rank");
 
             RuleFor(x => x.Meta_Title)
@@ -48,16 +49,16 @@ namespace ecommerce.superadmin.Category.Command.Validation
                 .NotNull();
 
             RuleFor(x => x.ParentId)
-                .Must(x=>CategoryRepository.IsExists(x));
+                .Must(x => CategoryRepository.IsExists(x));
 
-            
+
             RuleForEach(x => x.Images)
                 .NotEmpty()
                 .NotNull()
-                .Must(image=>FileRule.isFileExists(image, WebHostEnvironment.WebRootPath));
+                .Must(image => FileRule.isFileExists(image, WebHostEnvironment.WebRootPath));
 
             RuleFor(x => x)
-                .Must(x=>CategoryRepository.ValidImages(x.DeletedImages,x.Id))
+                .Must(x => CategoryRepository.ValidImages(x.DeletedImages, x.Id))
                 .OverridePropertyName("deletedImages");
 
         }

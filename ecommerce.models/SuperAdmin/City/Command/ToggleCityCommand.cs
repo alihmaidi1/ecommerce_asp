@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.City;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.City.Command
     public class ToggleCityCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CityId Id { get; set; }
 
     }
 }

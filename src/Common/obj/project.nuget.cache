@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "w+LZipdum5P+1KaqwpVwdYR6MjYonCcZZ7meMW+SEze22NbZlTr5JMjVQAIi435NyFooO5jmxxfEySNyijNIaw==",
+=======
+  "dgSpecHash": "gm1c4KFyw/MO4Dzmdvs9+XC5HO7d2lxAdRbmvdOaaRAUmmZkuXOEkE0qJot1DeAkLOJ5pR6xaRNZ5E8igUi5ng==",
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj",
   "expectedPackageFiles": [

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.deps.json
 C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll
 C:/Users/Ali Hmaidi/Desktop/ecommerce_asp/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb
@@ -34,3 +35,36 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/ecommerce.models/obj/Debug/ne
 /home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll
 /home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb
 /home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll
+=======
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.deps.json
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\bin\Debug\net7.0\ecommerce.models.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.AssemblyReference.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfoInputs.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfo.cs
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CoreCompileInputs.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\refint\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ecommerce.models.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_asp\ecommerce.models\obj\Debug\net7.0\ref\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.deps.json
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.models.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.AssemblyReference.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfoInputs.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.AssemblyInfo.cs
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CoreCompileInputs.cache
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\refint\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ref\ecommerce.models.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.Domain.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce_shared.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce.Domain.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ecommerce_shared.pdb
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\ar\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\bin\Debug\net7.0\en\ecommerce.Domain.resources.dll
+C:\Users\Ali Hmaidi\Desktop\ecommerce_microservice\ecommerce.models\obj\Debug\net7.0\ecommerce.models.csproj.CopyComplete
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf

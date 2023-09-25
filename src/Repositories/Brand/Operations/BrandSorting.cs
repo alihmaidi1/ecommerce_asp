@@ -1,4 +1,4 @@
-﻿using BrandEntity=ecommerce.Domain.Entities.Brand;
+﻿using BrandEntity = ecommerce.Domain.Entities.Brand.Brand;
 using ecommerce.Domain.Base;
 using System.Linq.Expressions;
 using NetTopologySuite.Index.HPRtree;

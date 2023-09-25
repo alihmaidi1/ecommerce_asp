@@ -11,5 +11,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
 
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <ProjectReference Include="..\src\Domain\ecommerce.Domain.csproj" />
+  </ItemGroup>
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
 
 </Project>

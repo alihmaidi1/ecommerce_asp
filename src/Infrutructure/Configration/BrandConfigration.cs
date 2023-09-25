@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Brand;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,9 +13,17 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Brand> builder)
         {
+
+            builder.HasKey(b=>b.Id);
+            
+            
+            builder.Property(b => b.Id)
+                .HasConversion(brandId => brandId.Value,value=>new BrandId(value));
+
             builder.HasIndex(b=>b.Name).IsUnique();
+
             builder.HasMany(b => b.Products)
-            .WithOne(p => p.Brand)
+            .WithOne(p => p.Brand)            
             .OnDelete(DeleteBehavior.Restrict);
 
         }

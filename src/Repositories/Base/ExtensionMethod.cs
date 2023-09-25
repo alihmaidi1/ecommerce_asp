@@ -1,4 +1,5 @@
 ﻿using ecommerce.Domain.Base;
+using ecommerce.Domain.Base.ValueObject;
 using Nest;
 using System.Linq.Expressions;
 using tables.Base.Entity;
@@ -8,11 +9,11 @@ namespace Repositories.Base
     public static class ExtensionMethod
     {
 
-        public static IOrderedQueryable<T> Sort<T>(this IQueryable<T> entity, string? sortType, Func<string, Expression<Func<T, object>>> switcher) where T : BaseEntity
+        public static IOrderedQueryable<T> Sort<Y,T>(this IQueryable<T> entity, string? sortType, Func<string, Expression<Func<T, object>>> switcher) where Y : StronglyTypeId where T :BaseEntity<Y> 
         {
 
-            if (sortType == null || sortType.Equals("")) return entity.OrderBy(x => x.DateCreated);                                    
-            
+            if (sortType == null || sortType.Equals("")) return entity.OrderBy(x => x.DateCreated);
+
             List<string> strings = sortType.Split(',').ToList();
             IOrderedQueryable<T> OrderedData = null;
             foreach (string item in strings)
@@ -35,7 +36,7 @@ namespace Repositories.Base
         }
 
 
-      
+
 
     }
 }

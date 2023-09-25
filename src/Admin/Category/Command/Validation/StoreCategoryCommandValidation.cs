@@ -11,16 +11,17 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Category.Command.Validation
 {
-    public class StoreCategoryCommandValidation:AbstractValidator<StoreCategoryCommand>
+    public class StoreCategoryCommandValidation : AbstractValidator<StoreCategoryCommand>
     {
 
 
-        public StoreCategoryCommandValidation(IWebHostEnvironment webHost,ICategoryRepository CategoryRepository) { 
-        
-            RuleFor(x=>x.Name)
+        public StoreCategoryCommandValidation(IWebHostEnvironment webHost, ICategoryRepository CategoryRepository)
+        {
+
+            RuleFor(x => x.Name)
                 .NotEmpty()
                 .NotNull()
-                .Must(name=>CategoryRepository.IsUniqueName(name));
+                .Must(name => CategoryRepository.IsUniqueName(name));
 
             RuleFor(x => x.Description)
                 .NotEmpty()
@@ -33,22 +34,22 @@ namespace ecommerce.superadmin.Category.Command.Validation
             RuleFor(x => x.Rank)
                 .NotNull()
                 .NotEmpty()
-                .Must(rank=>CategoryRepository.IsUniqueRank(rank));
+                .Must(rank => CategoryRepository.IsUniqueRank(rank));
 
-            
+
             RuleFor(x => x.Meta_Description)
                 .NotEmpty()
                 .NotNull();
 
 
             RuleFor(x => x.ParentId)
-                .Must(parentid=>CategoryRepository.IsExists(parentid));
-            
-            
+                .Must(parentid => CategoryRepository.IsExists(parentid));
+
+
             RuleForEach(x => x.Images)
                 .NotNull()
                 .NotEmpty()
-                .Must(x=>FileRule.isFileExists(x, webHost.WebRootPath));
+                .Must(x => FileRule.isFileExists(x, webHost.WebRootPath));
 
 
         }

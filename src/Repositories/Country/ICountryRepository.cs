@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using CountryEntity= ecommerce.Domain.Entities.Country;
 using ecommerce.Dto.Results.Admin.Country;
 using Repositories.Base;
@@ -7,32 +8,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ecommerce.Dto.Results.User.City.Query;
+=======
+﻿//using CountryEntity = ecommerce.Domain.Entities.Country.Country;
+//using ecommerce.Dto.Results.Admin.Country;
+//using Repositories.Base;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
 
-namespace Repositories.Country
-{
-    public interface ICountryRepository : Repositories.Base.IgenericRepository<ecommerce.Domain.Entities.Country>
-    {
+//namespace Repositories.Country
+//{
+//    public interface ICountryRepository : Repositories.Base.IgenericRepository<CountryEntity>
+//    {
 
 
 
-        public List<GetAllCountriesDto> GetAllCountries();
+//        public List<GetAllCountriesDto> GetAllCountries();
         
         public List<GetAllCountriesDto> GetAllActiveCountries();
 
 
         public List<OnlyCityDto> GetActiveCities(Guid CountryId);
         
-        public GetCountryResponse GetCountry(Guid id);
-        public bool IsExists(Guid Id);
+//        public GetCountryResponse GetCountry(Guid id);
+//        public bool IsExists(Guid Id);
 
+<<<<<<< HEAD
         public bool IsActiveExists(Guid Id);
 
         public bool Active(Guid Id);
+=======
+//        public bool Active(Guid Id);
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
 
 
-        public bool UnActive(Guid Id);
+//        public bool UnActive(Guid Id);
         
 
 
-    }
-}
+//    }
+//}

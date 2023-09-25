@@ -1,4 +1,6 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.City;
+using ecommerce.Domain.Entities.Country;
+
 namespace ecommerce.Dto
 {
     public class GetAllCountriesWithCities

@@ -1,4 +1,5 @@
-﻿using ecommerce_shared.OperationResult.Base;
+﻿using ecommerce.Domain.Entities.Page;
+using ecommerce_shared.OperationResult.Base;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,7 +13,7 @@ namespace ecommerce.admin.Pages.Commands.Models
     public class DeletePageCommand : IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public PageId Id { get; set; }
 
     }
 }

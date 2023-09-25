@@ -1,5 +1,5 @@
 ﻿using Bogus;
-using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Slider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace ecommerce.infrutructure.Data
         {
 
             var Slider = new Faker<Slider>();
-            Slider.RuleFor(x => x.Id, Guid.NewGuid);
+            Slider.RuleFor(x => x.Id, new SliderId(Guid.NewGuid()));
             Slider.RuleFor(x => x.Rank, x =>x.Random.Int(1,2045400994));
             Slider.RuleFor(x => x.Url, x => x.Image.PicsumUrl());
             Slider.RuleFor(x => x.ResizedUrl, x => x.Image.PicsumUrl());

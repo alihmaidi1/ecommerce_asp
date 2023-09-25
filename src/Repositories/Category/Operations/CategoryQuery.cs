@@ -1,4 +1,4 @@
-﻿using CategoryEntity=ecommerce.Domain.Entities.Category;
+﻿using CategoryEntity = ecommerce.Domain.Entities.Category.Category;
 using ecommerce.Dto.Results.Admin.Category;
 using System;
 using System.Collections.Generic;
@@ -16,15 +16,15 @@ namespace Repositories.Category.Operations
         public static Expression<Func<CategoryEntity, AddCategoryResponse>> ToCategoryResponse = c => new AddCategoryResponse
         {
 
-            Id=c.Id,
-            Name=c.Name,
-            Status=c.Status,
-            Description=c.Description,
-            Images=c.Images.Select(x=>new ImageResponse { hash=x.Hash,resized=x.Resized,Url=x.Url}).ToList(),
+            Id = c.Id,
+            Name = c.Name,
+            Status = c.Status,
+            Description = c.Description,
+            Images = c.Images.Select(x => new ImageResponse { hash = x.Hash, resized = x.Resized, Url = x.Url }).ToList(),
             Meta_Description = c.Meta_Description,
-            Meta_Title=c.Meta_Title,
-            Rank=c.Rank,            
-            
+            Meta_Title = c.Meta_Title,
+            Rank = c.Rank,
+
 
         };
 
@@ -39,14 +39,14 @@ namespace Repositories.Category.Operations
             Meta_Description = c.Meta_Description,
             Meta_Title = c.Meta_Title,
             Rank = c.Rank,
-            
+
 
 
         };
 
 
 
-        public static Expression<Func<CategoryEntity, GetCategoryWithParent>> ToAllCategoryWithParent= c => new GetCategoryWithParent
+        public static Expression<Func<CategoryEntity, GetCategoryWithParent>> ToAllCategoryWithParent = c => new GetCategoryWithParent
         {
 
             Id = c.Id,
@@ -57,7 +57,7 @@ namespace Repositories.Category.Operations
             Meta_Description = c.Meta_Description,
             Meta_Title = c.Meta_Title,
             Rank = c.Rank,
-            ParentId=c.ParentId
+            ParentId = c.ParentId
 
 
         };

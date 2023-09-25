@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Country;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -14,7 +14,13 @@ namespace ecommerce.infrutructure.Configration
         public void Configure(EntityTypeBuilder<Country> builder)
         {
 
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id)
+                .HasConversion(CountryId => CountryId.Value, Value => new CountryId(Value));
+
             builder.HasIndex(c=>c.Name).IsUnique();
+            
             builder.HasMany(c => c.Cities)
             .WithOne(c => c.Country)
             .OnDelete(DeleteBehavior.Cascade);

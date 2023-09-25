@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Brand;
 using ecommerce.infrutructure.Data;
 using ecommerce_shared.Enums;
 using Nest;

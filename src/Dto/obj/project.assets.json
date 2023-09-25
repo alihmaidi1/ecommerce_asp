@@ -3798,7 +3798,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "MediatR": "12.1.1",
-          "Microsoft.AspNetCore.Mvc": "2.2.0"
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "ecommerce.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ecommerce.models.dll": {}

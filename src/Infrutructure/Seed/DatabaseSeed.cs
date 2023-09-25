@@ -36,24 +36,28 @@ namespace ecommerce.infrutructure.seed
                 await PermissionSeed.seedData(RoleManager, context);
                 await AdminSeed.seedData(context, UserManager);
                 await SliderSeed.seedData(context, ElasticService);
-                await PageSeed.seedDate(context);
-                await CurrencySeed.seedData(context);
-                await BannerSeed.seedData(context);
-                await BrandSeed.seedData(context, ElasticService);
-                await CartSeed.seedData(context);
-                await CategorySeed.seedData(context);
-                await CountrySeed.seedData(context, RegionApi);
-                await Cityseed.seedData(context, RegionApi);
-                await CoponSeed.seedData(context);
-                await ProductSeed.seedData(context);
-                await PorpertySeed.seedData(context);
-                await ReviewSeed.seedData(context);
+                //await PageSeed.seedDate(context);
+                //await CurrencySeed.seedData(context);
+                //await BannerSeed.seedData(context);
+                //await BrandSeed.seedData(context, ElasticService);
+                //await CartSeed.seedData(context);
+                //await CategorySeed.seedData(context);
+                //await CountrySeed.seedData(context, RegionApi);
+                //await Cityseed.seedData(context, RegionApi);
+                //await CoponSeed.seedData(context);
+                //await ProductSeed.seedData(context);
+                //await PorpertySeed.seedData(context);
+                //await ReviewSeed.seedData(context);
                 await transaction.CommitAsync();
 
 
 
             }
+<<<<<<< HEAD
             catch(Exception ex)
+=======
+            catch(Exception ex) 
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
             {
 
                 transaction.Rollback();

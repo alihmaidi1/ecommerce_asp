@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "k9xDazLEVzIO1uBSLqnwA0e6ZFgTmg8VJ4hhZfxfP6g8ItDrCp7FrsA4XV/Qy/m7QNJfM1q4Iz85XM75aHmoqg==",
+=======
+  "dgSpecHash": "aLN/S3oPi7TDlrF1frt3tZR0Rtw5Mql7r127YtQ3bwez8Mnsea/CI3Cxzq8xMUmezcJd58dJ/jXlE01z1zmbaQ==",
+>>>>>>> 07266b15958bf96eea3c784909c9f5bee4e25ecf
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj",
   "expectedPackageFiles": [
