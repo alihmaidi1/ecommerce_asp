@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Slider;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,6 +13,11 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Slider> builder)
         {
+
+            builder.HasKey(x=>x.Id);
+            builder.Property(x => x.Id)
+                .HasConversion(SliderId => SliderId.Value,Value=>new SliderId(Value));
+
             builder.HasIndex(s => s.Rank).IsUnique();
 
         }

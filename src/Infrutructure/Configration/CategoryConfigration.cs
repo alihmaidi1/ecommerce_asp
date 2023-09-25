@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Category;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -14,6 +14,16 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id)
+                .HasConversion(CategoryId => CategoryId.Value, Value => new CategoryId(Value));
+
+
+            builder.Property(x => x.ParentId)
+                .HasConversion(ParentId => ParentId.Value,Value=>new CategoryId(Value));
+
             builder.HasIndex(c=>c.Name).IsUnique();
             builder.HasIndex(c => c.Rank).IsUnique();
 

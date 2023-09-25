@@ -1,5 +1,5 @@
 ﻿using Amazon.S3.Model;
-using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.Currency;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,47 +11,47 @@ namespace ecommerce.infrutructure.Seed
     public static class CurrencySeed
     {
 
-        public static async Task seedData(ApplicationDbContext context)
-        {
+        //public static async Task seedData(ApplicationDbContext context)
+        //{
 
 
-            if(!context.Currencies.Any())
-            {
+        //    if(!context.Currencies.Any())
+        //    {
 
-                List<Currency> Currencies = new List<Currency>
-            {
+        //        List<Currency> Currencies = new List<Currency>
+        //    {
 
-                new Currency
-                {
+        //        new Currency
+        //        {
 
-                    Name="Syria",
-                    Code="SYP",
-                    Status=true
+        //            Name="Syria",
+        //            Code="SYP",
+        //            Status=true
 
-                },
-
-
-                new Currency
-                {
-
-                    Name="Euro",
-                    Code="EUR",
-                    Status=true
-
-                }
+        //        },
 
 
-            };
+        //        new Currency
+        //        {
 
-                context.Currencies.AddRange(Currencies);
-                context.SaveChanges();
+        //            Name="Euro",
+        //            Code="EUR",
+        //            Status=true
+
+        //        }
 
 
+        //    };
 
-            }
+        //        context.Currencies.AddRange(Currencies);
+        //        context.SaveChanges();
 
 
 
-        }
+        //    }
+
+
+
+        //}
     }
 }

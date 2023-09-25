@@ -10,19 +10,20 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Category.Command.Validation
 {
-    public class UnActiveCategoryCommandValidation:AbstractValidator<UnActiveCategoryCommand>
+    public class UnActiveCategoryCommandValidation : AbstractValidator<UnActiveCategoryCommand>
     {
 
-        public UnActiveCategoryCommandValidation(ICategoryRepository CategoryRepository) {
+        public UnActiveCategoryCommandValidation(ICategoryRepository CategoryRepository)
+        {
 
 
             RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(id=> CategoryRepository.IsExists(id));
+                .Must(id => CategoryRepository.IsExists(id));
 
-        
-        }    
+
+        }
 
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-using ecommerce.Domain.Entities;
 using System.Reflection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
@@ -8,6 +6,19 @@ using ecommerce.Domain.Entities.Identity;
 using EntityFrameworkCore.EncryptColumn.Interfaces;
 using EntityFrameworkCore.EncryptColumn.Util;
 using EntityFrameworkCore.EncryptColumn.Extension;
+using ecommerce.Domain.Entities.Brand;
+using ecommerce.Domain.Entities.Category;
+using ecommerce.Domain.Entities.City;
+using ecommerce.Domain.Entities.Country;
+using ecommerce.Domain.Entities.Coupon;
+using ecommerce.Domain.Entities.Currency;
+using ecommerce.Domain.Entities.Slider;
+using ecommerce.Domain.Entities.Product;
+using ecommerce.Domain.Entities.Page;
+using ecommerce.Domain.Entities.Cart;
+using ecommerce.Domain.Entities.Wishlist;
+using ecommerce.Domain.Entities.Review;
+using ecommerce.Domain.Entities.Property;
 
 namespace ecommerce.infrutructure
 {
@@ -56,7 +67,7 @@ namespace ecommerce.infrutructure
         public DbSet<Product> Products { get; set; }
 
 
-        public DbSet<ProductProperty> ProductProperties { get; set; }       
+        public DbSet<ProductProperty> ProductProperties { get; set; }
 
         public DbSet<Property> Properties { get; set; }
 

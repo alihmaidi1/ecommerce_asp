@@ -23,10 +23,11 @@ namespace ecommerce.superadmin.Slider.Command.Handlers
 
         public ISliderRepository SliderRepository;
 
-        public SliderCommandHandlers(ISliderRepository SliderRepository) { 
-        
-            
-            this.SliderRepository = SliderRepository;   
+        public SliderCommandHandlers(ISliderRepository SliderRepository)
+        {
+
+
+            this.SliderRepository = SliderRepository;
         }
 
         public async Task<JsonResult> Handle(StoreSliderCommand request, CancellationToken cancellationToken)
@@ -34,17 +35,17 @@ namespace ecommerce.superadmin.Slider.Command.Handlers
 
 
             var Slider = await SliderRepository.Store(request.Url, request.Rank);
-            return Success(SliderStoreQuery.ToSliderResponse.Compile()(Slider),"the slider was created successfully");
+            return Success(SliderStoreQuery.ToSliderResponse.Compile()(Slider), "the slider was created successfully");
 
         }
 
         public async Task<JsonResult> Handle(UpdateSliderCommand request, CancellationToken cancellationToken)
         {
             var Slider = await SliderRepository.Update(request.Id, request.url, request.Rank);
-            return Success(Slider,"The Slider Was Updated Successfully");
+            return Success(Slider, "The Slider Was Updated Successfully");
         }
 
-        public  async Task<JsonResult> Handle(DeleteSliderCommand request, CancellationToken cancellationToken)
+        public async Task<JsonResult> Handle(DeleteSliderCommand request, CancellationToken cancellationToken)
         {
 
             SliderRepository.Delete(request.Id);

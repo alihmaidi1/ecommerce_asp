@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Slider;
 using ecommerce.infrutructure.Data;
 using ecommerce_shared.Enums;
 using Nest;
@@ -16,21 +16,21 @@ namespace ecommerce.infrutructure.Seed
         public static async Task seedData(ApplicationDbContext context, IElasticClient ElasticClient)
         {
 
-            if(!context.Sliders.Any()) {
+            //if(!context.Sliders.Any()) {
 
 
-                List<Slider> Sliders = SliderFaker
-                    .GetSliderFaker()
-                    .Generate(5)
-                    .DistinctBy(x=>x.Rank)
-                    .ToList();
+            //    List<Slider> Sliders = SliderFaker
+            //        .GetSliderFaker()
+            //        .Generate(5)
+            //        .DistinctBy(x=>x.Rank)
+            //        .ToList();
 
-                context.AddRange(Sliders);
-                context.SaveChanges();
-                ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
+            //    context.AddRange(Sliders);
+            //    context.SaveChanges();
+            //    ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
 
 
-            }
+            //}
 
 
 

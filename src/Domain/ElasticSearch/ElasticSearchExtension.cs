@@ -1,4 +1,5 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Brand;
+using ecommerce.Domain.Entities.Slider;
 using ecommerce_shared.Enums;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

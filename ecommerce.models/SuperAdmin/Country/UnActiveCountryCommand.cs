@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ecommerce.Domain.Entities.Country;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ecommerce.models.SuperAdmin.Country
     public class UnActiveCountryCommand:IRequest<JsonResult>
     {
 
-        public Guid Id { get; set; }
+        public CountryId Id { get; set; }
 
     }
 }

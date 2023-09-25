@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Category.Query.Validation
 {
-    public class GetCategoryQueryValidation:AbstractValidator<GetCategoryQuery>
+    public class GetCategoryQueryValidation : AbstractValidator<GetCategoryQuery>
     {
 
-        public GetCategoryQueryValidation(ICategoryRepository CategoryRepository) {
+        public GetCategoryQueryValidation(ICategoryRepository CategoryRepository)
+        {
 
 
             RuleFor(x => x.Id)
@@ -21,7 +22,7 @@ namespace ecommerce.superadmin.Category.Query.Validation
                 .NotNull()
                 .Must(x => CategoryRepository.IsExists(x));
 
-        
+
         }
 
     }

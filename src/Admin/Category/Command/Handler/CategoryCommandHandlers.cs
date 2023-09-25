@@ -24,16 +24,17 @@ namespace ecommerce.superadmin.Category.Command.Handler
 
     {
         public ICategoryRepository CategoryRepository;
-        public CategoryCommandHandlers(ICategoryRepository CategoryRepository) { 
-        
-            this.CategoryRepository = CategoryRepository;   
+        public CategoryCommandHandlers(ICategoryRepository CategoryRepository)
+        {
+
+            this.CategoryRepository = CategoryRepository;
         }
         public async Task<JsonResult> Handle(StoreCategoryCommand request, CancellationToken cancellationToken)
         {
 
-            var Category = await CategoryRepository.Store(request.Name,request.Description
-                ,request.Meta_Title,request.Rank,request.Meta_Description
-                ,request.ParentId,request.Images);
+            var Category = await CategoryRepository.Store(request.Name, request.Description
+                , request.Meta_Title, request.Rank, request.Meta_Description
+                , request.ParentId, request.Images);
             return Success(Category, "the category was added successfully");
         }
 
@@ -42,7 +43,7 @@ namespace ecommerce.superadmin.Category.Command.Handler
 
             var Category = await CategoryRepository.Update(request.Id, request.Name,
                 request.Description, request.Meta_Title, request.Rank,
-                request.Meta_Description, request.ParentId, 
+                request.Meta_Description, request.ParentId,
                 request.Images, request.DeletedImages);
             return Success(Category, "the category was updated successfully");
 
@@ -51,14 +52,14 @@ namespace ecommerce.superadmin.Category.Command.Handler
         public async Task<JsonResult> Handle(UnActiveCategoryCommand request, CancellationToken cancellationToken)
         {
 
-            bool isUnActivated=CategoryRepository.UnActive(request.Id);
+            bool isUnActivated = CategoryRepository.UnActive(request.Id);
             return Success(isUnActivated, "the category was unactivated successfully");
         }
 
         public async Task<JsonResult> Handle(ActiveCategoryCommand request, CancellationToken cancellationToken)
         {
 
-            bool IsActivated=CategoryRepository.ActiveCategory(request.Id);
+            bool IsActivated = CategoryRepository.ActiveCategory(request.Id);
 
             return Success(IsActivated, "the category was activated successfully");
 

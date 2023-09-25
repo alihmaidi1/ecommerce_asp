@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Category.Command.Validation
 {
-    public class ActiveCategoryCommandValidation:AbstractValidator<ActiveCategoryCommand>
+    public class ActiveCategoryCommandValidation : AbstractValidator<ActiveCategoryCommand>
     {
 
 
-        public ActiveCategoryCommandValidation(ICategoryRepository CategoryRepository) {
+        public ActiveCategoryCommandValidation(ICategoryRepository CategoryRepository)
+        {
 
 
             RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(id=> CategoryRepository.IsExists(id));
-        
+                .Must(id => CategoryRepository.IsExists(id));
+
         }
 
     }

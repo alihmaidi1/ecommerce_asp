@@ -9,29 +9,30 @@ using System.Threading.Tasks;
 
 namespace ecommerce.superadmin.Slider.Command.Validations
 {
-    public class UpdateSliderCommandValidation:AbstractValidator<UpdateSliderCommand>
+    public class UpdateSliderCommandValidation : AbstractValidator<UpdateSliderCommand>
     {
 
-        public UpdateSliderCommandValidation(ISliderRepository SliderRepository) { 
-        
+        public UpdateSliderCommandValidation(ISliderRepository SliderRepository)
+        {
 
-            RuleFor(x=>x.Id)
+
+            RuleFor(x => x.Id)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=> SliderRepository.IsExists(x));
+                .Must(x => SliderRepository.IsExists(x));
 
 
             RuleFor(x => x)
-                .Must(x=>SliderRepository.IsUniqueRank(x.Id,x.Rank))
+                .Must(x => SliderRepository.IsUniqueRank(x.Id, x.Rank))
                 .OverridePropertyName("Rank");
 
             RuleFor(x => x)
                 .NotEmpty()
                 .NotNull()
-                .Must(x=>SliderRepository.IsValidLogo(x.Id,x.url))
+                .Must(x => SliderRepository.IsValidLogo(x.Id, x.url))
                 .OverridePropertyName("Url");
 
-            
+
 
         }
 

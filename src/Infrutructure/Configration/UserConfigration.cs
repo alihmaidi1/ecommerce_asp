@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using ecommerce.Domain.Entities.City;
 using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,8 @@ namespace ecommerce.infrutructure.Configration
 
             builder.Property(u => u.Point).HasDefaultValue(0);
             builder.Property(u=>u.IsBlocked).HasDefaultValue(false);
+            builder.Property(x => x.CityId)
+                .HasConversion(CityId => CityId.Value, Value => new CityId(Value));
             
 
         }

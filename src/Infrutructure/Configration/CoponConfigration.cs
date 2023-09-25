@@ -1,4 +1,4 @@
-﻿using ecommerce.Domain.Entities;
+﻿using ecommerce.Domain.Entities.Coupon;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,10 +13,19 @@ namespace ecommerce.infrutructure.Configration
     {
         public void Configure(EntityTypeBuilder<Coupon> builder)
         {
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x=>x.Id)
+                .HasConversion(CouponId=>CouponId.Value,Value=>new CouponId(Value));
+
             builder.HasIndex(c=>c.Name).IsUnique();
+            
+            
             builder.HasMany(c=>c.Products)
             .WithOne(p=>p.Copon)
             .OnDelete(DeleteBehavior.SetNull);
+
 
         }
     }

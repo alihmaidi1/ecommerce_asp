@@ -13,12 +13,12 @@ namespace ecommerce.Controllers.SuperAdmin
     [AppAuthorize(RoleEnum.SuperAdmin)]
 
     [ApiGroup(ApiGroupName.SuperAdmin)]
-    public class BrandController: ApiController
+    public class BrandController : ApiController
     {
 
 
         [HttpPost(BrandRouter.Add)]
-        public async Task<IActionResult> AddBrand([FromBody]AddBrandCommand request)
+        public async Task<IActionResult> AddBrand([FromBody] AddBrandCommand request)
         {
 
             var response = await Mediator.Send(request);
@@ -28,7 +28,7 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPost(BrandRouter.List)]
-        public async Task<IActionResult> GetAllBtand([FromQuery]GetAllBrandQuery request)
+        public async Task<IActionResult> GetAllBtand([FromQuery] GetAllBrandQuery request)
         {
 
             var response = await Mediator.Send(request);
@@ -40,12 +40,12 @@ namespace ecommerce.Controllers.SuperAdmin
         public async Task<IActionResult> GetBrand(Guid id)
         {
 
-            var response = await Mediator.Send(new GetBrandQuery { Id=id});
+            var response = await Mediator.Send(new GetBrandQuery { Id = id });
             return response;
         }
 
         [HttpPut(BrandRouter.Update)]
-        public async Task<IActionResult> UpdateBrand([FromBody]UpdateBrandCommand request)
+        public async Task<IActionResult> UpdateBrand([FromBody] UpdateBrandCommand request)
         {
 
             var response = await Mediator.Send(request);

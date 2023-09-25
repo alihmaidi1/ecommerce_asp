@@ -15,7 +15,7 @@ namespace ecommerce.Controllers.SuperAdmin
     [AppAuthorize(RoleEnum.SuperAdmin)]
 
     [ApiGroup(ApiGroupName.SuperAdmin)]
-    public class CategoryController: ApiController
+    public class CategoryController : ApiController
     {
 
         [HttpPost(CategoryRouter.Store)]
@@ -50,10 +50,10 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpGet(CategoryRouter.Get)]
-        public async Task<IActionResult> Get([FromRoute]Guid id)
+        public async Task<IActionResult> Get([FromRoute] Guid id)
         {
 
-            var response = await Mediator.Send(new GetCategoryQuery { Id=id});
+            var response = await Mediator.Send(new GetCategoryQuery { Id = id });
             return response;
         }
 
