@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj": {}
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/User/ecommerce.user.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
         "projectName": "ecommerce.models",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,41 +63,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj",
         "projectName": "ecommerce.Domain",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -152,44 +138,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
         "projectName": "ecommerce.Dto",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj"
               }
             }
           }
@@ -225,44 +204,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
         "projectName": "ecommerce.infrutructure",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Domain\\ecommerce.Domain.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
               }
             }
           }
@@ -348,47 +320,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Infrutructure\\ecommerce.infrutructure.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -424,47 +389,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/ecommerce.service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/ecommerce.service.csproj",
         "projectName": "ecommerce.service",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/ecommerce.service.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -494,33 +452,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj",
         "projectName": "ecommerce_shared",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -612,53 +563,46 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/User/ecommerce.user.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/User/ecommerce.user.csproj",
         "projectName": "ecommerce.user",
-        "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\ecommerce.user.csproj",
-        "packagesPath": "C:\\Users\\Ali Hmaidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\User\\obj\\",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/User/ecommerce.user.csproj",
+        "packagesPath": "/home/alihmaidi/.nuget/packages/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/User/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ali Hmaidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\ecommerce.models\\ecommerce.models.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Dto\\ecommerce.Dto.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Repositories\\Repositories.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Service\\ecommerce.service.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/ecommerce.service.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Service/ecommerce.service.csproj"
               },
-              "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj": {
-                "projectPath": "C:\\Users\\Ali Hmaidi\\Desktop\\ecommerce_microservice\\src\\Shared_Kernal\\ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -706,7 +650,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
         }
       }
     }
