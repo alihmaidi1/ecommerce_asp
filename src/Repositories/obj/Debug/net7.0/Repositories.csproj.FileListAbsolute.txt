@@ -119,3 +119,28 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Repositories/obj/Debug/ne
 /home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/obj/Debug/net7.0/refint/Repositories.dll
 /home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/obj/Debug/net7.0/Repositories.pdb
 /home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/obj/Debug/net7.0/ref/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/Repositories.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/Repositories.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/en/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/bin/Debug/net7.0/ar/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.csproj.CopyComplete
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/refint/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/Repositories.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/Debug/net7.0/ref/Repositories.dll

@@ -12327,11 +12327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj",
+      "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
       "projectName": "ecommerce.infrutructure",
-      "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj",
+      "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
       "packagesPath": "/home/alihmaidi/.nuget/packages/",
-      "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/obj/",
+      "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -12346,11 +12346,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj": {
-              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj"
+            "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
+              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj"
             },
-            "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj": {
-              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj"
+            "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
             }
           }
         }

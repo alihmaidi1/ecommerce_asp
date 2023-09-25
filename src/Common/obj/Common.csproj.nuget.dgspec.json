@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj": {}
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj": {}
   },
   "projects": {
-    "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
         "projectName": "ecommerce.models",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -67,14 +67,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj",
         "projectName": "Common",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -89,11 +89,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj"
               },
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj",
         "projectName": "ecommerce.Domain",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -163,8 +163,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -216,14 +216,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
         "projectName": "ecommerce.Dto",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -238,11 +238,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj"
               },
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj"
               }
             }
           }
@@ -282,14 +282,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
         "projectName": "ecommerce.infrutructure",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -304,11 +304,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj"
               },
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
               }
             }
           }
@@ -398,14 +398,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -420,14 +420,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj"
               },
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Infrutructure/ecommerce.infrutructure.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Infrutructure/ecommerce.infrutructure.csproj"
               },
-              "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj": {
-                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj"
+              "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
+                "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
               }
             }
           }
@@ -467,14 +467,14 @@
         }
       }
     },
-    "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj",
         "projectName": "ecommerce_shared",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"

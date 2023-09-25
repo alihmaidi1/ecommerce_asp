@@ -129,3 +129,30 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Common/obj/Debug/net7.0/r
 /home/alihmaidi/Desktop/ecommerce_asp/src/Common/obj/Debug/net7.0/refint/Common.dll
 /home/alihmaidi/Desktop/ecommerce_asp/src/Common/obj/Debug/net7.0/Common.pdb
 /home/alihmaidi/Desktop/ecommerce_asp/src/Common/obj/Debug/net7.0/ref/Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/Common.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/Common.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.Domain.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/Repositories.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.Domain.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.Dto.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/en/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/bin/Debug/net7.0/ar/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.csproj.CopyComplete
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/refint/Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/Common.pdb
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/Debug/net7.0/ref/Common.dll
