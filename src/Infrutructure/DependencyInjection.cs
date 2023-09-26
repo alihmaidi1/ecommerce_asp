@@ -37,7 +37,7 @@ namespace ecommerce.infrutructure
                 option.LogTo(Console.WriteLine,LogLevel.Information);
                 option.EnableSensitiveDataLogging();                                
 
-            });
+            },ServiceLifetime.Transient);
             
 
 
