@@ -10,11 +10,25 @@
   <component name="ChangeListManager">
     <list default="true" id="315eceec-f936-4dcd-a920-ee1b5877a826" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.pack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/appsettings.Production.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/appsettings.Production.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +166,7 @@
       <workItem from="1695717294496" duration="4341000" />
       <workItem from="1695729399723" duration="174000" />
       <workItem from="1695730662015" duration="1024000" />
-      <workItem from="1695737547115" duration="7119000" />
+      <workItem from="1695737547115" duration="8442000" />
     </task>
     <servers />
   </component>
