@@ -12,15 +12,6 @@ services:
     
     networks:
      - redis
-  nginx:
-    image: nginx:latest
-    ports:
-      - "8080:80"
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/nginx.conf
-    depends_on:
-      - api
-  
   redis:
     image: redis
     ports:
