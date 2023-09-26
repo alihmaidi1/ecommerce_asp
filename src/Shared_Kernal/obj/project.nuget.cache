@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "asbUGfed16hNcbDkXHjS/nE6DNvJTsgx7K33N/AN3EX4+UDNSOWmgTaRUIPYVEivKlyZxVBaPlvjIvvzy0cW+A==",
-=======
-  "dgSpecHash": "NQSUzauQbPjY4fZlIw2Gc0QQmoELzJ9ec1k4uX/vkhSzE4qQw2FT/K2gDrH8ssGO4t54rTKt7IIPOdJKS2npLw==",
->>>>>>> Stashed changes
+  "dgSpecHash": "Pq3CrwnE0RYobr8i3dgc485RW7xCbf63vl/Eqc/sUhP95grNfmf4fiQCmhq53fBKpr/oKeBflEP0PIqqg76geA==",
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj",
   "expectedPackageFiles": [
@@ -152,5 +148,12 @@
     "/home/alihmaidi/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
