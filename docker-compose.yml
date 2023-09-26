@@ -17,6 +17,7 @@ services:
       - ./nginx/default.conf:/etc/nginx/nginx.conf
     depends_on:
       - api
+      - redis
   
   redis:
     image: redis
