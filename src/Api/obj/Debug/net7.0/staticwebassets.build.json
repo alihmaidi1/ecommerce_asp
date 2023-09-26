@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yG1c7s3J5g9MjW511q8+3XpFgzZiUxX5Va40AcjX2bQ=",
+  "Hash": "B92tIjjh6HzM6Y/hRtcBO7dGcRXiS4VecYMtXbTOLp8=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -644,6 +644,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Temp/36ef4420-3561-499d-8ab1-15f07478a81dScreenshot (1).png"
+    },
+    {
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/37b06147-b569-477c-8583-c8b50553facdcode1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/37b06147-b569-477c-8583-c8b50553facdcode1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Temp/37b06147-b569-477c-8583-c8b50553facdcode1.png"
     },
     {
       "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/384e2639-c996-499f-9e75-4b570fd651cacode1.png",
@@ -1460,6 +1477,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Temp/94286c42-78c8-4fe1-9864-2ba9178416b5download.jpeg"
+    },
+    {
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/9467cf1f-1bd5-4bd7-8e5e-328f94595791code.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/9467cf1f-1bd5-4bd7-8e5e-328f94595791code.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Temp/9467cf1f-1bd5-4bd7-8e5e-328f94595791code.png"
     },
     {
       "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/95cb58f3-1e86-4922-99d5-a98b209512d2Screenshot (2).png",

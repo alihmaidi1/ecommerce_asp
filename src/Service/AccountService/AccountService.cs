@@ -110,7 +110,7 @@ namespace ecommerce.service.UserService
             string Code = string.Empty.GenerateCode();
 
             DbContext.Accounts.Where(x => x.Id == id)
-                .ExecuteUpdate(setter=>setter.SetProperty(p=>p.Code,Code));
+                .ExecuteUpdate(setter=>setter.SetProperty(p=>p.ConfirmCode,Code));
             
             MailService.SendMail(Email, $"You Can Verify Your Account By This Code :{Code}");
             return true;

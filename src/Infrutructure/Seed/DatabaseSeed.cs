@@ -19,8 +19,10 @@ namespace ecommerce.infrutructure.seed
         public static async Task InitializeAsync(IServiceProvider services)
         {
             var context = services.GetRequiredService<ApplicationDbContext>();
-          
+
+            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
+            context.Database.Migrate();
             
             var transaction = context.Database.BeginTransaction();
 
