@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OSmay9qq0cWYSuyk6JXy09k8XcYCDUYmwqO3Cj6p8zM13hNTksC8g26xH9P6A/h218j+UQlaUBNAM3L7TFFJWw==",
+  "dgSpecHash": "X16k2oOwQWjecmdF7Mm2PA9vACswT8HPnrTpbpmqXj8R3FXws6XePv2vI+ld65ngqfPUjO8XrYBiofWi5urLwg==",
   "success": true,
-  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
+  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj",
   "expectedPackageFiles": [
     "/home/alihmaidi/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
