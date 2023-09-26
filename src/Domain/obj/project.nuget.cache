@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "gB1qox5Ua76ud8b8KFv4iVB5bB1vrqlhDKi38D27txE6ZAIMqp2ZTq+JVKVHtxqhCn8+XqRg66hOyX4G7Vjw9w==",
+=======
+  "dgSpecHash": "Vk2X0tpnsUEO58fwG+y41S6ozg+hRsycn72D+9x/REpt9/cj+8TtaPQF52HdHSEqmew3Z5V55qJUPYvD99ezAg==",
+>>>>>>> Stashed changes
   "success": true,
-  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Domain/ecommerce.Domain.csproj",
+  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Domain/ecommerce.Domain.csproj",
   "expectedPackageFiles": [
     "/home/alihmaidi/.nuget/packages/awssdk.core/3.7.201.6/awssdk.core.3.7.201.6.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/awssdk.s3/3.7.203.1/awssdk.s3.3.7.203.1.nupkg.sha512",

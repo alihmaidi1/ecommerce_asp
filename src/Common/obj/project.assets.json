@@ -12002,11 +12002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj",
+      "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj",
       "projectName": "Common",
-      "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/Common.csproj",
+      "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/Common.csproj",
       "packagesPath": "/home/alihmaidi/.nuget/packages/",
-      "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Common/obj/",
+      "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Common/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
@@ -12021,11 +12021,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj": {
-              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Repositories/Repositories.csproj"
+            "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj": {
+              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj"
             },
-            "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj": {
-              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/ecommerce_shared.csproj"
+            "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj": {
+              "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj"
             }
           }
         }

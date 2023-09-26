@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "mqYEd5ttctE8YIfX/Z94F0DbOMNoKsxM1pAKpuRDkko9nS1Qyq51UP1D3hnbBQC33827XHUbvZoTMLPXYsbrOw==",
+=======
+  "dgSpecHash": "vZjAyj/gCs0LnuvCJsisRHo77aUoiJn34DSKUF2rwyP5HJOO6QtP6z0NmVOoVe6P4Xg2u4Mit/Q/f2/2ChitKQ==",
+>>>>>>> Stashed changes
   "success": true,
-  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
+  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj",
   "expectedPackageFiles": [
     "/home/alihmaidi/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
