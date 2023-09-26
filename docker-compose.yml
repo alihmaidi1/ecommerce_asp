@@ -16,8 +16,14 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/nginx.conf
     depends_on:
-      - api
-      - redis
+      api:
+        condition: service_started
+        restart: true
+      
+      redis:
+        condition: service_started
+        restart: true
+      
   
   redis:
     image: redis
