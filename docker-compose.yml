@@ -18,8 +18,7 @@ services:
     depends_on:
       api:
         condition: service_started
-        restart: true
-      
+        restart: true      
       redis:
         condition: service_started
         restart: true
