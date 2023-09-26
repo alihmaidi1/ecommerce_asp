@@ -7,6 +7,8 @@ services:
     image: alihmaidi/asp_ecommerce
     ports:
       - "8000:80"
+    depends_on:
+      - redis
   nginx:
     image: nginx:latest
     ports:
@@ -15,3 +17,8 @@ services:
       - ./nginx/default.conf:/etc/nginx/nginx.conf
     depends_on:
       - api
+  
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"      
