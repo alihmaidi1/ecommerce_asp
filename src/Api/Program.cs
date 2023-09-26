@@ -174,7 +174,6 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 app.UseCors("Policy");
 
 
-app.UseHangfireDashboard("/hangfire/dashbaord");
 app.UseMiddleware<ErrorHandling>();
 
 
@@ -197,6 +196,8 @@ using(var scope= app.Services.CreateScope()){
 
 
 }
+
+app.UseHangfireDashboard("/hangfire/dashbaord");
 
 
 app.UseAuthentication();
