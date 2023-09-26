@@ -9,16 +9,16 @@ services:
       - "8000:80"
     depends_on:
       - redis
-    
-    networks:
-     - redis
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - api
+  
   redis:
     image: redis
     ports:
       - "6379:6379"
-      
-    networks:
-     - redis      
-networks:
-  redis:
-    driver: bridge
