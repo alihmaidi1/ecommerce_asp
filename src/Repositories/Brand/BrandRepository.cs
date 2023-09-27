@@ -1,4 +1,4 @@
-﻿using BrandEntity=ecommerce.Domain.Entities.Brand;
+﻿using BrandEntity=ecommerce.Domain.Entities.BrandEntities.Brand;
 using Repositories.Base.Concrete;
 
 using ecommerce.infrutructure;
@@ -13,7 +13,9 @@ using Repositories.Brand.Operations;
 using Nest;
 using ecommerce_shared.Enums;
 using ecommerce.Domain.ElasticSearch;
+using Elasticsearch.Net;
 using Microsoft.AspNetCore.Hosting;
+using Repositories.Base;
 
 namespace Repositories.Brand
 {
@@ -39,25 +41,28 @@ namespace Repositories.Brand
         public async Task<PageList<AddBrandResponse>> GetAll(string? OrderBy, int? pageNumber,int? pageSize)
         {
 
-            var Result = ElasticClient.Search<BrandEntity>(s=>s
-                .Index(nameof(ElasticSearchIndexName.brand))
-                .Query(q=>q.MatchAll())
-                .Sort(s=>s.SortQuery(OrderBy,BrandSorting.switchOrdering))
-                .PaginateQuery<BrandEntity>(pageNumber, pageSize)
-            );
+            // var Result = ElasticClient.Search<BrandEntity>(s=>s
+            //     .Index(nameof(ElasticSearchIndexName.brand))
+            //     .Query(q=>q.MatchAll())
+            //     .Sort(s=>s.SortQuery(OrderBy,BrandSorting.switchOrdering))
+            //     .PaginateQuery<BrandEntity>(pageNumber, pageSize)
+            // );
+            //
+            //
+            // if (!Result.IsValid)
+            // {
+            //
+            //     throw new Exception(Result.ServerError.ToString());
+            // }
 
+            // return Result.Select(BrandQuery.ToBrandResponse.Compile()).ToPaginateResult(Result.HitsMetadata.Total.Value,pageNumber, pageSize);
 
-            if (!Result.IsValid)
-            {
-
-                throw new Exception(Result.ServerError.ToString());
-            }
-
-           // PageList<AddBrandResponse> Result= await DbContext.Brands
-           //     .Sort(OrderBy,BrandSorting.switchOrdering)                
-           //     .Select(BrandQuery.ToBrandResponse)
-           //     .ToPagedList(pageNumber,pageSize);
-           return Result.Documents.Select(BrandQuery.ToBrandResponse.Compile()).ToPaginateResult(Result.HitsMetadata.Total.Value,pageNumber, pageSize);
+           PageList<AddBrandResponse> Result=  DbContext.Brands
+               .Sort(OrderBy,BrandSorting.switchOrdering)
+               
+               .Select(BrandQuery.ToBrandResponse)
+               .ToPagedList(pageNumber,pageSize);
+           return Result;
         }
 
         public bool IsExists(Guid Id)
@@ -87,7 +92,7 @@ namespace Repositories.Brand
                 DbContext.SaveChanges();      
                 
             }
-            ElasticClient.Update(DBBrand, ElasticSearchIndexName.brand);            
+            // ElasticClient.Update(DBBrand, ElasticSearchIndexName.brand);            
             return DBBrand;
 
 
@@ -107,7 +112,7 @@ namespace Repositories.Brand
             var brand=new BrandEntity { Id = Id };
             DbContext.Brands.Remove(brand);            
             DbContext.SaveChanges();
-            ElasticClient.Delete(brand, ElasticSearchIndexName.brand);
+            // ElasticClient.Delete(brand, ElasticSearchIndexName.brand);
             return true; 
 
         }

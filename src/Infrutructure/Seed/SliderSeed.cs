@@ -27,7 +27,7 @@ namespace ecommerce.infrutructure.Seed
 
                 context.AddRange(Sliders);
                 context.SaveChanges();
-                ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
+                // ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
 
 
             }

@@ -9,15 +9,15 @@ namespace ecommerce_shared.Pagination
     public class PageList<T>
     {
 
-        public PageList(List<T> items,  long count, int? pageNumber=null, int ?pageSize=null)
+        public PageList(List<T> items,  long count, int? pageNumber=1, int ?pageSize=null)
         {
 
             TotalCount = count;
-            PageSize = pageSize;
+            PageSize = pageSize==null?(count==0)?1:(int?)count:pageSize;
             CurrentPage = pageNumber;
             Data    = items;
-            var x = (count / (double)pageSize);
-            TotalPages = Math.Ceiling((decimal)x);
+            var x = (count / (double)PageSize);
+            TotalPages = x==0?1:Math.Ceiling((decimal)x);
 
 
         }

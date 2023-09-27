@@ -15,7 +15,7 @@ namespace ecommerce.Dto.Results.Admin.Brand
 
         public string Name { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        // public DateTime CreatedAt { get; set; }
 
 
         public ImageResponse image { get; set; }

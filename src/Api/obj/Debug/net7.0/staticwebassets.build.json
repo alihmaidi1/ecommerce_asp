@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G6EN0SBhnnRuWUaF4rZSlKwLvGBL96WYBeX082s0Uak=",
+  "Hash": "223qpFlQj3vLcTAsJ+Sn5hYXeTt6bzxXGZPiMEBieZo=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -17,6 +17,23 @@
   ],
   "Assets": [
     {
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png"
+    },
+    {
       "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
@@ -32,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png"
+    },
+    {
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png"
     },
     {
       "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png",

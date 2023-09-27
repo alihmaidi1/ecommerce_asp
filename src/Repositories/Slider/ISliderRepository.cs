@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce_shared.Pagination;
 using SliderEntity=ecommerce.Domain.Entities.Slider;
 
 namespace Repositories.Slider
@@ -14,7 +15,7 @@ namespace Repositories.Slider
 
         public Task<SliderEntity> Store(string url,int rank);
 
-        public List<AddSliderResponse> GetAll();
+        public PageList<AddSliderResponse> GetAll(int? PageNumber,int? PageSize);
 
         public bool IsExists(Guid Id);
 

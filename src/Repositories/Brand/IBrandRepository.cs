@@ -1,9 +1,9 @@
-﻿using BrandEntity=ecommerce.Domain.Entities.Brand;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BrandTable=ecommerce.Domain.Entities.BrandEntities.Brand;
 using Repositories.Base;
 using ecommerce.Dto.Results.Admin.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
@@ -12,7 +12,7 @@ using ecommerce_shared.Pagination;
 
 namespace Repositories.Brand
 {
-    public interface IBrandRepository:IgenericRepository<BrandEntity>
+    public interface IBrandRepository:IgenericRepository<BrandTable>
     {
 
 
@@ -21,11 +21,11 @@ namespace Repositories.Brand
         public bool IsValidLogo(Guid Id,string logo);
 
 
-        public BrandEntity Get(Guid Id);     
+        public BrandTable Get(Guid Id);     
 
         public bool IsUniqueName(Guid Id,string Name);
 
-        public Task<BrandEntity> Update(UpdateBrandCommand brand);
+        public Task<BrandTable> Update(UpdateBrandCommand brand);
         public Task<PageList<AddBrandResponse>> GetAll(string? OrderBy,int? pageNumber, int? pageSize);
 
 

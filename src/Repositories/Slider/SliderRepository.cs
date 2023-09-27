@@ -14,6 +14,7 @@ using ecommerce.Dto.Results.Admin;
 using Microsoft.AspNetCore.Hosting;
 using ecommerce.Domain.Entities;
 using ecommerce_shared.Enums;
+using ecommerce_shared.Pagination;
 using Nest;
 using ecommerce.Domain.ElasticSearch;
 
@@ -49,7 +50,7 @@ namespace Repositories.Slider
                 Slider.Hash = image.hash;
                 DbContext.Sliders.Add(Slider);
                 DbContext.SaveChanges();
-                ElasticClient.AddEntity(Slider, ElasticSearchIndexName.slider);
+                // ElasticClient.AddEntity(Slider, ElasticSearchIndexName.slider);
                 return Slider;
 
 
@@ -69,11 +70,12 @@ namespace Repositories.Slider
         }
 
 
-        public List<AddSliderResponse> GetAll()
+        public  PageList<AddSliderResponse> GetAll(int? PageNumber,int? PageSize)
         {
 
-            return DbContext.Sliders.Select(SliderStoreQuery.ToSliderResponse).ToList();
+            return  DbContext.Sliders.OrderBy(x=>x.Rank).Select(SliderStoreQuery.ToSliderResponse).ToPagedList(PageNumber,PageSize);
 
+            
         }
 
 
@@ -90,7 +92,7 @@ namespace Repositories.Slider
 
             return DbContext.Sliders
                 .Select(SliderStoreQuery.ToSliderResponse)
-                .FirstOrDefault(x => x.Id == id);
+                .First(x => x.Id == id);
 
         }
 
@@ -151,7 +153,7 @@ namespace Repositories.Slider
                 DbContext.SaveChanges();
 
             }
-            ElasticClient.Update<SliderEntity>(DBSlider, ElasticSearchIndexName.slider);
+            // ElasticClient.Update<SliderEntity>(DBSlider, ElasticSearchIndexName.slider);
             return SliderStoreQuery.ToSliderResponse.Compile()(DBSlider);
 
 
@@ -164,7 +166,7 @@ namespace Repositories.Slider
         {
             var slider= new SliderEntity { Id = id };
             DbContext.Sliders.Remove(slider);
-            ElasticClient.Delete(slider, ElasticSearchIndexName.slider);
+            // ElasticClient.Delete(slider, ElasticSearchIndexName.slider);
             return true;
         }
 

@@ -27,37 +27,37 @@ namespace ecommerce.Domain.ElasticSearch
 
         }
 
-        public static void Update<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity
-        {
+        // public static void Update<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity
+        // {
+        //
+        //
+        //     var result = ElasticClient.Update<T>(entity.Id, d => d
+        //     .Index(name.ToString())
+        //     .Doc(entity));
+        //     if (!result.IsValid || result.ServerError != null)
+        //     {
+        //
+        //         throw new ErrorElasticSearch(result.ServerError.ToString());
+        //     }
+        // }
 
 
-            var result = ElasticClient.Update<T>(entity.Id, d => d
-            .Index(name.ToString())
-            .Doc(entity));
-            if (!result.IsValid || result.ServerError != null)
-            {
-
-                throw new ErrorElasticSearch(result.ServerError.ToString());
-            }
-        }
-
-
-        public static void Delete<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity
-        {
-
-            var Result = ElasticClient.Delete<T>(entity.Id, d => d
-            .Index(name.ToString())
-            );
-
-            if (!Result.IsValid || Result.ServerError != null)
-            {
-
-                throw new ErrorElasticSearch(Result.ServerError.ToString());
-
-            }
-
-
-        }
+        // public static void Delete<T>(this IElasticClient ElasticClient, T entity, ElasticSearchIndexName name) where T : BaseEntity
+        // {
+        //
+        //     var Result = ElasticClient.Delete<T>(entity.Id, d => d
+        //     .Index(name.ToString())
+        //     );
+        //
+        //     if (!Result.IsValid || Result.ServerError != null)
+        //     {
+        //
+        //         throw new ErrorElasticSearch(Result.ServerError.ToString());
+        //
+        //     }
+        //
+        //
+        // }
 
 
     }

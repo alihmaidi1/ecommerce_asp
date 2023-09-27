@@ -1,4 +1,4 @@
-﻿using BrandEntity=ecommerce.Domain.Entities.Brand;
+﻿using BrandEntity=ecommerce.Domain.Entities.BrandEntities.Brand;
 using ecommerce.Domain.Base;
 using System.Linq.Expressions;
 using NetTopologySuite.Index.HPRtree;
@@ -22,7 +22,7 @@ namespace Repositories.Brand.Operations
             =>key switch
             {
 
-                "Name" => x => x.Name.Suffix("keyword"),
+                "Name" => x => x.Name,
                 _ => x => x.DateCreated,
 
             };

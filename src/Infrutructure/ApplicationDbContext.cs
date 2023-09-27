@@ -2,6 +2,7 @@
 
 using ecommerce.Domain.Entities;
 using System.Reflection;
+using ecommerce.Domain.Entities.BrandEntities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using ecommerce.Domain.Entities.Identity;

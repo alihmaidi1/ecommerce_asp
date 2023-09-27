@@ -42,9 +42,7 @@ namespace ecommerce.Domain.Entities
         
 
         public virtual ICollection<Category> Child { get; set; }
-
-
-
+        
 
 
     }

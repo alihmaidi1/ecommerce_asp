@@ -14,6 +14,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Domain.Entities;
+using ecommerce.Domain.Entities.BrandEntities;
 
 namespace ecommerce.service.BrandService
 {
@@ -39,7 +41,7 @@ namespace ecommerce.service.BrandService
             Brand.Url = images.Url;
             Brand.ResizedUrl = images.resized;
             Brand=await BrandRepository.AddAsync(Brand);
-            ElasticClient.AddEntity(Brand, ElasticSearchIndexName.brand);
+            // ElasticClient.AddEntity(Brand, ElasticSearchIndexName.brand);
             AddBrandResponse Response= BrandQuery.ToBrandResponse.Compile()(Brand);
 
             return Response;

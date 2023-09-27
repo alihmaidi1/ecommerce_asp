@@ -9,26 +9,235 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="315eceec-f936-4dcd-a920-ee1b5877a826" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entities/BrandEntities/Brand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entities/BrandEntities/BrandId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrutructure/Data/CategoryFaker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositories/Category/Operations/CategorySorting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/0c9eeffe-06d6-4e98-a817-fbd832b9d610.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/0c9eeffe-06d6-4e98-a817-fbd832b9d610/storage_v2/_src_/database/ecommerce.QLYXWw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/0c9eeffe-06d6-4e98-a817-fbd832b9d610/storage_v2/_src_/database/ecommerce.QLYXWw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/0c9eeffe-06d6-4e98-a817-fbd832b9d610/storage_v2/_src_/database/ecommerce.QLYXWw/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/0c9eeffe-06d6-4e98-a817-fbd832b9d610/storage_v2/_src_/database/ecommerce.QLYXWw/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/3f212fb0-31ca-4650-95c7-ad66b07daa84.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/3f212fb0-31ca-4650-95c7-ad66b07daa84/storage_v2/_src_/database/ecommerce.QLYXWw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/3f212fb0-31ca-4650-95c7-ad66b07daa84/storage_v2/_src_/database/ecommerce.QLYXWw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/3f212fb0-31ca-4650-95c7-ad66b07daa84/storage_v2/_src_/database/ecommerce.QLYXWw/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/3f212fb0-31ca-4650-95c7-ad66b07daa84/storage_v2/_src_/database/ecommerce.QLYXWw/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/b680fb09-4715-49d4-847c-f5587794785f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/b680fb09-4715-49d4-847c-f5587794785f/storage_v2/_src_/database/ecommerce.QLYXWw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/b680fb09-4715-49d4-847c-f5587794785f/storage_v2/_src_/database/ecommerce.QLYXWw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/b680fb09-4715-49d4-847c-f5587794785f/storage_v2/_src_/database/ecommerce.QLYXWw/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/b680fb09-4715-49d4-847c-f5587794785f/storage_v2/_src_/database/ecommerce.QLYXWw/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/f23d762e-15c1-4c26-974b-7eb00d038e0e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/f23d762e-15c1-4c26-974b-7eb00d038e0e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/SuperAdmin/Slider/Query/GetAllSliderQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/SuperAdmin/Slider/Query/GetAllSliderQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ref/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/refint/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/Brand/Command/Handlers/BrandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Brand/Command/Handlers/BrandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/Brand/Query/Handlers/BrandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Brand/Query/Handlers/BrandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/Category/Query/Handler/CategoryQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Category/Query/Handler/CategoryQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/Pages/Queries/Handlers/PageQueryHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Pages/Queries/Handlers/PageQueryHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/Slider/Query/Handlers/SliderQueryHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Slider/Query/Handlers/SliderQueryHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/appsettings.Production.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/appsettings.Production.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.superadmin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.superadmin.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.superadmin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce.superadmin.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/Controllers/SuperAdmin/SliderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/Controllers/SuperAdmin/SliderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.superadmin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.superadmin.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.superadmin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.superadmin.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.user.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.user.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.user.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce.user.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ref/ecommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ref/ecommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/refint/ecommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/refint/ecommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ElasticSearch/ElasticSearchExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ElasticSearch/ElasticSearchExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ElasticSearch/ExtensionOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ElasticSearch/ExtensionOperation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/Brand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entities/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/City.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entities/City.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entities/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ecommerce.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ecommerce.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ref/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ref/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/refint/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/refint/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/Results/Admin/Brand/AddBrandResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/Results/Admin/Brand/AddBrandResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ref/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ref/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/refint/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/refint/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Configration/BrandConfigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Configration/BrandConfigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Data/BrandFaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Data/BrandFaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Data/SliderFaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Data/SliderFaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Seed/BrandSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Seed/BrandSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Seed/CategorySeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Seed/CategorySeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/Seed/SliderSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/Seed/SliderSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ref/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ref/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/refint/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/refint/ecommerce.infrutructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Brand/BrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Brand/BrandRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Brand/IBrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Brand/IBrandRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Brand/Operations/BrandQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Brand/Operations/BrandQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Brand/Operations/BrandSorting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Brand/Operations/BrandSorting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Category/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Category/CategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Category/ICategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Category/ICategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Slider/ISliderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Slider/ISliderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/Slider/SliderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/Slider/SliderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/ref/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/ref/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/refint/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/refint/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/BrandService/BrandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/BrandService/BrandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce.service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/PageList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/PageList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ref/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ref/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/refint/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/refint/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/Repositories.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/Repositories.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/Repositories.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/Repositories.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Dto.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Dto.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Dto.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.Dto.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.infrutructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.user.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.user.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.user.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce.user.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce_shared.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce_shared.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce_shared.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/bin/Debug/net7.0/ecommerce_shared.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +248,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44bb8a3d3e2043edb8a06de20a13497b34800/7c/b913d15e/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863c5a9eb0fd481e9b4fee5cf80fe1d1a29c00/15/23433bfe/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863c5a9eb0fd481e9b4fee5cf80fe1d1a29c00/f4/ebba4d8a/Path.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97982ada126b4a44bc33c12235fc663b24fc00/a8/95965e27/Faker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b3e14bbe97443818599125355fe5dd86ce00/54/d3932f0d/UserManager`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a79ea6671ab34f5b87042f8c15607ce92a578/34/d261c335/Bitmap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Api/Controllers/User/CityController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Infrutructure/Migrations/20230926164151_init.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entities/BrandEntities/BrandId.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrutructure/Migrations/ApplicationDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -166,7 +405,9 @@
       <workItem from="1695717294496" duration="4341000" />
       <workItem from="1695729399723" duration="174000" />
       <workItem from="1695730662015" duration="1024000" />
-      <workItem from="1695737547115" duration="8442000" />
+      <workItem from="1695737547115" duration="9789000" />
+      <workItem from="1695799515219" duration="8454000" />
+      <workItem from="1695820588247" duration="4301000" />
     </task>
     <servers />
   </component>
@@ -271,188 +512,6 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>110</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="110" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3474" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3540" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>109</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="109" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3407" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3449" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>111</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="111" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3553" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3623" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>112</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="112" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3636" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3698" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>113</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="113" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3711" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3748" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>114</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="114" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3761" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3818" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>116</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="116" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3832" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3855" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>118</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="118" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3934" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3966" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>117</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="117" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3868" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3921" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>120</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="120" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="3980" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4050" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>121</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="121" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="4063" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4117" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>123</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="123" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="4202" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4240" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>122</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="122" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="4130" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4189" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs</url>
-          <line>124</line>
-          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/File/S3/StorageService.cs" initialLine="124" containingFunctionPresentation="Method 'OptimizeFile'">
-            <startOffsets>
-              <option value="4253" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4424" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Service/UserService/UserService.cs</url>
           <line>65</line>
           <properties documentPath="$PROJECT_DIR$/src/Service/UserService/UserService.cs" initialLine="65" containingFunctionPresentation="Method 'ConfirmAccount'">
@@ -490,6 +549,73 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Service/BrandService/BrandService.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/src/Service/BrandService/BrandService.cs" initialLine="34" containingFunctionPresentation="Method 'CreateBrand'">
+            <startOffsets>
+              <option value="1198" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1286" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Admin/Category/Query/Handler/CategoryQueryHandler.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/src/Admin/Category/Query/Handler/CategoryQueryHandler.cs" initialLine="33" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1046" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1170" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Repositories/Category/CategoryRepository.cs</url>
+          <line>172</line>
+          <properties documentPath="$PROJECT_DIR$/src/Repositories/Category/CategoryRepository.cs" initialLine="170" containingFunctionPresentation="Method 'GetCategories'">
+            <startOffsets>
+              <option value="4449" />
+              <option value="4503" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4694" />
+              <option value="4519" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs</url>
+          <line>11</line>
+          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs" initialLine="11" containingFunctionPresentation="Method 'ToPagedList'">
+            <startOffsets>
+              <option value="272" />
+            </startOffsets>
+            <endOffsets>
+              <option value="291" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/src/Shared_Kernal/EntityOperation/ExtensionMethod.cs" initialLine="12" containingFunctionPresentation="Method 'ToPagedList'">
+            <startOffsets>
+              <option value="304" />
+            </startOffsets>
+            <endOffsets>
+              <option value="305" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

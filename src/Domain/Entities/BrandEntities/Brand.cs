@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace ecommerce.Domain.Entities.Brands
+namespace ecommerce.Domain.Entities.BrandEntities
 {
     public  class Brand :BaseEntity
     {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Domain.Entities.BrandEntities;
 using tables.Base.Entity;
 
 namespace ecommerce.Domain.Entities;

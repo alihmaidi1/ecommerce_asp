@@ -10,10 +10,13 @@ using ecommerce.Domain.Entities;
 using ecommerce_shared.File.S3;
 using ecommerce_shared.File;
 using ecommerce_shared.Constant;
+using ecommerce_shared.Pagination;
 using ecommerce.Dto.Results.Admin.Category;
 using Repositories.Category.Operations;
 using Microsoft.EntityFrameworkCore;
 using EFCore.BulkExtensions;
+using Repositories.Base;
+using StackExchange.Redis;
 
 namespace Repositories.Category
 {
@@ -163,11 +166,15 @@ namespace Repositories.Category
 
 
 
-        public List<GetAllCategoryResponse> GetCategories()
+        public PageList<GetAllCategoryResponse> GetCategories(string? OrderBy,int? pageNumber, int? pageSize,bool status=true)
         {
 
 
-            return DbContext.Categories.Select(CategoryQuery.ToAllCategoryResponse).ToList();
+            return DbContext.Categories
+                .Where(x=>x.Status==status)
+                .Sort(OrderBy,CategorySorting.switchOrdering)
+                .Select(CategoryQuery.ToAllCategoryResponse)
+                .ToPagedList(pageNumber,pageSize);
 
             
         }

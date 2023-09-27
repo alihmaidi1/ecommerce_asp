@@ -38,7 +38,7 @@ namespace ecommerce.admin.Pages.Queries.Handlers
         public async Task<JsonResult> Handle(GetAllPagesQuery request, CancellationToken cancellationToken)
         {
 
-            var PagesList = await pageService.GetPagesQueryable().Select(GetAllPagesResult.GetAllPage).ToPagedList(request.pageNumber, request.pageSize);
+            var PagesList =  pageService.GetPagesQueryable().Select(GetAllPagesResult.GetAllPage).ToPagedList(request.pageNumber, request.pageSize);
 
 
             return Success(PagesList);
