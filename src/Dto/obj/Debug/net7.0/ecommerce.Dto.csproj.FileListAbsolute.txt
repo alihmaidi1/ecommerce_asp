@@ -76,6 +76,30 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Dto/obj/Debug/net7.0/ecom
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Dto/obj/Debug/net7.0/refint/ecommerce.Dto.dll
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Dto/obj/Debug/net7.0/ecommerce.Dto.pdb
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Dto/obj/Debug/net7.0/ref/ecommerce.Dto.dll
+<<<<<<< HEAD
+=======
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.Dto.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.Dto.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.Domain.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce.Domain.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/en/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/bin/Debug/net7.0/ar/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.CopyComplete
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/refint/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ecommerce.Dto.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/obj/Debug/net7.0/ref/ecommerce.Dto.dll
+>>>>>>> ed
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/bin/Debug/net7.0/ecommerce.Dto.deps.json
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/bin/Debug/net7.0/ecommerce.Dto.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/bin/Debug/net7.0/ecommerce.Dto.pdb

@@ -486,6 +486,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "ereno.linux-x64.eugeneereno.System.Drawing": {
+              "target": "Package",
+              "version": "[6.1.1.4, )"
             }
           },
           "imports": [

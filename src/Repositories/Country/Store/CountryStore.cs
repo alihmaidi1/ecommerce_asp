@@ -18,6 +18,7 @@
 //        public static class Query
 //        {
 
+<<<<<<< HEAD
 //            public static Expression<Func<CountryEntity, GetAllCountriesDto>> ToGetAllCountryDto => c => new GetAllCountriesDto
 //            {
 //                Id = c.Id,
@@ -25,6 +26,17 @@
 //                lat = c.lat,
 //                Name = c.Name,
 //                Status = c.Status,
+=======
+            public static Expression<Func<CountryEntity, GetAllCountriesDto>> ToGetAllCountryDto => c => new GetAllCountriesDto
+            {
+                Id = c.Id,
+                Code = c.Code,
+                lat = c.lat,
+                lon=c.lon,
+                
+                Name = c.Name,
+                Status = c.Status,
+>>>>>>> ed
 
 //            };
 

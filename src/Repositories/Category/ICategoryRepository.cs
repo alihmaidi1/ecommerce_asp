@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce_shared.Pagination;
 using ecommerce.Dto.Results.Admin.Category;
 using ecommerce.Domain.Entities.Category;
 
@@ -30,7 +31,13 @@ namespace Repositories.Category
 
         public Task<AddCategoryResponse> Update(CategoryId Id, string Name, string Description, string Meta_Title, int rank, string Meta_Description, CategoryId? ParentId, List<string> Images, List<string> deletedImages);
 
+<<<<<<< HEAD
         public List<GetAllCategoryResponse> GetCategories();
+=======
+        public Task<AddCategoryResponse> Update(Guid Id,string Name, string Description, string Meta_Title, int rank, string Meta_Description, Guid? ParentId, List<string> Images, List<string> deletedImages);
+        
+        public PageList<GetAllCategoryResponse> GetCategories(string? OrderBy,int? pageNumber, int? pageSize,bool  status);
+>>>>>>> ed
 
         public List<GetCategoryResponse> GetCategoryTree();
 

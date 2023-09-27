@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "CsuDLSzQWzjE9T47iMFTG4v6MwowqkSn4BXEHNdgYS1aHkS861+WHXw9cgHnpH0G7cpZylHQLq2zOWpVyVf8dw==",
+=======
+  "dgSpecHash": "A/2VvAjrh84NDFU7eYCQ2O2Wrt/jJSwoQ/eN/jBoQtN/n8ubE9CbsoI87uHQW8KQaqg/JA9/gbfsRe9gSsRejw==",
+>>>>>>> ed
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/User/ecommerce.user.csproj",
   "expectedPackageFiles": [
@@ -21,9 +25,21 @@
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.encryptcolumn/6.0.8/entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid/4.0.0/entityframeworkcore.sqlserver.hierarchyid.4.0.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid.abstractions/4.0.0/entityframeworkcore.sqlserver.hierarchyid.abstractions.4.0.0.nupkg.sha512",
+<<<<<<< HEAD
     "/home/alihmaidi/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+=======
+    "/home/alihmaidi/.nuget/packages/ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4/ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire/1.8.5/hangfire.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.aspnetcore/1.8.5/hangfire.aspnetcore.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.core/1.8.5/hangfire.core.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.netcore/1.8.5/hangfire.netcore.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.sqlserver/1.8.5/hangfire.sqlserver.1.8.5.nupkg.sha512",
+>>>>>>> ed
     "/home/alihmaidi/.nuget/packages/lazziya.imageresize/4.1.4/lazziya.imageresize.4.1.4.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/mailkit/4.1.0/mailkit.4.1.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/medalliontopologicalsort/1.0.0/medalliontopologicalsort.1.0.0.nupkg.sha512",
@@ -102,7 +118,11 @@
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.fileproviders.composite/2.2.0/microsoft.extensions.fileproviders.composite.2.2.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.fileproviders.embedded/7.0.9/microsoft.extensions.fileproviders.embedded.7.0.9.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.filesystemglobbing/2.2.0/microsoft.extensions.filesystemglobbing.2.2.0.nupkg.sha512",
+<<<<<<< HEAD
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.hosting.abstractions/2.2.0/microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
+=======
+    "/home/alihmaidi/.nuget/packages/microsoft.extensions.hosting.abstractions/3.0.0/microsoft.extensions.hosting.abstractions.3.0.0.nupkg.sha512",
+>>>>>>> ed
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.identity.core/7.0.9/microsoft.extensions.identity.core.7.0.9.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.identity.stores/7.0.9/microsoft.extensions.identity.stores.7.0.9.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/microsoft.extensions.localization/2.2.0/microsoft.extensions.localization.2.2.0.nupkg.sha512",

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "9Bbad+3lVzSk3q9N2k7tlGHpKhCoXav6SPQEGieFrDSuOHHflSqWitDh8ZbYXnTqnuI3AHlpXNvi9PkeS7Zs5A==",
+=======
+  "dgSpecHash": "KvlvEjgF3OicRFXj9HXBprrzf7BpeBVtDI4ScBtUAOKNGCraYk/luv3oIiV7oFZ6ugf5UirRLPL4cwsimNUnYQ==",
+>>>>>>> ed
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Repositories/Repositories.csproj",
   "expectedPackageFiles": [
@@ -21,6 +25,10 @@
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.encryptcolumn/6.0.8/entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid/4.0.0/entityframeworkcore.sqlserver.hierarchyid.4.0.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid.abstractions/4.0.0/entityframeworkcore.sqlserver.hierarchyid.abstractions.4.0.0.nupkg.sha512",
+<<<<<<< HEAD
+=======
+    "/home/alihmaidi/.nuget/packages/ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4/ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
+>>>>>>> ed
     "/home/alihmaidi/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",

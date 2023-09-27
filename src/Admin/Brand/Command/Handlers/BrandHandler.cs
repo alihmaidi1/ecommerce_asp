@@ -1,4 +1,4 @@
-﻿using BrandEntity = ecommerce.Domain.Entities.Brand.Brand;
+﻿using BrandEntity = ecommerce.Domain.Entities.BrandEntities.Brand;
 using ecommerce.models.SuperAdmin.Brand.Commands;
 using ecommerce.service.BrandService;
 using ecommerce_shared.OperationResult;

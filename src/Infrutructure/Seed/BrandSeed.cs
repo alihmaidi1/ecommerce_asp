@@ -1,6 +1,7 @@
 ﻿using ecommerce.Domain.Entities.Brand;
 using ecommerce.infrutructure.Data;
 using ecommerce_shared.Enums;
+using ecommerce.Domain.Entities.BrandEntities;
 using Nest;
 namespace ecommerce.infrutructure.seed
 {
@@ -15,7 +16,7 @@ namespace ecommerce.infrutructure.seed
                 List<Brand> brands = BrandFaker.GetBrandFaker().Generate(5);
                 context.AddRange(brands);
                 context.SaveChanges();
-                ElasticClient.IndexMany(brands, ElasticSearchIndexName.brand.ToString());
+                // ElasticClient.IndexMany(brands, ElasticSearchIndexName.brand.ToString());
 
 
             }

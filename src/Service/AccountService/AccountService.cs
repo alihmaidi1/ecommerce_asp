@@ -13,6 +13,9 @@ using ecommerce_shared.Helper;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using ecommerce_shared.File;
+using ecommerce.infrutructure;
+using Microsoft.EntityFrameworkCore;
+using Nest;
 
 namespace ecommerce.service.UserService
 {
@@ -27,12 +30,14 @@ namespace ecommerce.service.UserService
 
         public readonly IAccountRepository AccountRepository;
 
+        public ApplicationDbContext DbContext;
         public ISchemaFactory SchemaFactory;
         protected SignInManager<Account> SignInManager;
         
-        public AccountService(IHttpContextAccessor httpContextAccessor,IAccountRepository AccountRepository,ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
+        public AccountService(ApplicationDbContext DbContext,IHttpContextAccessor httpContextAccessor,IAccountRepository AccountRepository,ISchemaFactory SchemaFactory,IMailService MailService,ICacheRepository CacheRepository,UserManager<Account> UserManager, SignInManager<Account> SignInManager)
         {
             this.CacheRepository = CacheRepository;
+            this.DbContext = DbContext;
             this.httpContextAccessor = httpContextAccessor;
             this.AccountRepository = AccountRepository;
             this.SchemaFactory=SchemaFactory;
@@ -98,13 +103,16 @@ namespace ecommerce.service.UserService
 
         }
 
-        public async Task<bool> SendConfirmCode(Account Account)
+        public async Task<bool> SendConfirmCode(Guid id,string Email)
         {
 
+            
             string Code = string.Empty.GenerateCode();
-            Account.ConfirmCode= Code;
-            await UserManager.UpdateAsync(Account);
-            MailService.SendMail(Account.Email, $"You Can Verify Your Account By This Code :{Code}");
+
+            DbContext.Accounts.Where(x => x.Id == id)
+                .ExecuteUpdate(setter=>setter.SetProperty(p=>p.ConfirmCode,Code));
+            
+            MailService.SendMail(Email, $"You Can Verify Your Account By This Code :{Code}");
             return true;
 
 

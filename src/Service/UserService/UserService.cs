@@ -60,6 +60,7 @@
         
 //        }
 
+<<<<<<< HEAD
 //        public async Task<User> ConfirmAccount(string Email, string Code)
 //        {
 //            var Account = Context.Users.FirstOrDefault(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
@@ -67,6 +68,15 @@
 //            Account.EmailConfirmed = true;
 //            await UserManager.UpdateAsync(Account);
 //            return Account as User;
+=======
+        public async Task<User> ConfirmAccount(string Email, string Code)
+        {
+            var Account = Context.Users.FirstOrDefault(x=>x.Email.Equals(Email)&&x.ProviderType==ProviderAuthentication.Local);
+            Account.ConfirmCode?.Equals(Code).ThrowIfFalse("Your Code Is Not Correct");
+            Account.EmailConfirmed = true;
+            await UserManager.UpdateAsync(Account);
+            return Account as User;
+>>>>>>> ed
 
 //        }
 

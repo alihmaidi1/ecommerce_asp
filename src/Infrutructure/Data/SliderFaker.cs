@@ -18,7 +18,7 @@ namespace ecommerce.infrutructure.Data
             Slider.RuleFor(x => x.Rank, x =>x.Random.Int(1,2045400994));
             Slider.RuleFor(x => x.Url, x => x.Image.PicsumUrl());
             Slider.RuleFor(x => x.ResizedUrl, x => x.Image.PicsumUrl());
-            Slider.RuleFor(x => x.Hash, x => x.Random.AlphaNumeric(10));
+            Slider.RuleFor(x => x.Hash, x => "LGF5]+Yk^6#M@-5c,1J5@[or[Q6.");
 
             return Slider;
         }

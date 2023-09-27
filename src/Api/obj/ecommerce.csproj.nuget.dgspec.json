@@ -216,6 +216,10 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.5, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.1.1, )"
@@ -273,6 +277,10 @@
             "System.Threading.RateLimiting": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "ereno.linux-x64.eugeneereno.System.Drawing": {
+              "target": "Package",
+              "version": "[6.1.1.4, )"
             }
           },
           "imports": [
@@ -850,6 +858,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "ereno.linux-x64.eugeneereno.System.Drawing": {
+              "target": "Package",
+              "version": "[6.1.1.4, )"
             }
           },
           "imports": [
@@ -933,6 +945,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
+            },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.5, )"
             },
             "MediatR": {
               "target": "Package",

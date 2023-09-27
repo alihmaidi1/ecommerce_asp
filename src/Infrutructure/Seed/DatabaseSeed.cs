@@ -20,12 +20,15 @@ namespace ecommerce.infrutructure.seed
         {
             var context = services.GetRequiredService<ApplicationDbContext>();
 
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+            context.Database.Migrate();
+            
             var transaction = context.Database.BeginTransaction();
 
             try
             {
 
-                await context.Database.MigrateAsync();
                 var RegionApi = services.GetRequiredService<ExternalRegionApi>();
                 var RoleManager = services.GetRequiredService<RoleManager<Role>>();
                 var UserManager = services.GetRequiredService<UserManager<Account>>();
@@ -52,11 +55,15 @@ namespace ecommerce.infrutructure.seed
 
 
             }
+<<<<<<< HEAD
             catch(Exception ex) 
+=======
+            catch(Exception ex)
+>>>>>>> ed
             {
 
                 transaction.Rollback();
-                
+                throw new Exception(ex.Message);
             }
 
 

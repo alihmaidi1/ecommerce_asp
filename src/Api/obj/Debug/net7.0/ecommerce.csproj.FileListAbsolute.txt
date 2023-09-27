@@ -625,6 +625,240 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/obj/Debug/net7.0/ecom
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/obj/Debug/net7.0/ref/ecommerce.dll
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/bin/Debug/net7.0/ecommerce.superadmin.dll
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/bin/Debug/net7.0/ecommerce.superadmin.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/appsettings.Development.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/appsettings.Production.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/appsettings.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.staticwebassets.runtime.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.runtimeconfig.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/AutoMapper.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/AWSSDK.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/AWSSDK.S3.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Azure.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Azure.Identity.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Blurhash.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Blurhash.ImageSharp.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Bogus.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/BouncyCastle.Cryptography.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Castle.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.SqlServer.Types.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/EFCore.BulkExtensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Elasticsearch.Net.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/EntityFrameworkCore.EncryptColumn.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/EntityFrameworkCore.SqlServer.HierarchyId.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/EntityFrameworkCore.SqlServer.HierarchyId.Abstractions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/FluentValidation.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Humanizer.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/LazZiya.ImageResize.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MailKit.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MedallionTopologicalSort.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MediatR.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MediatR.Contracts.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.UI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.JsonPatch.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Razor.Language.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.CodeAnalysis.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.CodeAnalysis.CSharp.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.CodeAnalysis.Razor.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Data.Sqlite.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Proxies.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Embedded.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MimeKit.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/MySqlConnector.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Nest.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/NetTopologySuite.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/NetTopologySuite.IO.SpatiaLite.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/NetTopologySuite.IO.SqlServerBytes.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Npgsql.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Pipelines.Sockets.Unofficial.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.AspNetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Enrichers.Environment.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Enrichers.Process.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Enrichers.Thread.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Extensions.Hosting.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Extensions.Logging.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Formatting.Compact.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Settings.Configuration.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Sinks.Console.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Sinks.Debug.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Serilog.Sinks.File.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/SixLabors.ImageSharp.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/SQLitePCLRaw.core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/StackExchange.Redis.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.CodeDom.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Drawing.Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Memory.Data.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Runtime.Caching.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Security.Cryptography.Pkcs.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Security.Permissions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/System.Windows.Extensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-arm64/native/sni.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-x64/native/sni.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win-x86/native/sni.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Common.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.Domain.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.Dto.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.models.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.service.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.superadmin.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.user.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Repositories.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Common.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.superadmin.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.infrutructure.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.service.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.user.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Repositories.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.Domain.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.Dto.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce.models.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/en/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ar/ecommerce.Domain.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.MvcApplicationPartsAssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.MvcApplicationPartsAssemblyInfo.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.build.ecommerce.props
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.ecommerce.props
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.ecommerce.props
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets.pack.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets.build.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/staticwebassets.development.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/scopedcss/bundle/ecommerce.styles.css
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.csproj.CopyComplete
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/refint/ecommerce.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ecommerce.genruntimeconfig.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/Debug/net7.0/ref/ecommerce.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ereno.linux-x64.eugeneereno.System.Drawing.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libX11.so.6
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXau.so.6
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXdmcp.so.6
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXext.so.6
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXrender.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libblkid.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libbz2.so.1.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libcairo.so.2
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libexif.so.12
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libexpat.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libffi.so.8
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfontconfig.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfreetype.so.6
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfribidi.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so.0.0.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgio-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libglib-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgmodule-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgobject-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgraphite2.so.3
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libharfbuzz.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libjpeg.so.8
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libmount.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpango-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpangocairo-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpangoft2-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpcre.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpixman-1.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpng16.so.16
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libtiff.so.5
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb-render.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb-shm.so.0
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libz.so.1
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Hangfire.AspNetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Hangfire.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Hangfire.NetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/Hangfire.SqlServer.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/ca/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/de/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/es/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/fa/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/fr/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/nb/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/nl/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/pt-BR/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/pt-PT/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/pt/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/sv/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/tr-TR/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/zh-TW/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Api/bin/Debug/net7.0/zh/Hangfire.Core.resources.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/appsettings.Development.json
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/appsettings.json
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/appsettings.Production.json
@@ -651,9 +885,14 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/bin/Debug/net7.0/ecom
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/EntityFrameworkCore.EncryptColumn.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/EntityFrameworkCore.SqlServer.HierarchyId.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/EntityFrameworkCore.SqlServer.HierarchyId.Abstractions.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/ereno.linux-x64.eugeneereno.System.Drawing.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/FluentValidation.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/Hangfire.AspNetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/Hangfire.Core.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/Hangfire.NetCore.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/Hangfire.SqlServer.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/Humanizer.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/LazZiya.ImageResize.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/MailKit.dll
@@ -743,6 +982,56 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Api/bin/Debug/net7.0/ecom
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/System.Security.Permissions.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/System.Windows.Extensions.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/ca/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/de/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/es/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/fa/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/fr/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/nb/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/nl/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/pt-BR/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/pt-PT/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/pt/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/sv/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/tr-TR/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/zh-TW/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/zh/Hangfire.Core.resources.dll
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libX11.so.6
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXau.so.6
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXdmcp.so.6
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXext.so.6
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libXrender.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libblkid.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libbz2.so.1.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libcairo.so.2
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libexif.so.12
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libexpat.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libffi.so.8
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfontconfig.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfreetype.so.6
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libfribidi.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgdiplus.so.0.0.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgio-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libglib-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgmodule-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgobject-2.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libgraphite2.so.3
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libharfbuzz.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libjpeg.so.8
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libmount.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpango-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpangocairo-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpangoft2-1.0.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpcre.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpixman-1.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libpng16.so.16
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libtiff.so.5
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb-render.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb-shm.so.0
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libxcb.so.1
+/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/linux-x64/native/libz.so.1
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll

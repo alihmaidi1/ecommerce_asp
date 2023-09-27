@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="Roles\Queries\Validations\**" />
     <EmbeddedResource Remove="Roles\Queries\Validations\**" />
+      <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <None Remove="Roles\Queries\Validations\**" />
   </ItemGroup>
 

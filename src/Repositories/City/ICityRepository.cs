@@ -11,7 +11,13 @@
 //    public interface ICityRepository:IgenericRepository<CityEntity>
 //    {
 
+<<<<<<< HEAD
 //        public bool IsCityIdExists(Guid id);
+=======
+        
+        
+        public bool IsCityIdExists(Guid id);
+>>>>>>> ed
 
 //        public bool Toggle(Guid id);    
 

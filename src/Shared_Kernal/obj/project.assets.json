@@ -88,6 +88,161 @@
           }
         }
       },
+      "ereno.linux-x64.eugeneereno.System.Drawing/6.1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ereno.linux-x64.eugeneereno.System.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ereno.linux-x64.eugeneereno.System.Drawing.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libX11.so.6": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libXau.so.6": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libXdmcp.so.6": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libXext.so.6": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libXrender.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libblkid.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libbz2.so.1.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libcairo.so.2": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libexif.so.12": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libexpat.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libffi.so.8": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libfontconfig.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libfreetype.so.6": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libfribidi.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgdiplus.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgdiplus.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgdiplus.so.0.0.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgio-2.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libglib-2.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgmodule-2.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgobject-2.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libgraphite2.so.3": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libharfbuzz.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libjpeg.so.8": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libmount.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpango-1.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpangocairo-1.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpangoft2-1.0.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpcre.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpixman-1.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libpng16.so.16": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libtiff.so.5": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libxcb-render.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libxcb-shm.so.0": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libxcb.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libz.so.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
       "FluentValidation/11.5.1": {
         "type": "package",
         "compile": {
@@ -2588,6 +2743,55 @@
         "lib/netstandard2.1/Elasticsearch.Net.xml",
         "license.txt",
         "nuget-icon.png"
+      ]
+    },
+    "ereno.linux-x64.eugeneereno.System.Drawing/6.1.1.4": {
+      "sha512": "03WkAOtjI3pjZH2ivl1do2FWrE/tZAHXy8ZPjvFO6Ygrt7TnzLVKegZFWit+R8WsKdj/YQvVPbnIatq1qI0SWQ==",
+      "type": "package",
+      "path": "ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
+        "ereno.linux-x64.eugeneereno.system.drawing.nuspec",
+        "lib/net48/ereno.linux-x64.eugeneereno.System.Drawing.dll",
+        "lib/net6.0/ereno.linux-x64.eugeneereno.System.Drawing.dll",
+        "runtimes/linux-x64/native/libX11.so.6",
+        "runtimes/linux-x64/native/libXau.so.6",
+        "runtimes/linux-x64/native/libXdmcp.so.6",
+        "runtimes/linux-x64/native/libXext.so.6",
+        "runtimes/linux-x64/native/libXrender.so.1",
+        "runtimes/linux-x64/native/libblkid.so.1",
+        "runtimes/linux-x64/native/libbz2.so.1.0",
+        "runtimes/linux-x64/native/libcairo.so.2",
+        "runtimes/linux-x64/native/libexif.so.12",
+        "runtimes/linux-x64/native/libexpat.so.1",
+        "runtimes/linux-x64/native/libffi.so.8",
+        "runtimes/linux-x64/native/libfontconfig.so.1",
+        "runtimes/linux-x64/native/libfreetype.so.6",
+        "runtimes/linux-x64/native/libfribidi.so.0",
+        "runtimes/linux-x64/native/libgdiplus.so",
+        "runtimes/linux-x64/native/libgdiplus.so.0",
+        "runtimes/linux-x64/native/libgdiplus.so.0.0.0",
+        "runtimes/linux-x64/native/libgio-2.0.so.0",
+        "runtimes/linux-x64/native/libglib-2.0.so.0",
+        "runtimes/linux-x64/native/libgmodule-2.0.so.0",
+        "runtimes/linux-x64/native/libgobject-2.0.so.0",
+        "runtimes/linux-x64/native/libgraphite2.so.3",
+        "runtimes/linux-x64/native/libharfbuzz.so.0",
+        "runtimes/linux-x64/native/libjpeg.so.8",
+        "runtimes/linux-x64/native/libmount.so.1",
+        "runtimes/linux-x64/native/libpango-1.0.so.0",
+        "runtimes/linux-x64/native/libpangocairo-1.0.so.0",
+        "runtimes/linux-x64/native/libpangoft2-1.0.so.0",
+        "runtimes/linux-x64/native/libpcre.so.1",
+        "runtimes/linux-x64/native/libpixman-1.so.0",
+        "runtimes/linux-x64/native/libpng16.so.16",
+        "runtimes/linux-x64/native/libtiff.so.5",
+        "runtimes/linux-x64/native/libxcb-render.so.0",
+        "runtimes/linux-x64/native/libxcb-shm.so.0",
+        "runtimes/linux-x64/native/libxcb.so.1",
+        "runtimes/linux-x64/native/libz.so.1"
       ]
     },
     "FluentValidation/11.5.1": {
@@ -7371,7 +7575,8 @@
       "SixLabors.ImageSharp >= 3.0.1",
       "StackExchange.Redis >= 2.6.122",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.5.0",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0"
+      "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0",
+      "ereno.linux-x64.eugeneereno.System.Drawing >= 6.1.1.4"
     ]
   },
   "packageFolders": {
@@ -7466,6 +7671,10 @@
           "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",
             "version": "[6.5.0, )"
+          },
+          "ereno.linux-x64.eugeneereno.System.Drawing": {
+            "target": "Package",
+            "version": "[6.1.1.4, )"
           }
         },
         "imports": [

@@ -25,9 +25,15 @@ namespace ecommerce.infrutructure.Seed
             //        .DistinctBy(x=>x.Rank)
             //        .ToList();
 
+<<<<<<< HEAD
             //    context.AddRange(Sliders);
             //    context.SaveChanges();
             //    ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
+=======
+                context.AddRange(Sliders);
+                context.SaveChanges();
+                // ElasticClient.IndexMany(Sliders, ElasticSearchIndexName.slider.ToString());
+>>>>>>> ed
 
 
             //}

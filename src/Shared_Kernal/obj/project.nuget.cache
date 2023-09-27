@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Pq3CrwnE0RYobr8i3dgc485RW7xCbf63vl/Eqc/sUhP95grNfmf4fiQCmhq53fBKpr/oKeBflEP0PIqqg76geA==",
+=======
+  "dgSpecHash": "NQSUzauQbPjY4fZlIw2Gc0QQmoELzJ9ec1k4uX/vkhSzE4qQw2FT/K2gDrH8ssGO4t54rTKt7IIPOdJKS2npLw==",
+>>>>>>> ed
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/ecommerce_shared.csproj",
   "expectedPackageFiles": [
@@ -10,6 +14,10 @@
     "/home/alihmaidi/.nuget/packages/blurhash.imagesharp/3.0.0/blurhash.imagesharp.3.0.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/bouncycastle.cryptography/2.2.1/bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/elasticsearch.net/7.17.5/elasticsearch.net.7.17.5.nupkg.sha512",
+<<<<<<< HEAD
+=======
+    "/home/alihmaidi/.nuget/packages/ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4/ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
+>>>>>>> ed
     "/home/alihmaidi/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",

@@ -28,9 +28,9 @@ namespace ecommerce.Controllers.SuperAdmin
 
 
         [HttpPost(SliderRouter.GetAll)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(GetAllSliderQuery request)
         {
-            var response = await this.Mediator.Send(new GetAllSliderQuery());
+            var response = await this.Mediator.Send(request);
             return response;
 
         }

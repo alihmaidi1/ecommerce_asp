@@ -22,23 +22,21 @@ namespace ecommerce.superadmin.Category.Query.Handler
     {
 
         public ICategoryRepository CategoryRepository { get; set; }
-        public CategoryQueryHandler(ICategoryRepository CategoryRepository)
-        {
-
+        public CategoryQueryHandler(ICategoryRepository CategoryRepository) {
+        
             this.CategoryRepository = CategoryRepository;
-
+        
         }
 
         public async Task<JsonResult> Handle(GetAllCategory request, CancellationToken cancellationToken)
         {
-
-            var Categories = CategoryRepository.GetCategories();
-            return Success(Categories, "This Is All Categories");
+            
+            var Categories = CategoryRepository.GetCategories(request.OrderBy,request.pageNumber,request.pageSize,request.status??true);
+            return Success(Categories,"This Is All Categories");
+            
         }
-
         public async Task<JsonResult> Handle(GetAllCategoryAsTreeQuery request, CancellationToken cancellationToken)
         {
-
             var Categories = CategoryRepository.GetCategoryTree();
             return Success(Categories, "this is all your categories");
         }

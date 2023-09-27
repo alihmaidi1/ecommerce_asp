@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿//using CountryEntity = ecommerce.Domain.Entities.Country.Country;
 //using ecommerce.infrutructure;
 //using Repositories.Base.Concrete;
@@ -6,6 +7,18 @@
 //using Microsoft.EntityFrameworkCore;
 //using Nest;
 //using ecommerce.infrutructure.ExtensionMethod;
+=======
+﻿using CountryEntity=ecommerce.Domain.Entities.Country;
+using ecommerce.infrutructure;
+using Repositories.Base.Concrete;
+using ecommerce.Dto.Results.Admin.Country;
+using Repositories.Country.Store;
+using Microsoft.EntityFrameworkCore;
+using ecommerce.Domain.Entities;
+using ecommerce.Dto.Results.User.City.Query;
+using Nest;
+using ecommerce.infrutructure.ExtensionMethod;
+>>>>>>> ed
 
 //namespace Repositories.Country
 //{
@@ -23,6 +36,16 @@
 
 //            return Countries;
 //        }
+
+        public List<GetAllCountriesDto> GetAllActiveCountries()
+        {
+            
+            var Countries = DbContext.Countries.Select(CountryStore.Query.ToGetAllCountryDto).Where(x=>x.Status==true).ToList();
+
+            return Countries;
+            
+            
+        }
 
 
 //        public GetCountryResponse GetCountry(Guid id)
@@ -85,6 +108,23 @@
 //            return true;
 
 //        }
+
+        public List<OnlyCityDto> GetActiveCities(Guid CountryId)
+        {
+
+            return DbContext.Cities.Select(x => new OnlyCityDto { Id = x.Id,status = x.status, Delivery_Price = x.Delivery_Price, Name = x.Name }).Where(x=>x.status==true).ToList();
+
+            
+
+        }
+
+        public bool IsActiveExists(Guid Id)
+        {
+            return DbContext.Countries.Any(x => x.Id == Id && x.Status == true);
+
+
+
+        }
 
 
 

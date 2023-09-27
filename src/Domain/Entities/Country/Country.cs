@@ -26,6 +26,7 @@ namespace ecommerce.Domain.Entities.Country
 
 
         public double lat { get; set; }
+        public double lon { get; set; }
     
         public virtual ICollection<CityEntity> Cities { get; set;}
 

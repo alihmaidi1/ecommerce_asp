@@ -27,5 +27,6 @@
     <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">/home/alihmaidi/.nuget/packages/awssdk.core/3.7.201.6</PkgAWSSDK_Core>
     <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">/home/alihmaidi/.nuget/packages/awssdk.s3/3.7.203.1</PkgAWSSDK_S3>
     <PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets Condition=" '$(PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets)' == '' ">/home/alihmaidi/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.18.1</PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets>
+    <PkgHangfire_SqlServer Condition=" '$(PkgHangfire_SqlServer)' == '' ">/home/alihmaidi/.nuget/packages/hangfire.sqlserver/1.8.5</PkgHangfire_SqlServer>
   </PropertyGroup>
 </Project>

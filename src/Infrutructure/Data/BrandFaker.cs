@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Domain.Entities.BrandEntities;
 
 namespace ecommerce.infrutructure.Data
 {
@@ -14,13 +15,13 @@ namespace ecommerce.infrutructure.Data
         public static Faker<Brand> GetBrandFaker()
         {
 
+            
             var Brand = new Faker<Brand>();
             Brand.RuleFor(x => x.Id, new BrandId(Guid.NewGuid()));
             Brand.RuleFor(x => x.Name, x => x.Company.CompanyName());
             Brand.RuleFor(x => x.Url, x => x.Image.PicsumUrl());
             Brand.RuleFor(x => x.ResizedUrl, x => x.Image.PicsumUrl());
-            Brand.RuleFor(x => x.Hash, x => x.Random.AlphaNumeric(10));
-
+            Brand.RuleFor(x => x.Hash, x => "LGF5]+Yk^6#M@-5c,1J5@[or[Q6.");
             return Brand;
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CQ/WlKQO52qECW5wTzP913E4U7J1PxKOwMje4TaRFo2bi2W+Fbi8rE0DJVBcSXSaJv1IzMPh+Xn5RZ3QVa4JNg==",
+  "dgSpecHash": "vaVCPlvG3fhxiLaQSQHRuzXR+V9DoVL1/86lG2OjpHebDaCiTWAXQrgEGlpt7QK89UrNjsONC0+PXZd4WZ/49A==",
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Admin/ecommerce.superadmin.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.encryptcolumn/6.0.8/entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid/4.0.0/entityframeworkcore.sqlserver.hierarchyid.4.0.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid.abstractions/4.0.0/entityframeworkcore.sqlserver.hierarchyid.abstractions.4.0.0.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4/ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
@@ -257,12 +258,5 @@
     "/home/alihmaidi/.nuget/packages/system.xml.xpath/4.3.0/system.xml.xpath.4.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/system.xml.xpath.xdocument/4.3.0/system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /home/alihmaidi/Desktop/ecommerce_asp/src/Admin/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

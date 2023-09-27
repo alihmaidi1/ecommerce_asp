@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Base\ValueObject\StronglyTypeId.cs" />
+    <Compile Include="Base\ValueObject\ValueObject.cs" />
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <Compile Remove="Authorization\**" />
     <Compile Remove="Base\Abstract\**" />
     <Compile Remove="ValuesObject\**" />
@@ -16,6 +20,13 @@
     <None Remove="Authorization\**" />
     <None Remove="Base\Abstract\**" />
     <None Remove="ValuesObject\**" />
+    <Compile Remove="Entities\BrandEntity\**" />
+    <EmbeddedResource Remove="Entities\BrandEntity\**" />
+    <None Remove="Entities\BrandEntity\**" />
+    <Compile Remove="Entities\BrandEntities\BrandId.cs" />
+    <Compile Remove="Base\ValueObject\**" />
+    <EmbeddedResource Remove="Base\ValueObject\**" />
+    <None Remove="Base\ValueObject\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,5 +39,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared_Kernal\ecommerce_shared.csproj" />
   </ItemGroup>
+
+
 
 </Project>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Domain.Entities;
+using ecommerce.infrutructure.Data;
 
 namespace ecommerce.infrutructure.Seed
 {
@@ -11,6 +13,16 @@ namespace ecommerce.infrutructure.Seed
 
         public static async Task seedData(ApplicationDbContext context)
         {
+            
+            if (!context.Categories.Any())
+            {
+
+                List<Category> categories = CategoryFaker.GetCategoryFaker().Generate(5);
+                context.AddRange(categories);
+                context.SaveChanges();
+
+            }
+
 
 
         }

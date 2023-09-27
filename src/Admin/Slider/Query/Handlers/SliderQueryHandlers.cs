@@ -33,7 +33,7 @@ namespace ecommerce.superadmin.Slider.Query.Handlers
 
         public async Task<JsonResult> Handle(GetAllSliderQuery request, CancellationToken cancellationToken)
         {
-            var Sliders = SliderRepository.GetAll();
+            var Sliders = SliderRepository.GetAll(request.pageNumber,request.pageSize);
 
 
             return Success(Sliders, "this is all your sliders");

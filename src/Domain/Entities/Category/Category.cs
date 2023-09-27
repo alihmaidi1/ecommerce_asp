@@ -44,9 +44,7 @@ namespace ecommerce.Domain.Entities.Category
         public virtual Category? Parent { get;set; }
         
         public virtual ICollection<Category> Child { get; set; }
-
-
-
+        
 
 
     }

@@ -13,11 +13,19 @@ namespace ecommerce_shared.Pagination
         {
 
             TotalCount = count;
+<<<<<<< HEAD
             PageSize = (pageSize==null)? (int?)count:pageSize;
             CurrentPage = pageNumber;
             Data    = items;
             var x = (count / (double)PageSize);
             TotalPages = Math.Ceiling((decimal)x);
+=======
+            PageSize = pageSize==null?(count==0)?1:(int?)count:pageSize;
+            CurrentPage = pageNumber;
+            Data    = items;
+            var x = (count / (double)PageSize);
+            TotalPages = x==0?1:Math.Ceiling((decimal)x);
+>>>>>>> ed
 
 
         }

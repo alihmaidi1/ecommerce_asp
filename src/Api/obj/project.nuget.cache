@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ff4CY2sw2gCk+yUq5Il9T+j/T7MAoR0RORSrE7XLxHgD0FKl5H90IsFTJgh7lbCeS61zjHsQOJAtSNNtVaWtGg==",
+  "dgSpecHash": "cIegtfR89PvMOT3jdlU0MCChpLG6bH+G3Mm70CuvXIEkNakHSIqQvUFcsm6/Tpa2tCTXbJN5Wyt7egauuGBKKw==",
   "success": true,
   "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/ecommerce.csproj",
   "expectedPackageFiles": [
@@ -21,9 +21,15 @@
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.encryptcolumn/6.0.8/entityframeworkcore.encryptcolumn.6.0.8.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid/4.0.0/entityframeworkcore.sqlserver.hierarchyid.4.0.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/entityframeworkcore.sqlserver.hierarchyid.abstractions/4.0.0/entityframeworkcore.sqlserver.hierarchyid.abstractions.4.0.0.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/ereno.linux-x64.eugeneereno.system.drawing/6.1.1.4/ereno.linux-x64.eugeneereno.system.drawing.6.1.1.4.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.7.1/fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire/1.8.5/hangfire.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.aspnetcore/1.8.5/hangfire.aspnetcore.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.core/1.8.5/hangfire.core.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.netcore/1.8.5/hangfire.netcore.1.8.5.nupkg.sha512",
+    "/home/alihmaidi/.nuget/packages/hangfire.sqlserver/1.8.5/hangfire.sqlserver.1.8.5.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/lazziya.imageresize/4.1.4/lazziya.imageresize.4.1.4.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/mailkit/4.1.0/mailkit.4.1.0.nupkg.sha512",
@@ -280,12 +286,5 @@
     "/home/alihmaidi/.nuget/packages/system.xml.xpath/4.3.0/system.xml.xpath.4.3.0.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/system.xml.xpath.xdocument/4.3.0/system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /home/alihmaidi/Desktop/ecommerce_asp/src/Api/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

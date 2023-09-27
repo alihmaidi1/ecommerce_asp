@@ -7,7 +7,7 @@ namespace ecommerce_shared.Pagination
     public static class ExtensionMethod
     {
 
-        public static  async Task<PageList<T>> ToPagedList<T>(this IQueryable<T> source, int? pageNumber, int? pageSize)
+        public static   PageList<T> ToPagedList<T>(this IQueryable<T> source, int? pageNumber, int? pageSize)
         {
             if (source == null)
             {

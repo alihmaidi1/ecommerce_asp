@@ -1,5 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+<<<<<<< HEAD:src/Domain/Entities/City/City.cs
 using CountryEntity=ecommerce.Domain.Entities.Country.Country;
+=======
+
+>>>>>>> ed:src/Domain/Entities/City.cs
 using ecommerce.Domain.Entities.Identity;
 using tables.Base.Entity;
 using ecommerce.Domain.Entities.Country;

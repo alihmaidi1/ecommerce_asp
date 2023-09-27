@@ -8,8 +8,14 @@
 
   <ItemGroup>
     <Compile Remove="Services\**" />
+    <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+
     <EmbeddedResource Remove="Services\**" />
     <None Remove="Services\**" />
+    <Compile Remove="Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
   </ItemGroup>
 
   <ItemGroup>

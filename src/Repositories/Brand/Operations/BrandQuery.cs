@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using BrandEntity = ecommerce.Domain.Entities.Brand.Brand;
+=======
+﻿using BrandEntity=ecommerce.Domain.Entities.BrandEntities.Brand;
+>>>>>>> ed
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +21,12 @@ namespace Repositories.Brand.Store
 
             Id = b.Id,
             Name = b.Name,
+<<<<<<< HEAD
             CreatedAt = b.DateCreated,
 
+=======
+            
+>>>>>>> ed
             image = new ecommerce_shared.File.ImageResponse()
             {
 

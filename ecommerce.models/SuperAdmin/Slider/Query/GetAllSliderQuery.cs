@@ -11,6 +11,9 @@ namespace ecommerce.models.SuperAdmin.Slider.Query
     public class GetAllSliderQuery:IRequest<JsonResult>
     {
 
+        
+        public int? pageNumber { get; set; }
+        public int? pageSize { get; set; }
 
     }
 }

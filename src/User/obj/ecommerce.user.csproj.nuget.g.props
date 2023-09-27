@@ -20,5 +20,9 @@
     <PkgMicrosoft_AspNetCore_Razor_Design Condition=" '$(PkgMicrosoft_AspNetCore_Razor_Design)' == '' ">/home/alihmaidi/.nuget/packages/microsoft.aspnetcore.razor.design/2.2.0</PkgMicrosoft_AspNetCore_Razor_Design>
     <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">/home/alihmaidi/.nuget/packages/awssdk.core/3.7.201.6</PkgAWSSDK_Core>
     <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">/home/alihmaidi/.nuget/packages/awssdk.s3/3.7.203.1</PkgAWSSDK_S3>
+<<<<<<< HEAD
+=======
+    <PkgHangfire_SqlServer Condition=" '$(PkgHangfire_SqlServer)' == '' ">/home/alihmaidi/.nuget/packages/hangfire.sqlserver/1.8.5</PkgHangfire_SqlServer>
+>>>>>>> ed
   </PropertyGroup>
 </Project>

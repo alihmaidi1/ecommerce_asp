@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿//using AutoMapper;
 //using ecommerce.Domain.Entities.Identity;
 //using ecommerce.Dto.Base;
@@ -15,6 +16,26 @@
 //using Repositories.Jwt;
 //using Repositories.Jwt.Factory;
 //using Repositories.User.Store;
+=======
+﻿using AutoMapper;
+using ecommerce.Domain.Entities.Identity;
+using ecommerce.Dto.Base;
+using ecommerce.Dto.Results.User.Auth.Command;
+using ecommerce.models.Users.Auth.Commands;
+using ecommerce.service.UserService;
+using ecommerce_shared.Enums;
+using ecommerce_shared.OperationResult;
+using ecommerce_shared.Redis;
+using ecommerce_shared.Services.Authentication;
+using ecommerce_shared.Services.Authentication.Factory;
+using Hangfire;
+using MediatR;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Repositories.Jwt;
+using Repositories.Jwt.Factory;
+using Repositories.User.Store;
+>>>>>>> ed
 
 //namespace ecommerce.user.Auth.Commands.Handlers
 //{
@@ -64,12 +85,22 @@
         
 //        }
 
+<<<<<<< HEAD
 //        public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
 //        {
 //            User User=await UserService.CreateUser(request);
             
 //            await AccountService.SendConfirmCode(User);
 //            return Created(true, "Account Created Please Check Your Email To Confirm Your Account");
+=======
+        public async Task<JsonResult> Handle(AddUserCommand request, CancellationToken cancellationToken)
+        {
+            
+            User User=await UserService.CreateUser(request);
+            
+            BackgroundJob.Enqueue(() => AccountService.SendConfirmCode(User.Id,User.Email));
+            return Created(true, "Account Created Please Check Your Email To Confirm Your Account");
+>>>>>>> ed
 
 //        }
 

@@ -55,6 +55,21 @@ C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Shared_Kernal/obj/Debug/n
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Shared_Kernal/obj/Debug/net7.0/refint/ecommerce_shared.dll
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.pdb
 C:/Users/Ali Hmaidi/Desktop/ecommerce_microservice/src/Shared_Kernal/obj/Debug/net7.0/ref/ecommerce_shared.dll
+<<<<<<< HEAD
+=======
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.deps.json
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.csproj.AssemblyReference.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.AssemblyInfoInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.AssemblyInfo.cs
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.csproj.CoreCompileInputs.cache
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/refint/ecommerce_shared.dll
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.pdb
+/home/alihmaidi/Desktop/ecommerce_asp/src/Shared_Kernal/obj/Debug/net7.0/ref/ecommerce_shared.dll
+>>>>>>> ed
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.deps.json
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.dll
 /home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Shared_Kernal/bin/Debug/net7.0/ecommerce_shared.pdb
