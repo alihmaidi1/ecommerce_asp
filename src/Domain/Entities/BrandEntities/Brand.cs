@@ -1,4 +1,3 @@
-﻿
 using ecommerce.Domain.Base.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using tables.Base.Entity;
 
-namespace ecommerce.Domain.Entities
+namespace ecommerce.Domain.Entities.Brands
 {
     public  class Brand :BaseEntity
     {
