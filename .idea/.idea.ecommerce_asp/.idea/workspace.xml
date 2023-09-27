@@ -9,89 +9,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="315eceec-f936-4dcd-a920-ee1b5877a826" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/5a82d249-c95a-4986-8a07-a219472f0faa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/dataSources/c6751747-046e-4414-91bb-49026f64b8c4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ecommerce_asp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/Debug/net7.0/ecommerce.models.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/ecommerce.models.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.models/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/Debug/net7.0/ecommerce.superadmin.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/ecommerce.superadmin.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/ecommerce.superadmin.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/Debug/net7.0/ecommerce.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/ecommerce.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/ecommerce.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Api/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/net7.0/Common.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/Debug/net7.0/ecommerce.Domain.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/Debug/net7.0/ecommerce.Dto.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/ecommerce.Dto.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/ecommerce.Dto.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dto/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/Debug/net7.0/ecommerce.infrutructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/ecommerce.infrutructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/ecommerce.infrutructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrutructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrutructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Debug/net7.0/Repositories.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/Repositories.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/Repositories.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/Debug/net7.0/ecommerce.service.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/ecommerce.service.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/ecommerce.service.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/Debug/net7.0/ecommerce_shared.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared_Kernal/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared_Kernal/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/Debug/net7.0/ecommerce.user.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/ecommerce.user.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/ecommerce.user.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
