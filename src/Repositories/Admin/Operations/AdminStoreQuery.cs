@@ -34,7 +34,6 @@ namespace Repositories.Admin.Store
             UserName = b.UserName,
             Email = b.Email,
             IsBlocked = b.IsBlocked,
-            ConfirmedEmail = b.EmailConfirmed
 
 
 

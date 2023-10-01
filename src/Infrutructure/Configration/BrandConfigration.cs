@@ -18,7 +18,8 @@ namespace ecommerce.infrutructure.Configration
             builder.HasMany(b => b.Products)
             .WithOne(p => p.Brand)
             .OnDelete(DeleteBehavior.Restrict);
-
+            
+            builder.HasQueryFilter(x => x.DateDeleted == null);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace ecommerce.superadmin.Category.Query.Handler
         }
         public async Task<JsonResult> Handle(GetAllCategoryAsTreeQuery request, CancellationToken cancellationToken)
         {
-            var Categories = CategoryRepository.GetCategoryTree();
+            var Categories = CategoryRepository.GetCategoryTree(request.OrderBy,request.status);
             return Success(Categories, "this is all your categories");
         }
 

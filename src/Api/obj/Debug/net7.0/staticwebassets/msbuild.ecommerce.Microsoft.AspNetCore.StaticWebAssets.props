@@ -1,5 +1,21 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Temp\0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ecommerce</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ecommerce</BasePath>
+      <RelativePath>Temp/0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Temp\0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Temp\955b88fb-a923-4667-9093-0c9626e25001code1.png))">
       <SourceType>Package</SourceType>
       <SourceId>ecommerce</SourceId>

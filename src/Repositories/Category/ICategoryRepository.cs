@@ -32,7 +32,7 @@ namespace Repositories.Category
         
         public PageList<GetAllCategoryResponse> GetCategories(string? OrderBy,int? pageNumber, int? pageSize,bool  status);
 
-        public List<GetCategoryResponse> GetCategoryTree();
+        public List<GetCategoryResponse> GetCategoryTree(string? OrderBy,bool? Status);
 
         public GetCategoryResponse? GetCategory(Guid Id);
 

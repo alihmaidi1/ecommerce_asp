@@ -15,6 +15,7 @@ using ecommerce_shared.Enums;
 using ecommerce.Domain.ElasticSearch;
 using Elasticsearch.Net;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Base;
 
 namespace Repositories.Brand
@@ -75,7 +76,7 @@ namespace Repositories.Brand
         public async Task<BrandEntity> Update(UpdateBrandCommand brand)
         {
 
-            BrandEntity DBBrand = DbContext.Brands.FirstOrDefault(b => b.Id==brand.Id);
+            BrandEntity DBBrand = DbContext.Brands.First(b => b.Id==brand.Id);
             if (brand.Logo == DBBrand.Url)
             {
 
@@ -91,8 +92,7 @@ namespace Repositories.Brand
                 DBBrand.Hash=image.hash;
                 DbContext.SaveChanges();      
                 
-            }
-            // ElasticClient.Update(DBBrand, ElasticSearchIndexName.brand);            
+            }          
             return DBBrand;
 
 
@@ -110,11 +110,18 @@ namespace Repositories.Brand
         public bool Delete(Guid Id)
         {
             var brand=new BrandEntity { Id = Id };
-            DbContext.Brands.Remove(brand);            
+            DbContext.Brands
+                .Where(x=>x.Id==Id)
+                .ExecuteUpdate(setter=>
+                    setter.SetProperty(p=>p.DateDeleted,DateTime.Now)
+                    );
+            DbContext.Products
+                .Where(x => x.BrandId == Id)
+                .ExecuteUpdate(setter => 
+                    setter.SetProperty(p=>p.DateDeleted,DateTime.Now));
             DbContext.SaveChanges();
-            // ElasticClient.Delete(brand, ElasticSearchIndexName.brand);
             return true; 
-
+            
         }
 
         public bool IsValidLogo(Guid Id, string logo)

@@ -12,9 +12,11 @@ using ecommerce.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using AccountEntity=ecommerce.Domain.Entities.Identity.Account;
 using ecommerce.Domain.Entities.Identity;
+using ecommerce.Dto.Results.Admin.Admin;
 using Repositories.Role.Store;
 using Microsoft.EntityFrameworkCore;
 using Nest;
+using Repositories.Admin.Store;
 
 namespace Repositories.Admin
 {
@@ -54,7 +56,7 @@ namespace Repositories.Admin
         }
 
 
-        public async Task<AdminEntity> Store(string Email, string UserName, string Password,Guid RoleId)
+        public async Task<GetAdminQueryResponse> Store(string Email, string UserName, string Password,Guid RoleId)
         {
 
 
@@ -66,10 +68,11 @@ namespace Repositories.Admin
             DbContext.Admins.Add(Admin);
             DbContext.SaveChanges();
             var Role = await RoleManager.FindByIdAsync(RoleId.ToString());
-            var result=await UserManager.AddToRoleAsync(Admin, "Base Admin");
+            var result=await UserManager.AddToRoleAsync(Admin, Role.Name);
             if (result.Succeeded)
             {
-                return Admin;
+                
+                return AdminStoreQuery.ToAdminQueryResponse.Compile()(Admin);
             }
             throw new Exception(result.Errors.ToString());
 

@@ -17,6 +17,9 @@ namespace ecommerce.infrutructure.Configration
             builder.HasIndex(c=>c.Name).IsUnique();
             builder.HasIndex(c => c.Rank).IsUnique();
 
+            builder.HasQueryFilter(x => x.DateDeleted == null);
+
+
             builder.HasMany(c => c.Products)
             .WithOne(p => p.Category)
             .OnDelete(DeleteBehavior.Cascade);

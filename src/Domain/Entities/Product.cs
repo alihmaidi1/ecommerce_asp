@@ -37,6 +37,7 @@ public class Product: BaseEntity
 
         public string MetaLogo { get; set; }
 
+        public Guid CategoryId { get; set; }
         public virtual Category Category { get; set; }  
 
         public float Price { get; set; }    
@@ -48,6 +49,7 @@ public class Product: BaseEntity
 
         public int SellingNumber { get; set; }
 
+        public Guid BrandId { get; set; }
         public virtual Brand? Brand { get; set; }
 
         public virtual Coupon? Copon { get; set; }   

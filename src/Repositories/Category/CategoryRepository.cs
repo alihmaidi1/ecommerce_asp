@@ -196,11 +196,12 @@ namespace Repositories.Category
 
 
 
-        public List<GetCategoryResponse> GetCategoryTree()
+        public List<GetCategoryResponse> GetCategoryTree(string ? OrderBy="default",bool ? Status=true)
         {
 
             List<GetCategoryWithParent> AllCategories = DbContext.
-                Categories.
+                Categories.Where(x=>x.Status==(Status??true))
+                .Sort(OrderBy,CategorySorting.switchOrdering).
                 Select(CategoryQuery.ToAllCategoryWithParent).ToList();
 
             List<GetCategoryResponse> RootCategories = GetRootCategory(AllCategories);
@@ -236,9 +237,8 @@ namespace Repositories.Category
 
 
         }
-
+    
         
-
         private List<GetCategoryResponse> GetRootCategory(List<GetCategoryWithParent> Categories)
         {
 
@@ -362,7 +362,20 @@ namespace Repositories.Category
 
         public bool Delete(Guid Id)
         {
-            DbContext.Categories.Where(x => x.Id == Id).ExecuteDelete();
+            List<Guid> Ids = Enumerable.Empty<Guid>().ToList();
+            Ids.Add(Id);
+            GetCategoryResponse category=GetCategory(Id);
+            Ids.AddRange(GetChildsIds(category));
+            List<Guid> ProductIds = Enumerable.Empty<Guid>().ToList();
+            DbContext.Categories
+                .Where(x => Ids.Any(y => y == x.Id))
+                .ExecuteUpdate(setter => 
+                    setter.SetProperty(p=>p.DateDeleted,DateTime.Now));
+            DbContext
+                .Products
+                .Where(x => x.DateDeleted != null && Ids.Any(y => y == x.Id))
+                .ExecuteUpdate(setter=>setter.SetProperty(p=>p.DateDeleted,DateTime.Now));
+            // DbContext.Categories.Where(x => x.Id == Id).ExecuteDelete();
             return true;
 
 

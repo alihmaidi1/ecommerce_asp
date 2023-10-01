@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "223qpFlQj3vLcTAsJ+Sn5hYXeTt6bzxXGZPiMEBieZo=",
+  "Hash": "1wy2W4D5t84vh3mqVXHE/Oms3ZlnqYbshbUAQdSV8+M=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -10,17 +10,34 @@
     {
       "Name": "ecommerce/wwwroot",
       "Source": "ecommerce",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Temp/0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Temp/0dbacd89-0055-4ba7-a941-8d8d5ebc1e3bcode1.png"
+    },
+    {
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png",
       "AssetKind": "All",
@@ -34,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/Temp/955b88fb-a923-4667-9093-0c9626e25001code1.png"
     },
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png",
       "AssetKind": "All",
@@ -51,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/Temp/f775e609-ed25-416e-ba2c-f6555ded7f2bScreenshot (4).png"
     },
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png",
       "AssetKind": "All",
@@ -68,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/Temp/f8913668-383c-46f7-9a05-84d2c0887b70code1.png"
     },
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temp/fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png",
       "AssetKind": "All",
@@ -85,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/Temp/fcdca3b6-3117-43cb-a2ed-a8623e1e1e65Screenshot (5).png"
     },
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temp/ff69926d-4890-4858-ac25-e1796a964a88download.jpeg",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temp/ff69926d-4890-4858-ac25-e1796a964a88download.jpeg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temp/ff69926d-4890-4858-ac25-e1796a964a88download.jpeg",
       "AssetKind": "All",
@@ -102,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/Temp/ff69926d-4890-4858-ac25-e1796a964a88download.jpeg"
     },
     {
-      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/Temps/01b468a7-6289-4ce1-9610-90b0dd52bb5fdbba3b3a-e048-495a-a7ee-1c831e82c0c9.jpeg",
+      "Identity": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/Temps/01b468a7-6289-4ce1-9610-90b0dd52bb5fdbba3b3a-e048-495a-a7ee-1c831e82c0c9.jpeg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp/src/Api/wwwroot/",
+      "ContentRoot": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Api/wwwroot/",
       "BasePath": "_content/ecommerce",
       "RelativePath": "Temps/01b468a7-6289-4ce1-9610-90b0dd52bb5fdbba3b3a-e048-495a-a7ee-1c831e82c0c9.jpeg",
       "AssetKind": "All",

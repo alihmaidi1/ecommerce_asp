@@ -14,10 +14,12 @@ namespace ecommerce.infrutructure.Seed
         public static async Task seedData(ApplicationDbContext context)
         {
             
+            
+            
             if (!context.Categories.Any())
             {
 
-                List<Category> categories = CategoryFaker.GetCategoryFaker().Generate(5);
+                List<Category> categories = CategoryFaker.GetCategoryFaker().Generate(5).DistinctBy(x=>x.Rank).DistinctBy(x=>x.Name).ToList();
                 context.AddRange(categories);
                 context.SaveChanges();
 

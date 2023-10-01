@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ecommerce.Dto.Results.Admin.Admin;
 
 namespace Repositories.Admin
 {
@@ -28,7 +29,7 @@ namespace Repositories.Admin
         public bool UnBlockAdmin(Guid Id);
 
 
-        public Task<AdminEntity> Store(string Email,string UserName,string Password,Guid RoleId);
+        public Task<GetAdminQueryResponse> Store(string Email,string UserName,string Password,Guid RoleId);
         public Task<AdminEntity> Update(Guid id,string Email, string UserName, string Password, Guid RoleId);
 
         public List<AdminEntity> GetAllForSuperAdmin();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZjAyj/gCs0LnuvCJsisRHo77aUoiJn34DSKUF2rwyP5HJOO6QtP6z0NmVOoVe6P4Xg2u4Mit/Q/f2/2ChitKQ==",
+  "dgSpecHash": "GrmWzkpl0/wb79+0/HyWxqvWWGDP10J1AHovT/LkrN7BXWVYGACxFcmApgfoGaX5Ji8fClvK8MYLt4Y2ouVVzw==",
   "success": true,
-  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp/src/Dto/ecommerce.Dto.csproj",
+  "projectFilePath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/src/Dto/ecommerce.Dto.csproj",
   "expectedPackageFiles": [
     "/home/alihmaidi/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/alihmaidi/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

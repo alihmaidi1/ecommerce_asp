@@ -37,7 +37,7 @@ namespace ecommerce.superadmin.Admin.Command.Handlers
         {
 
             var Admin =  await AdminRepository.Store(request.Email, request.UserName, request.Password,request.RoleId);
-
+            
             return Success(Admin, "the admin was added successfully");
         }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj": {}
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {}
   },
   "projects": {
-    "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj": {
+    "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj",
+        "projectUniqueName": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
         "projectName": "ecommerce.models",
-        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/ecommerce.models.csproj",
+        "projectPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/ecommerce.models.csproj",
         "packagesPath": "/home/alihmaidi/.nuget/packages/",
-        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp/ecommerce.models/obj/",
+        "outputPath": "/home/alihmaidi/Desktop/ecommerce_asp (copy)/ecommerce.models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alihmaidi/.nuget/NuGet/NuGet.Config"
